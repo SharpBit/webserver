@@ -102,7 +102,7 @@ async def submit_question(request):
     if not question or not question_num or not answers:
         return response.json({'error': True, 'message': 'Enter a question, question number, and answers'}, 400)
 
-    with open('data/hq_questions.json') as f:
+    with open('data/hq_questions.json', 'r+') as f:
         questions = json.load(f)
         questions.append(data)
         json.dump(questions, f, indent=4)
@@ -118,7 +118,7 @@ async def submit_answer(request):
     if not question or not answer:
         return response.json({'error': True, 'message': 'Enter a question and answer'}, 400)
 
-    with open('data/hq_questions.json') as f:
+    with open('data/hq_questions.json', 'r+') as f:
         questions = json.load(f)
         for q in questions:
             if question.lower() == q['question'].lower():
