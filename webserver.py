@@ -28,7 +28,7 @@ def authorized():
 
 
 async def git_commit(session):
-    url = 'https://api.github.com/repos/SharpBit/HQ-Bot/contents/data/hq_questions.json'
+    url = 'https://api.github.com/repos/SharpBit/webserver/contents/data/hq_questions.json'
     base64content = base64.b64encode(open('data/hq_questions.json', "rb").read())
     async with session.get(url + '?ref=master', headers={'Authorization': 'token ' + os.environ.get('github-token')}) as resp:
         data = await resp.json()
