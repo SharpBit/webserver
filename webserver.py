@@ -32,6 +32,7 @@ async def git_commit(session):
     base64content = base64.b64encode(open('data/hq_questions.json', "rb").read())
     async with session.get(url + '?ref=master', headers={'Authorization': 'token ' + os.environ.get('github-token')}) as resp:
         data = await resp.json()
+        print(data)
         sha = data['sha']
     if base64content.decode('utf-8') + '\n' != data['content']:
         message = json.dumps({
