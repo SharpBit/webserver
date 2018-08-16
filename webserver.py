@@ -107,6 +107,7 @@ async def submit_question(request):
         questions.append(data)
         json.dump(f)
     git_commit(app.session)
+    return response.json({'error': False, 'message': 'Question successfully submitted'})
 
 
 @app.route('/hq/answer', methods=['POST'])
