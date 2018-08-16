@@ -105,8 +105,9 @@ async def submit_question(request):
     with open('data/hq_questions.json', 'r+') as f:
         questions = json.load(f)
         questions.append(data)
+        f.seek(0)
         json.dump(questions, f, indent=4)
-    git_commit(app.session)
+    await git_commit(app.session)
     return response.json({'error': False, 'message': 'Question successfully submitted'})
 
 
@@ -123,8 +124,9 @@ async def submit_answer(request):
         for q in questions:
             if question.lower() == q['question'].lower():
                 q['answer'] = answer
+        f.seek(0)
         json.dump(questions, f, indent=4)
-    git_commit(app.session)
+    await git_commit(app.session)
     return response.json({'error': False, 'message': 'Answer successfully submitted'})
 
 
