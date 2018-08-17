@@ -83,12 +83,12 @@
         "questionNumber": 9
     },
     {
-        "question": "Which American explorer went on to serve in the House of Representatives?",
+        "question": "Which is NOT one of the Balearic Islands?",
         "answers": [
-            "Daniel Boone",
-            "Davy Crockett",
-            "Meriwether Lewis"
+            "Corsica",
+            "Ibiza",
+            "Mallorca"
         ],
-        "questionNumber": 10
+        "questionNumber": 11
     }
 ]
