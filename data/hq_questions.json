@@ -72,5 +72,14 @@
             "Prismoid"
         ],
         "questionNumber": 8
+    },
+    {
+        "question": "When the Berlin Wall was standing, which of these places was a national capital?",
+        "answers": [
+            "Bonn",
+            "Dresden",
+            "Munich"
+        ],
+        "questionNumber": 9
     }
 ]
