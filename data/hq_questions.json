@@ -45,5 +45,14 @@
             "Thimble"
         ],
         "questionNumber": 4
+    },
+    {
+        "question": "Its name alone reveals that an empanada is what?",
+        "answers": [
+            "Pan-fried",
+            "Bread-wrapped",
+            "Hot and flavorful"
+        ],
+        "questionNumber": 5
     }
 ]
