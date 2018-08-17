@@ -27,5 +27,14 @@
             "Poundscreen"
         ],
         "questionNumber": 1
+    },
+    {
+        "question": "A baseball cap with a foam front and a mesh body is typically known as what?",
+        "answers": [
+            "Trucker hat",
+            "State governor hat",
+            "Brain surgeon hat"
+        ],
+        "questionNumber": 2
     }
 ]
