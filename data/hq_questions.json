@@ -54,5 +54,14 @@
             "Gabriel Garcia Marquez"
         ],
         "questionNumber": 6
+    },
+    {
+        "question": "What tennis player defeated Bobby Riggs to win 1973's \"Battle of the Sexes\"?",
+        "answers": [
+            "Chris Evert",
+            "Margaret Court",
+            "Billie Jean King"
+        ],
+        "questionNumber": 7
     }
 ]
