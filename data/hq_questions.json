@@ -47,12 +47,12 @@
         "questionNumber": 4
     },
     {
-        "question": "Its name alone reveals that an empanada is what?",
+        "question": "Which author is famously associated with \"iceberg theory\"?",
         "answers": [
-            "Pan-fried",
-            "Bread-wrapped",
-            "Hot and flavorful"
+            "Toni Morrison",
+            "Ernest Hemingway",
+            "Gabriel Garcia Marquez"
         ],
-        "questionNumber": 5
+        "questionNumber": 6
     }
 ]
