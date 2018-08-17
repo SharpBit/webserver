@@ -81,5 +81,14 @@
             "Munich"
         ],
         "questionNumber": 9
+    },
+    {
+        "question": "Which American explorer went on to serve in the House of Representatives?",
+        "answers": [
+            "Daniel Boone",
+            "Davy Crockett",
+            "Meriwether Lewis"
+        ],
+        "questionNumber": 10
     }
 ]
