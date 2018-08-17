@@ -36,5 +36,14 @@
             "Lid"
         ],
         "questionNumber": 3
+    },
+    {
+        "question": "Which of these has NOT been a token shape in a standard edition of Monopoly?",
+        "answers": [
+            "Wheelbarrow",
+            "Anvil",
+            "Thimble"
+        ],
+        "questionNumber": 4
     }
 ]
