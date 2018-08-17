@@ -90,5 +90,14 @@
             "Mallorca"
         ],
         "questionNumber": 11
+    },
+    {
+        "question": "Who speaks the last line of scripted dialogue in the 1980 film \"The Blues Brothers\"?",
+        "answers": [
+            "Martin Scorsese",
+            "George Lucas",
+            "Steven Spielberg"
+        ],
+        "questionNumber": 12
     }
 ]
