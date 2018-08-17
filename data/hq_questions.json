@@ -63,5 +63,14 @@
             "Billie Jean King"
         ],
         "questionNumber": 7
+    },
+    {
+        "question": "A pyramid with a triangular base is called what?",
+        "answers": [
+            "Dodecahedron",
+            "Tetrahedron",
+            "Prismoid"
+        ],
+        "questionNumber": 8
     }
 ]
