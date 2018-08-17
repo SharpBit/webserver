@@ -18,5 +18,14 @@
         ],
         "questionNumber": 1,
         "answer": 2
+    },
+    {
+        "question": "The front of a smartphone typically has a what?",
+        "answers": [
+            "Touchscreen",
+            "Smushscreen",
+            "Poundscreen"
+        ],
+        "questionNumber": 1
     }
 ]
