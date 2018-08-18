@@ -3,9 +3,7 @@ from sanic import response, Sanic
 from functools import wraps
 
 import aiohttp
-import asyncio
 import base64
-import unidecode
 
 import json
 import os
@@ -32,11 +30,10 @@ async def git_commit(session):
     base64content = base64.b64encode(open('data/hq_questions.json', "rb").read())
     async with session.get(url + '?ref=master', headers={'Authorization': 'token ' + os.environ.get('github-token')}) as resp:
         data = await resp.json()
-        print(data)
         sha = data['sha']
     if base64content.decode('utf-8') + '\n' != data['content']:
         message = json.dumps({
-            'message': 'update',
+            'message': 'Update question list.',
             'branch': 'master',
             'content': base64content.decode('utf-8'),
             'sha': sha
@@ -99,17 +96,17 @@ async def submit_question(request):
     question = data.get('question')
     question_num = data.get('questionNumber')
     answers = data.get('answers')
+    time = data.get('time')
 
     # gotta handle bad requests amirite
-    if not question or not question_num or not answers:
-        return response.json({'error': True, 'message': 'Enter a question, question number, and answers'}, 400)
+    if not question or not question_num or not answers or not time:
+        return response.json({'error': True, 'message': 'Enter a question, question number,answers, and epoch time.'}, 400)
 
     with open('data/hq_questions.json', 'r+') as f:
         questions = json.load(f)
         questions.append(data)
         f.seek(0)
         json.dump(questions, f, indent=4)
-    await git_commit(app.session)
     return response.json({'error': False, 'message': 'Question successfully submitted'})
 
 
@@ -118,8 +115,9 @@ async def submit_question(request):
 async def submit_answer(request):
     question = request.json.get('question')
     answer = request.json.get('answer')
-    if not question or not answer:
-        return response.json({'error': True, 'message': 'Enter a question and answer'}, 400)
+    final = request.json.get('final')
+    if not question or not answer or not final:
+        return response.json({'error': True, 'message': 'Enter a question, answer, and final question (true/false)'}, 400)
 
     with open('data/hq_questions.json', 'r+') as f:
         questions = json.load(f)
@@ -128,7 +126,8 @@ async def submit_answer(request):
                 q['answer'] = answer
         f.seek(0)
         json.dump(questions, f, indent=4)
-    await git_commit(app.session)
+    if final:
+        await git_commit(app.session)
     return response.json({'error': False, 'message': 'Answer successfully submitted'})
 
 
