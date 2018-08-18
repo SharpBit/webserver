@@ -100,5 +100,14 @@
         ],
         "questionNumber": 12,
         "answer": "3"
+    },
+    {
+        "question": "Which of these is a common body part?",
+        "answers": [
+            "Kneecap",
+            "Wristsombrero",
+            "Shoulderfedora"
+        ],
+        "questionNumber": 1
     }
 ]
