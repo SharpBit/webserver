@@ -116,7 +116,7 @@ async def submit_answer(request):
     question = request.json.get('question')
     answer = request.json.get('answer')
     final = request.json.get('final')
-    if not question or not answer or not final:
+    if not question or not answer or final is None:
         return response.json({'error': True, 'message': 'Enter a question, answer, and final question (true/false)'}, 400)
 
     with open('data/hq_questions.json', 'r+') as f:
