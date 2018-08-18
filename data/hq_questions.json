@@ -164,5 +164,14 @@
             "Genoa salami"
         ],
         "questionNumber": 8
+    },
+    {
+        "question": "Which of these comedians has NOT starred in a music video by Kanye West?",
+        "answers": [
+            "Aziz Ansari",
+            "Judah Friedlander",
+            "Zach Galifianakis"
+        ],
+        "questionNumber": 9
     }
 ]
