@@ -128,5 +128,14 @@
             "Stress that syllable"
         ],
         "questionNumber": 4
+    },
+    {
+        "question": "In what video game series can you visit Rainbow Road?",
+        "answers": [
+            "Legend of Zelda",
+            "Castlevania",
+            "Mario Kart"
+        ],
+        "questionNumber": 5
     }
 ]
