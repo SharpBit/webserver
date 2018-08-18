@@ -119,5 +119,14 @@
             "Dilutes it"
         ],
         "questionNumber": 3
+    },
+    {
+        "question": "In Spanish, what does a tilde over the letter \"N\" mean?",
+        "answers": [
+            "Pronounce it as \"D\"",
+            "Add a \"Y\" sound",
+            "Stress that syllable"
+        ],
+        "questionNumber": 4
     }
 ]
