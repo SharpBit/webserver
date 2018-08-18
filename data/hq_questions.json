@@ -191,5 +191,14 @@
             "Shrek"
         ],
         "questionNumber": 11
+    },
+    {
+        "question": "What work does the music accompanying the ballet-dancing hippos in Disney's \"Fantasia\" come from?",
+        "answers": [
+            "The Nutcracker",
+            "Swan Lake",
+            "La Gioconda"
+        ],
+        "questionNumber": 12
     }
 ]
