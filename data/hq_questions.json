@@ -110,5 +110,14 @@
         ],
         "questionNumber": 1,
         "answer": 1
+    },
+    {
+        "question": "What does \"caramelizing\" food do to it?",
+        "answers": [
+            "Freezes it",
+            "Browns it",
+            "Dilutes it"
+        ],
+        "questionNumber": 3
     }
 ]
