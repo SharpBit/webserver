@@ -155,5 +155,14 @@
             "Magazines"
         ],
         "questionNumber": 7
+    },
+    {
+        "question": "Imports of what meat were banned from the United States from 1967 to 2000?",
+        "answers": [
+            "Mortadella",
+            "Canadian bacon",
+            "Genoa salami"
+        ],
+        "questionNumber": 8
     }
 ]
