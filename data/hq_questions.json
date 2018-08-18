@@ -146,5 +146,14 @@
             "Trickle"
         ],
         "questionNumber": 6
+    },
+    {
+        "question": "Which word is NOT in the lyrics of The Flaming Lips '90s hit \"She Don't Use Jelly\"?",
+        "answers": [
+            "Tangerines",
+            "Submarines",
+            "Magazines"
+        ],
+        "questionNumber": 7
     }
 ]
