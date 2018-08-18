@@ -137,5 +137,14 @@
             "Mario Kart"
         ],
         "questionNumber": 5
+    },
+    {
+        "question": "In computer graphics, what is the 3D equivalent of a pixel?",
+        "answers": [
+            "Voxel",
+            "Cubex",
+            "Trickle"
+        ],
+        "questionNumber": 6
     }
 ]
