@@ -182,5 +182,14 @@
             "Azerbaijan"
         ],
         "questionNumber": 10
+    },
+    {
+        "question": "What fictional character does NOT have a star on the Hollywood Walk of Fame?",
+        "answers": [
+            "R2-D2",
+            "Godzilla",
+            "Shrek"
+        ],
+        "questionNumber": 11
     }
 ]
