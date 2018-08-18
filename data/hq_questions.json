@@ -173,5 +173,14 @@
             "Zach Galifianakis"
         ],
         "questionNumber": 9
+    },
+    {
+        "question": "Which of these nations has beaches on the Black Sea?",
+        "answers": [
+            "Georgia",
+            "Armenia",
+            "Azerbaijan"
+        ],
+        "questionNumber": 10
     }
 ]
