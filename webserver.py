@@ -18,7 +18,7 @@ def authorized():
     def decorator(f):
         @wraps(f)
         async def decorated_function(request, *args, **kwargs):
-            if request.token == 'hunter2':
+            if request.token == os.environ.get('auth-token'):
                 return await f(request, *args, **kwargs)
             return response.json({'error': True, 'message': 'Unauthorized'}, status=401)
         return decorated_function
@@ -56,7 +56,6 @@ async def close_session(app, loop):
 
 
 @app.route('/')
-# @authorized()
 async def index(request):
     return response.json({'hello': 'world'})
 
@@ -82,7 +81,6 @@ async def hq_home(request):
 
 
 @app.route('/hq/questions')
-# @authorized()
 async def load_questions(request):
     with open('data/hq_questions.json') as f:
         questions = json.load(f)
@@ -90,7 +88,7 @@ async def load_questions(request):
 
 
 @app.route('/hq/question', methods=['POST'])
-# @authorized()
+@authorized()
 async def submit_question(request):
     data = request.json
     checks = ['question', 'answers', 'questionNumber', 'time', 'category']
@@ -108,7 +106,7 @@ async def submit_question(request):
 
 
 @app.route('/hq/answer', methods=['POST'])
-# @authorized()
+@authorized()
 async def submit_answer(request):
     checks = ['question', 'answer', 'final']
     if not all([True if k in request.json.keys() else False for k in checks]):
