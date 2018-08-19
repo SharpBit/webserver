@@ -7,7 +7,8 @@
             "Round and round"
         ],
         "questionNumber": 1,
-        "time": 1534640674.2195075
+        "time": 1534640674.2195075,
+        "answer": 3
     },
     {
         "question": "What farm animal is categorized as poultry?",
@@ -17,7 +18,8 @@
             "Pig"
         ],
         "questionNumber": 2,
-        "time": 1534640707.1562788
+        "time": 1534640707.1562788,
+        "answer": 2
     },
     {
         "question": "Which of these units measures the intensity of sound?",
@@ -49,7 +51,8 @@
             "Falling"
         ],
         "questionNumber": 5,
-        "time": 1534640830.327315
+        "time": 1534640830.327315,
+        "answer": 2
     },
     {
         "question": "The tallest known peak in our solar system is on what planet?",
@@ -92,7 +95,8 @@
             "Blue whale"
         ],
         "questionNumber": 9,
-        "time": 1534640999.2183766
+        "time": 1534640999.2183766,
+        "answer": 2
     },
     {
         "question": "Which of these hit singles is by the first band to play on every continent within a year?",
@@ -102,7 +106,8 @@
             "Enter Sandman"
         ],
         "questionNumber": 10,
-        "time": 1534641043.485441
+        "time": 1534641043.485441,
+        "answer": 3
     },
     {
         "question": "In grammar, which of these is NOT considered a coordinating conjunction?",
@@ -112,7 +117,8 @@
             "For"
         ],
         "questionNumber": 11,
-        "time": 1534641082.1230056
+        "time": 1534641082.1230056,
+        "answer": 1
     },
     {
         "question": "What special request did Muhammad Ali make for his star on the Hollywood Walk of Fame?",
