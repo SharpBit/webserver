@@ -93,14 +93,11 @@ async def load_questions(request):
 # @authorized()
 async def submit_question(request):
     data = request.json
-    question = data.get('question')
-    question_num = data.get('questionNumber')
-    answers = data.get('answers')
-    time = data.get('time')
+    checks = ['question', 'answers', 'questionNumber', 'time', 'category']
 
     # gotta handle bad requests amirite
-    if not question or not question_num or not answers or not time:
-        return response.json({'error': True, 'message': 'Enter a question, question number,answers, and epoch time.'}, 400)
+    if not all([True if k in data.keys() else False for k in checks]):
+        return response.json({'error': True, 'message': 'Enter a question, question number, answers, epoch time, and category.'}, 400)
 
     with open('data/hq_questions.json', 'r+') as f:
         questions = json.load(f)
@@ -113,23 +110,21 @@ async def submit_question(request):
 @app.route('/hq/answer', methods=['POST'])
 # @authorized()
 async def submit_answer(request):
-    question = request.json.get('question')
-    answer = request.json.get('answer')
-    final = request.json.get('final')
-    if not question or not answer or final is None:
+    checks = ['question', 'answer', 'final']
+    if not all([True if k in request.json.keys() else False for k in checks]):
         return response.json({'error': True, 'message': 'Enter a question, answer, and final question (true/false)'}, 400)
 
     with open('data/hq_questions.json', 'r+') as f:
         questions = json.load(f)
         for q in questions:
-            if question.lower() == q['question'].lower():
-                q['answer'] = answer
+            if request.json['question'] == q['question']:
+                q['answer'] = request.json['answer']
         f.seek(0)
         json.dump(questions, f, indent=4)
-    if final:
+    if request.json['final']:
         await git_commit(app.session)
     return response.json({'error': False, 'message': 'Answer successfully submitted'})
 
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=os.getenv('PORT') or 5000)
+    app.run(host='0.0.0.0', port=os.getenv('PORT'))
