@@ -1,1 +1,181 @@
-[]
+[
+    {
+        "question": "In the classic children's song, \"London Bridge is\" what?",
+        "answers": [
+            "A big mood",
+            "Throwing shade",
+            "Falling down"
+        ],
+        "questionNumber": 1,
+        "time": 1534727140.4943538,
+        "category": "Music",
+        "answer": 3
+    },
+    {
+        "question": "Which of these words is a synonym for \"cold\"?",
+        "answers": [
+            "Frigid",
+            "Turgid",
+            "Rigid"
+        ],
+        "questionNumber": 2,
+        "time": 1534727165.7554915,
+        "category": "Language",
+        "answer": 1
+    },
+    {
+        "question": "By definition, people who are lactose intolerant might have trouble drinking a glass of what?",
+        "answers": [
+            "Clam juice",
+            "Diet soda",
+            "Milk"
+        ],
+        "questionNumber": 3,
+        "time": 1534727234.6145687,
+        "category": "Food & Drink",
+        "answer": 3
+    },
+    {
+        "question": "\"Three Is a Magic Number\" is a song from the pilot episode of what educational TV show?",
+        "answers": [
+            "DuckTales",
+            "The Powerpuff Girls",
+            "Schoolhouse Rock!"
+        ],
+        "questionNumber": 4,
+        "time": 1534727272.5541751,
+        "category": "TV"
+    },
+    {
+        "question": "In the 1930s, Italian engineers drilled holes in the foundation of what landmark in an effort to fix it?",
+        "answers": [
+            "Colosseum",
+            "Sistine Chapel",
+            "Leaning Tower of Pisa"
+        ],
+        "questionNumber": 5,
+        "time": 1534727315.3420181,
+        "category": "Fashion & Design",
+        "answer": 3
+    },
+    {
+        "question": "A cremini is a younger version of what mushroom?",
+        "answers": [
+            "Portobello",
+            "Oyster",
+            "Shiitake"
+        ],
+        "questionNumber": 6,
+        "time": 1534727350.8020477,
+        "category": "Food & Drink",
+        "answer": 1
+    },
+    {
+        "question": "A paramecium moves by the means of what small filaments that resemble eyelashes?",
+        "answers": [
+            "Lumina",
+            "Cilia",
+            "Celica"
+        ],
+        "questionNumber": 7,
+        "time": 1534727398.1047337,
+        "category": "Science",
+        "answer": 2
+    },
+    {
+        "question": "Which of these \"Saturday Night Live\" alumni has an Oscar nomination for Best Original Screenplay?",
+        "answers": [
+            "Kristen Wiig",
+            "Seth Meyers",
+            "Tina Fey"
+        ],
+        "questionNumber": 8,
+        "time": 1534727433.7750406,
+        "category": "TV",
+        "answer": 1
+    },
+    {
+        "question": "Which of these words is NOT autological?",
+        "answers": [
+            "Hellenic",
+            "Monosyllabic",
+            "Word"
+        ],
+        "questionNumber": 9,
+        "time": 1534727477.8438337,
+        "category": "Language",
+        "answer": 2
+    },
+    {
+        "question": "A 19th-century painting by Winslow Homer graces the cover of a mid-1980s album by who?",
+        "answers": [
+            "Tom Petty",
+            "Bob Dylan",
+            "Bruce Springsteen"
+        ],
+        "questionNumber": 10,
+        "time": 1534727538.606061,
+        "category": "Music",
+        "answer": 1
+    },
+    {
+        "question": "What film prominently features the likeness of the actor who played Captain Kirk in \"Star Trek\"?",
+        "answers": [
+            "Friday the 13th",
+            "The Exorcist",
+            "Halloween"
+        ],
+        "questionNumber": 11,
+        "time": 1534727572.8900235,
+        "category": "Movies",
+        "answer": 3
+    },
+    {
+        "question": "Which of these literary characters is considered a classic example of an unreliable narrator?",
+        "answers": [
+            "Amy Dunne",
+            "Kinsey Millhone",
+            "Lisbeth Salander"
+        ],
+        "questionNumber": 12,
+        "time": 1534727619.0145607,
+        "category": "Literature",
+        "answer": 1
+    },
+    {
+        "question": "Which of these TV shows premiered first?",
+        "answers": [
+            "The New Normal",
+            "New Girl",
+            "Modern Family"
+        ],
+        "questionNumber": 13,
+        "time": 1534727666.834249,
+        "category": "TV",
+        "answer": 3
+    },
+    {
+        "question": "Which of these islands has the largest population?",
+        "answers": [
+            "Great Britain",
+            "Honshu",
+            "Taiwan"
+        ],
+        "questionNumber": 14,
+        "time": 1534727705.046711,
+        "category": "Geography",
+        "answer": 2
+    },
+    {
+        "question": "What '90s band's debut album title comes from a memorable line in \"Scarface\"?",
+        "answers": [
+            "LFO",
+            "The Offspring",
+            "Smash Mouth"
+        ],
+        "questionNumber": 15,
+        "time": 1534727770.632562,
+        "category": "Entertainment",
+        "answer": 3
+    }
+]
