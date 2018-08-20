@@ -91,11 +91,11 @@ async def load_questions(request):
 @authorized()
 async def submit_question(request):
     data = request.json
-    checks = ['question', 'answers', 'questionNumber', 'time', 'category']
+    checks = ['question', 'questionNumber', 'time', 'category']
 
     # gotta handle bad requests amirite
     if not all([True if k in data.keys() else False for k in checks]):
-        return response.json({'error': True, 'message': 'Enter a question, question number, answers, epoch time, and category.'}, 400)
+        return response.json({'error': True, 'message': 'Enter a question, question number, epoch time, and category.'}, 400)
 
     with open('data/hq_questions.json', 'r+') as f:
         questions = json.load(f)
@@ -108,15 +108,15 @@ async def submit_question(request):
 @app.route('/hq/answer', methods=['POST'])
 @authorized()
 async def submit_answer(request):
-    checks = ['question', 'answer', 'final']
+    checks = ['question', 'answers', 'final']
     if not all([True if k in request.json.keys() else False for k in checks]):
-        return response.json({'error': True, 'message': 'Enter a question, answer, and final question (true/false)'}, 400)
+        return response.json({'error': True, 'message': 'Enter a question, answers, and final question (true/false)'}, 400)
 
     with open('data/hq_questions.json', 'r+') as f:
         questions = json.load(f)
         for q in questions:
             if request.json['question'] == q['question']:
-                q['answer'] = request.json['answer']
+                q['answers'] = request.json['answers']
         f.seek(0)
         json.dump(questions, f, indent=4)
     if request.json['final']:
