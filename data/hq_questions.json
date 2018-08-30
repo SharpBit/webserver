@@ -1,1 +1,278 @@
-[]
+[
+    {
+        "question": "Which of these is the name of a common game for kids?",
+        "questionNumber": 1,
+        "time": 1535591069.6430562,
+        "category": "Games",
+        "answers": [
+            {
+                "answer": "Sloth in the Slagheap",
+                "correct": false,
+                "count": 3505
+            },
+            {
+                "answer": "Anteater in the Alley",
+                "correct": false,
+                "count": 4658
+            },
+            {
+                "answer": "Monkey in the Middle",
+                "correct": true,
+                "count": 360943
+            }
+        ]
+    },
+    {
+        "question": "A wide, collarbone-skimming neckline on a blouse or dress is known as a what?",
+        "questionNumber": 2,
+        "time": 1535591089.001482,
+        "category": "Fashion",
+        "answers": [
+            {
+                "answer": "Mayflower neck",
+                "correct": false,
+                "count": 58172
+            },
+            {
+                "answer": "Boatneck",
+                "correct": true,
+                "count": 272369
+            },
+            {
+                "answer": "Lil Yachty neck",
+                "correct": false,
+                "count": 3112
+            }
+        ]
+    },
+    {
+        "question": "Which state's capital does NOT contain the name of the state?",
+        "questionNumber": 3,
+        "time": 1535591154.2591126,
+        "category": "Geography",
+        "answers": [
+            {
+                "answer": "Oklahoma",
+                "correct": false,
+                "count": 39835
+            },
+            {
+                "answer": "New York",
+                "correct": true,
+                "count": 147392
+            },
+            {
+                "answer": "Indiana",
+                "correct": false,
+                "count": 80794
+            }
+        ]
+    },
+    {
+        "question": "The Colosseum in Rome is what kind of building?",
+        "questionNumber": 4,
+        "time": 1535591189.0881836,
+        "category": "Art & Design",
+        "answers": [
+            {
+                "answer": "Courthouse",
+                "correct": false,
+                "count": 1565
+            },
+            {
+                "answer": "Amphitheatre",
+                "correct": true,
+                "count": 147724
+            },
+            {
+                "answer": "Palace",
+                "correct": false,
+                "count": 2390
+            }
+        ]
+    },
+    {
+        "question": "Which of these types of animals first appeared in the Triassic period?",
+        "questionNumber": 5,
+        "time": 1535591226.393842,
+        "category": "Nature",
+        "answers": [
+            {
+                "answer": "Reptiles",
+                "correct": false,
+                "count": 62708
+            },
+            {
+                "answer": "Amphibians",
+                "correct": false,
+                "count": 54209
+            },
+            {
+                "answer": "Mammals",
+                "correct": true,
+                "count": 28973
+            }
+        ]
+    },
+    {
+        "question": "What was the Academy Award for Best Picture called when it was initially awarded?",
+        "questionNumber": 6,
+        "time": 1535591265.1963289,
+        "category": "Movies",
+        "answers": [
+            {
+                "answer": "Outstanding Picture",
+                "correct": true,
+                "count": 19824
+            },
+            {
+                "answer": "Work of Regard",
+                "correct": false,
+                "count": 5722
+            },
+            {
+                "answer": "Best Production",
+                "correct": false,
+                "count": 10162
+            }
+        ]
+    },
+    {
+        "question": "Who is the only US president sworn in on a Catholic missal rather than a Bible?",
+        "questionNumber": 7,
+        "time": 1535591300.157343,
+        "category": "History",
+        "answers": [
+            {
+                "answer": "Dwight D. Eisenhower",
+                "correct": false,
+                "count": 1939
+            },
+            {
+                "answer": "John F. Kennedy",
+                "correct": false,
+                "count": 14985
+            },
+            {
+                "answer": "Lyndon B. Johnson",
+                "correct": true,
+                "count": 3620
+            }
+        ]
+    },
+    {
+        "question": "The song \"Edelweiss\" is the national anthem of what country?",
+        "questionNumber": 8,
+        "time": 1535591349.3371112,
+        "category": "Music",
+        "answers": [
+            {
+                "answer": "Germany",
+                "correct": false,
+                "count": 576
+            },
+            {
+                "answer": "Austria",
+                "correct": false,
+                "count": 3074
+            },
+            {
+                "answer": "Neither",
+                "correct": true,
+                "count": 1456
+            }
+        ]
+    },
+    {
+        "question": "What is the main ingredient in the Japanese treat kakigori?",
+        "questionNumber": 9,
+        "time": 1535591395.1931536,
+        "category": "Cuisine",
+        "answers": [
+            {
+                "answer": "Red bean paste",
+                "correct": false,
+                "count": 781
+            },
+            {
+                "answer": "Mochi",
+                "correct": false,
+                "count": 365
+            },
+            {
+                "answer": "Shaved ice",
+                "correct": true,
+                "count": 605
+            }
+        ]
+    },
+    {
+        "question": "A \"Whose Line Is It Anyway\" host starred in Disney's live-action version of what classic story?",
+        "questionNumber": 10,
+        "time": 1535591433.0820317,
+        "category": "TV",
+        "answers": [
+            {
+                "answer": "Cinderella",
+                "correct": false,
+                "count": 128
+            },
+            {
+                "answer": "Beauty and the Beast",
+                "correct": false,
+                "count": 348
+            },
+            {
+                "answer": "Pinocchio",
+                "correct": true,
+                "count": 249
+            }
+        ]
+    },
+    {
+        "question": "Which country's flag has its name written on it?",
+        "questionNumber": 11,
+        "time": 1535591468.7160614,
+        "category": "Geography",
+        "answers": [
+            {
+                "answer": "Fiji",
+                "correct": false,
+                "count": 68
+            },
+            {
+                "answer": "Samoa",
+                "correct": false,
+                "count": 89
+            },
+            {
+                "answer": "Guam",
+                "correct": true,
+                "count": 122
+            }
+        ]
+    },
+    {
+        "question": "An NBA player who released a rap album in 2006 later won a championship with which team?",
+        "questionNumber": 12,
+        "time": 1535591519.0642488,
+        "category": "Sports",
+        "answers": [
+            {
+                "answer": "Golden State Warriors",
+                "correct": false,
+                "count": 25
+            },
+            {
+                "answer": "Miami Heat",
+                "correct": false,
+                "count": 61
+            },
+            {
+                "answer": "Los Angeles Lakers",
+                "correct": true,
+                "count": 50
+            }
+        ]
+    }
+]
