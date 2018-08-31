@@ -274,5 +274,281 @@
                 "count": 50
             }
         ]
+    },
+    {
+        "question": "What kind of creatures roam throughout \"Jurassic Park\"?",
+        "questionNumber": 1,
+        "time": 1535677511.4711628,
+        "category": "Movies",
+        "answers": [
+            {
+                "answer": "Internet trolls",
+                "correct": false,
+                "count": 1143
+            },
+            {
+                "answer": "Dinosaurs",
+                "correct": true,
+                "count": 448098
+            },
+            {
+                "answer": "The Olsen twins",
+                "correct": false,
+                "count": 677
+            }
+        ]
+    },
+    {
+        "question": "According to the movie's theme song, \"Who you gonna call\"?",
+        "questionNumber": 2,
+        "time": 1535677544.9514902,
+        "category": "Movies",
+        "answers": [
+            {
+                "answer": "Ghostbusters",
+                "correct": true,
+                "count": 444188
+            },
+            {
+                "answer": "Crop dusters",
+                "correct": false,
+                "count": 838
+            },
+            {
+                "answer": "Claims adjusters",
+                "correct": false,
+                "count": 380
+            }
+        ]
+    },
+    {
+        "question": "John Travolta stars in which of these gangster films?",
+        "questionNumber": 3,
+        "time": 1535677600.63068,
+        "category": "Movies",
+        "answers": [
+            {
+                "answer": "Casino",
+                "correct": false,
+                "count": 78008
+            },
+            {
+                "answer": "Gotti",
+                "correct": true,
+                "count": 232328
+            },
+            {
+                "answer": "Goodfellas",
+                "correct": false,
+                "count": 127353
+            }
+        ]
+    },
+    {
+        "question": "Which of these sci-fi classics is set the earliest?",
+        "questionNumber": 4,
+        "time": 1535677636.9587297,
+        "category": "Movies",
+        "answers": [
+            {
+                "answer": "Star Wars",
+                "correct": true,
+                "count": 98644
+            },
+            {
+                "answer": "2001: A Space Odyssey",
+                "correct": false,
+                "count": 92893
+            },
+            {
+                "answer": "Alien",
+                "correct": false,
+                "count": 46103
+            }
+        ]
+    },
+    {
+        "question": "Which of these Ben Affleck-fronted films is the highest-grossing?",
+        "questionNumber": 5,
+        "time": 1535677677.004059,
+        "category": "Movies",
+        "answers": [
+            {
+                "answer": "Batman v Superman",
+                "correct": true,
+                "count": 38577
+            },
+            {
+                "answer": "Good Will Hunting",
+                "correct": false,
+                "count": 44609
+            },
+            {
+                "answer": "Justice League",
+                "correct": false,
+                "count": 29029
+            }
+        ]
+    },
+    {
+        "question": "Which Disney movie featured a prince named Phillip?",
+        "questionNumber": 6,
+        "time": 1535677729.739344,
+        "category": "Movies",
+        "answers": [
+            {
+                "answer": "Sleeping Beauty",
+                "correct": true,
+                "count": 26452
+            },
+            {
+                "answer": "The Little Mermaid",
+                "correct": false,
+                "count": 13102
+            },
+            {
+                "answer": "Snow White",
+                "correct": false,
+                "count": 6334
+            }
+        ]
+    },
+    {
+        "question": "Which of these actors has never starred in a sequel?",
+        "questionNumber": 7,
+        "time": 1535677771.0212197,
+        "category": "Movies",
+        "answers": [
+            {
+                "answer": "Leonardo DiCaprio",
+                "correct": false,
+                "count": 16115
+            },
+            {
+                "answer": "Julia Roberts",
+                "correct": false,
+                "count": 4148
+            },
+            {
+                "answer": "Jodie Foster",
+                "correct": true,
+                "count": 7550
+            }
+        ]
+    },
+    {
+        "question": "In Disney's cartoon version of \"Alice in Wonderland,\" what does the Cheshire Cat say to Alice?",
+        "questionNumber": 8,
+        "time": 1535677821.4084802,
+        "category": "Movies",
+        "answers": [
+            {
+                "answer": "We're all mad here",
+                "correct": false,
+                "count": 4022
+            },
+            {
+                "answer": "Everyone's a bit mad",
+                "correct": false,
+                "count": 3084
+            },
+            {
+                "answer": "Most everyone's mad here",
+                "correct": true,
+                "count": 2048
+            }
+        ]
+    },
+    {
+        "question": "In which of these films is a main character flabbergasted by a first-generation iPhone?",
+        "questionNumber": 9,
+        "time": 1535677872.4706604,
+        "category": "Movies",
+        "answers": [
+            {
+                "answer": "Sex and the City",
+                "correct": true,
+                "count": 828
+            },
+            {
+                "answer": "Freaky Friday",
+                "correct": false,
+                "count": 821
+            },
+            {
+                "answer": "Kate and Leopold",
+                "correct": false,
+                "count": 1266
+            }
+        ]
+    },
+    {
+        "question": "Which of these action movies has NOT warranted a Criterion Collection DVD?",
+        "questionNumber": 10,
+        "time": 1535677914.8472412,
+        "category": "Movies",
+        "answers": [
+            {
+                "answer": "Con Air",
+                "correct": true,
+                "count": 560
+            },
+            {
+                "answer": "The Rock",
+                "correct": false,
+                "count": 254
+            },
+            {
+                "answer": "Armageddon",
+                "correct": false,
+                "count": 242
+            }
+        ]
+    },
+    {
+        "question": "In which iconic movie makeover reveal is the character in a blue dress?",
+        "questionNumber": 11,
+        "time": 1535677963.600632,
+        "category": "Movies",
+        "answers": [
+            {
+                "answer": "The Devil Wears Prada",
+                "correct": false,
+                "count": 107
+            },
+            {
+                "answer": "Miss Congeniality",
+                "correct": true,
+                "count": 350
+            },
+            {
+                "answer": "Pretty Woman",
+                "correct": false,
+                "count": 136
+            }
+        ]
+    },
+    {
+        "question": "In \"Wall Street,\" what does Gordon Gekko say after declaring that greed \"is good\"?",
+        "questionNumber": 12,
+        "time": 1535678023.9931715,
+        "category": "Movies",
+        "answers": [
+            {
+                "answer": "Greed is really good",
+                "correct": false,
+                "count": 70
+            },
+            {
+                "answer": "Greed is great",
+                "correct": false,
+                "count": 73
+            },
+            {
+                "answer": "Greed is right",
+                "correct": true,
+                "count": 205
+            }
+        ]
     }
 ]
