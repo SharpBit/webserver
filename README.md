@@ -10,7 +10,7 @@ Endpoint | Function | Type
 `/hq/question` | Post question info | POST
 `/hq/answer` | Post an answer to a question | POST
 `/hq/questions` | List of HQ Questions | GET
-<br>
+
 Note: `/hq/answer` and `/hq/question` both require an API Key to POST to in order to maintain correct question info.
 ## POST request format
 Here's an example JSON to post to `/hq/question`:
