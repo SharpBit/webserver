@@ -1,5 +1,5 @@
 # HQ Trivia Webserver
-A simple python sanic [webserver](http://sharpbit-webserver.herokuapp.com/) made for [HQ Trivia](https://en.wikipedia.org/wiki/HQ_Trivia/).<br>
+A simple python sanic [webserver](http://sharpbit-webserver.herokuapp.com/) made for [HQ Trivia](https://en.wikipedia.org/wiki/HQ_Trivia).<br>
 
 ## Endpoints
 Endpoint | Function | Type
