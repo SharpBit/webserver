@@ -550,5 +550,258 @@
                 "count": 205
             }
         ]
+    },
+    {
+        "question": "Which of these is a string instrument?",
+        "questionNumber": 1,
+        "time": 1535763986.8865347,
+        "category": "Music",
+        "answers": [
+            {
+                "answer": "Harmonica",
+                "correct": false,
+                "count": 2767
+            },
+            {
+                "answer": "Saxophone",
+                "correct": false,
+                "count": 1862
+            },
+            {
+                "answer": "Violin",
+                "correct": true,
+                "count": 376597
+            }
+        ]
+    },
+    {
+        "question": "In the 1800s, what painter's last name became the source of a word meaning \"full-figured\"?",
+        "questionNumber": 2,
+        "time": 1535764020.448353,
+        "category": "Art & Design",
+        "answers": [
+            {
+                "answer": "Andy Warhol",
+                "correct": false,
+                "count": 100091
+            },
+            {
+                "answer": "Peter Paul Rubens",
+                "correct": true,
+                "count": 195599
+            },
+            {
+                "answer": "Banksy",
+                "correct": false,
+                "count": 53892
+            }
+        ]
+    },
+    {
+        "question": "What famous speech took place in front of the Lincoln Memorial?",
+        "questionNumber": 3,
+        "time": 1535764129.156196,
+        "category": "History",
+        "answers": [
+            {
+                "answer": "Nixon's resignation",
+                "correct": false,
+                "count": 9308
+            },
+            {
+                "answer": "Gettysburg Address",
+                "correct": false,
+                "count": 32605
+            },
+            {
+                "answer": "I Have a Dream",
+                "correct": true,
+                "count": 155876
+            }
+        ]
+    },
+    {
+        "question": "The pronunciation of what state's capital sounds just like a synonym of \"defeated\"?",
+        "questionNumber": 5,
+        "time": 1535764177.8671834,
+        "category": "Geography",
+        "answers": [
+            {
+                "answer": "Rhode Island",
+                "correct": false,
+                "count": 24806
+            },
+            {
+                "answer": "New Hampshire",
+                "correct": true,
+                "count": 47657
+            },
+            {
+                "answer": "Connecticut",
+                "correct": false,
+                "count": 39669
+            }
+        ]
+    },
+    {
+        "question": "Which of these \"Sesame Street\" characters is still mostly played by the original performer?",
+        "questionNumber": 6,
+        "time": 1535764220.382842,
+        "category": "TV",
+        "answers": [
+            {
+                "answer": "Oscar",
+                "correct": true,
+                "count": 26013
+            },
+            {
+                "answer": "Ernie",
+                "correct": false,
+                "count": 13682
+            },
+            {
+                "answer": "Gordon",
+                "correct": false,
+                "count": 12786
+            }
+        ]
+    },
+    {
+        "question": "How does Eggs Florentine typically differ from Eggs Benedict?",
+        "questionNumber": 7,
+        "time": 1535764277.6982334,
+        "category": "Cuisine",
+        "answers": [
+            {
+                "answer": "Different sauce",
+                "correct": false,
+                "count": 9275
+            },
+            {
+                "answer": "Subtracts the muffin",
+                "correct": false,
+                "count": 4829
+            },
+            {
+                "answer": "Swaps in a vegetable",
+                "correct": true,
+                "count": 13644
+            }
+        ]
+    },
+    {
+        "question": "Which of these is an element on the periodic table?",
+        "questionNumber": 8,
+        "time": 1535764314.232734,
+        "category": "Science",
+        "answers": [
+            {
+                "answer": "Bromide",
+                "correct": false,
+                "count": 2554
+            },
+            {
+                "answer": "Barium",
+                "correct": true,
+                "count": 11171
+            },
+            {
+                "answer": "Freon",
+                "correct": false,
+                "count": 982
+            }
+        ]
+    },
+    {
+        "question": "Which of these classic arcade games is a sequel?",
+        "questionNumber": 9,
+        "time": 1535764355.3936794,
+        "category": "Games",
+        "answers": [
+            {
+                "answer": "Joust",
+                "correct": false,
+                "count": 3429
+            },
+            {
+                "answer": "Ghouls 'N Ghosts",
+                "correct": true,
+                "count": 6550
+            },
+            {
+                "answer": "Track & Field",
+                "correct": false,
+                "count": 1611
+            }
+        ]
+    },
+    {
+        "question": "Which of these is NOT a recording speed on blank VHS tapes?",
+        "questionNumber": 10,
+        "time": 1535764396.7484345,
+        "category": "Tech",
+        "answers": [
+            {
+                "answer": "DP",
+                "correct": true,
+                "count": 4718
+            },
+            {
+                "answer": "LP",
+                "correct": false,
+                "count": 1738
+            },
+            {
+                "answer": "SP",
+                "correct": false,
+                "count": 854
+            }
+        ]
+    },
+    {
+        "question": "Which actor has won Razzie awards in both the Worst Actor and Worst Actress categories?",
+        "questionNumber": 11,
+        "time": 1535764445.803077,
+        "category": "Movies",
+        "answers": [
+            {
+                "answer": "John Travolta",
+                "correct": false,
+                "count": 1756
+            },
+            {
+                "answer": "Rob Schneider",
+                "correct": false,
+                "count": 1022
+            },
+            {
+                "answer": "Adam Sandler",
+                "correct": true,
+                "count": 2278
+            }
+        ]
+    },
+    {
+        "question": "After first reading the manuscript of \"Moby-Dick,\" what suggestion did the publisher make?",
+        "questionNumber": 12,
+        "time": 1535764498.6736193,
+        "category": "Literature",
+        "answers": [
+            {
+                "answer": "Make Ahab younger",
+                "correct": false,
+                "count": 510
+            },
+            {
+                "answer": "Lose the whale",
+                "correct": true,
+                "count": 1957
+            },
+            {
+                "answer": "Have female narrator",
+                "correct": false,
+                "count": 235
+            }
+        ]
     }
 ]
