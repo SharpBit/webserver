@@ -803,5 +803,258 @@
                 "count": 235
             }
         ]
+    },
+    {
+        "question": "Which of these is the name of a French dance famous for its high kicks?",
+        "questionNumber": 1,
+        "time": 1535850384.7086523,
+        "category": "Culture",
+        "answers": [
+            {
+                "answer": "Two-liter-two-liter",
+                "correct": false,
+                "count": 7299
+            },
+            {
+                "answer": "Can-can",
+                "correct": true,
+                "count": 349913
+            },
+            {
+                "answer": "Bottle-bottle",
+                "correct": false,
+                "count": 5505
+            }
+        ]
+    },
+    {
+        "question": "What is the word for a landmass like Florida that is surrounded on three sides by water?",
+        "questionNumber": 2,
+        "time": 1535850433.6191907,
+        "category": "Geography",
+        "answers": [
+            {
+                "answer": "Peninsula",
+                "correct": true,
+                "count": 343550
+            },
+            {
+                "answer": "Pinata",
+                "correct": false,
+                "count": 929
+            },
+            {
+                "answer": "Trifecta",
+                "correct": false,
+                "count": 2705
+            }
+        ]
+    },
+    {
+        "question": "Which scientist is the namesake of a \"cage\" that can block electromagnetic fields?",
+        "questionNumber": 4,
+        "time": 1535850548.9391592,
+        "category": "Science",
+        "answers": [
+            {
+                "answer": "Michael Faraday",
+                "correct": true,
+                "count": 66280
+            },
+            {
+                "answer": "Nikola Tesla",
+                "correct": false,
+                "count": 54684
+            },
+            {
+                "answer": "Alessandro Volta",
+                "correct": false,
+                "count": 39830
+            }
+        ]
+    },
+    {
+        "question": "What was the 1989 sequel to the movie \"Fletch\" called?",
+        "questionNumber": 5,
+        "time": 1535850587.5123565,
+        "category": "Movies",
+        "answers": [
+            {
+                "answer": "Fletch Rides Again",
+                "correct": false,
+                "count": 13522
+            },
+            {
+                "answer": "Fletch Lives",
+                "correct": true,
+                "count": 54225
+            },
+            {
+                "answer": "Fletch Is Still Here",
+                "correct": false,
+                "count": 4360
+            }
+        ]
+    },
+    {
+        "question": "Which of these parts of a bird is also the name of a part of a clam?",
+        "questionNumber": 6,
+        "time": 1535850624.4612353,
+        "category": "Nature",
+        "answers": [
+            {
+                "answer": "Beak",
+                "correct": true,
+                "count": 37900
+            },
+            {
+                "answer": "Talon",
+                "correct": false,
+                "count": 8241
+            },
+            {
+                "answer": "Wing",
+                "correct": false,
+                "count": 8284
+            }
+        ]
+    },
+    {
+        "question": "The US pilot episode of \"Yo! MTV Raps\" in 1988 was hosted by what hip-hop act?",
+        "questionNumber": 7,
+        "time": 1535850672.096916,
+        "category": "Entertainment",
+        "answers": [
+            {
+                "answer": "Eric B. & Rakim",
+                "correct": false,
+                "count": 7961
+            },
+            {
+                "answer": "Beastie Boys",
+                "correct": false,
+                "count": 6561
+            },
+            {
+                "answer": "Run-DMC",
+                "correct": true,
+                "count": 23287
+            }
+        ]
+    },
+    {
+        "question": "Who reportedly got his showbiz name from the comedy section of a local newspaper?",
+        "questionNumber": 8,
+        "time": 1535850722.8716872,
+        "category": "Music",
+        "answers": [
+            {
+                "answer": "Bing Crosby",
+                "correct": true,
+                "count": 7438
+            },
+            {
+                "answer": "Duke Ellington",
+                "correct": false,
+                "count": 7895
+            },
+            {
+                "answer": "Milton Berle",
+                "correct": false,
+                "count": 10571
+            }
+        ]
+    },
+    {
+        "question": "Anthropologist Margaret Mead is best known for a 1928 book about girls living where?",
+        "questionNumber": 9,
+        "time": 1535850784.849032,
+        "category": "Literature",
+        "answers": [
+            {
+                "answer": "Sweden",
+                "correct": false,
+                "count": 1074
+            },
+            {
+                "answer": "India",
+                "correct": false,
+                "count": 2936
+            },
+            {
+                "answer": "Samoa",
+                "correct": true,
+                "count": 5949
+            }
+        ]
+    },
+    {
+        "question": "Which of these '80s comedies was directed by a cast member of the original \"Star Trek\"?",
+        "questionNumber": 10,
+        "time": 1535850835.8046532,
+        "category": "Movies",
+        "answers": [
+            {
+                "answer": "Three Men and a Baby",
+                "correct": true,
+                "count": 3591
+            },
+            {
+                "answer": "Porky's",
+                "correct": false,
+                "count": 789
+            },
+            {
+                "answer": "Police Academy",
+                "correct": false,
+                "count": 1936
+            }
+        ]
+    },
+    {
+        "question": "The McGillicuddy Serious Party of New Zealand famously tried to get what animal elected to parliament?",
+        "questionNumber": 11,
+        "time": 1535850892.6087935,
+        "category": "Civics",
+        "answers": [
+            {
+                "answer": "Hedgehog",
+                "correct": true,
+                "count": 2603
+            },
+            {
+                "answer": "Kangaroo",
+                "correct": false,
+                "count": 562
+            },
+            {
+                "answer": "Wildebeest",
+                "correct": false,
+                "count": 539
+            }
+        ]
+    },
+    {
+        "question": "Which TV show features a theme song recorded by the original lead singer of Black Sabbath?",
+        "questionNumber": 12,
+        "time": 1535850936.5687501,
+        "category": "TV",
+        "answers": [
+            {
+                "answer": "American Chopper",
+                "correct": false,
+                "count": 684
+            },
+            {
+                "answer": "Dog the Bounty Hunter",
+                "correct": true,
+                "count": 1461
+            },
+            {
+                "answer": "Pawn Stars",
+                "correct": false,
+                "count": 590
+            }
+        ]
     }
 ]
