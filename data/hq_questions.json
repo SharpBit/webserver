@@ -1056,5 +1056,281 @@
                 "count": 590
             }
         ]
+    },
+    {
+        "question": "For several years, the US Library of Congress kept a log of every single what?",
+        "questionNumber": 1,
+        "time": 1536008774.1328478,
+        "category": "Civics",
+        "answers": [
+            {
+                "answer": "Call you make to grandma",
+                "correct": false,
+                "count": 33149
+            },
+            {
+                "answer": "Second helping of pie",
+                "correct": false,
+                "count": 27871
+            },
+            {
+                "answer": "Tweet",
+                "correct": true,
+                "count": 352542
+            }
+        ]
+    },
+    {
+        "question": "The city of Carlsbad, New Mexico is known for being near what geographical feature?",
+        "questionNumber": 2,
+        "time": 1536008809.5530386,
+        "category": "Geography",
+        "answers": [
+            {
+                "answer": "Caverns",
+                "correct": true,
+                "count": 314761
+            },
+            {
+                "answer": "Leprechaun jungle",
+                "correct": false,
+                "count": 7762
+            },
+            {
+                "answer": "Alpine lakes",
+                "correct": false,
+                "count": 29639
+            }
+        ]
+    },
+    {
+        "question": "Which of these is a common nickname for a person from Wisconsin?",
+        "questionNumber": 3,
+        "time": 1536008841.5177712,
+        "category": "Geography",
+        "answers": [
+            {
+                "answer": "Cheesehead",
+                "correct": true,
+                "count": 308440
+            },
+            {
+                "answer": "Soupnoggin",
+                "correct": false,
+                "count": 4499
+            },
+            {
+                "answer": "Burgerface",
+                "correct": false,
+                "count": 1933
+            }
+        ]
+    },
+    {
+        "question": "The \"A\" in the College Board's SAT exam originally stood for what?",
+        "questionNumber": 4,
+        "time": 1536008868.4122288,
+        "category": "Language",
+        "answers": [
+            {
+                "answer": "Acceptance",
+                "correct": false,
+                "count": 13111
+            },
+            {
+                "answer": "Accuracy",
+                "correct": false,
+                "count": 13515
+            },
+            {
+                "answer": "Aptitude",
+                "correct": true,
+                "count": 280429
+            }
+        ]
+    },
+    {
+        "question": "A rebellion known as the Bear Flag Revolt inspired the current flag of what state?",
+        "questionNumber": 5,
+        "time": 1536008903.973517,
+        "category": "History",
+        "answers": [
+            {
+                "answer": "North Dakota",
+                "correct": false,
+                "count": 28529
+            },
+            {
+                "answer": "Alaska",
+                "correct": false,
+                "count": 53178
+            },
+            {
+                "answer": "California",
+                "correct": true,
+                "count": 197796
+            }
+        ]
+    },
+    {
+        "question": "Cesar Chavez helped improve treatment of farm workers by encouraging a boycott of what produce?",
+        "questionNumber": 6,
+        "time": 1536008938.6893253,
+        "category": "History",
+        "answers": [
+            {
+                "answer": "Grapes",
+                "correct": true,
+                "count": 83530
+            },
+            {
+                "answer": "Potatoes",
+                "correct": false,
+                "count": 41759
+            },
+            {
+                "answer": "Tomatoes",
+                "correct": false,
+                "count": 76269
+            }
+        ]
+    },
+    {
+        "question": "Which of these animal parts is NOT the name of a type of chili pepper?",
+        "questionNumber": 7,
+        "time": 1536008980.6835682,
+        "category": "Cuisine",
+        "answers": [
+            {
+                "answer": "Goat horn",
+                "correct": false,
+                "count": 22506
+            },
+            {
+                "answer": "Elephant trunk",
+                "correct": false,
+                "count": 37047
+            },
+            {
+                "answer": "Cat's paw",
+                "correct": true,
+                "count": 34066
+            }
+        ]
+    },
+    {
+        "question": "An 1846 painting by Thomas Cole is one of the first American depictions of what?",
+        "questionNumber": 8,
+        "time": 1536009011.7677171,
+        "category": "Art & Design",
+        "answers": [
+            {
+                "answer": "Barbecue",
+                "correct": false,
+                "count": 7500
+            },
+            {
+                "answer": "Picnic",
+                "correct": true,
+                "count": 30318
+            },
+            {
+                "answer": "Pool party",
+                "correct": false,
+                "count": 3534
+            }
+        ]
+    },
+    {
+        "question": "In an Oscar-winning role, who formed a union by writing the word \"UNION\" on cardboard?",
+        "questionNumber": 9,
+        "time": 1536009053.4492688,
+        "category": "Movies",
+        "answers": [
+            {
+                "answer": "Marlon Brando",
+                "correct": false,
+                "count": 5706
+            },
+            {
+                "answer": "Meryl Streep",
+                "correct": false,
+                "count": 4660
+            },
+            {
+                "answer": "Sally Field",
+                "correct": true,
+                "count": 21111
+            }
+        ]
+    },
+    {
+        "question": "In the 1980s, which of these comedians emceed a White House Correspondents' Dinner?",
+        "questionNumber": 10,
+        "time": 1536009087.909017,
+        "category": "Entertainment",
+        "answers": [
+            {
+                "answer": "Carrot Top",
+                "correct": false,
+                "count": 3599
+            },
+            {
+                "answer": "Yakov Smirnoff",
+                "correct": true,
+                "count": 10786
+            },
+            {
+                "answer": "Jeff Foxworthy",
+                "correct": false,
+                "count": 7766
+            }
+        ]
+    },
+    {
+        "question": "In 1620, which of these was the first name of one of the passengers on the Mayflower?",
+        "questionNumber": 11,
+        "time": 1536009119.8289437,
+        "category": "History",
+        "answers": [
+            {
+                "answer": "Swimming",
+                "correct": false,
+                "count": 1813
+            },
+            {
+                "answer": "Wrestling",
+                "correct": true,
+                "count": 1480
+            },
+            {
+                "answer": "Leaving",
+                "correct": false,
+                "count": 9132
+            }
+        ]
+    },
+    {
+        "question": "When cheerleaders first became popular in the US, which of these terms was used to refer to them?",
+        "questionNumber": 12,
+        "time": 1536009194.0495832,
+        "category": "History",
+        "answers": [
+            {
+                "answer": "Yell squad",
+                "correct": true,
+                "count": 1675
+            },
+            {
+                "answer": "Rally criers",
+                "correct": false,
+                "count": 991
+            },
+            {
+                "answer": "Spirit saluters",
+                "correct": false,
+                "count": 754
+            }
+        ]
     }
 ]
