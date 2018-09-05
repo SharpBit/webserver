@@ -1332,5 +1332,258 @@
                 "count": 754
             }
         ]
+    },
+    {
+        "question": "Which of these is an Olympic gymnastics event?",
+        "questionNumber": 1,
+        "time": 1536188780.3165693,
+        "category": "Sports",
+        "answers": [
+            {
+                "answer": "Crazy rings",
+                "correct": false,
+                "count": 6869
+            },
+            {
+                "answer": "Uneven bars",
+                "correct": true,
+                "count": 100187
+            },
+            {
+                "answer": "Sloppy pommel horse",
+                "correct": false,
+                "count": 1692
+            }
+        ]
+    },
+    {
+        "question": "In baseball's American League, the position abbreviated as DH stands for \"designated\" what?",
+        "questionNumber": 2,
+        "time": 1536188817.6337967,
+        "category": "Sports",
+        "answers": [
+            {
+                "answer": "Hitter",
+                "correct": true,
+                "count": 97136
+            },
+            {
+                "answer": "Homer",
+                "correct": false,
+                "count": 1602
+            },
+            {
+                "answer": "Hatmaker",
+                "correct": false,
+                "count": 309
+            }
+        ]
+    },
+    {
+        "question": "Who was just announced as a face of Nike's latest massive marketing campaign?",
+        "questionNumber": 3,
+        "time": 1536188846.0392888,
+        "category": "Sports",
+        "answers": [
+            {
+                "answer": "Michael Jordan",
+                "correct": false,
+                "count": 2025
+            },
+            {
+                "answer": "Colin Kaepernick",
+                "correct": true,
+                "count": 91246
+            },
+            {
+                "answer": "Usain Bolt",
+                "correct": false,
+                "count": 2868
+            }
+        ]
+    },
+    {
+        "question": "Which of these leagues' championship has NOT been won by a single franchise three years in a row?",
+        "questionNumber": 4,
+        "time": 1536188877.6211772,
+        "category": "Sports",
+        "answers": [
+            {
+                "answer": "NHL",
+                "correct": false,
+                "count": 23381
+            },
+            {
+                "answer": "NFL",
+                "correct": true,
+                "count": 37169
+            },
+            {
+                "answer": "MLB",
+                "correct": false,
+                "count": 23235
+            }
+        ]
+    },
+    {
+        "question": "What all-time US soccer great just announced his retirement?",
+        "questionNumber": 5,
+        "time": 1536188925.170778,
+        "category": "Sports",
+        "answers": [
+            {
+                "answer": "Christian Pulisic",
+                "correct": false,
+                "count": 4099
+            },
+            {
+                "answer": "Clint Dempsey",
+                "correct": true,
+                "count": 20673
+            },
+            {
+                "answer": "Landon Donovan",
+                "correct": false,
+                "count": 14191
+            }
+        ]
+    },
+    {
+        "question": "Which of these college football teams is NOT referred to with an animal nickname?",
+        "questionNumber": 6,
+        "time": 1536188970.4983993,
+        "category": "Sports",
+        "answers": [
+            {
+                "answer": "Texas A&M",
+                "correct": true,
+                "count": 15932
+            },
+            {
+                "answer": "UCLA",
+                "correct": false,
+                "count": 3797
+            },
+            {
+                "answer": "LSU",
+                "correct": false,
+                "count": 1341
+            }
+        ]
+    },
+    {
+        "question": "Which of these events features by far the tallest trophy?",
+        "questionNumber": 8,
+        "time": 1536189066.1558714,
+        "category": "Sports",
+        "answers": [
+            {
+                "answer": "Wimbledon",
+                "correct": false,
+                "count": 666
+            },
+            {
+                "answer": "America's Cup",
+                "correct": false,
+                "count": 2384
+            },
+            {
+                "answer": "Indy 500",
+                "correct": true,
+                "count": 5055
+            }
+        ]
+    },
+    {
+        "question": "Which of these players has spent the fewest number of weeks at No. 1 overall in the WTA rankings?",
+        "questionNumber": 9,
+        "time": 1536189091.2682943,
+        "category": "Sports",
+        "answers": [
+            {
+                "answer": "Caroline Wozniacki",
+                "correct": false,
+                "count": 1712
+            },
+            {
+                "answer": "Venus Williams",
+                "correct": true,
+                "count": 1725
+            },
+            {
+                "answer": "Maria Sharapova",
+                "correct": false,
+                "count": 1877
+            }
+        ]
+    },
+    {
+        "question": "Which of these terms is used in horse racing to describe an inexperienced jockey?",
+        "questionNumber": 10,
+        "time": 1536189133.6456068,
+        "category": "Sports",
+        "answers": [
+            {
+                "answer": "Bunny hopper",
+                "correct": false,
+                "count": 729
+            },
+            {
+                "answer": "Bug boy",
+                "correct": true,
+                "count": 609
+            },
+            {
+                "answer": "Froggy",
+                "correct": false,
+                "count": 887
+            }
+        ]
+    },
+    {
+        "question": "The first 2-point conversion in NFL history was scored by a player who primarily played what position?",
+        "questionNumber": 11,
+        "time": 1536189171.6457195,
+        "category": "Sports",
+        "answers": [
+            {
+                "answer": "Safety",
+                "correct": false,
+                "count": 178
+            },
+            {
+                "answer": "Punter",
+                "correct": true,
+                "count": 561
+            },
+            {
+                "answer": "Quarterback",
+                "correct": false,
+                "count": 119
+            }
+        ]
+    },
+    {
+        "question": "Which MLB legend has the greatest number of years between winning his first and last batting titles?",
+        "questionNumber": 12,
+        "time": 1536189225.391875,
+        "category": "Sports",
+        "answers": [
+            {
+                "answer": "George Brett",
+                "correct": true,
+                "count": 237
+            },
+            {
+                "answer": "Rod Carew",
+                "correct": false,
+                "count": 155
+            },
+            {
+                "answer": "Tony Gwynn",
+                "correct": false,
+                "count": 193
+            }
+        ]
     }
 ]
