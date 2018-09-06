@@ -1585,5 +1585,281 @@
                 "count": 193
             }
         ]
+    },
+    {
+        "question": "What is the center of a storm often called?",
+        "questionNumber": 1,
+        "time": 1536195994.44064,
+        "category": "Language",
+        "answers": [
+            {
+                "answer": "Belly-button",
+                "correct": false,
+                "count": 4077
+            },
+            {
+                "answer": "Elbow",
+                "correct": false,
+                "count": 2109
+            },
+            {
+                "answer": "Eye",
+                "correct": true,
+                "count": 417549
+            }
+        ]
+    },
+    {
+        "question": "According to an old saying, at what rate do apples keep the doctor away?",
+        "questionNumber": 2,
+        "time": 1536196025.9608617,
+        "category": "Language",
+        "answers": [
+            {
+                "answer": "One per day",
+                "correct": true,
+                "count": 410221
+            },
+            {
+                "answer": "Five per week",
+                "correct": false,
+                "count": 1907
+            },
+            {
+                "answer": "Three every 12 hours",
+                "correct": false,
+                "count": 1074
+            }
+        ]
+    },
+    {
+        "question": "What classic film gave us the line, \"Here's lookin' at you, kid\"?",
+        "questionNumber": 3,
+        "time": 1536196059.3244011,
+        "category": "Movies",
+        "answers": [
+            {
+                "answer": "The Wizard of Oz",
+                "correct": false,
+                "count": 21125
+            },
+            {
+                "answer": "Citizen Kane",
+                "correct": false,
+                "count": 38926
+            },
+            {
+                "answer": "Casablanca",
+                "correct": true,
+                "count": 346374
+            }
+        ]
+    },
+    {
+        "question": "The process of pasteurizing milk mainly involves what?",
+        "questionNumber": 4,
+        "time": 1536196097.9424655,
+        "category": "Science",
+        "answers": [
+            {
+                "answer": "Antibiotics",
+                "correct": false,
+                "count": 51414
+            },
+            {
+                "answer": "Heat",
+                "correct": true,
+                "count": 271179
+            },
+            {
+                "answer": "Centrifuges",
+                "correct": false,
+                "count": 23589
+            }
+        ]
+    },
+    {
+        "question": "Which of these board games does NOT use dice in its original version?",
+        "questionNumber": 5,
+        "time": 1536196131.157696,
+        "category": "Games",
+        "answers": [
+            {
+                "answer": "Sorry!",
+                "correct": true,
+                "count": 78001
+            },
+            {
+                "answer": "Risk",
+                "correct": false,
+                "count": 86974
+            },
+            {
+                "answer": "Mouse Trap",
+                "correct": false,
+                "count": 105949
+            }
+        ]
+    },
+    {
+        "question": "Which sport is Native American in origin?",
+        "questionNumber": 6,
+        "time": 1536196189.8741777,
+        "category": "Sports",
+        "answers": [
+            {
+                "answer": "Bowling",
+                "correct": false,
+                "count": 12068
+            },
+            {
+                "answer": "Lacrosse",
+                "correct": true,
+                "count": 65565
+            },
+            {
+                "answer": "Badminton",
+                "correct": false,
+                "count": 13768
+            }
+        ]
+    },
+    {
+        "question": "Which of these television shows has a male lead that is a professional sportswriter?",
+        "questionNumber": 7,
+        "time": 1536196227.244485,
+        "category": "TV",
+        "answers": [
+            {
+                "answer": "Everybody Loves Raymond",
+                "correct": true,
+                "count": 47067
+            },
+            {
+                "answer": "According to Jim",
+                "correct": false,
+                "count": 14933
+            },
+            {
+                "answer": "My Name Is Earl",
+                "correct": false,
+                "count": 4866
+            }
+        ]
+    },
+    {
+        "question": "In which of these places can it be legal to practice polygamy?",
+        "questionNumber": 8,
+        "time": 1536196265.4900157,
+        "category": "Civics",
+        "answers": [
+            {
+                "answer": "Singapore",
+                "correct": true,
+                "count": 19449
+            },
+            {
+                "answer": "Canada",
+                "correct": false,
+                "count": 8980
+            },
+            {
+                "answer": "Finland",
+                "correct": false,
+                "count": 20086
+            }
+        ]
+    },
+    {
+        "question": "In addition to the Ten Commandments, what is the Ark of the Covenant said to contain?",
+        "questionNumber": 9,
+        "time": 1536196307.8283641,
+        "category": "Culture",
+        "answers": [
+            {
+                "answer": "Crown",
+                "correct": false,
+                "count": 10705
+            },
+            {
+                "answer": "Sandals",
+                "correct": false,
+                "count": 6306
+            },
+            {
+                "answer": "Food",
+                "correct": true,
+                "count": 6240
+            }
+        ]
+    },
+    {
+        "question": "Which of these is NOT a horse coat color?",
+        "questionNumber": 10,
+        "time": 1536196364.4709635,
+        "category": "Nature",
+        "answers": [
+            {
+                "answer": "Cremello",
+                "correct": false,
+                "count": 1495
+            },
+            {
+                "answer": "Skewbald",
+                "correct": false,
+                "count": 2398
+            },
+            {
+                "answer": "Mackerel",
+                "correct": true,
+                "count": 4673
+            }
+        ]
+    },
+    {
+        "question": "In the early 1600s, what kind of question mark was sometimes used to indicate a rhetorical question?",
+        "questionNumber": 11,
+        "time": 1536196412.1811473,
+        "category": "Language",
+        "answers": [
+            {
+                "answer": "Upside down",
+                "correct": false,
+                "count": 2717
+            },
+            {
+                "answer": "Backwards",
+                "correct": true,
+                "count": 1759
+            },
+            {
+                "answer": "Miniature",
+                "correct": false,
+                "count": 622
+            }
+        ]
+    },
+    {
+        "question": "The Beatles were once sued for their song's similarity to one by which of these artists?",
+        "questionNumber": 12,
+        "time": 1536196471.0066385,
+        "category": "Music",
+        "answers": [
+            {
+                "answer": "Roy Orbison",
+                "correct": false,
+                "count": 561
+            },
+            {
+                "answer": "Little Richard",
+                "correct": false,
+                "count": 526
+            },
+            {
+                "answer": "Chuck Berry",
+                "correct": true,
+                "count": 1020
+            }
+        ]
     }
 ]
