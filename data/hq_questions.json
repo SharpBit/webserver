@@ -1861,5 +1861,264 @@
                 "count": 1020
             }
         ]
+    },
+    {
+        "question": "Trains usually run on what structure?",
+        "questionNumber": 1,
+        "time": 1536368700.7993348,
+        "category": "Tech",
+        "answers": [
+            {
+                "answer": "Self-love",
+                "correct": false,
+                "count": 1602
+            },
+            {
+                "answer": "Tracks",
+                "correct": true,
+                "count": 341558
+            },
+            {
+                "answer": "Nitro cold brew",
+                "correct": false,
+                "count": 882
+            }
+        ]
+    },
+    {
+        "question": "A shirt with extremely thin straps is often called what kind of top?",
+        "questionNumber": 2,
+        "time": 1536368730.2156518,
+        "category": "Fashion",
+        "answers": [
+            {
+                "answer": "Spaghetti strap",
+                "correct": true,
+                "count": 332188
+            },
+            {
+                "answer": "Tagliatelle top",
+                "correct": false,
+                "count": 3596
+            },
+            {
+                "answer": "Bucatini blouse",
+                "correct": false,
+                "count": 2490
+            }
+        ]
+    },
+    {
+        "question": "Which of these instruments is usually included in a drumline?",
+        "questionNumber": 3,
+        "time": 1536368759.9918146,
+        "category": "Music",
+        "answers": [
+            {
+                "answer": "Cymbals",
+                "correct": true,
+                "count": 319197
+            },
+            {
+                "answer": "Flute",
+                "correct": false,
+                "count": 8500
+            },
+            {
+                "answer": "Piano",
+                "correct": false,
+                "count": 2148
+            }
+        ]
+    },
+    {
+        "question": "In \"The Lion, the Witch and the Wardrobe,\" what holiday does the White Witch keep from coming to Narnia?",
+        "questionNumber": 4,
+        "time": 1536368792.9189677,
+        "category": "Literature",
+        "answers": [
+            {
+                "answer": "St. Patrick's Day",
+                "correct": false,
+                "count": 13295
+            },
+            {
+                "answer": "Rosh Hashanah",
+                "correct": false,
+                "count": 16702
+            },
+            {
+                "answer": "Christmas",
+                "correct": true,
+                "count": 284308
+            }
+        ]
+    },
+    {
+        "question": "In the Hebrew Bible, King Solomon was best known for having what quality?",
+        "questionNumber": 5,
+        "time": 1536368831.8553126,
+        "category": "Literature",
+        "answers": [
+            {
+                "answer": "Paranoia",
+                "correct": false,
+                "count": 9118
+            },
+            {
+                "answer": "Wisdom",
+                "correct": true,
+                "count": 249938
+            },
+            {
+                "answer": "Cruelty",
+                "correct": false,
+                "count": 25575
+            }
+        ]
+    },
+    {
+        "question": "Which type of energy is NOT prominently utilized in the desk ornament known as Newton's Cradle?",
+        "questionNumber": 6,
+        "time": 1536368866.9080653,
+        "category": "Science",
+        "answers": [
+            {
+                "answer": "Kinetic",
+                "correct": false,
+                "count": 38798
+            },
+            {
+                "answer": "Potential",
+                "correct": false,
+                "count": 40188
+            },
+            {
+                "answer": "Radiant",
+                "correct": true,
+                "count": 168855
+            }
+        ]
+    },
+    {
+        "question": "The director of which film apologized when asked about its negative reputation?",
+        "questionNumber": 7,
+        "time": 1536368906.2330546,
+        "category": "Movies",
+        "answers": [
+            {
+                "answer": "Demolition Man",
+                "correct": false,
+                "count": 48959
+            },
+            {
+                "answer": "Anaconda",
+                "correct": false,
+                "count": 38850
+            },
+            {
+                "answer": "Batman & Robin",
+                "correct": true,
+                "count": 86877
+            }
+        ]
+    },
+    {
+        "question": "The person said to have inspired the Uncle Sam nickname was known for providing soldiers with what?",
+        "questionNumber": 8,
+        "time": 1536368947.4679325,
+        "category": "History",
+        "answers": [
+            {
+                "answer": "Beef",
+                "correct": true,
+                "count": 34777
+            },
+            {
+                "answer": "Uniforms",
+                "correct": false,
+                "count": 31310
+            },
+            {
+                "answer": "Ammunition",
+                "correct": false,
+                "count": 29898
+            }
+        ]
+    },
+    {
+        "question": "Which supermodel was NOT featured in George Michael's iconic \"Freedom! '90\" music video?",
+        "questionNumber": 9,
+        "time": 1536368987.2779858,
+        "category": "Music"
+    },
+    {
+        "question": "Charles Darwin invented his \"competing browsers theory\" to explain what animal's trademark feature?",
+        "questionNumber": 10,
+        "time": 1536369037.172194,
+        "category": "Nature",
+        "answers": [
+            {
+                "answer": "Firefox",
+                "correct": false,
+                "count": 4394
+            },
+            {
+                "answer": "Giraffe",
+                "correct": true,
+                "count": 13462
+            },
+            {
+                "answer": "Peacock",
+                "correct": false,
+                "count": 12627
+            }
+        ]
+    },
+    {
+        "question": "According to Nielsen, which of these sports has the richest fans on average?",
+        "questionNumber": 11,
+        "time": 1536369083.6499784,
+        "category": "Sports",
+        "answers": [
+            {
+                "answer": "Hockey",
+                "correct": true,
+                "count": 3430
+            },
+            {
+                "answer": "Golf",
+                "correct": false,
+                "count": 7385
+            },
+            {
+                "answer": "Tennis",
+                "correct": false,
+                "count": 6175
+            }
+        ]
+    },
+    {
+        "question": "Which of these Spike Lee joints was co-written by a star of \"The Sopranos\"?",
+        "questionNumber": 12,
+        "time": 1536369152.5849183,
+        "category": "Movies",
+        "answers": [
+            {
+                "answer": "Clockers",
+                "correct": false,
+                "count": 1874
+            },
+            {
+                "answer": "Inside Man",
+                "correct": false,
+                "count": 1854
+            },
+            {
+                "answer": "Summer of Sam",
+                "correct": true,
+                "count": 2330
+            }
+        ]
     }
 ]
