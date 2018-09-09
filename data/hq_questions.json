@@ -2120,5 +2120,304 @@
                 "count": 2330
             }
         ]
+    },
+    {
+        "question": "What NFL team's fans cheer by clapping their hands and shouting \"Skol\"?",
+        "questionNumber": 1,
+        "time": 1536509079.3432324,
+        "category": "Sports",
+        "answers": [
+            {
+                "answer": "Dakota Thunderbolts",
+                "correct": false,
+                "count": 20845
+            },
+            {
+                "answer": "Minnesota Vikings",
+                "correct": true,
+                "count": 310138
+            },
+            {
+                "answer": "Caribbean Seadogs",
+                "correct": false,
+                "count": 14832
+            }
+        ]
+    },
+    {
+        "question": "Which of these birds are NOT represented by an NFL team?",
+        "questionNumber": 2,
+        "time": 1536509116.8598557,
+        "category": "Sports",
+        "answers": [
+            {
+                "answer": "Pigeons",
+                "correct": true,
+                "count": 306142
+            },
+            {
+                "answer": "Falcons",
+                "correct": false,
+                "count": 1935
+            },
+            {
+                "answer": "Eagles",
+                "correct": false,
+                "count": 1150
+            }
+        ]
+    },
+    {
+        "question": "Which of these NFL teams currently plays its home games in New York?",
+        "questionNumber": 3,
+        "time": 1536509169.5639484,
+        "category": "Sports",
+        "answers": [
+            {
+                "answer": "Jets",
+                "correct": false,
+                "count": 77160
+            },
+            {
+                "answer": "Giants",
+                "correct": false,
+                "count": 103463
+            },
+            {
+                "answer": "Bills",
+                "correct": true,
+                "count": 118015
+            }
+        ]
+    },
+    {
+        "question": "What NFL Hall of Famer was given the nickname \"Sweetness\"?",
+        "questionNumber": 4,
+        "time": 1536509207.5025177,
+        "category": "Sports",
+        "answers": [
+            {
+                "answer": "Walter Payton",
+                "correct": true,
+                "count": 94798
+            },
+            {
+                "answer": "Deion Sanders",
+                "correct": false,
+                "count": 19871
+            },
+            {
+                "answer": "Jerry Rice",
+                "correct": false,
+                "count": 14410
+            }
+        ]
+    },
+    {
+        "question": "Which country has hosted the greatest number of regular-season NFL games outside of the USA?",
+        "questionNumber": 5,
+        "time": 1536509252.0334854,
+        "category": "Sports",
+        "answers": [
+            {
+                "answer": "England",
+                "correct": true,
+                "count": 79883
+            },
+            {
+                "answer": "Canada",
+                "correct": false,
+                "count": 5256
+            },
+            {
+                "answer": "Mexico",
+                "correct": false,
+                "count": 10872
+            }
+        ]
+    },
+    {
+        "question": "Which of these NFL teams has an official mascot?",
+        "questionNumber": 7,
+        "time": 1536509328.8039021,
+        "category": "Sports",
+        "answers": [
+            {
+                "answer": "Jets",
+                "correct": false,
+                "count": 10953
+            },
+            {
+                "answer": "Packers",
+                "correct": false,
+                "count": 10608
+            },
+            {
+                "answer": "49ers",
+                "correct": true,
+                "count": 30315
+            }
+        ]
+    },
+    {
+        "question": "Which of these players has the highest catch total in a single game?",
+        "questionNumber": 8,
+        "time": 1536509368.284691,
+        "category": "Sports",
+        "answers": [
+            {
+                "answer": "Marvin Harrison",
+                "correct": false,
+                "count": 10943
+            },
+            {
+                "answer": "Terrell Owens",
+                "correct": false,
+                "count": 11229
+            },
+            {
+                "answer": "Brandon Marshall",
+                "correct": true,
+                "count": 11437
+            }
+        ]
+    },
+    {
+        "question": "Which NFL team currently plays home games in the same city the team was founded in?",
+        "questionNumber": 9,
+        "time": 1536509423.0146499,
+        "category": "Sports",
+        "answers": [
+            {
+                "answer": "Chargers",
+                "correct": true,
+                "count": 4200
+            },
+            {
+                "answer": "Colts",
+                "correct": false,
+                "count": 1491
+            },
+            {
+                "answer": "Rams",
+                "correct": false,
+                "count": 8856
+            }
+        ]
+    },
+    {
+        "question": "Bill Walsh and quarterback Virgil Carter developed the West Coast offense on what team?",
+        "questionNumber": 11,
+        "time": 1536509506.6116898,
+        "category": "Sports",
+        "answers": [
+            {
+                "answer": "49ers",
+                "correct": false,
+                "count": 2292
+            },
+            {
+                "answer": "Bengals",
+                "correct": true,
+                "count": 1414
+            },
+            {
+                "answer": "Raiders",
+                "correct": false,
+                "count": 210
+            }
+        ]
+    },
+    {
+        "question": "The only unanimous All-Pro selection in the NFL last season plays what position?",
+        "questionNumber": 12,
+        "time": 1536509546.725603,
+        "category": "Sports",
+        "answers": [
+            {
+                "answer": "Defensive lineman",
+                "correct": false,
+                "count": 1115
+            },
+            {
+                "answer": "Quarterback",
+                "correct": false,
+                "count": 119
+            },
+            {
+                "answer": "Wide receiver",
+                "correct": true,
+                "count": 487
+            }
+        ]
+    },
+    {
+        "question": "Which NFL franchise is NOT among the top three in all-time regular-season games played?",
+        "questionNumber": 13,
+        "time": 1536509588.0963016,
+        "category": "Sports",
+        "answers": [
+            {
+                "answer": "Packers",
+                "correct": false,
+                "count": 116
+            },
+            {
+                "answer": "Cardinals",
+                "correct": false,
+                "count": 262
+            },
+            {
+                "answer": "Lions",
+                "correct": true,
+                "count": 264
+            }
+        ]
+    },
+    {
+        "question": "Of these quarterbacks, which has had the highest single-season passer rating?",
+        "questionNumber": 14,
+        "time": 1536509628.8194814,
+        "category": "Sports",
+        "answers": [
+            {
+                "answer": "Robert Griffin III",
+                "correct": false,
+                "count": 66
+            },
+            {
+                "answer": "Tony Romo",
+                "correct": false,
+                "count": 52
+            },
+            {
+                "answer": "Nick Foles",
+                "correct": true,
+                "count": 210
+            }
+        ]
+    },
+    {
+        "question": "In the 1940s, rival NFL teams in what state combined to form a single team?",
+        "questionNumber": 15,
+        "time": 1536509684.6676867,
+        "category": "Sports",
+        "answers": [
+            {
+                "answer": "California",
+                "correct": false,
+                "count": 12
+            },
+            {
+                "answer": "Pennsylvania",
+                "correct": true,
+                "count": 175
+            },
+            {
+                "answer": "Illinois",
+                "correct": false,
+                "count": 33
+            }
+        ]
     }
 ]
