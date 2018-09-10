@@ -2419,5 +2419,281 @@
                 "count": 33
             }
         ]
+    },
+    {
+        "question": "What is it called when a basketball player gets 10 points, 10 assists, and 10 rebounds in a single game?",
+        "questionNumber": 1,
+        "time": 1536620670.2540805,
+        "category": "Sports",
+        "answers": [
+            {
+                "answer": "Triple-double",
+                "correct": true,
+                "count": 113563
+            },
+            {
+                "answer": "Double-double with sauce",
+                "correct": false,
+                "count": 3635
+            },
+            {
+                "answer": "Dipsy-doodle",
+                "correct": false,
+                "count": 1297
+            }
+        ]
+    },
+    {
+        "question": "Which of these prizes is awarded to the most outstanding college football player of the year?",
+        "questionNumber": 2,
+        "time": 1536620702.1431766,
+        "category": "Sports",
+        "answers": [
+            {
+                "answer": "Heisman Trophy",
+                "correct": true,
+                "count": 111026
+            },
+            {
+                "answer": "Golden Fidget Spinner",
+                "correct": false,
+                "count": 836
+            },
+            {
+                "answer": "Nobel Prize",
+                "correct": false,
+                "count": 893
+            }
+        ]
+    },
+    {
+        "question": "What unusual NFL event happened yesterday?",
+        "questionNumber": 3,
+        "time": 1536620760.842747,
+        "category": "Sports",
+        "answers": [
+            {
+                "answer": "Longest game since merge",
+                "correct": true,
+                "count": 54438
+            },
+            {
+                "answer": "Unfinished game",
+                "correct": false,
+                "count": 33171
+            },
+            {
+                "answer": "Scoreless game",
+                "correct": false,
+                "count": 20628
+            }
+        ]
+    },
+    {
+        "question": "Which of these athletes won their Olympic gold medal in softball?",
+        "questionNumber": 4,
+        "time": 1536620809.2397995,
+        "category": "Sports",
+        "answers": [
+            {
+                "answer": "Dara Torres",
+                "correct": false,
+                "count": 4564
+            },
+            {
+                "answer": "Jennie Finch",
+                "correct": true,
+                "count": 46239
+            },
+            {
+                "answer": "Bonnie Blair",
+                "correct": false,
+                "count": 5472
+            }
+        ]
+    },
+    {
+        "question": "What is the MLB ruling when a pitched ball bounces off the ground and then hits the batter?",
+        "questionNumber": 5,
+        "time": 1536620842.8421962,
+        "category": "Sports",
+        "answers": [
+            {
+                "answer": "Ball",
+                "correct": false,
+                "count": 15315
+            },
+            {
+                "answer": "Runner takes first",
+                "correct": true,
+                "count": 19928
+            },
+            {
+                "answer": "Foul",
+                "correct": false,
+                "count": 10244
+            }
+        ]
+    },
+    {
+        "question": "Who was the last US women's tennis player to win a singles Grand Slam tournament final?",
+        "questionNumber": 6,
+        "time": 1536620882.0063672,
+        "category": "Sports",
+        "answers": [
+            {
+                "answer": "Madison Keys",
+                "correct": false,
+                "count": 2561
+            },
+            {
+                "answer": "Sloane Stephens",
+                "correct": true,
+                "count": 8049
+            },
+            {
+                "answer": "Serena Williams",
+                "correct": false,
+                "count": 11330
+            }
+        ]
+    },
+    {
+        "question": "What MLB pitcher was once so dominant during a no-hitter that a batter brought a table leg to the plate?",
+        "questionNumber": 7,
+        "time": 1536620937.6684663,
+        "category": "Sports",
+        "answers": [
+            {
+                "answer": "Nolan Ryan",
+                "correct": true,
+                "count": 3739
+            },
+            {
+                "answer": "Roger Clemens",
+                "correct": false,
+                "count": 1245
+            },
+            {
+                "answer": "Sandy Koufax",
+                "correct": false,
+                "count": 4067
+            }
+        ]
+    },
+    {
+        "question": "The most recent Tour de France was won by a racer born where?",
+        "questionNumber": 8,
+        "time": 1536620981.755577,
+        "category": "Sports",
+        "answers": [
+            {
+                "answer": "USA",
+                "correct": false,
+                "count": 276
+            },
+            {
+                "answer": "United Kingdom",
+                "correct": true,
+                "count": 3053
+            },
+            {
+                "answer": "Kenya",
+                "correct": false,
+                "count": 966
+            }
+        ]
+    },
+    {
+        "question": "Which of these players did NOT score 80 goals in a single NHL season?",
+        "questionNumber": 9,
+        "time": 1536621013.658099,
+        "category": "Sports",
+        "answers": [
+            {
+                "answer": "Brett Hull",
+                "correct": false,
+                "count": 977
+            },
+            {
+                "answer": "Mario Lemieux",
+                "correct": false,
+                "count": 601
+            },
+            {
+                "answer": "Gordie Howe",
+                "correct": true,
+                "count": 1586
+            }
+        ]
+    },
+    {
+        "question": "In 2018, \"Forbes\" ranked what franchise as the world's second-most valuable, just behind the Dallas Cowboys?",
+        "questionNumber": 10,
+        "time": 1536621052.0437732,
+        "category": "Sports",
+        "answers": [
+            {
+                "answer": "FC Barcelona",
+                "correct": false,
+                "count": 165
+            },
+            {
+                "answer": "Manchester United",
+                "correct": true,
+                "count": 1145
+            },
+            {
+                "answer": "Real Madrid",
+                "correct": false,
+                "count": 471
+            }
+        ]
+    },
+    {
+        "question": "Which player has the highest yards-per-carry average in a 2000-yard season?",
+        "questionNumber": 11,
+        "time": 1536621090.5708442,
+        "category": "Sports",
+        "answers": [
+            {
+                "answer": "Adrian Peterson",
+                "correct": false,
+                "count": 234
+            },
+            {
+                "answer": "Barry Sanders",
+                "correct": true,
+                "count": 472
+            },
+            {
+                "answer": "Eric Dickerson",
+                "correct": false,
+                "count": 558
+            }
+        ]
+    },
+    {
+        "question": "What team won back-to-back World Series titles first?",
+        "questionNumber": 12,
+        "time": 1536621150.3725502,
+        "category": "Sports",
+        "answers": [
+            {
+                "answer": "Tigers",
+                "correct": false,
+                "count": 179
+            },
+            {
+                "answer": "Yankees",
+                "correct": false,
+                "count": 111
+            },
+            {
+                "answer": "Cubs",
+                "correct": true,
+                "count": 340
+            }
+        ]
     }
 ]
