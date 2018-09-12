@@ -2695,5 +2695,264 @@
                 "count": 340
             }
         ]
+    },
+    {
+        "question": "The large television screen at sporting events is known as what?",
+        "questionNumber": 1,
+        "time": 1536714347.8928049,
+        "category": "Tech"
+    },
+    {
+        "question": "In order to be legally wed, what does a couple usually need?",
+        "questionNumber": 2,
+        "time": 1536714379.7564907,
+        "category": "Civics",
+        "answers": [
+            {
+                "answer": "License",
+                "correct": true,
+                "count": 349829
+            },
+            {
+                "answer": "Lotta love",
+                "correct": false,
+                "count": 1796
+            },
+            {
+                "answer": "Listening skills",
+                "correct": false,
+                "count": 820
+            }
+        ]
+    },
+    {
+        "question": "In politics, a US president's last term is colloquially known as what?",
+        "questionNumber": 3,
+        "time": 1536714411.480783,
+        "category": "Civics",
+        "answers": [
+            {
+                "answer": "Silly goose",
+                "correct": false,
+                "count": 6732
+            },
+            {
+                "answer": "Wise owl",
+                "correct": false,
+                "count": 76976
+            },
+            {
+                "answer": "Lame duck",
+                "correct": true,
+                "count": 260750
+            }
+        ]
+    },
+    {
+        "question": "Marco Polo likely believed which animal was a unicorn?",
+        "questionNumber": 4,
+        "time": 1536714449.6633255,
+        "category": "Nature",
+        "answers": [
+            {
+                "answer": "Zebra",
+                "correct": false,
+                "count": 29941
+            },
+            {
+                "answer": "Narwhal",
+                "correct": false,
+                "count": 111512
+            },
+            {
+                "answer": "Rhinoceros",
+                "correct": true,
+                "count": 120493
+            }
+        ]
+    },
+    {
+        "question": "In the lyrics of Shaggy's hit song \"It Wasn't Me,\" who was his friend having an affair with?",
+        "questionNumber": 5,
+        "time": 1536714495.0557199,
+        "category": "Music",
+        "answers": [
+            {
+                "answer": "Sexy lady",
+                "correct": false,
+                "count": 12671
+            },
+            {
+                "answer": "Girl next door",
+                "correct": true,
+                "count": 102110
+            },
+            {
+                "answer": "Darling angel",
+                "correct": false,
+                "count": 10366
+            }
+        ]
+    },
+    {
+        "question": "Which Central American country claims English as its official language?",
+        "questionNumber": 6,
+        "time": 1536714534.6871355,
+        "category": "Geography",
+        "answers": [
+            {
+                "answer": "Belize",
+                "correct": true,
+                "count": 42394
+            },
+            {
+                "answer": "Panama",
+                "correct": false,
+                "count": 36664
+            },
+            {
+                "answer": "Costa Rica",
+                "correct": false,
+                "count": 23410
+            }
+        ]
+    },
+    {
+        "question": "The Monopoly mascot wears which of these accessories?",
+        "questionNumber": 7,
+        "time": 1536714572.244033,
+        "category": "Games",
+        "answers": [
+            {
+                "answer": "Glasses",
+                "correct": false,
+                "count": 1541
+            },
+            {
+                "answer": "Monocle",
+                "correct": false,
+                "count": 33621
+            },
+            {
+                "answer": "Neither",
+                "correct": true,
+                "count": 10702
+            }
+        ]
+    },
+    {
+        "question": "GPS was originally launched by which of these?",
+        "questionNumber": 8,
+        "time": 1536714622.8040578,
+        "category": "Tech",
+        "answers": [
+            {
+                "answer": "Car company",
+                "correct": false,
+                "count": 1370
+            },
+            {
+                "answer": "Insurance company",
+                "correct": false,
+                "count": 2833
+            },
+            {
+                "answer": "Government agency",
+                "correct": true,
+                "count": 10667
+            }
+        ]
+    },
+    {
+        "question": "Jealousy was first referred to as the \"green-eyed monster\" in which Shakespeare play?",
+        "questionNumber": 9,
+        "time": 1536714661.0804765,
+        "category": "Literature",
+        "answers": [
+            {
+                "answer": "Hamlet",
+                "correct": false,
+                "count": 1292
+            },
+            {
+                "answer": "Macbeth",
+                "correct": false,
+                "count": 2809
+            },
+            {
+                "answer": "Othello",
+                "correct": true,
+                "count": 6963
+            }
+        ]
+    },
+    {
+        "question": "Which of these car companies was the first to offer air-conditioned cars?",
+        "questionNumber": 10,
+        "time": 1536714706.1698961,
+        "category": "Tech",
+        "answers": [
+            {
+                "answer": "Packard",
+                "correct": true,
+                "count": 4967
+            },
+            {
+                "answer": "GM",
+                "correct": false,
+                "count": 1627
+            },
+            {
+                "answer": "Ford",
+                "correct": false,
+                "count": 890
+            }
+        ]
+    },
+    {
+        "question": "According to the lyrics, \"The Urkel Dance\" is better than what?",
+        "questionNumber": 11,
+        "time": 1536714741.4022698,
+        "category": "Music",
+        "answers": [
+            {
+                "answer": "Prince",
+                "correct": false,
+                "count": 352
+            },
+            {
+                "answer": "Michael",
+                "correct": false,
+                "count": 1060
+            },
+            {
+                "answer": "Elvis",
+                "correct": true,
+                "count": 3826
+            }
+        ]
+    },
+    {
+        "question": "Which of these films did NOT come out while the \"Titanic\" soundtrack was No. 1 on the Billboard 200?",
+        "questionNumber": 12,
+        "time": 1536714789.7214477,
+        "category": "Movies",
+        "answers": [
+            {
+                "answer": "Space Jam",
+                "correct": true,
+                "count": 2027
+            },
+            {
+                "answer": "The Big Lebowski",
+                "correct": false,
+                "count": 747
+            },
+            {
+                "answer": "Blues Brothers 2000",
+                "correct": false,
+                "count": 1229
+            }
+        ]
     }
 ]
