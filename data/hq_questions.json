@@ -2954,5 +2954,264 @@
                 "count": 1229
             }
         ]
+    },
+    {
+        "question": "Who just unveiled their latest collection of Savage X Fenty lingerie at New York Fashion Week?",
+        "questionNumber": 1,
+        "time": 1536887203.1400287,
+        "category": "Fashion",
+        "answers": [
+            {
+                "answer": "Rihanna",
+                "correct": true,
+                "count": 340973
+            },
+            {
+                "answer": "Paul McCartney",
+                "correct": false,
+                "count": 12334
+            },
+            {
+                "answer": "Elon Musk",
+                "correct": false,
+                "count": 14726
+            }
+        ]
+    },
+    {
+        "question": "In fashion, LBD usually stands for what?",
+        "questionNumber": 2,
+        "time": 1536887258.3518507,
+        "category": "Fashion",
+        "answers": [
+            {
+                "answer": "Little Black Dress",
+                "correct": true,
+                "count": 336303
+            },
+            {
+                "answer": "Lotta Bank Deposits",
+                "correct": false,
+                "count": 1725
+            },
+            {
+                "answer": "Let's Buy Dungarees",
+                "correct": false,
+                "count": 1309
+            }
+        ]
+    },
+    {
+        "question": "Which of these is the name of a denim wash popular in the '80s?",
+        "questionNumber": 3,
+        "time": 1536887303.0404801,
+        "category": "Fashion"
+    },
+    {
+        "question": "Emmy winner Tim Gunn frequently gives what piece of advice on \"Project Runway\"?",
+        "questionNumber": 4,
+        "time": 1536887354.8686426,
+        "category": "Fashion",
+        "answers": [
+            {
+                "answer": "When in doubt, wear red",
+                "correct": false,
+                "count": 50952
+            },
+            {
+                "answer": "Make it work",
+                "correct": true,
+                "count": 232531
+            },
+            {
+                "answer": "Excess is success",
+                "correct": false,
+                "count": 34047
+            }
+        ]
+    },
+    {
+        "question": "What designer directed an Oscar-nominated feature film?",
+        "questionNumber": 5,
+        "time": 1536887428.4809003,
+        "category": "Fashion",
+        "answers": [
+            {
+                "answer": "Tom Ford",
+                "correct": true,
+                "count": 139325
+            },
+            {
+                "answer": "Thom Browne",
+                "correct": false,
+                "count": 22212
+            },
+            {
+                "answer": "Isaac Mizrahi",
+                "correct": false,
+                "count": 73381
+            }
+        ]
+    },
+    {
+        "question": "Which designer once worked as Christian Dior's assistant?",
+        "questionNumber": 6,
+        "time": 1536887475.7538974,
+        "category": "Fashion",
+        "answers": [
+            {
+                "answer": "Yves Saint Laurent",
+                "correct": true,
+                "count": 69898
+            },
+            {
+                "answer": "Coco Chanel",
+                "correct": false,
+                "count": 48107
+            },
+            {
+                "answer": "Hubert de Givenchy",
+                "correct": false,
+                "count": 25722
+            }
+        ]
+    },
+    {
+        "question": "Who famously used robots in a runway show to spray paint on a model's dress?",
+        "questionNumber": 7,
+        "time": 1536887525.9882274,
+        "category": "Fashion",
+        "answers": [
+            {
+                "answer": "Iris van Herpen",
+                "correct": false,
+                "count": 3962
+            },
+            {
+                "answer": "Christian Louboutin",
+                "correct": false,
+                "count": 15084
+            },
+            {
+                "answer": "Alexander McQueen",
+                "correct": true,
+                "count": 55374
+            }
+        ]
+    },
+    {
+        "question": "Which designer maintained an eponymous label while simultaneously designing for Louis Vuitton?",
+        "questionNumber": 8,
+        "time": 1536887569.338445,
+        "category": "Fashion",
+        "answers": [
+            {
+                "answer": "Michael Kors",
+                "correct": false,
+                "count": 15799
+            },
+            {
+                "answer": "Calvin Klein",
+                "correct": false,
+                "count": 6456
+            },
+            {
+                "answer": "Marc Jacobs",
+                "correct": true,
+                "count": 34084
+            }
+        ]
+    },
+    {
+        "question": "Who was the first African-American model to appear on the cover of American \"Vogue\"?",
+        "questionNumber": 9,
+        "time": 1536887615.3831549,
+        "category": "Fashion",
+        "answers": [
+            {
+                "answer": "Iman",
+                "correct": false,
+                "count": 13489
+            },
+            {
+                "answer": "Beverly Johnson",
+                "correct": true,
+                "count": 15914
+            },
+            {
+                "answer": "Tyra Banks",
+                "correct": false,
+                "count": 6842
+            }
+        ]
+    },
+    {
+        "question": "Which person was in the same Fendi intern class as Kanye West?",
+        "questionNumber": 10,
+        "time": 1536887661.9921577,
+        "category": "Fashion",
+        "answers": [
+            {
+                "answer": "Sophia Amoruso",
+                "correct": false,
+                "count": 4814
+            },
+            {
+                "answer": "Virgil Abloh",
+                "correct": true,
+                "count": 10475
+            },
+            {
+                "answer": "Jenna Lyons",
+                "correct": false,
+                "count": 3393
+            }
+        ]
+    },
+    {
+        "question": "Which designer is known for wrapping up fashion shows with a brief display of gymnastics?",
+        "questionNumber": 11,
+        "time": 1536887706.4644454,
+        "category": "Fashion",
+        "answers": [
+            {
+                "answer": "Rick Owens",
+                "correct": false,
+                "count": 6316
+            },
+            {
+                "answer": "Betsey Johnson",
+                "correct": true,
+                "count": 4281
+            },
+            {
+                "answer": "Stella McCartney",
+                "correct": false,
+                "count": 859
+            }
+        ]
+    },
+    {
+        "question": "Legendary fashion editor Anna Wintour was once fired from what magazine?",
+        "questionNumber": 12,
+        "time": 1536887761.23157,
+        "category": "Fashion",
+        "answers": [
+            {
+                "answer": "Vogue UK",
+                "correct": false,
+                "count": 1713
+            },
+            {
+                "answer": "Harper's Bazaar",
+                "correct": true,
+                "count": 3024
+            },
+            {
+                "answer": "Vanity Fair",
+                "correct": false,
+                "count": 1875
+            }
+        ]
     }
 ]
