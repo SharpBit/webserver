@@ -3213,5 +3213,258 @@
                 "count": 1875
             }
         ]
+    },
+    {
+        "question": "Chopsticks are traditionally used to eat what kind of food?",
+        "questionNumber": 1,
+        "time": 1537059842.0003536,
+        "category": "Cuisine",
+        "answers": [
+            {
+                "answer": "French fries",
+                "correct": false,
+                "count": 2486
+            },
+            {
+                "answer": "Bananas",
+                "correct": false,
+                "count": 1310
+            },
+            {
+                "answer": "Sushi",
+                "correct": true,
+                "count": 303852
+            }
+        ]
+    },
+    {
+        "question": "Which characteristic do both birds and planes share?",
+        "questionNumber": 2,
+        "time": 1537059898.2494695,
+        "category": "Science",
+        "answers": [
+            {
+                "answer": "Lay eggs",
+                "correct": false,
+                "count": 3718
+            },
+            {
+                "answer": "Have wings",
+                "correct": true,
+                "count": 295306
+            },
+            {
+                "answer": "Can peck you",
+                "correct": false,
+                "count": 1272
+            }
+        ]
+    },
+    {
+        "question": "Long John Silver is the villain of what classic novel?",
+        "questionNumber": 4,
+        "time": 1537059943.724242,
+        "category": "Literature",
+        "answers": [
+            {
+                "answer": "Robinson Crusoe",
+                "correct": false,
+                "count": 31682
+            },
+            {
+                "answer": "Moby-Dick",
+                "correct": false,
+                "count": 34093
+            },
+            {
+                "answer": "Treasure Island",
+                "correct": true,
+                "count": 200583
+            }
+        ]
+    },
+    {
+        "question": "British comedian Ricky Gervais won an \"Outstanding Lead Actor\" Emmy thanks to what TV series?",
+        "questionNumber": 5,
+        "time": 1537059980.302995,
+        "category": "TV",
+        "answers": [
+            {
+                "answer": "Extras",
+                "correct": true,
+                "count": 31532
+            },
+            {
+                "answer": "The Office",
+                "correct": false,
+                "count": 149242
+            },
+            {
+                "answer": "Derek",
+                "correct": false,
+                "count": 19031
+            }
+        ]
+    },
+    {
+        "question": "Viewed from Earth, what other planets in our solar system can appear to move in \"retrograde\" motion?",
+        "questionNumber": 6,
+        "time": 1537060039.7443628,
+        "category": "Science",
+        "answers": [
+            {
+                "answer": "All of them",
+                "correct": true,
+                "count": 12610
+            },
+            {
+                "answer": "None of them",
+                "correct": false,
+                "count": 6611
+            },
+            {
+                "answer": "Mercury only",
+                "correct": false,
+                "count": 20546
+            }
+        ]
+    },
+    {
+        "question": "In politics, which of these words is NOT part of the acronym Super PAC?",
+        "questionNumber": 7,
+        "time": 1537060088.257712,
+        "category": "Civics",
+        "answers": [
+            {
+                "answer": "Political",
+                "correct": false,
+                "count": 1603
+            },
+            {
+                "answer": "Action",
+                "correct": false,
+                "count": 1710
+            },
+            {
+                "answer": "Community",
+                "correct": true,
+                "count": 11144
+            }
+        ]
+    },
+    {
+        "question": "Hunter S. Thompson said what kind of journalism requires believing \"anything you're told\"?",
+        "questionNumber": 8,
+        "time": 1537060127.9337196,
+        "category": "Literature",
+        "answers": [
+            {
+                "answer": "Political",
+                "correct": false,
+                "count": 7528
+            },
+            {
+                "answer": "Entertainment",
+                "correct": false,
+                "count": 2696
+            },
+            {
+                "answer": "Sports",
+                "correct": true,
+                "count": 1156
+            }
+        ]
+    },
+    {
+        "question": "A deliberately \"gross\" version of the Easy Bake Oven was sold under what name?",
+        "questionNumber": 9,
+        "time": 1537060182.6149058,
+        "category": "Games",
+        "answers": [
+            {
+                "answer": "Grossy Bake Oven",
+                "correct": false,
+                "count": 714
+            },
+            {
+                "answer": "Queasy-Bake Cookerator",
+                "correct": true,
+                "count": 1137
+            },
+            {
+                "answer": "Creepy Crock Pot",
+                "correct": false,
+                "count": 574
+            }
+        ]
+    },
+    {
+        "question": "Which day of the week does NOT get name-checked in Rebecca Black's viral hit \"Friday\"?",
+        "questionNumber": 10,
+        "time": 1537060223.7924197,
+        "category": "Music",
+        "answers": [
+            {
+                "answer": "Thursday",
+                "correct": false,
+                "count": 207
+            },
+            {
+                "answer": "Sunday",
+                "correct": false,
+                "count": 447
+            },
+            {
+                "answer": "Tuesday",
+                "correct": true,
+                "count": 543
+            }
+        ]
+    },
+    {
+        "question": "Which of these films was directed by the same person as \"Sleepless in Seattle\"?",
+        "questionNumber": 11,
+        "time": 1537060263.4479866,
+        "category": "Movies",
+        "answers": [
+            {
+                "answer": "French Kiss",
+                "correct": false,
+                "count": 82
+            },
+            {
+                "answer": "You've Got Mail",
+                "correct": true,
+                "count": 313
+            },
+            {
+                "answer": "When Harry Met Sally",
+                "correct": false,
+                "count": 228
+            }
+        ]
+    },
+    {
+        "question": "Which of these catchphrases was featured in a '90s sitcom that had its own Super Nintendo video game?",
+        "questionNumber": 12,
+        "time": 1537060319.0360234,
+        "category": "Games",
+        "answers": [
+            {
+                "answer": "Have mercy!",
+                "correct": false,
+                "count": 91
+            },
+            {
+                "answer": "Did I do that?",
+                "correct": false,
+                "count": 132
+            },
+            {
+                "answer": "I don't think so Tim!",
+                "correct": true,
+                "count": 105
+            }
+        ]
     }
 ]
