@@ -3466,5 +3466,258 @@
                 "count": 105
             }
         ]
+    },
+    {
+        "question": "What Al Davis catchphrase eventually  became the Raiders team motto?",
+        "questionNumber": 2,
+        "time": 1537225514.1976388,
+        "category": "Sports",
+        "answers": [
+            {
+                "answer": "Raiders gotta raid",
+                "correct": false,
+                "count": 24992
+            },
+            {
+                "answer": "Just win, baby",
+                "correct": true,
+                "count": 83050
+            },
+            {
+                "answer": "Leeroy Jenkins!",
+                "correct": false,
+                "count": 6605
+            }
+        ]
+    },
+    {
+        "question": "In what series did the recently retired Danica Patrick have her best finish?",
+        "questionNumber": 3,
+        "time": 1537225556.7891688,
+        "category": "Sports",
+        "answers": [
+            {
+                "answer": "Formula 1",
+                "correct": false,
+                "count": 12496
+            },
+            {
+                "answer": "NASCAR Cup Series",
+                "correct": false,
+                "count": 32147
+            },
+            {
+                "answer": "IndyCar",
+                "correct": true,
+                "count": 39072
+            }
+        ]
+    },
+    {
+        "question": "What did NFL cornerback Vontae Davis do at halftime of yesterday's Bills game?",
+        "questionNumber": 4,
+        "time": 1537225596.761857,
+        "category": "Sports",
+        "answers": [
+            {
+                "answer": "Go to wrong locker room",
+                "correct": false,
+                "count": 4876
+            },
+            {
+                "answer": "Throw a birthday party",
+                "correct": false,
+                "count": 1054
+            },
+            {
+                "answer": "Decide to retire",
+                "correct": true,
+                "count": 38878
+            }
+        ]
+    },
+    {
+        "question": "Which city was NOT represented in this year's WNBA Finals?",
+        "questionNumber": 5,
+        "time": 1537225637.3461778,
+        "category": "Sports",
+        "answers": [
+            {
+                "answer": "Minneapolis",
+                "correct": true,
+                "count": 17531
+            },
+            {
+                "answer": "Washington DC",
+                "correct": false,
+                "count": 16509
+            },
+            {
+                "answer": "Seattle",
+                "correct": false,
+                "count": 5080
+            }
+        ]
+    },
+    {
+        "question": "Of these MLB statistics, which does outfielder Terrance Gore have the most of this season?",
+        "questionNumber": 6,
+        "time": 1537225679.1438408,
+        "category": "Sports",
+        "answers": [
+            {
+                "answer": "Putouts",
+                "correct": false,
+                "count": 8435
+            },
+            {
+                "answer": "Plate appearances",
+                "correct": false,
+                "count": 3445
+            },
+            {
+                "answer": "Stolen bases",
+                "correct": true,
+                "count": 8828
+            }
+        ]
+    },
+    {
+        "question": "The college that won the first back-to-back NCAA men's basketball titles is located where?",
+        "questionNumber": 7,
+        "time": 1537225717.709552,
+        "category": "Sports",
+        "answers": [
+            {
+                "answer": "North Carolina",
+                "correct": false,
+                "count": 4530
+            },
+            {
+                "answer": "Oklahoma",
+                "correct": true,
+                "count": 1484
+            },
+            {
+                "answer": "California",
+                "correct": false,
+                "count": 5000
+            }
+        ]
+    },
+    {
+        "question": "Which of these young quarterbacks has been a part of more NFL teams than the others?",
+        "questionNumber": 8,
+        "time": 1537225758.963798,
+        "category": "Sports",
+        "answers": [
+            {
+                "answer": "Christian Hackenberg",
+                "correct": true,
+                "count": 1375
+            },
+            {
+                "answer": "Jacoby Brissett",
+                "correct": false,
+                "count": 1103
+            },
+            {
+                "answer": "DeShone Kizer",
+                "correct": false,
+                "count": 676
+            }
+        ]
+    },
+    {
+        "question": "What is the only Premier League team to finish top three in each of the last three seasons?",
+        "questionNumber": 9,
+        "time": 1537225793.962103,
+        "category": "Sports",
+        "answers": [
+            {
+                "answer": "Chelsea",
+                "correct": false,
+                "count": 514
+            },
+            {
+                "answer": "Manchester United",
+                "correct": false,
+                "count": 387
+            },
+            {
+                "answer": "Tottenham Hotspur",
+                "correct": true,
+                "count": 628
+            }
+        ]
+    },
+    {
+        "question": "Which MLB team was the last to have two different players win the MVP in back-to-back years?",
+        "questionNumber": 10,
+        "time": 1537225827.3657176,
+        "category": "Sports",
+        "answers": [
+            {
+                "answer": "Yankees",
+                "correct": false,
+                "count": 168
+            },
+            {
+                "answer": "Tigers",
+                "correct": true,
+                "count": 281
+            },
+            {
+                "answer": "Phillies",
+                "correct": false,
+                "count": 289
+            }
+        ]
+    },
+    {
+        "question": "Which of these is found on the official NBA game ball?",
+        "questionNumber": 11,
+        "time": 1537225871.9212964,
+        "category": "Sports",
+        "answers": [
+            {
+                "answer": "NBA Twitter handle",
+                "correct": true,
+                "count": 93
+            },
+            {
+                "answer": "NBA website",
+                "correct": false,
+                "count": 79
+            },
+            {
+                "answer": "Holographic sticker",
+                "correct": false,
+                "count": 177
+            }
+        ]
+    },
+    {
+        "question": "By definition, what trophy is given to the best first-year NHL player?",
+        "questionNumber": 12,
+        "time": 1537225918.2817824,
+        "category": "Sports",
+        "answers": [
+            {
+                "answer": "Calder",
+                "correct": true,
+                "count": 76
+            },
+            {
+                "answer": "Vezina",
+                "correct": false,
+                "count": 23
+            },
+            {
+                "answer": "Hart",
+                "correct": false,
+                "count": 20
+            }
+        ]
     }
 ]
