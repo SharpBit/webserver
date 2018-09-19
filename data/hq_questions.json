@@ -3719,5 +3719,264 @@
                 "count": 20
             }
         ]
+    },
+    {
+        "question": "According to the old adage, where is the grass always greener?",
+        "questionNumber": 1,
+        "time": 1537319069.4307709,
+        "category": "Nature"
+    },
+    {
+        "question": "What does a car's \"torque\" refer to?",
+        "questionNumber": 2,
+        "time": 1537319097.1253898,
+        "category": "Science",
+        "answers": [
+            {
+                "answer": "Angry honking power",
+                "correct": false,
+                "count": 4579
+            },
+            {
+                "answer": "Wheel turning power",
+                "correct": true,
+                "count": 328300
+            },
+            {
+                "answer": "Emotional soothing power",
+                "correct": false,
+                "count": 4098
+            }
+        ]
+    },
+    {
+        "question": "Featured in countless ancient myths, Mount Olympus is located in what country?",
+        "questionNumber": 3,
+        "time": 1537319146.2108328,
+        "category": "Geography",
+        "answers": [
+            {
+                "answer": "Greece",
+                "correct": true,
+                "count": 316529
+            },
+            {
+                "answer": "Spain",
+                "correct": false,
+                "count": 6036
+            },
+            {
+                "answer": "Scotland",
+                "correct": false,
+                "count": 3298
+            }
+        ]
+    },
+    {
+        "question": "What does the \"P\" in PSAT stand for?",
+        "questionNumber": 4,
+        "time": 1537319172.78694,
+        "category": "Civics",
+        "answers": [
+            {
+                "answer": "Practical",
+                "correct": false,
+                "count": 95942
+            },
+            {
+                "answer": "Present",
+                "correct": false,
+                "count": 3462
+            },
+            {
+                "answer": "Preliminary",
+                "correct": true,
+                "count": 214890
+            }
+        ]
+    },
+    {
+        "question": "According to The Knot, engagements most commonly occur in which month?",
+        "questionNumber": 5,
+        "time": 1537319204.994989,
+        "category": "Culture",
+        "answers": [
+            {
+                "answer": "December",
+                "correct": true,
+                "count": 71497
+            },
+            {
+                "answer": "February",
+                "correct": false,
+                "count": 95433
+            },
+            {
+                "answer": "May",
+                "correct": false,
+                "count": 52055
+            }
+        ]
+    },
+    {
+        "question": "The dance craze \"nae nae\" was inspired by the star of which TV show?",
+        "questionNumber": 6,
+        "time": 1537319243.9856637,
+        "category": "Music",
+        "answers": [
+            {
+                "answer": "Frasier",
+                "correct": false,
+                "count": 8579
+            },
+            {
+                "answer": "Martin",
+                "correct": true,
+                "count": 57642
+            },
+            {
+                "answer": "Joey",
+                "correct": false,
+                "count": 16134
+            }
+        ]
+    },
+    {
+        "question": "Which book featuring Hannibal Lecter was released first?",
+        "questionNumber": 7,
+        "time": 1537319276.4826865,
+        "category": "Literature",
+        "answers": [
+            {
+                "answer": "Silence of the Lambs",
+                "correct": false,
+                "count": 24400
+            },
+            {
+                "answer": "Red Dragon",
+                "correct": true,
+                "count": 23849
+            },
+            {
+                "answer": "Hannibal",
+                "correct": false,
+                "count": 11080
+            }
+        ]
+    },
+    {
+        "question": "The oldest existing polo club is located in which city?",
+        "questionNumber": 8,
+        "time": 1537319302.9787066,
+        "category": "Geography",
+        "answers": [
+            {
+                "answer": "Calcutta",
+                "correct": true,
+                "count": 11431
+            },
+            {
+                "answer": "St. Moritz",
+                "correct": false,
+                "count": 8214
+            },
+            {
+                "answer": "Dublin",
+                "correct": false,
+                "count": 7898
+            }
+        ]
+    },
+    {
+        "question": "The director of \"The Wolf of Wall Street\" also directed the music video for which of these songs?",
+        "questionNumber": 9,
+        "time": 1537319331.5827901,
+        "category": "Movies",
+        "answers": [
+            {
+                "answer": "Billie Jean",
+                "correct": false,
+                "count": 2955
+            },
+            {
+                "answer": "Bad",
+                "correct": true,
+                "count": 4938
+            },
+            {
+                "answer": "Thriller",
+                "correct": false,
+                "count": 5556
+            }
+        ]
+    },
+    {
+        "question": "Which fashion magazine did the women of \"The Hills\" and \"The City\" NOT work at?",
+        "questionNumber": 10,
+        "time": 1537319358.6422722,
+        "category": "TV",
+        "answers": [
+            {
+                "answer": "Teen Vogue",
+                "correct": false,
+                "count": 1769
+            },
+            {
+                "answer": "Cosmopolitan",
+                "correct": true,
+                "count": 2200
+            },
+            {
+                "answer": "Elle",
+                "correct": false,
+                "count": 2284
+            }
+        ]
+    },
+    {
+        "question": "Which drink did Nikita Khrushchev declare \"America's lethal weapon\"?",
+        "questionNumber": 11,
+        "time": 1537319391.3749146,
+        "category": "History",
+        "answers": [
+            {
+                "answer": "Instant coffee",
+                "correct": false,
+                "count": 1697
+            },
+            {
+                "answer": "Martini",
+                "correct": true,
+                "count": 533
+            },
+            {
+                "answer": "Milk",
+                "correct": false,
+                "count": 685
+            }
+        ]
+    },
+    {
+        "question": "Before it won the Oscar, a song from which film prompted the presenter to say, \"What a shocker\"?",
+        "questionNumber": 12,
+        "time": 1537319453.0623562,
+        "category": "Music",
+        "answers": [
+            {
+                "answer": "La La Land",
+                "correct": false,
+                "count": 286
+            },
+            {
+                "answer": "Frozen",
+                "correct": false,
+                "count": 280
+            },
+            {
+                "answer": "Titanic",
+                "correct": true,
+                "count": 354
+            }
+        ]
     }
 ]
