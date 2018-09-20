@@ -3978,5 +3978,247 @@
                 "count": 354
             }
         ]
+    },
+    {
+        "question": "The time off some offices have at the end of the week in summer months is called what?",
+        "questionNumber": 1,
+        "time": 1537470312.844727,
+        "category": "Culture"
+    },
+    {
+        "question": "Which of these is an iPhone feature that allows you to see the people you call?",
+        "questionNumber": 2,
+        "time": 1537470345.6968775,
+        "category": "Tech",
+        "answers": [
+            {
+                "answer": "FootPlace",
+                "correct": false,
+                "count": 412
+            },
+            {
+                "answer": "ArmBand",
+                "correct": false,
+                "count": 650
+            },
+            {
+                "answer": "FaceTime",
+                "correct": true,
+                "count": 197724
+            }
+        ]
+    },
+    {
+        "question": "The aluminum tab that opens a soda can has what nickname?",
+        "questionNumber": 3,
+        "time": 1537470376.171296,
+        "category": "Culture",
+        "answers": [
+            {
+                "answer": "Hip-hop",
+                "correct": false,
+                "count": 1317
+            },
+            {
+                "answer": "Pop-top",
+                "correct": true,
+                "count": 193216
+            },
+            {
+                "answer": "Chop shop",
+                "correct": false,
+                "count": 1108
+            }
+        ]
+    },
+    {
+        "question": "In what sports league is the last part of the regular season often referred to as a \"pennant race\"?",
+        "questionNumber": 4,
+        "time": 1537470402.6354325,
+        "category": "Sports",
+        "answers": [
+            {
+                "answer": "MLB",
+                "correct": true,
+                "count": 156397
+            },
+            {
+                "answer": "NBA",
+                "correct": false,
+                "count": 17472
+            },
+            {
+                "answer": "NFL",
+                "correct": false,
+                "count": 15409
+            }
+        ]
+    },
+    {
+        "question": "The Puerto Rican dish Mofongo is usually made with what main ingredient?",
+        "questionNumber": 5,
+        "time": 1537470431.4811876,
+        "category": "Cuisine",
+        "answers": [
+            {
+                "answer": "Plantains",
+                "correct": true,
+                "count": 130699
+            },
+            {
+                "answer": "Pineapple",
+                "correct": false,
+                "count": 19090
+            },
+            {
+                "answer": "Salmon",
+                "correct": false,
+                "count": 7004
+            }
+        ]
+    },
+    {
+        "question": "The gemstone peridot is known for being closest to which of these colors?",
+        "questionNumber": 6,
+        "time": 1537470462.6167102,
+        "category": "Fashion",
+        "answers": [
+            {
+                "answer": "Green",
+                "correct": true,
+                "count": 73170
+            },
+            {
+                "answer": "Blue",
+                "correct": false,
+                "count": 40301
+            },
+            {
+                "answer": "Red",
+                "correct": false,
+                "count": 17592
+            }
+        ]
+    },
+    {
+        "question": "Which character was NOT in Mary Shelley's \"Frankenstein\"?",
+        "questionNumber": 7,
+        "time": 1537470492.6844504,
+        "category": "Literature",
+        "answers": [
+            {
+                "answer": "William Frankenstein",
+                "correct": false,
+                "count": 17117
+            },
+            {
+                "answer": "Robert Walton",
+                "correct": false,
+                "count": 25554
+            },
+            {
+                "answer": "Igor",
+                "correct": true,
+                "count": 32790
+            }
+        ]
+    },
+    {
+        "question": "Which of these movies did better at the box office than the original film in its series?",
+        "questionNumber": 8,
+        "time": 1537470527.6203482,
+        "category": "Movies",
+        "answers": [
+            {
+                "answer": "D2: The Mighty Ducks",
+                "correct": false,
+                "count": 10708
+            },
+            {
+                "answer": "Meet the Fockers",
+                "correct": true,
+                "count": 17082
+            },
+            {
+                "answer": "The Next Karate Kid",
+                "correct": false,
+                "count": 8239
+            }
+        ]
+    },
+    {
+        "question": "Which of these Eastern European countries reaches the farthest south?",
+        "questionNumber": 9,
+        "time": 1537470563.0766413,
+        "category": "Geography",
+        "answers": [
+            {
+                "answer": "Serbia",
+                "correct": true,
+                "count": 7976
+            },
+            {
+                "answer": "Slovenia",
+                "correct": false,
+                "count": 5611
+            },
+            {
+                "answer": "Slovakia",
+                "correct": false,
+                "count": 5750
+            }
+        ]
+    },
+    {
+        "question": "Which of these films features a car built by its lead actor in real life?",
+        "questionNumber": 10,
+        "time": 1537470609.522223,
+        "category": "Movies"
+    },
+    {
+        "question": "The production credit at the end of every episode of the TV show \"House'\" mentions what accessory?",
+        "questionNumber": 11,
+        "time": 1537470647.270183,
+        "category": "Entertainment",
+        "answers": [
+            {
+                "answer": "Tie",
+                "correct": false,
+                "count": 722
+            },
+            {
+                "answer": "Scarf",
+                "correct": false,
+                "count": 867
+            },
+            {
+                "answer": "Hat",
+                "correct": true,
+                "count": 2191
+            }
+        ]
+    },
+    {
+        "question": "Iggy Azalea's hit 2014 song \"Fancy\" mentions a brand of which type of alcohol?",
+        "questionNumber": 12,
+        "time": 1537470715.1712759,
+        "category": "Music",
+        "answers": [
+            {
+                "answer": "Vodka",
+                "correct": true,
+                "count": 1115
+            },
+            {
+                "answer": "Cognac",
+                "correct": false,
+                "count": 604
+            },
+            {
+                "answer": "Tequila",
+                "correct": false,
+                "count": 642
+            }
+        ]
     }
 ]
