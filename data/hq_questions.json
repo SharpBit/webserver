@@ -4220,5 +4220,281 @@
                 "count": 642
             }
         ]
+    },
+    {
+        "question": "A swimming pool that appears boundless on at least one side is known as what?",
+        "questionNumber": 1,
+        "time": 1537578325.3621252,
+        "category": "Art & Design",
+        "answers": [
+            {
+                "answer": "Infinity pool",
+                "correct": true,
+                "count": 330584
+            },
+            {
+                "answer": "Occasional pool",
+                "correct": false,
+                "count": 7236
+            },
+            {
+                "answer": "10 minutes max pool",
+                "correct": false,
+                "count": 2715
+            }
+        ]
+    },
+    {
+        "question": "In the classic parable \"The Emperor's New Clothes,\" what does the Emperor end up wearing?",
+        "questionNumber": 2,
+        "time": 1537578358.8618548,
+        "category": "Literature",
+        "answers": [
+            {
+                "answer": "Nothing at all",
+                "correct": true,
+                "count": 293176
+            },
+            {
+                "answer": "Athleisure wear",
+                "correct": false,
+                "count": 20934
+            },
+            {
+                "answer": "Supreme beanie",
+                "correct": false,
+                "count": 9544
+            }
+        ]
+    },
+    {
+        "question": "Isosceles and equilateral are two kinds of what geometric shape?",
+        "questionNumber": 3,
+        "time": 1537578408.2842584,
+        "category": "Math",
+        "answers": [
+            {
+                "answer": "Circle",
+                "correct": false,
+                "count": 3270
+            },
+            {
+                "answer": "Triangle",
+                "correct": true,
+                "count": 279895
+            },
+            {
+                "answer": "Sphere",
+                "correct": false,
+                "count": 8715
+            }
+        ]
+    },
+    {
+        "question": "A coda usually occurs at what part of a story?",
+        "questionNumber": 4,
+        "time": 1537578438.1510735,
+        "category": "Literature",
+        "answers": [
+            {
+                "answer": "Beginning",
+                "correct": false,
+                "count": 49407
+            },
+            {
+                "answer": "Middle",
+                "correct": false,
+                "count": 101812
+            },
+            {
+                "answer": "End",
+                "correct": true,
+                "count": 126075
+            }
+        ]
+    },
+    {
+        "question": "Gallstones can most directly affect which of these organs?",
+        "questionNumber": 5,
+        "time": 1537578470.312417,
+        "category": "Science",
+        "answers": [
+            {
+                "answer": "Brain",
+                "correct": false,
+                "count": 283
+            },
+            {
+                "answer": "Kidney",
+                "correct": false,
+                "count": 84999
+            },
+            {
+                "answer": "Liver",
+                "correct": true,
+                "count": 47986
+            }
+        ]
+    },
+    {
+        "question": "Which of these fashion brands is known for its bamboo details in handbags?",
+        "questionNumber": 6,
+        "time": 1537578509.3420823,
+        "category": "Fashion",
+        "answers": [
+            {
+                "answer": "Dior",
+                "correct": false,
+                "count": 14116
+            },
+            {
+                "answer": "Gucci",
+                "correct": true,
+                "count": 20404
+            },
+            {
+                "answer": "Louis Vuitton",
+                "correct": false,
+                "count": 18514
+            }
+        ]
+    },
+    {
+        "question": "In the Black Eyed Peas hit \"Boom Boom Pow,\" Fergie brags about being from what era?",
+        "questionNumber": 7,
+        "time": 1537578544.8786292,
+        "category": "Music",
+        "answers": [
+            {
+                "answer": "Late 2000s",
+                "correct": false,
+                "count": 6850
+            },
+            {
+                "answer": "Early 2000s",
+                "correct": false,
+                "count": 8777
+            },
+            {
+                "answer": "Early 3000s",
+                "correct": true,
+                "count": 5075
+            }
+        ]
+    },
+    {
+        "question": "Which of these streets runs alongside one edge of Manhattan's Central Park?",
+        "questionNumber": 8,
+        "time": 1537578583.2127924,
+        "category": "Geography",
+        "answers": [
+            {
+                "answer": "Madison Avenue",
+                "correct": false,
+                "count": 1204
+            },
+            {
+                "answer": "Park Avenue",
+                "correct": false,
+                "count": 3116
+            },
+            {
+                "answer": "5th Avenue",
+                "correct": true,
+                "count": 2391
+            }
+        ]
+    },
+    {
+        "question": "The skeptical partner in \"The X-Files\" was named after an announcer for what baseball team?",
+        "questionNumber": 9,
+        "time": 1537578618.448231,
+        "category": "Sports",
+        "answers": [
+            {
+                "answer": "Boston Red Sox",
+                "correct": false,
+                "count": 794
+            },
+            {
+                "answer": "NY Mets",
+                "correct": false,
+                "count": 532
+            },
+            {
+                "answer": "LA Dodgers",
+                "correct": true,
+                "count": 1472
+            }
+        ]
+    },
+    {
+        "question": "The biggest flower in the world is native to which country?",
+        "questionNumber": 10,
+        "time": 1537578653.1613436,
+        "category": "Nature",
+        "answers": [
+            {
+                "answer": "England",
+                "correct": false,
+                "count": 114
+            },
+            {
+                "answer": "India",
+                "correct": false,
+                "count": 304
+            },
+            {
+                "answer": "Indonesia",
+                "correct": true,
+                "count": 1201
+            }
+        ]
+    },
+    {
+        "question": "In Robert Palmer's \"Addicted to Love\" music video, which band member's dress is off-the-shoulder?",
+        "questionNumber": 11,
+        "time": 1537578687.2038658,
+        "category": "Music",
+        "answers": [
+            {
+                "answer": "Pianist",
+                "correct": false,
+                "count": 282
+            },
+            {
+                "answer": "Guitarist",
+                "correct": false,
+                "count": 690
+            },
+            {
+                "answer": "Drummer",
+                "correct": true,
+                "count": 302
+            }
+        ]
+    },
+    {
+        "question": "Who directed the first PG-13 film to be nominated for a Best Picture Oscar?",
+        "questionNumber": 12,
+        "time": 1537578753.0111725,
+        "category": "Movies",
+        "answers": [
+            {
+                "answer": "Peter Jackson",
+                "correct": false,
+                "count": 134
+            },
+            {
+                "answer": "James Cameron",
+                "correct": false,
+                "count": 156
+            },
+            {
+                "answer": "Steven Spielberg",
+                "correct": true,
+                "count": 183
+            }
+        ]
     }
 ]
