@@ -4496,5 +4496,333 @@
                 "count": 183
             }
         ]
+    },
+    {
+        "question": "According to legend, William Tell used a bow and arrow to shoot what off his son's head?",
+        "questionNumber": 1,
+        "time": 1537751205.5476196,
+        "category": "Culture"
+    },
+    {
+        "question": "The title of the video game \"Super Mario Bros.\" refers to what brothers?",
+        "questionNumber": 2,
+        "time": 1537751223.8511074,
+        "category": "Games",
+        "answers": [
+            {
+                "answer": "Mario / Luigi",
+                "correct": true,
+                "count": 622633
+            },
+            {
+                "answer": "Hanzo / Genji",
+                "correct": false,
+                "count": 935
+            },
+            {
+                "answer": "Hotfixer / Stonefoot",
+                "correct": false,
+                "count": 497
+            }
+        ]
+    },
+    {
+        "question": "Which of these animals breathes through gills?",
+        "questionNumber": 3,
+        "time": 1537751269.1944327,
+        "category": "Nature",
+        "answers": [
+            {
+                "answer": "Barracuda",
+                "correct": true,
+                "count": 486828
+            },
+            {
+                "answer": "Miniature horse",
+                "correct": false,
+                "count": 4970
+            },
+            {
+                "answer": "Blue whale",
+                "correct": false,
+                "count": 122367
+            }
+        ]
+    },
+    {
+        "question": "Which of these words means both \"hello\" and \"goodbye\"?",
+        "questionNumber": 4,
+        "time": 1537751300.7005582,
+        "category": "Language",
+        "answers": [
+            {
+                "answer": "Ciao",
+                "correct": true,
+                "count": 445288
+            },
+            {
+                "answer": "Sayonara",
+                "correct": false,
+                "count": 30719
+            },
+            {
+                "answer": "Adios",
+                "correct": false,
+                "count": 17230
+            }
+        ]
+    },
+    {
+        "question": "A full English breakfast traditionally includes which of these foods?",
+        "questionNumber": 5,
+        "time": 1537751329.8139267,
+        "category": "Cuisine",
+        "answers": [
+            {
+                "answer": "Yogurt parfait",
+                "correct": false,
+                "count": 159885
+            },
+            {
+                "answer": "Baked beans",
+                "correct": true,
+                "count": 274478
+            },
+            {
+                "answer": "Acai bowl",
+                "correct": false,
+                "count": 10926
+            }
+        ]
+    },
+    {
+        "question": "By definition, a person with \"tall poppy syndrome\" dislikes what?",
+        "questionNumber": 6,
+        "time": 1537751365.747027,
+        "category": "Culture",
+        "answers": [
+            {
+                "answer": "Heights",
+                "correct": false,
+                "count": 98656
+            },
+            {
+                "answer": "Poppies",
+                "correct": false,
+                "count": 16515
+            },
+            {
+                "answer": "Successful people",
+                "correct": true,
+                "count": 168215
+            }
+        ]
+    },
+    {
+        "question": "Which band is fronted by a person who also created a wildly successful \"virtual band\"?",
+        "questionNumber": 7,
+        "time": 1537751398.9493628,
+        "category": "Music",
+        "answers": [
+            {
+                "answer": "Blur",
+                "correct": true,
+                "count": 88031
+            },
+            {
+                "answer": "Oasis",
+                "correct": false,
+                "count": 73985
+            },
+            {
+                "answer": "Rolling Stones",
+                "correct": false,
+                "count": 13663
+            }
+        ]
+    },
+    {
+        "question": "Which of these words does NOT refer to an area of vegetation?",
+        "questionNumber": 8,
+        "time": 1537751443.5781665,
+        "category": "Language",
+        "answers": [
+            {
+                "answer": "Chaparral",
+                "correct": false,
+                "count": 20842
+            },
+            {
+                "answer": "Weald",
+                "correct": false,
+                "count": 22424
+            },
+            {
+                "answer": "Shoal",
+                "correct": true,
+                "count": 53425
+            }
+        ]
+    },
+    {
+        "question": "Which show's pilot episode cost so much that a network executive was fired over it?",
+        "questionNumber": 9,
+        "time": 1537751479.2424018,
+        "category": "TV",
+        "answers": [
+            {
+                "answer": "Lost",
+                "correct": true,
+                "count": 34717
+            },
+            {
+                "answer": "Boardwalk Empire",
+                "correct": false,
+                "count": 13764
+            },
+            {
+                "answer": "The Walking Dead",
+                "correct": false,
+                "count": 10983
+            }
+        ]
+    },
+    {
+        "question": "Which word is derived from the last name of the target of a famous protest?",
+        "questionNumber": 10,
+        "time": 1537751530.414979,
+        "category": "Language",
+        "answers": [
+            {
+                "answer": "Mutiny",
+                "correct": false,
+                "count": 10538
+            },
+            {
+                "answer": "Strike",
+                "correct": false,
+                "count": 4189
+            },
+            {
+                "answer": "Boycott",
+                "correct": true,
+                "count": 23399
+            }
+        ]
+    },
+    {
+        "question": "Which of these companies changed its original name because of its morbid connotation?",
+        "questionNumber": 11,
+        "time": 1537751574.7519178,
+        "category": "Tech",
+        "answers": [
+            {
+                "answer": "Amazon",
+                "correct": true,
+                "count": 13006
+            },
+            {
+                "answer": "Google",
+                "correct": false,
+                "count": 9452
+            },
+            {
+                "answer": "Facebook",
+                "correct": false,
+                "count": 3190
+            }
+        ]
+    },
+    {
+        "question": "The initials of the band LFO, famous for \"Summer Girls,\" stand for what?",
+        "questionNumber": 12,
+        "time": 1537751611.6766078,
+        "category": "Music",
+        "answers": [
+            {
+                "answer": "Loose Fresh Originals",
+                "correct": false,
+                "count": 4071
+            },
+            {
+                "answer": "Lyte Funkie Ones",
+                "correct": true,
+                "count": 6942
+            },
+            {
+                "answer": "Low Frequency Oscillator",
+                "correct": false,
+                "count": 3911
+            }
+        ]
+    },
+    {
+        "question": "Who described Helen of Troy as \"the face that launch'd a thousand ships\"?",
+        "questionNumber": 13,
+        "time": 1537751663.129173,
+        "category": "Literature",
+        "answers": [
+            {
+                "answer": "George Bernard Shaw",
+                "correct": false,
+                "count": 2351
+            },
+            {
+                "answer": "William Shakespeare",
+                "correct": false,
+                "count": 1743
+            },
+            {
+                "answer": "Christopher Marlowe",
+                "correct": true,
+                "count": 4016
+            }
+        ]
+    },
+    {
+        "question": "Which of these was NOT a rejected character for Disney's \"Snow White and the Seven Dwarfs?\"",
+        "questionNumber": 14,
+        "time": 1537751709.520835,
+        "category": "Movies",
+        "answers": [
+            {
+                "answer": "Baldy",
+                "correct": false,
+                "count": 1232
+            },
+            {
+                "answer": "Flabby",
+                "correct": false,
+                "count": 1327
+            },
+            {
+                "answer": "Loosy",
+                "correct": true,
+                "count": 1868
+            }
+        ]
+    },
+    {
+        "question": "At the very end of \"Frasier,\" Frasier Crane leaves Seattle in favor of what city?",
+        "questionNumber": 15,
+        "time": 1537751778.8807604,
+        "category": "TV",
+        "answers": [
+            {
+                "answer": "San Francisco",
+                "correct": false,
+                "count": 824
+            },
+            {
+                "answer": "Boston",
+                "correct": false,
+                "count": 790
+            },
+            {
+                "answer": "Chicago",
+                "correct": true,
+                "count": 644
+            }
+        ]
     }
 ]
