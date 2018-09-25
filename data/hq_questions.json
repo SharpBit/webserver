@@ -4824,5 +4824,264 @@
                 "count": 644
             }
         ]
+    },
+    {
+        "question": "Windows users are asked to drag unwanted files to what desktop icon?",
+        "questionNumber": 1,
+        "time": 1537902337.7160766,
+        "category": "Tech",
+        "answers": [
+            {
+                "answer": "Dumpster behind pizzeria",
+                "correct": false,
+                "count": 1747
+            },
+            {
+                "answer": "Recycle bin",
+                "correct": true,
+                "count": 243586
+            },
+            {
+                "answer": "Hudson River trash barge",
+                "correct": false,
+                "count": 1124
+            }
+        ]
+    },
+    {
+        "question": "As its title suggests, in which of these games can players get into trouble by digging straight down?",
+        "questionNumber": 2,
+        "time": 1537902379.0432742,
+        "category": "Games",
+        "answers": [
+            {
+                "answer": "Mario Tennis Aces",
+                "correct": false,
+                "count": 5495
+            },
+            {
+                "answer": "Fortnite",
+                "correct": false,
+                "count": 15206
+            },
+            {
+                "answer": "Minecraft",
+                "correct": true,
+                "count": 210922
+            }
+        ]
+    },
+    {
+        "question": "On a typical US calculator, AC stands for what?",
+        "questionNumber": 3,
+        "time": 1537902444.094021,
+        "category": "Tech",
+        "answers": [
+            {
+                "answer": "Arithmetic Control",
+                "correct": false,
+                "count": 10101
+            },
+            {
+                "answer": "Additional Calculation",
+                "correct": false,
+                "count": 19689
+            },
+            {
+                "answer": "All Clear",
+                "correct": true,
+                "count": 178503
+            }
+        ]
+    },
+    {
+        "question": "Modern gas-powered automobiles run on which type of engine?",
+        "questionNumber": 4,
+        "time": 1537902494.582956,
+        "category": "Science",
+        "answers": [
+            {
+                "answer": "Fraternal combustion",
+                "correct": false,
+                "count": 1347
+            },
+            {
+                "answer": "Internal combustion",
+                "correct": true,
+                "count": 156261
+            },
+            {
+                "answer": "External combustion",
+                "correct": false,
+                "count": 19241
+            }
+        ]
+    },
+    {
+        "question": "Established in 1969, a precursor to the internet was called what?",
+        "questionNumber": 5,
+        "time": 1537902534.106774,
+        "category": "Tech",
+        "answers": [
+            {
+                "answer": "ARPANET",
+                "correct": true,
+                "count": 63554
+            },
+            {
+                "answer": "ALTINET",
+                "correct": false,
+                "count": 43904
+            },
+            {
+                "answer": "ACTNET",
+                "correct": false,
+                "count": 46278
+            }
+        ]
+    },
+    {
+        "question": "The Macintosh was introduced in an ambitious TV ad directed by whom?",
+        "questionNumber": 6,
+        "time": 1537902584.759904,
+        "category": "Tech",
+        "answers": [
+            {
+                "answer": "George Lucas",
+                "correct": false,
+                "count": 23279
+            },
+            {
+                "answer": "Martin Scorsese",
+                "correct": false,
+                "count": 12100
+            },
+            {
+                "answer": "Ridley Scott",
+                "correct": true,
+                "count": 29624
+            }
+        ]
+    },
+    {
+        "question": "The man who patented the telephone also invented a means for transmitting speech through what?",
+        "questionNumber": 7,
+        "time": 1537902637.9844685,
+        "category": "Science",
+        "answers": [
+            {
+                "answer": "Radio waves",
+                "correct": false,
+                "count": 17046
+            },
+            {
+                "answer": "Water",
+                "correct": false,
+                "count": 7546
+            },
+            {
+                "answer": "Light",
+                "correct": true,
+                "count": 6510
+            }
+        ]
+    },
+    {
+        "question": "In 2009, South Africa's ADSL internet infamously failed a speed test against what?",
+        "questionNumber": 8,
+        "time": 1537902686.9994633,
+        "category": "Tech",
+        "answers": [
+            {
+                "answer": "Bicycle courier",
+                "correct": false,
+                "count": 1105
+            },
+            {
+                "answer": "Pigeon",
+                "correct": true,
+                "count": 5807
+            },
+            {
+                "answer": "Telegraph",
+                "correct": false,
+                "count": 1789
+            }
+        ]
+    },
+    {
+        "question": "Steve Jobs picked the name \"Apple\" partly because it specifically came before what in the phone book?",
+        "questionNumber": 9,
+        "time": 1537902750.3752978,
+        "category": "Tech",
+        "answers": [
+            {
+                "answer": "Xerox",
+                "correct": false,
+                "count": 656
+            },
+            {
+                "answer": "AT&T",
+                "correct": false,
+                "count": 1836
+            },
+            {
+                "answer": "Atari",
+                "correct": true,
+                "count": 3505
+            }
+        ]
+    },
+    {
+        "question": "What product comes with a \"Bioweapon Defense Mode\" for use in case of apocalyptic catastrophe?",
+        "questionNumber": 10,
+        "time": 1537902781.546478,
+        "category": "Tech",
+        "answers": [
+            {
+                "answer": "Samsung Galaxy Note 9",
+                "correct": false,
+                "count": 146
+            },
+            {
+                "answer": "Amazon Echo",
+                "correct": false,
+                "count": 186
+            },
+            {
+                "answer": "Tesla Model X",
+                "correct": true,
+                "count": 3354
+            }
+        ]
+    },
+    {
+        "question": "The first known televised use of \"google\" as a verb was in 2002 on what show?",
+        "questionNumber": 11,
+        "time": 1537902848.1831963,
+        "category": "Tech"
+    },
+    {
+        "question": "The enigmatic creator of Bitcoin goes by the same first name as the creator of what game?",
+        "questionNumber": 12,
+        "time": 1537902882.3004544,
+        "category": "Tech",
+        "answers": [
+            {
+                "answer": "Final Fantasy",
+                "correct": false,
+                "count": 616
+            },
+            {
+                "answer": "Pokemon",
+                "correct": true,
+                "count": 1171
+            },
+            {
+                "answer": "Donkey Kong",
+                "correct": false,
+                "count": 499
+            }
+        ]
     }
 ]
