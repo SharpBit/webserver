@@ -5083,5 +5083,281 @@
                 "count": 499
             }
         ]
+    },
+    {
+        "question": "A baseball player who bats both right and left handed is known as what?",
+        "questionNumber": 1,
+        "time": 1538003118.3894012,
+        "category": "Sports",
+        "answers": [
+            {
+                "answer": "Switch hitter",
+                "correct": true,
+                "count": 103560
+            },
+            {
+                "answer": "Por que no los dos?",
+                "correct": false,
+                "count": 418
+            },
+            {
+                "answer": "Flippy floppy",
+                "correct": false,
+                "count": 793
+            }
+        ]
+    },
+    {
+        "question": "Which word commonly refers to a track and field obstacle roughly 30 to 40 inches high?",
+        "questionNumber": 2,
+        "time": 1538003153.4211695,
+        "category": "Sports",
+        "answers": [
+            {
+                "answer": "Hurdle",
+                "correct": true,
+                "count": 100850
+            },
+            {
+                "answer": "Hamper",
+                "correct": false,
+                "count": 987
+            },
+            {
+                "answer": "Hindrance",
+                "correct": false,
+                "count": 350
+            }
+        ]
+    },
+    {
+        "question": "In what sport is play frequently restarted with something called a \"scrum\"?",
+        "questionNumber": 3,
+        "time": 1538003224.178342,
+        "category": "Sports",
+        "answers": [
+            {
+                "answer": "Hockey",
+                "correct": false,
+                "count": 3329
+            },
+            {
+                "answer": "Soccer",
+                "correct": false,
+                "count": 1689
+            },
+            {
+                "answer": "Rugby",
+                "correct": true,
+                "count": 94321
+            }
+        ]
+    },
+    {
+        "question": "What competition features a team of US golfers facing a team from Europe?",
+        "questionNumber": 4,
+        "time": 1538003263.5425725,
+        "category": "Sports",
+        "answers": [
+            {
+                "answer": "Ryder Cup",
+                "correct": true,
+                "count": 79137
+            },
+            {
+                "answer": "America's Cup",
+                "correct": false,
+                "count": 6389
+            },
+            {
+                "answer": "Presidents Cup",
+                "correct": false,
+                "count": 7129
+            }
+        ]
+    },
+    {
+        "question": "What US Division I college sport has the fewest number of teams in its official playoff tournament?",
+        "questionNumber": 5,
+        "time": 1538003300.6958659,
+        "category": "Sports",
+        "answers": [
+            {
+                "answer": "Football",
+                "correct": true,
+                "count": 40213
+            },
+            {
+                "answer": "Hockey",
+                "correct": false,
+                "count": 30207
+            },
+            {
+                "answer": "Basketball",
+                "correct": false,
+                "count": 5645
+            }
+        ]
+    },
+    {
+        "question": "Which MLB career record is NOT held by Rickey Henderson?",
+        "questionNumber": 6,
+        "time": 1538003345.8020058,
+        "category": "Sports",
+        "answers": [
+            {
+                "answer": "Triples",
+                "correct": true,
+                "count": 17225
+            },
+            {
+                "answer": "Stolen bases",
+                "correct": false,
+                "count": 5359
+            },
+            {
+                "answer": "Runs",
+                "correct": false,
+                "count": 19350
+            }
+        ]
+    },
+    {
+        "question": "What sport features an important piece of equipment called a \"stump\"?",
+        "questionNumber": 7,
+        "time": 1538003390.88255,
+        "category": "Sports",
+        "answers": [
+            {
+                "answer": "Cricket",
+                "correct": true,
+                "count": 14204
+            },
+            {
+                "answer": "Badminton",
+                "correct": false,
+                "count": 885
+            },
+            {
+                "answer": "Curling",
+                "correct": false,
+                "count": 3668
+            }
+        ]
+    },
+    {
+        "question": "In what city is it possible to hit the shortest over-the-fence home run in Major League Baseball?",
+        "questionNumber": 8,
+        "time": 1538003426.1688595,
+        "category": "Sports",
+        "answers": [
+            {
+                "answer": "Houston",
+                "correct": false,
+                "count": 1842
+            },
+            {
+                "answer": "Boston",
+                "correct": true,
+                "count": 9071
+            },
+            {
+                "answer": "New York",
+                "correct": false,
+                "count": 3554
+            }
+        ]
+    },
+    {
+        "question": "What team eliminated Michael Jordan's Bulls from the playoffs the greatest number of times?",
+        "questionNumber": 9,
+        "time": 1538003466.3922079,
+        "category": "Sports",
+        "answers": [
+            {
+                "answer": "Knicks",
+                "correct": false,
+                "count": 1024
+            },
+            {
+                "answer": "Pistons",
+                "correct": true,
+                "count": 6731
+            },
+            {
+                "answer": "Celtics",
+                "correct": false,
+                "count": 1990
+            }
+        ]
+    },
+    {
+        "question": "The first woman to record a point in men's pro hockey did so while playing in what country?",
+        "questionNumber": 10,
+        "time": 1538003506.240057,
+        "category": "Sports",
+        "answers": [
+            {
+                "answer": "Canada",
+                "correct": false,
+                "count": 2329
+            },
+            {
+                "answer": "Russia",
+                "correct": false,
+                "count": 992
+            },
+            {
+                "answer": "Finland",
+                "correct": true,
+                "count": 3770
+            }
+        ]
+    },
+    {
+        "question": "Which fighting style was NOT represented at the original UFC 1 tournament?",
+        "questionNumber": 11,
+        "time": 1538003552.938594,
+        "category": "Sports",
+        "answers": [
+            {
+                "answer": "Brazilian jiu-jitsu",
+                "correct": false,
+                "count": 474
+            },
+            {
+                "answer": "Sumo",
+                "correct": false,
+                "count": 2562
+            },
+            {
+                "answer": "Krav maga",
+                "correct": true,
+                "count": 1298
+            }
+        ]
+    },
+    {
+        "question": "As measured by number of games, which record streak is the longest?",
+        "questionNumber": 12,
+        "time": 1538003610.8794124,
+        "category": "Sports",
+        "answers": [
+            {
+                "answer": "NBA 30-point game streak",
+                "correct": true,
+                "count": 200
+            },
+            {
+                "answer": "NHL points streak",
+                "correct": false,
+                "count": 704
+            },
+            {
+                "answer": "MLB hitting streak",
+                "correct": false,
+                "count": 969
+            }
+        ]
     }
 ]
