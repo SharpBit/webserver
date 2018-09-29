@@ -5359,5 +5359,281 @@
                 "count": 969
             }
         ]
+    },
+    {
+        "question": "In the Bible, what method of transportation did Noah use to survive the flood?",
+        "questionNumber": 1,
+        "time": 1538183036.2603028,
+        "category": "Culture",
+        "answers": [
+            {
+                "answer": "Batmobile",
+                "correct": false,
+                "count": 1759
+            },
+            {
+                "answer": "Ark",
+                "correct": true,
+                "count": 301743
+            },
+            {
+                "answer": "E-scooter",
+                "correct": false,
+                "count": 901
+            }
+        ]
+    },
+    {
+        "question": "An old saying advises against making a mountain out of what?",
+        "questionNumber": 2,
+        "time": 1538183064.0263383,
+        "category": "Language",
+        "answers": [
+            {
+                "answer": "Papier-mache",
+                "correct": false,
+                "count": 25755
+            },
+            {
+                "answer": "Carpet remnants",
+                "correct": false,
+                "count": 3939
+            },
+            {
+                "answer": "A molehill",
+                "correct": true,
+                "count": 266837
+            }
+        ]
+    },
+    {
+        "question": "By definition, which of these people claims to have extrasensory powers?",
+        "questionNumber": 3,
+        "time": 1538183115.6564806,
+        "category": "Culture",
+        "answers": [
+            {
+                "answer": "Psychotherapist",
+                "correct": false,
+                "count": 2692
+            },
+            {
+                "answer": "Psychiatrist",
+                "correct": false,
+                "count": 2121
+            },
+            {
+                "answer": "Psychic",
+                "correct": true,
+                "count": 260834
+            }
+        ]
+    },
+    {
+        "question": "Which of these creatures is typically the smallest?",
+        "questionNumber": 4,
+        "time": 1538183149.456374,
+        "category": "Nature",
+        "answers": [
+            {
+                "answer": "Louse",
+                "correct": true,
+                "count": 178988
+            },
+            {
+                "answer": "Mouse",
+                "correct": false,
+                "count": 79165
+            },
+            {
+                "answer": "Moose",
+                "correct": false,
+                "count": 1012
+            }
+        ]
+    },
+    {
+        "question": "Near what city would you find the Disney property officially known as The Magic Kingdom?",
+        "questionNumber": 5,
+        "time": 1538183184.869596,
+        "category": "Geography",
+        "answers": [
+            {
+                "answer": "Tokyo",
+                "correct": false,
+                "count": 3358
+            },
+            {
+                "answer": "Paris",
+                "correct": false,
+                "count": 4146
+            },
+            {
+                "answer": "Orlando",
+                "correct": true,
+                "count": 176783
+            }
+        ]
+    },
+    {
+        "question": "Which American artist was known for his mobiles?",
+        "questionNumber": 6,
+        "time": 1538183222.5367928,
+        "category": "Art & Design",
+        "answers": [
+            {
+                "answer": "Jackson Pollock",
+                "correct": false,
+                "count": 46196
+            },
+            {
+                "answer": "Jasper Johns",
+                "correct": false,
+                "count": 42444
+            },
+            {
+                "answer": "Alexander Calder",
+                "correct": true,
+                "count": 86330
+            }
+        ]
+    },
+    {
+        "question": "Which of these beers is made by a fully US-owned company?",
+        "questionNumber": 7,
+        "time": 1538183262.4363635,
+        "category": "Business",
+        "answers": [
+            {
+                "answer": "Budweiser",
+                "correct": false,
+                "count": 21643
+            },
+            {
+                "answer": "Yuengling",
+                "correct": true,
+                "count": 36919
+            },
+            {
+                "answer": "Coors",
+                "correct": false,
+                "count": 34268
+            }
+        ]
+    },
+    {
+        "question": "Who was the original host of Comedy Central's \"The Daily Show\"?",
+        "questionNumber": 8,
+        "time": 1538183300.9853861,
+        "category": "TV",
+        "answers": [
+            {
+                "answer": "Craig Kilborn",
+                "correct": true,
+                "count": 20595
+            },
+            {
+                "answer": "Greg Kinnear",
+                "correct": false,
+                "count": 7121
+            },
+            {
+                "answer": "Jon Stewart",
+                "correct": false,
+                "count": 15119
+            }
+        ]
+    },
+    {
+        "question": "What band had a hit '90s song with almost the exact same title as Tag Team's \"Whoomp! (There It Is)\"?",
+        "questionNumber": 9,
+        "time": 1538183338.663075,
+        "category": "Music",
+        "answers": [
+            {
+                "answer": "C+C Music Factory",
+                "correct": false,
+                "count": 8113
+            },
+            {
+                "answer": "Baja Men",
+                "correct": false,
+                "count": 7269
+            },
+            {
+                "answer": "95 South",
+                "correct": true,
+                "count": 6928
+            }
+        ]
+    },
+    {
+        "question": "Which of these words appears in Lewis Carroll's \"Jabberwocky\"?",
+        "questionNumber": 10,
+        "time": 1538183405.4284327,
+        "category": "Literature",
+        "answers": [
+            {
+                "answer": "Galumphing",
+                "correct": true,
+                "count": 4506
+            },
+            {
+                "answer": "Phantasmagoria",
+                "correct": false,
+                "count": 3066
+            },
+            {
+                "answer": "Hurly-burly",
+                "correct": false,
+                "count": 2303
+            }
+        ]
+    },
+    {
+        "question": "The Komodo dragon is the national animal of where?",
+        "questionNumber": 11,
+        "time": 1538183452.471334,
+        "category": "Nature",
+        "answers": [
+            {
+                "answer": "Papua New Guinea",
+                "correct": false,
+                "count": 1641
+            },
+            {
+                "answer": "Indonesia",
+                "correct": true,
+                "count": 3373
+            },
+            {
+                "answer": "The Philippines",
+                "correct": false,
+                "count": 491
+            }
+        ]
+    },
+    {
+        "question": "To prevent plot leaks, what claim did Darth Vader make in the actors' script for \"Empire Strikes Back\"?",
+        "questionNumber": 12,
+        "time": 1538183508.2094028,
+        "category": "Movies",
+        "answers": [
+            {
+                "answer": "Obi-Wan killed your dad",
+                "correct": true,
+                "count": 1779
+            },
+            {
+                "answer": "Obi-Wan was your dad",
+                "correct": false,
+                "count": 941
+            },
+            {
+                "answer": "I was Obi-Wan",
+                "correct": false,
+                "count": 873
+            }
+        ]
     }
 ]
