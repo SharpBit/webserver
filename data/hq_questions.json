@@ -5635,5 +5635,281 @@
                 "count": 873
             }
         ]
+    },
+    {
+        "question": "By definition, a QB on a football team is what?",
+        "questionNumber": 1,
+        "time": 1538269506.996348,
+        "category": "Sports",
+        "answers": [
+            {
+                "answer": "Quiz buddy",
+                "correct": false,
+                "count": 1584
+            },
+            {
+                "answer": "Quiet boi",
+                "correct": false,
+                "count": 1086
+            },
+            {
+                "answer": "Quarterback",
+                "correct": true,
+                "count": 335728
+            }
+        ]
+    },
+    {
+        "question": "The material designed to capture wind and propel a boat is generally known as what?",
+        "questionNumber": 2,
+        "time": 1538269545.7201836,
+        "category": "Language",
+        "answers": [
+            {
+                "answer": "Hairnet",
+                "correct": false,
+                "count": 2090
+            },
+            {
+                "answer": "Sail",
+                "correct": true,
+                "count": 325721
+            },
+            {
+                "answer": "Dreamcatcher",
+                "correct": false,
+                "count": 4053
+            }
+        ]
+    },
+    {
+        "question": "Which of these sandwiches typically features three pieces of bread?",
+        "questionNumber": 3,
+        "time": 1538269619.2948542,
+        "category": "Cuisine",
+        "answers": [
+            {
+                "answer": "Hoagie",
+                "correct": false,
+                "count": 31982
+            },
+            {
+                "answer": "Club",
+                "correct": true,
+                "count": 288187
+            },
+            {
+                "answer": "Hot dog",
+                "correct": false,
+                "count": 1413
+            }
+        ]
+    },
+    {
+        "question": "Which of these is necessary to complete photosynthesis?",
+        "questionNumber": 4,
+        "time": 1538269666.6201277,
+        "category": "Science",
+        "answers": [
+            {
+                "answer": "Chlorophyll",
+                "correct": true,
+                "count": 271839
+            },
+            {
+                "answer": "Chromium",
+                "correct": false,
+                "count": 9005
+            },
+            {
+                "answer": "Chlorine",
+                "correct": false,
+                "count": 6501
+            }
+        ]
+    },
+    {
+        "question": "\"Where do you want to go today?\" was the longtime slogan of what tech company?",
+        "questionNumber": 5,
+        "time": 1538269704.44671,
+        "category": "Business",
+        "answers": [
+            {
+                "answer": "Google",
+                "correct": false,
+                "count": 69465
+            },
+            {
+                "answer": "AOL",
+                "correct": false,
+                "count": 128228
+            },
+            {
+                "answer": "Microsoft",
+                "correct": true,
+                "count": 68628
+            }
+        ]
+    },
+    {
+        "question": "Piggy has a rough time while stranded on an island in a novel written by whom?",
+        "questionNumber": 6,
+        "time": 1538269770.67604,
+        "category": "Literature",
+        "answers": [
+            {
+                "answer": "William Golding",
+                "correct": true,
+                "count": 36188
+            },
+            {
+                "answer": "JD Salinger",
+                "correct": false,
+                "count": 21641
+            },
+            {
+                "answer": "Robert Louis Stevenson",
+                "correct": false,
+                "count": 21362
+            }
+        ]
+    },
+    {
+        "question": "Which movie features multiple discussions mentioning the painter Monet?",
+        "questionNumber": 7,
+        "time": 1538269815.9667828,
+        "category": "Movies",
+        "answers": [
+            {
+                "answer": "Legally Blonde",
+                "correct": false,
+                "count": 6001
+            },
+            {
+                "answer": "Titanic",
+                "correct": true,
+                "count": 13280
+            },
+            {
+                "answer": "Reservoir Dogs",
+                "correct": false,
+                "count": 19051
+            }
+        ]
+    },
+    {
+        "question": "Mobster Salvatore Gravano's nickname references the male version of what animal?",
+        "questionNumber": 8,
+        "time": 1538269878.8447654,
+        "category": "Entertainment",
+        "answers": [
+            {
+                "answer": "Bovine",
+                "correct": true,
+                "count": 6293
+            },
+            {
+                "answer": "Horse",
+                "correct": false,
+                "count": 6582
+            },
+            {
+                "answer": "Chicken",
+                "correct": false,
+                "count": 3445
+            }
+        ]
+    },
+    {
+        "question": "JFK once compared the combined talents of a room of Nobel Prize winners to what single man?",
+        "questionNumber": 9,
+        "time": 1538269917.899418,
+        "category": "History",
+        "answers": [
+            {
+                "answer": "Washington",
+                "correct": false,
+                "count": 932
+            },
+            {
+                "answer": "FDR",
+                "correct": false,
+                "count": 2576
+            },
+            {
+                "answer": "Jefferson",
+                "correct": true,
+                "count": 3783
+            }
+        ]
+    },
+    {
+        "question": "Which classic '60s song has NOT been covered by William Shatner?",
+        "questionNumber": 10,
+        "time": 1538269967.962812,
+        "category": "Entertainment",
+        "answers": [
+            {
+                "answer": "Space Oddity",
+                "correct": false,
+                "count": 1215
+            },
+            {
+                "answer": "Mr. Tambourine Man",
+                "correct": false,
+                "count": 936
+            },
+            {
+                "answer": "Ruby Tuesday",
+                "correct": true,
+                "count": 2061
+            }
+        ]
+    },
+    {
+        "question": "Which sitcom starred an actor who got his break by winning the first comedy competition on \"Star Search\"?",
+        "questionNumber": 11,
+        "time": 1538270007.3915737,
+        "category": "TV",
+        "answers": [
+            {
+                "answer": "Home Improvement",
+                "correct": false,
+                "count": 778
+            },
+            {
+                "answer": "Perfect Strangers",
+                "correct": false,
+                "count": 685
+            },
+            {
+                "answer": "Everybody Loves Raymond",
+                "correct": true,
+                "count": 813
+            }
+        ]
+    },
+    {
+        "question": "Which city is NOT home to a mass transit system listed as a National Historic Landmark?",
+        "questionNumber": 12,
+        "time": 1538270074.870376,
+        "category": "Culture",
+        "answers": [
+            {
+                "answer": "New Orleans",
+                "correct": false,
+                "count": 452
+            },
+            {
+                "answer": "Chicago",
+                "correct": true,
+                "count": 441
+            },
+            {
+                "answer": "San Francisco",
+                "correct": false,
+                "count": 143
+            }
+        ]
     }
 ]
