@@ -5911,5 +5911,281 @@
                 "count": 143
             }
         ]
+    },
+    {
+        "question": "The exchange from center to quarterback is called the what?",
+        "questionNumber": 1,
+        "time": 1538435190.4509947,
+        "category": "Sports",
+        "answers": [
+            {
+                "answer": "Snap",
+                "correct": true,
+                "count": 112066
+            },
+            {
+                "answer": "Crackle",
+                "correct": false,
+                "count": 2113
+            },
+            {
+                "answer": "Pop",
+                "correct": false,
+                "count": 1625
+            }
+        ]
+    },
+    {
+        "question": "Wayne Gretzky has been credited with saying \"you miss 100% of the shots you don't\" what?",
+        "questionNumber": 2,
+        "time": 1538435223.3111813,
+        "category": "Sports",
+        "answers": [
+            {
+                "answer": "Chug",
+                "correct": false,
+                "count": 1385
+            },
+            {
+                "answer": "Slap",
+                "correct": false,
+                "count": 8242
+            },
+            {
+                "answer": "Take",
+                "correct": true,
+                "count": 99947
+            }
+        ]
+    },
+    {
+        "question": "Which of these sports has the fewest number of players on the field at one time?",
+        "questionNumber": 3,
+        "time": 1538435256.4619772,
+        "category": "Sports",
+        "answers": [
+            {
+                "answer": "Baseball",
+                "correct": true,
+                "count": 67991
+            },
+            {
+                "answer": "American football",
+                "correct": false,
+                "count": 4724
+            },
+            {
+                "answer": "Soccer",
+                "correct": false,
+                "count": 20986
+            }
+        ]
+    },
+    {
+        "question": "In baseball, the term \"split-finger fastball\" refers to what specific two fingers being split?",
+        "questionNumber": 4,
+        "time": 1538435287.8013933,
+        "category": "Sports",
+        "answers": [
+            {
+                "answer": "Ring and middle",
+                "correct": false,
+                "count": 7996
+            },
+            {
+                "answer": "Index and middle",
+                "correct": true,
+                "count": 45591
+            },
+            {
+                "answer": "Index and thumb",
+                "correct": false,
+                "count": 2313
+            }
+        ]
+    },
+    {
+        "question": "Which pitcher did NOT reach the 20-win mark this year in MLB?",
+        "questionNumber": 5,
+        "time": 1538435327.3436391,
+        "category": "Sports",
+        "answers": [
+            {
+                "answer": "Blake Snell",
+                "correct": false,
+                "count": 10360
+            },
+            {
+                "answer": "Corey Kluber",
+                "correct": false,
+                "count": 15856
+            },
+            {
+                "answer": "Max Scherzer",
+                "correct": true,
+                "count": 19344
+            }
+        ]
+    },
+    {
+        "question": "What football team was the last to win the Super Bowl with a left-handed starting QB?",
+        "questionNumber": 6,
+        "time": 1538435364.214207,
+        "category": "Sports",
+        "answers": [
+            {
+                "answer": "Raiders",
+                "correct": false,
+                "count": 4339
+            },
+            {
+                "answer": "49ers",
+                "correct": true,
+                "count": 13607
+            },
+            {
+                "answer": "Falcons",
+                "correct": false,
+                "count": 2801
+            }
+        ]
+    },
+    {
+        "question": "Brett Favre tossed the most touchdowns in a single game while playing for what team?",
+        "questionNumber": 7,
+        "time": 1538435404.9524486,
+        "category": "Sports",
+        "answers": [
+            {
+                "answer": "Packers",
+                "correct": false,
+                "count": 5104
+            },
+            {
+                "answer": "Jets",
+                "correct": true,
+                "count": 1859
+            },
+            {
+                "answer": "Vikings",
+                "correct": false,
+                "count": 7070
+            }
+        ]
+    },
+    {
+        "question": "Who is the only player with a triple double of at least 20 points, rebounds and assists in an NBA game?",
+        "questionNumber": 8,
+        "time": 1538435449.959107,
+        "category": "Sports",
+        "answers": [
+            {
+                "answer": "Russell Westbrook",
+                "correct": false,
+                "count": 983
+            },
+            {
+                "answer": "Oscar Robertson",
+                "correct": false,
+                "count": 1092
+            },
+            {
+                "answer": "Wilt Chamberlain",
+                "correct": true,
+                "count": 1075
+            }
+        ]
+    },
+    {
+        "question": "Who was the last person Serena Williams defeated in a Grand Slam singles final?",
+        "questionNumber": 9,
+        "time": 1538435483.3191428,
+        "category": "Sports",
+        "answers": [
+            {
+                "answer": "Angelique Kerber",
+                "correct": false,
+                "count": 490
+            },
+            {
+                "answer": "Venus Williams",
+                "correct": true,
+                "count": 382
+            },
+            {
+                "answer": "Caroline Wozniacki",
+                "correct": false,
+                "count": 455
+            }
+        ]
+    },
+    {
+        "question": "Who is NOT one of the boxers who is tied for most appearances on HBO?",
+        "questionNumber": 10,
+        "time": 1538435521.8690596,
+        "category": "Sports",
+        "answers": [
+            {
+                "answer": "Roy Jones Jr.",
+                "correct": false,
+                "count": 136
+            },
+            {
+                "answer": "Floyd Mayweather",
+                "correct": true,
+                "count": 250
+            },
+            {
+                "answer": "Oscar de la Hoya",
+                "correct": false,
+                "count": 109
+            }
+        ]
+    },
+    {
+        "question": "Who set the NHL record for goals by a rookie born in the United States?",
+        "questionNumber": 11,
+        "time": 1538435559.4738457,
+        "category": "Sports",
+        "answers": [
+            {
+                "answer": "Auston Matthews",
+                "correct": true,
+                "count": 119
+            },
+            {
+                "answer": "Patrick Kane",
+                "correct": false,
+                "count": 84
+            },
+            {
+                "answer": "Jeremy Roenick",
+                "correct": false,
+                "count": 77
+            }
+        ]
+    },
+    {
+        "question": "During this year's Ryder Cup, which of these numbers was highest?",
+        "questionNumber": 12,
+        "time": 1538435619.048875,
+        "category": "Sports",
+        "answers": [
+            {
+                "answer": "Francesco Molinari wins",
+                "correct": true,
+                "count": 43
+            },
+            {
+                "answer": "Tiger Woods losses",
+                "correct": false,
+                "count": 32
+            },
+            {
+                "answer": "They were equal",
+                "correct": false,
+                "count": 67
+            }
+        ]
     }
 ]
