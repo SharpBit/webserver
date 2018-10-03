@@ -6187,5 +6187,281 @@
                 "count": 67
             }
         ]
+    },
+    {
+        "question": "Shrimp is most often paired with which of these foods in the South?",
+        "questionNumber": 1,
+        "time": 1538528718.2504275,
+        "category": "Cuisine",
+        "answers": [
+            {
+                "answer": "Swedish meatballs",
+                "correct": false,
+                "count": 11130
+            },
+            {
+                "answer": "Poutine",
+                "correct": false,
+                "count": 52436
+            },
+            {
+                "answer": "Grits",
+                "correct": true,
+                "count": 301581
+            }
+        ]
+    },
+    {
+        "question": "Which of these is a type of fancy shoe?",
+        "questionNumber": 2,
+        "time": 1538528768.0497289,
+        "category": "Fashion",
+        "answers": [
+            {
+                "answer": "Wingnuts",
+                "correct": false,
+                "count": 5760
+            },
+            {
+                "answer": "Wingtips",
+                "correct": true,
+                "count": 282500
+            },
+            {
+                "answer": "Wing Chun",
+                "correct": false,
+                "count": 12989
+            }
+        ]
+    },
+    {
+        "question": "Which of these animals is technically a type of rodent?",
+        "questionNumber": 3,
+        "time": 1538528845.234359,
+        "category": "Nature",
+        "answers": [
+            {
+                "answer": "Prairie dog",
+                "correct": true,
+                "count": 223253
+            },
+            {
+                "answer": "Elk",
+                "correct": false,
+                "count": 2139
+            },
+            {
+                "answer": "Otter",
+                "correct": false,
+                "count": 55334
+            }
+        ]
+    },
+    {
+        "question": "Trousers that remain wide-legged all the way through the ankle are known as what?",
+        "questionNumber": 4,
+        "time": 1538528892.258983,
+        "category": "Fashion",
+        "answers": [
+            {
+                "answer": "Stirrup pants",
+                "correct": false,
+                "count": 36794
+            },
+            {
+                "answer": "Harem pants",
+                "correct": false,
+                "count": 67171
+            },
+            {
+                "answer": "Palazzo pants",
+                "correct": true,
+                "count": 107114
+            }
+        ]
+    },
+    {
+        "question": "Which of these places is NOT currently classified as a \"city-state\"?",
+        "questionNumber": 5,
+        "time": 1538528947.6840868,
+        "category": "Geography",
+        "answers": [
+            {
+                "answer": "Monaco",
+                "correct": false,
+                "count": 25592
+            },
+            {
+                "answer": "Kuala Lumpur",
+                "correct": true,
+                "count": 50742
+            },
+            {
+                "answer": "Singapore",
+                "correct": false,
+                "count": 32438
+            }
+        ]
+    },
+    {
+        "question": "Which of these ubiquitous tech symbols is an example of Cubism?",
+        "questionNumber": 6,
+        "time": 1538528996.9388955,
+        "category": "Tech",
+        "answers": [
+            {
+                "answer": "Twitter logo",
+                "correct": false,
+                "count": 11337
+            },
+            {
+                "answer": "Android robot",
+                "correct": false,
+                "count": 27426
+            },
+            {
+                "answer": "Apple Finder",
+                "correct": true,
+                "count": 13245
+            }
+        ]
+    },
+    {
+        "question": "According to the \"Ducktales\" theme song, what kind of tales are being had?",
+        "questionNumber": 7,
+        "time": 1538529056.5799267,
+        "category": "Music",
+        "answers": [
+            {
+                "answer": "Wild tales",
+                "correct": false,
+                "count": 6970
+            },
+            {
+                "answer": "Fairy tales",
+                "correct": false,
+                "count": 1600
+            },
+            {
+                "answer": "Good luck tales",
+                "correct": true,
+                "count": 7527
+            }
+        ]
+    },
+    {
+        "question": "Which of these camera advancements was first introduced?",
+        "questionNumber": 8,
+        "time": 1538529096.655352,
+        "category": "Tech",
+        "answers": [
+            {
+                "answer": "Self-timer",
+                "correct": true,
+                "count": 5257
+            },
+            {
+                "answer": "Autofocus",
+                "correct": false,
+                "count": 1939
+            },
+            {
+                "answer": "Memory card",
+                "correct": false,
+                "count": 1063
+            }
+        ]
+    },
+    {
+        "question": "A ram's horn known as a shofar is typically blown during which Jewish event?",
+        "questionNumber": 9,
+        "time": 1538529142.6478431,
+        "category": "Culture",
+        "answers": [
+            {
+                "answer": "Hanukkah",
+                "correct": false,
+                "count": 180
+            },
+            {
+                "answer": "Bar Mitzvah",
+                "correct": false,
+                "count": 719
+            },
+            {
+                "answer": "Rosh Hashanah",
+                "correct": true,
+                "count": 4585
+            }
+        ]
+    },
+    {
+        "question": "Which major child-related medical advancement first happened in the '80s?",
+        "questionNumber": 10,
+        "time": 1538529194.0593271,
+        "category": "Science",
+        "answers": [
+            {
+                "answer": "The pill",
+                "correct": false,
+                "count": 786
+            },
+            {
+                "answer": "Home pregnancy kits",
+                "correct": false,
+                "count": 1697
+            },
+            {
+                "answer": "Gestational surrogacy",
+                "correct": true,
+                "count": 2061
+            }
+        ]
+    },
+    {
+        "question": "Which TV show debuted with the coveted post-Super Bowl time slot?",
+        "questionNumber": 11,
+        "time": 1538529234.3575313,
+        "category": "TV",
+        "answers": [
+            {
+                "answer": "Cheers",
+                "correct": false,
+                "count": 1017
+            },
+            {
+                "answer": "The Wonder Years",
+                "correct": true,
+                "count": 1077
+            },
+            {
+                "answer": "Magnum, PI",
+                "correct": false,
+                "count": 446
+            }
+        ]
+    },
+    {
+        "question": "Which film's lead character says the fewest words?",
+        "questionNumber": 12,
+        "time": 1538529288.4121318,
+        "category": "Movies",
+        "answers": [
+            {
+                "answer": "T2: Judgment Day",
+                "correct": false,
+                "count": 130
+            },
+            {
+                "answer": "Edward Scissorhands",
+                "correct": true,
+                "count": 921
+            },
+            {
+                "answer": "Drive",
+                "correct": false,
+                "count": 282
+            }
+        ]
     }
 ]
