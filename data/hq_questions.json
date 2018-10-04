@@ -6463,5 +6463,264 @@
                 "count": 282
             }
         ]
+    },
+    {
+        "question": "In a popular myth, what is said to be at the end of a rainbow?",
+        "questionNumber": 1,
+        "time": 1538680004.8367348,
+        "category": "Entertainment",
+        "answers": [
+            {
+                "answer": "Pot of gold",
+                "correct": true,
+                "count": 202533
+            },
+            {
+                "answer": "A moth",
+                "correct": false,
+                "count": 1147
+            },
+            {
+                "answer": "Bunch of mean horses",
+                "correct": false,
+                "count": 740
+            }
+        ]
+    },
+    {
+        "question": "Asking someone to do the opposite of what you want is known as what kind of psychology?",
+        "questionNumber": 2,
+        "time": 1538680046.5012012,
+        "category": "Science",
+        "answers": [
+            {
+                "answer": "Super forward",
+                "correct": false,
+                "count": 1040
+            },
+            {
+                "answer": "Reverse",
+                "correct": true,
+                "count": 197543
+            },
+            {
+                "answer": "Wildly neutral",
+                "correct": false,
+                "count": 687
+            }
+        ]
+    },
+    {
+        "question": "Within a play, a group of characters who comment on the drama is known as what?",
+        "questionNumber": 3,
+        "time": 1538680099.495969,
+        "category": "Entertainment",
+        "answers": [
+            {
+                "answer": "Swedish bowlers",
+                "correct": false,
+                "count": 8817
+            },
+            {
+                "answer": "Greek chorus",
+                "correct": true,
+                "count": 171121
+            },
+            {
+                "answer": "Italian bakers",
+                "correct": false,
+                "count": 11041
+            }
+        ]
+    },
+    {
+        "question": "In the novel \"The Sisterhood of the Traveling Pants,\" what kind of pants were shared?",
+        "questionNumber": 4,
+        "time": 1538680138.7855794,
+        "category": "Literature",
+        "answers": [
+            {
+                "answer": "Jeans",
+                "correct": true,
+                "count": 149480
+            },
+            {
+                "answer": "Cargo pants",
+                "correct": false,
+                "count": 9470
+            },
+            {
+                "answer": "Silk slacks",
+                "correct": false,
+                "count": 10717
+            }
+        ]
+    },
+    {
+        "question": "In hiking, taking a zig zag route up a mountain is known as what?",
+        "questionNumber": 5,
+        "time": 1538680177.3361223,
+        "category": "Nature",
+        "answers": [
+            {
+                "answer": "The Zorro",
+                "correct": false,
+                "count": 10448
+            },
+            {
+                "answer": "X marking",
+                "correct": false,
+                "count": 15538
+            },
+            {
+                "answer": "Switchback",
+                "correct": true,
+                "count": 122516
+            }
+        ]
+    },
+    {
+        "question": "The star of what film was recently cast as Tony in the remake of \"West Side Story\"?",
+        "questionNumber": 6,
+        "time": 1538680224.6502106,
+        "category": "Entertainment",
+        "answers": [
+            {
+                "answer": "Solo: A Star Wars Story",
+                "correct": false,
+                "count": 43964
+            },
+            {
+                "answer": "Whiplash",
+                "correct": false,
+                "count": 20156
+            },
+            {
+                "answer": "Baby Driver",
+                "correct": true,
+                "count": 56201
+            }
+        ]
+    },
+    {
+        "question": "Compounds known as lipids are often found in what?",
+        "questionNumber": 7,
+        "time": 1538680260.9321232,
+        "category": "Science",
+        "answers": [
+            {
+                "answer": "Butter",
+                "correct": true,
+                "count": 50505
+            },
+            {
+                "answer": "Sunlight",
+                "correct": false,
+                "count": 2885
+            },
+            {
+                "answer": "Water",
+                "correct": false,
+                "count": 5833
+            }
+        ]
+    },
+    {
+        "question": "Which of these rappers has the username LilTunechi on Twitter?",
+        "questionNumber": 8,
+        "time": 1538680323.547015,
+        "category": "Tech",
+        "answers": [
+            {
+                "answer": "Lil Wayne",
+                "correct": true,
+                "count": 23160
+            },
+            {
+                "answer": "Lil Yachty",
+                "correct": false,
+                "count": 15900
+            },
+            {
+                "answer": "Lil Kim",
+                "correct": false,
+                "count": 11839
+            }
+        ]
+    },
+    {
+        "question": "Title IX is a landmark American civil rights law most directly affecting what system?",
+        "questionNumber": 9,
+        "time": 1538680403.3759253,
+        "category": "History"
+    },
+    {
+        "question": "Which character was in all eight original \"Harry Potter\" movies?",
+        "questionNumber": 10,
+        "time": 1538680422.5470293,
+        "category": "Movies",
+        "answers": [
+            {
+                "answer": "Peter Pettigrew",
+                "correct": true,
+                "count": 4402
+            },
+            {
+                "answer": "Remus Lupin",
+                "correct": false,
+                "count": 2975
+            },
+            {
+                "answer": "Lucius Malfoy",
+                "correct": false,
+                "count": 12880
+            }
+        ]
+    },
+    {
+        "question": "Which of these famous sculptures does NOT have Morton's Toe?",
+        "questionNumber": 11,
+        "time": 1538680493.635352,
+        "category": "Art & Design",
+        "answers": [
+            {
+                "answer": "Statue of Liberty",
+                "correct": false,
+                "count": 1737
+            },
+            {
+                "answer": "Michelangelo's David",
+                "correct": false,
+                "count": 1737
+            },
+            {
+                "answer": "Great Sphinx of Giza",
+                "correct": true,
+                "count": 3692
+            }
+        ]
+    },
+    {
+        "question": "In Pitbull's massive 2013 hit featuring Kesha, what athlete is mentioned?",
+        "questionNumber": 12,
+        "time": 1538680559.4607968,
+        "category": "Music",
+        "answers": [
+            {
+                "answer": "Michael Jordan",
+                "correct": false,
+                "count": 665
+            },
+            {
+                "answer": "Kobe Bryant",
+                "correct": false,
+                "count": 1873
+            },
+            {
+                "answer": "LeBron James",
+                "correct": true,
+                "count": 1546
+            }
+        ]
     }
 ]
