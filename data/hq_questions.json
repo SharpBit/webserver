@@ -6722,5 +6722,281 @@
                 "count": 1546
             }
         ]
+    },
+    {
+        "question": "What part of a song do singers in a rock band typically perform?",
+        "questionNumber": 1,
+        "time": 1538787947.7894268,
+        "category": "Music",
+        "answers": [
+            {
+                "answer": "Drum solo",
+                "correct": false,
+                "count": 40237
+            },
+            {
+                "answer": "Lyrics",
+                "correct": true,
+                "count": 263008
+            },
+            {
+                "answer": "Sick bass licks",
+                "correct": false,
+                "count": 4353
+            }
+        ]
+    },
+    {
+        "question": "What gum brand weirdly translates to \"three teeth\"?",
+        "questionNumber": 2,
+        "time": 1538788003.9839845,
+        "category": "Cuisine",
+        "answers": [
+            {
+                "answer": "Extra",
+                "correct": false,
+                "count": 3225
+            },
+            {
+                "answer": "Trident",
+                "correct": true,
+                "count": 237697
+            },
+            {
+                "answer": "Chiclets",
+                "correct": false,
+                "count": 21516
+            }
+        ]
+    },
+    {
+        "question": "What word can mean either a punctuation mark or \"to hurry\"?",
+        "questionNumber": 3,
+        "time": 1538788063.8375056,
+        "category": "Language",
+        "answers": [
+            {
+                "answer": "Rush",
+                "correct": false,
+                "count": 22707
+            },
+            {
+                "answer": "Colon",
+                "correct": false,
+                "count": 14070
+            },
+            {
+                "answer": "Dash",
+                "correct": true,
+                "count": 197921
+            }
+        ]
+    },
+    {
+        "question": "Which of these nations lies in Sub-Saharan Africa?",
+        "questionNumber": 4,
+        "time": 1538788111.6575663,
+        "category": "Geography",
+        "answers": [
+            {
+                "answer": "Zambia",
+                "correct": true,
+                "count": 128026
+            },
+            {
+                "answer": "Egypt",
+                "correct": false,
+                "count": 29393
+            },
+            {
+                "answer": "Tunisia",
+                "correct": false,
+                "count": 39940
+            }
+        ]
+    },
+    {
+        "question": "If a regular-season NHL game goes into overtime, what happens first?",
+        "questionNumber": 5,
+        "time": 1538788167.3327687,
+        "category": "Sports",
+        "answers": [
+            {
+                "answer": "Teams go to 3 skaters",
+                "correct": true,
+                "count": 43587
+            },
+            {
+                "answer": "Goalies are pulled",
+                "correct": false,
+                "count": 15996
+            },
+            {
+                "answer": "Shootout",
+                "correct": false,
+                "count": 63938
+            }
+        ]
+    },
+    {
+        "question": "Stannous fluoride is fluoride containing what?",
+        "questionNumber": 6,
+        "time": 1538788232.2115684,
+        "category": "Science",
+        "answers": [
+            {
+                "answer": "Tin",
+                "correct": true,
+                "count": 22201
+            },
+            {
+                "answer": "Iron",
+                "correct": false,
+                "count": 17429
+            },
+            {
+                "answer": "Copper",
+                "correct": false,
+                "count": 8457
+            }
+        ]
+    },
+    {
+        "question": "Who is the only person named Oscar to win an Oscar?",
+        "questionNumber": 7,
+        "time": 1538788292.7043855,
+        "category": "Movies",
+        "answers": [
+            {
+                "answer": "Oscar Isaac",
+                "correct": false,
+                "count": 3077
+            },
+            {
+                "answer": "Oscar de la Renta",
+                "correct": false,
+                "count": 4183
+            },
+            {
+                "answer": "Oscar Hammerstein",
+                "correct": true,
+                "count": 16670
+            }
+        ]
+    },
+    {
+        "question": "Which is NOT a category of Pulitzer Prize?",
+        "questionNumber": 8,
+        "time": 1538788327.392562,
+        "category": "Literature",
+        "answers": [
+            {
+                "answer": "Editorial Cartooning",
+                "correct": false,
+                "count": 3098
+            },
+            {
+                "answer": "Science Writing",
+                "correct": true,
+                "count": 7335
+            },
+            {
+                "answer": "Breaking News Reporting",
+                "correct": false,
+                "count": 6450
+            }
+        ]
+    },
+    {
+        "question": "A real-life coding glitch put what accidental Pokemon into the first two games?",
+        "questionNumber": 9,
+        "time": 1538788367.6836543,
+        "category": "Games",
+        "answers": [
+            {
+                "answer": "EMPTYBUS.",
+                "correct": false,
+                "count": 803
+            },
+            {
+                "answer": "MISSINGNO.",
+                "correct": true,
+                "count": 5889
+            },
+            {
+                "answer": "PK_IDENT.",
+                "correct": false,
+                "count": 1659
+            }
+        ]
+    },
+    {
+        "question": "Which of these is NOT an example of a venomous mammal?",
+        "questionNumber": 10,
+        "time": 1538788430.7903411,
+        "category": "Nature",
+        "answers": [
+            {
+                "answer": "Ghost-faced bat",
+                "correct": true,
+                "count": 2530
+            },
+            {
+                "answer": "Platypus",
+                "correct": false,
+                "count": 1100
+            },
+            {
+                "answer": "Slow loris",
+                "correct": false,
+                "count": 2574
+            }
+        ]
+    },
+    {
+        "question": "A \"TV Guide\" list of the worst shows ever included what spinoff of the legendary sitcom \"M*A*S*H\"?",
+        "questionNumber": 11,
+        "time": 1538788476.9679914,
+        "category": "TV",
+        "answers": [
+            {
+                "answer": "W*A*L*T*E*R",
+                "correct": false,
+                "count": 612
+            },
+            {
+                "answer": "Trapper John, MD",
+                "correct": false,
+                "count": 1215
+            },
+            {
+                "answer": "AfterMASH",
+                "correct": true,
+                "count": 1122
+            }
+        ]
+    },
+    {
+        "question": "The exterior of Washington National Cathedral in America's capital features a carving of who?",
+        "questionNumber": 12,
+        "time": 1538788534.110458,
+        "category": "Culture",
+        "answers": [
+            {
+                "answer": "Ned Flanders",
+                "correct": false,
+                "count": 93
+            },
+            {
+                "answer": "The Lone Ranger",
+                "correct": false,
+                "count": 434
+            },
+            {
+                "answer": "Darth Vader",
+                "correct": true,
+                "count": 1084
+            }
+        ]
     }
 ]
