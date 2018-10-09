@@ -6998,5 +6998,281 @@
                 "count": 1084
             }
         ]
+    },
+    {
+        "question": "By definition, which of these combine to form a coordinate point?",
+        "questionNumber": 1,
+        "time": 1539111974.461333,
+        "category": "Geography",
+        "answers": [
+            {
+                "answer": "Longitude / latitude",
+                "correct": true,
+                "count": 232407
+            },
+            {
+                "answer": "Ham / cheese",
+                "correct": false,
+                "count": 1921
+            },
+            {
+                "answer": "Hall / Oates",
+                "correct": false,
+                "count": 639
+            }
+        ]
+    },
+    {
+        "question": "In the 1800s, Otto von Bismarck was the chancellor of what European power?",
+        "questionNumber": 2,
+        "time": 1539112013.677814,
+        "category": "History",
+        "answers": [
+            {
+                "answer": "Empire Records",
+                "correct": false,
+                "count": 14010
+            },
+            {
+                "answer": "Galactic Republic",
+                "correct": false,
+                "count": 6699
+            },
+            {
+                "answer": "German Empire",
+                "correct": true,
+                "count": 204189
+            }
+        ]
+    },
+    {
+        "question": "Which of these shows just introduced a 13th version of its main character?",
+        "questionNumber": 3,
+        "time": 1539112077.9924822,
+        "category": "TV",
+        "answers": [
+            {
+                "answer": "Doctor Who",
+                "correct": true,
+                "count": 178650
+            },
+            {
+                "answer": "God Friended Me",
+                "correct": false,
+                "count": 9780
+            },
+            {
+                "answer": "Cheers",
+                "correct": false,
+                "count": 11423
+            }
+        ]
+    },
+    {
+        "question": "Which of these is a key ingredient in an Elvis sandwich?",
+        "questionNumber": 4,
+        "time": 1539112120.7389867,
+        "category": "Cuisine",
+        "answers": [
+            {
+                "answer": "Jelly",
+                "correct": false,
+                "count": 21890
+            },
+            {
+                "answer": "Banana",
+                "correct": true,
+                "count": 140881
+            },
+            {
+                "answer": "Chocolate spread",
+                "correct": false,
+                "count": 13743
+            }
+        ]
+    },
+    {
+        "question": "Who hosted \"Saturday Night Live\" this past weekend?",
+        "questionNumber": 5,
+        "time": 1539112161.3112135,
+        "category": "TV",
+        "answers": [
+            {
+                "answer": "Awkwafina",
+                "correct": true,
+                "count": 84216
+            },
+            {
+                "answer": "Sandra Bullock",
+                "correct": false,
+                "count": 19839
+            },
+            {
+                "answer": "Anne Hathaway",
+                "correct": false,
+                "count": 35675
+            }
+        ]
+    },
+    {
+        "question": "The Titanic was primarily built in what city?",
+        "questionNumber": 6,
+        "time": 1539112204.1301837,
+        "category": "History",
+        "answers": [
+            {
+                "answer": "New York",
+                "correct": false,
+                "count": 11821
+            },
+            {
+                "answer": "Southampton",
+                "correct": false,
+                "count": 28698
+            },
+            {
+                "answer": "Belfast",
+                "correct": true,
+                "count": 44683
+            }
+        ]
+    },
+    {
+        "question": "Which of these cooking gurus was once a professional stockbroker?",
+        "questionNumber": 7,
+        "time": 1539112256.5868926,
+        "category": "Cuisine",
+        "answers": [
+            {
+                "answer": "Rachael Ray",
+                "correct": false,
+                "count": 7541
+            },
+            {
+                "answer": "Martha Stewart",
+                "correct": true,
+                "count": 22818
+            },
+            {
+                "answer": "Emeril Lagasse",
+                "correct": false,
+                "count": 15431
+            }
+        ]
+    },
+    {
+        "question": "The Sony exec responsible for the Walkman wanted to use it to listen to what kind of music?",
+        "questionNumber": 8,
+        "time": 1539112312.4895763,
+        "category": "Music",
+        "answers": [
+            {
+                "answer": "Opera",
+                "correct": true,
+                "count": 13103
+            },
+            {
+                "answer": "Country",
+                "correct": false,
+                "count": 2705
+            },
+            {
+                "answer": "Jazz",
+                "correct": false,
+                "count": 8145
+            }
+        ]
+    },
+    {
+        "question": "On average, which of these cities has the greatest total annual rainfall?",
+        "questionNumber": 9,
+        "time": 1539112348.9073265,
+        "category": "Nature",
+        "answers": [
+            {
+                "answer": "Seattle",
+                "correct": false,
+                "count": 9752
+            },
+            {
+                "answer": "New Orleans",
+                "correct": true,
+                "count": 3513
+            },
+            {
+                "answer": "New York City",
+                "correct": false,
+                "count": 915
+            }
+        ]
+    },
+    {
+        "question": "The Maroon 5 video with the most views on YouTube was directed by the same person as what film?",
+        "questionNumber": 10,
+        "time": 1539112412.060819,
+        "category": "Music",
+        "answers": [
+            {
+                "answer": "Wedding Crashers",
+                "correct": true,
+                "count": 1830
+            },
+            {
+                "answer": "The Hangover",
+                "correct": false,
+                "count": 1681
+            },
+            {
+                "answer": "Bridesmaids",
+                "correct": false,
+                "count": 1474
+            }
+        ]
+    },
+    {
+        "question": "Which TV show featured an actor who made annual singing appearances at the Indy 500?",
+        "questionNumber": 11,
+        "time": 1539112466.3892338,
+        "category": "Sports",
+        "answers": [
+            {
+                "answer": "Happy Days",
+                "correct": false,
+                "count": 731
+            },
+            {
+                "answer": "I Dream of Jeannie",
+                "correct": false,
+                "count": 644
+            },
+            {
+                "answer": "The Brady Bunch",
+                "correct": true,
+                "count": 921
+            }
+        ]
+    },
+    {
+        "question": "In China, what word is often used in popular American comedy movie titles?",
+        "questionNumber": 12,
+        "time": 1539112524.006269,
+        "category": "Movies",
+        "answers": [
+            {
+                "answer": "Ace",
+                "correct": true,
+                "count": 612
+            },
+            {
+                "answer": "Goofy",
+                "correct": false,
+                "count": 244
+            },
+            {
+                "answer": "Tickle",
+                "correct": false,
+                "count": 219
+            }
+        ]
     }
 ]
