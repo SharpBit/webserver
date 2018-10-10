@@ -7274,5 +7274,281 @@
                 "count": 219
             }
         ]
+    },
+    {
+        "question": "Which of these is an official weight class in the UFC?",
+        "questionNumber": 1,
+        "time": 1539212626.443931,
+        "category": "Sports",
+        "answers": [
+            {
+                "answer": "Peanutweight",
+                "correct": false,
+                "count": 14760
+            },
+            {
+                "answer": "Birdweight",
+                "correct": false,
+                "count": 30613
+            },
+            {
+                "answer": "Strawweight",
+                "correct": true,
+                "count": 56451
+            }
+        ]
+    },
+    {
+        "question": "Red Sox utility player Brock Holt just became the first person to ever do what in the playoffs?",
+        "questionNumber": 2,
+        "time": 1539212663.686243,
+        "category": "Sports",
+        "answers": [
+            {
+                "answer": "Play all nine positions",
+                "correct": false,
+                "count": 6330
+            },
+            {
+                "answer": "Hit for the cycle",
+                "correct": true,
+                "count": 38857
+            },
+            {
+                "answer": "Steal every base twice",
+                "correct": false,
+                "count": 8768
+            }
+        ]
+    },
+    {
+        "question": "In which football formation does the quarterback set up the farthest from the center?",
+        "questionNumber": 3,
+        "time": 1539212723.7475276,
+        "category": "Sports",
+        "answers": [
+            {
+                "answer": "Shotgun",
+                "correct": true,
+                "count": 35418
+            },
+            {
+                "answer": "I formation",
+                "correct": false,
+                "count": 2400
+            },
+            {
+                "answer": "Pistol",
+                "correct": false,
+                "count": 1163
+            }
+        ]
+    },
+    {
+        "question": "Which of these college football teams received a No. 1 vote in this week's AP poll?",
+        "questionNumber": 4,
+        "time": 1539212763.99973,
+        "category": "Sports",
+        "answers": [
+            {
+                "answer": "Georgia",
+                "correct": false,
+                "count": 13158
+            },
+            {
+                "answer": "Ohio State",
+                "correct": true,
+                "count": 13341
+            },
+            {
+                "answer": "Notre Dame",
+                "correct": false,
+                "count": 8326
+            }
+        ]
+    },
+    {
+        "question": "Who hit the most home runs in MLB history after reaching the age of 43?",
+        "questionNumber": 5,
+        "time": 1539212808.240657,
+        "category": "Sports",
+        "answers": [
+            {
+                "answer": "Julio Franco",
+                "correct": true,
+                "count": 3800
+            },
+            {
+                "answer": "Barry Bonds",
+                "correct": false,
+                "count": 8769
+            },
+            {
+                "answer": "Carlton Fisk",
+                "correct": false,
+                "count": 2060
+            }
+        ]
+    },
+    {
+        "question": "What is the only NFL team that has neither played in nor hosted a Super Bowl?",
+        "questionNumber": 6,
+        "time": 1539212856.620676,
+        "category": "Sports",
+        "answers": [
+            {
+                "answer": "Jacksonville Jaguars",
+                "correct": false,
+                "count": 1135
+            },
+            {
+                "answer": "Cleveland Browns",
+                "correct": true,
+                "count": 2580
+            },
+            {
+                "answer": "Detroit Lions",
+                "correct": false,
+                "count": 844
+            }
+        ]
+    },
+    {
+        "question": "The phrase \"winning hands down\" originated in what sport?",
+        "questionNumber": 7,
+        "time": 1539212903.6684384,
+        "category": "Sports",
+        "answers": [
+            {
+                "answer": "Boxing",
+                "correct": false,
+                "count": 1446
+            },
+            {
+                "answer": "Horse racing",
+                "correct": true,
+                "count": 906
+            },
+            {
+                "answer": "Swimming",
+                "correct": false,
+                "count": 441
+            }
+        ]
+    },
+    {
+        "question": "What league's championship trophy features multiple women's names engraved on it?",
+        "questionNumber": 8,
+        "time": 1539212942.1391306,
+        "category": "Sports",
+        "answers": [
+            {
+                "answer": "NHL",
+                "correct": true,
+                "count": 691
+            },
+            {
+                "answer": "NFL",
+                "correct": false,
+                "count": 121
+            },
+            {
+                "answer": "NBA",
+                "correct": false,
+                "count": 341
+            }
+        ]
+    },
+    {
+        "question": "Which of these championship-winning coaches did NOT play on a team that won the NCAA tournament?",
+        "questionNumber": 9,
+        "time": 1539212979.7447577,
+        "category": "Sports",
+        "answers": [
+            {
+                "answer": "Bobby Knight",
+                "correct": false,
+                "count": 253
+            },
+            {
+                "answer": "John Wooden",
+                "correct": true,
+                "count": 287
+            },
+            {
+                "answer": "Dean Smith",
+                "correct": false,
+                "count": 203
+            }
+        ]
+    },
+    {
+        "question": "In the last 10 years, which team has had multiple NBA Rookies of the Year?",
+        "questionNumber": 10,
+        "time": 1539213029.3760846,
+        "category": "Sports",
+        "answers": [
+            {
+                "answer": "Timberwolves",
+                "correct": true,
+                "count": 180
+            },
+            {
+                "answer": "Cavaliers",
+                "correct": false,
+                "count": 65
+            },
+            {
+                "answer": "Bucks",
+                "correct": false,
+                "count": 107
+            }
+        ]
+    },
+    {
+        "question": "Which tennis player won the greatest number of consecutive matches on clay?",
+        "questionNumber": 11,
+        "time": 1539213070.456681,
+        "category": "Sports",
+        "answers": [
+            {
+                "answer": "Rafael Nadal",
+                "correct": false,
+                "count": 77
+            },
+            {
+                "answer": "Chris Evert",
+                "correct": true,
+                "count": 68
+            },
+            {
+                "answer": "Bjorn Borg",
+                "correct": false,
+                "count": 58
+            }
+        ]
+    },
+    {
+        "question": "Which nation won its first Olympic medal most recently?",
+        "questionNumber": 12,
+        "time": 1539213126.2603865,
+        "category": "Sports",
+        "answers": [
+            {
+                "answer": "Colombia",
+                "correct": false,
+                "count": 36
+            },
+            {
+                "answer": "Ireland",
+                "correct": false,
+                "count": 39
+            },
+            {
+                "answer": "China",
+                "correct": true,
+                "count": 17
+            }
+        ]
     }
 ]
