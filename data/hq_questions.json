@@ -7550,5 +7550,281 @@
                 "count": 17
             }
         ]
+    },
+    {
+        "question": "Who once told an \"American Idol\" contestant that he was \"the worst singer in the world\"?",
+        "questionNumber": 1,
+        "time": 1539306266.0172424,
+        "category": "TV",
+        "answers": [
+            {
+                "answer": "Simon Cowell",
+                "correct": true,
+                "count": 393667
+            },
+            {
+                "answer": "Luna Legend",
+                "correct": false,
+                "count": 5215
+            },
+            {
+                "answer": "NHL Mascot Gritty",
+                "correct": false,
+                "count": 2238
+            }
+        ]
+    },
+    {
+        "question": "The star of the original \"Magnum, P.I.\" sported what kind of facial hair?",
+        "questionNumber": 2,
+        "time": 1539306311.6235483,
+        "category": "TV",
+        "answers": [
+            {
+                "answer": "Mustache",
+                "correct": true,
+                "count": 373407
+            },
+            {
+                "answer": "Soul patch",
+                "correct": false,
+                "count": 12717
+            },
+            {
+                "answer": "Wizard beard",
+                "correct": false,
+                "count": 4367
+            }
+        ]
+    },
+    {
+        "question": "Which of these TV shows famously aired a series finale that abruptly cuts to black?",
+        "questionNumber": 3,
+        "time": 1539306358.3360293,
+        "category": "TV",
+        "answers": [
+            {
+                "answer": "Mad Men",
+                "correct": false,
+                "count": 48592
+            },
+            {
+                "answer": "Seinfeld",
+                "correct": false,
+                "count": 47626
+            },
+            {
+                "answer": "The Sopranos",
+                "correct": true,
+                "count": 271026
+            }
+        ]
+    },
+    {
+        "question": "In which of these shows was the main character NOT a doctor?",
+        "questionNumber": 4,
+        "time": 1539306407.4907343,
+        "category": "TV",
+        "answers": [
+            {
+                "answer": "Castle",
+                "correct": true,
+                "count": 193799
+            },
+            {
+                "answer": "House",
+                "correct": false,
+                "count": 4827
+            },
+            {
+                "answer": "The Mindy Project",
+                "correct": false,
+                "count": 78204
+            }
+        ]
+    },
+    {
+        "question": "Which of these \"Game of Thrones\" characters learned to speak Dothraki?",
+        "questionNumber": 5,
+        "time": 1539306442.142713,
+        "category": "TV",
+        "answers": [
+            {
+                "answer": "Daenerys Targaryen",
+                "correct": true,
+                "count": 150793
+            },
+            {
+                "answer": "Jon Snow",
+                "correct": false,
+                "count": 31042
+            },
+            {
+                "answer": "Stannis Baratheon",
+                "correct": false,
+                "count": 18694
+            }
+        ]
+    },
+    {
+        "question": "Which of these creepy characters has NOT been featured on \"American Horror Story\"?",
+        "questionNumber": 6,
+        "time": 1539306483.131081,
+        "category": "TV",
+        "answers": [
+            {
+                "answer": "Rubber Man",
+                "correct": false,
+                "count": 34748
+            },
+            {
+                "answer": "Krazee-Eyez Killa",
+                "correct": true,
+                "count": 100699
+            },
+            {
+                "answer": "Twisty the Clown",
+                "correct": false,
+                "count": 19212
+            }
+        ]
+    },
+    {
+        "question": "What style of footwear did Carrie Bradshaw think was just \"an urban shoe myth\"?",
+        "questionNumber": 7,
+        "time": 1539306519.9882352,
+        "category": "TV",
+        "answers": [
+            {
+                "answer": "Christian Louboutin flat",
+                "correct": false,
+                "count": 36193
+            },
+            {
+                "answer": "Manolo Blahnik Mary Jane",
+                "correct": true,
+                "count": 50923
+            },
+            {
+                "answer": "Prada stiletto",
+                "correct": false,
+                "count": 18220
+            }
+        ]
+    },
+    {
+        "question": "The Countess of Grantham on \"Downton Abbey\" was almost played by the star of what show?",
+        "questionNumber": 8,
+        "time": 1539306578.051445,
+        "category": "TV",
+        "answers": [
+            {
+                "answer": "Medium",
+                "correct": false,
+                "count": 14458
+            },
+            {
+                "answer": "The X-Files",
+                "correct": true,
+                "count": 26296
+            },
+            {
+                "answer": "Prime Suspect",
+                "correct": false,
+                "count": 17805
+            }
+        ]
+    },
+    {
+        "question": "The people who receive The Fab Five's help on this year's \"Queer Eye\" reboot are referred to as what?",
+        "questionNumber": 9,
+        "time": 1539306621.802477,
+        "category": "TV",
+        "answers": [
+            {
+                "answer": "Heroes",
+                "correct": true,
+                "count": 14723
+            },
+            {
+                "answer": "Projects",
+                "correct": false,
+                "count": 11792
+            },
+            {
+                "answer": "Frenemies",
+                "correct": false,
+                "count": 4399
+            }
+        ]
+    },
+    {
+        "question": "A young character on \"Big Little Lies\" is named in honor of what musician?",
+        "questionNumber": 10,
+        "time": 1539306663.3909755,
+        "category": "TV",
+        "answers": [
+            {
+                "answer": "David Bowie",
+                "correct": true,
+                "count": 8319
+            },
+            {
+                "answer": "Mick Jagger",
+                "correct": false,
+                "count": 2858
+            },
+            {
+                "answer": "Stevie Nicks",
+                "correct": false,
+                "count": 5225
+            }
+        ]
+    },
+    {
+        "question": "When Luke infamously \"welcomes\" Ryan in \"The OC\" pilot, what accessory is he wearing?",
+        "questionNumber": 11,
+        "time": 1539306710.3099482,
+        "category": "TV",
+        "answers": [
+            {
+                "answer": "Necklace",
+                "correct": true,
+                "count": 3769
+            },
+            {
+                "answer": "Baseball cap",
+                "correct": false,
+                "count": 3343
+            },
+            {
+                "answer": "Sunglasses",
+                "correct": false,
+                "count": 2157
+            }
+        ]
+    },
+    {
+        "question": "During Ross's wedding to Emily in \"Friends,\" what does Ross say immediately after \"take thee Rachel\"?",
+        "questionNumber": 12,
+        "time": 1539306775.8493567,
+        "category": "TV",
+        "answers": [
+            {
+                "answer": "Whoops",
+                "correct": false,
+                "count": 598
+            },
+            {
+                "answer": "Rachel",
+                "correct": false,
+                "count": 916
+            },
+            {
+                "answer": "Emily",
+                "correct": true,
+                "count": 3194
+            }
+        ]
     }
 ]
