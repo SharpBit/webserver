@@ -7826,5 +7826,281 @@
                 "count": 3194
             }
         ]
+    },
+    {
+        "question": "In education, what does \"K-12\" refer to?",
+        "questionNumber": 1,
+        "time": 1539479126.1501794,
+        "category": "Civics",
+        "answers": [
+            {
+                "answer": "Climbing technique",
+                "correct": false,
+                "count": 2310
+            },
+            {
+                "answer": "\"Battleship\" move",
+                "correct": false,
+                "count": 1895
+            },
+            {
+                "answer": "Kindergarten to Grade 12",
+                "correct": true,
+                "count": 310357
+            }
+        ]
+    },
+    {
+        "question": "Raisins are a dried form of what fruit?",
+        "questionNumber": 2,
+        "time": 1539479175.3840759,
+        "category": "Cuisine",
+        "answers": [
+            {
+                "answer": "Prunes",
+                "correct": false,
+                "count": 22547
+            },
+            {
+                "answer": "Apricots",
+                "correct": false,
+                "count": 1427
+            },
+            {
+                "answer": "Grapes",
+                "correct": true,
+                "count": 282274
+            }
+        ]
+    },
+    {
+        "question": "Which of these characters could be classified as a burro?",
+        "questionNumber": 3,
+        "time": 1539479239.1157084,
+        "category": "Nature",
+        "answers": [
+            {
+                "answer": "Tigger",
+                "correct": false,
+                "count": 12471
+            },
+            {
+                "answer": "Winnie the Pooh",
+                "correct": false,
+                "count": 20247
+            },
+            {
+                "answer": "Eeyore",
+                "correct": true,
+                "count": 246124
+            }
+        ]
+    },
+    {
+        "question": "Who was the first US president to reside in the White House?",
+        "questionNumber": 4,
+        "time": 1539479284.211051,
+        "category": "History",
+        "answers": [
+            {
+                "answer": "John Adams",
+                "correct": true,
+                "count": 130474
+            },
+            {
+                "answer": "Thomas Jefferson",
+                "correct": false,
+                "count": 81428
+            },
+            {
+                "answer": "George Washington",
+                "correct": false,
+                "count": 30750
+            }
+        ]
+    },
+    {
+        "question": "Which of these is the correct spelling of a synonym for \"pompous\"?",
+        "questionNumber": 5,
+        "time": 1539479333.4617195,
+        "category": "Language",
+        "answers": [
+            {
+                "answer": "Highfalutin",
+                "correct": true,
+                "count": 71045
+            },
+            {
+                "answer": "Highfaluting",
+                "correct": false,
+                "count": 39327
+            },
+            {
+                "answer": "Highfalutine",
+                "correct": false,
+                "count": 21645
+            }
+        ]
+    },
+    {
+        "question": "What candy shares its name with a bowling-like lawn game?",
+        "questionNumber": 6,
+        "time": 1539479405.5666223,
+        "category": "Culture",
+        "answers": [
+            {
+                "answer": "Skittles",
+                "correct": true,
+                "count": 48280
+            },
+            {
+                "answer": "Smarties",
+                "correct": false,
+                "count": 6890
+            },
+            {
+                "answer": "Snickers",
+                "correct": false,
+                "count": 16844
+            }
+        ]
+    },
+    {
+        "question": "Which US state is currently divided into smaller regions called counties?",
+        "questionNumber": 7,
+        "time": 1539479459.6697578,
+        "category": "Geography",
+        "answers": [
+            {
+                "answer": "Louisiana",
+                "correct": false,
+                "count": 14430
+            },
+            {
+                "answer": "Rhode Island",
+                "correct": true,
+                "count": 18054
+            },
+            {
+                "answer": "Alaska",
+                "correct": false,
+                "count": 15473
+            }
+        ]
+    },
+    {
+        "question": "What is 1/100,000,000 of a Bitcoin called?",
+        "questionNumber": 8,
+        "time": 1539479517.9718838,
+        "category": "Business",
+        "answers": [
+            {
+                "answer": "Nanocent",
+                "correct": false,
+                "count": 6666
+            },
+            {
+                "answer": "Picocoin",
+                "correct": false,
+                "count": 6895
+            },
+            {
+                "answer": "Satoshi",
+                "correct": true,
+                "count": 6109
+            }
+        ]
+    },
+    {
+        "question": "When successful, which American football play scores the most points?",
+        "questionNumber": 9,
+        "time": 1539479596.2324457,
+        "category": "Sports",
+        "answers": [
+            {
+                "answer": "Safety",
+                "correct": false,
+                "count": 2369
+            },
+            {
+                "answer": "Conversion",
+                "correct": false,
+                "count": 4016
+            },
+            {
+                "answer": "Fair-catch kick",
+                "correct": true,
+                "count": 1243
+            }
+        ]
+    },
+    {
+        "question": "What \"Lord of the Rings\" character was in the books, but not seen, heard, or mentioned in Peter Jackson's films?",
+        "questionNumber": 10,
+        "time": 1539479651.7063162,
+        "category": "Literature",
+        "answers": [
+            {
+                "answer": "Tom Bombadil",
+                "correct": true,
+                "count": 1242
+            },
+            {
+                "answer": "Farmer Maggot",
+                "correct": false,
+                "count": 348
+            },
+            {
+                "answer": "Barliman Butterbur",
+                "correct": false,
+                "count": 545
+            }
+        ]
+    },
+    {
+        "question": "Which is a playable race in \"World of Warcraft\"?",
+        "questionNumber": 11,
+        "time": 1539479712.0170083,
+        "category": "Games",
+        "answers": [
+            {
+                "answer": "Faerie",
+                "correct": false,
+                "count": 85
+            },
+            {
+                "answer": "High elf",
+                "correct": false,
+                "count": 420
+            },
+            {
+                "answer": "Gnome",
+                "correct": true,
+                "count": 828
+            }
+        ]
+    },
+    {
+        "question": "Roger Ebert infamously wrote he \"hated hated hated hated hated\" a 1994 film directed by who?",
+        "questionNumber": 12,
+        "time": 1539479767.6976004,
+        "category": "Movies",
+        "answers": [
+            {
+                "answer": "Harold Ramis",
+                "correct": false,
+                "count": 126
+            },
+            {
+                "answer": "Ivan Reitman",
+                "correct": false,
+                "count": 115
+            },
+            {
+                "answer": "Rob Reiner",
+                "correct": true,
+                "count": 618
+            }
+        ]
     }
 ]
