@@ -8102,5 +8102,264 @@
                 "count": 618
             }
         ]
+    },
+    {
+        "question": "In which of these sports does each player carry a stick?",
+        "questionNumber": 1,
+        "time": 1539644673.9384332,
+        "category": "Sports"
+    },
+    {
+        "question": "According to a WSJ study, which football position has the shortest average NFL career length?",
+        "questionNumber": 2,
+        "time": 1539644705.4226077,
+        "category": "Sports",
+        "answers": [
+            {
+                "answer": "Quarterback",
+                "correct": false,
+                "count": 11377
+            },
+            {
+                "answer": "Offensive lineman",
+                "correct": false,
+                "count": 24468
+            },
+            {
+                "answer": "Running back",
+                "correct": true,
+                "count": 57249
+            }
+        ]
+    },
+    {
+        "question": "What level of basketball has the shortest 3-point line, measured from basket to the top of the key?",
+        "questionNumber": 3,
+        "time": 1539644752.851359,
+        "category": "Sports",
+        "answers": [
+            {
+                "answer": "NCAA",
+                "correct": true,
+                "count": 23391
+            },
+            {
+                "answer": "NBA",
+                "correct": false,
+                "count": 2251
+            },
+            {
+                "answer": "WNBA",
+                "correct": false,
+                "count": 31109
+            }
+        ]
+    },
+    {
+        "question": "What pitcher set the record for most consecutive team losses in his postseason starts?",
+        "questionNumber": 4,
+        "time": 1539644800.1806788,
+        "category": "Sports",
+        "answers": [
+            {
+                "answer": "Clayton Kershaw",
+                "correct": false,
+                "count": 7439
+            },
+            {
+                "answer": "Trevor Bauer",
+                "correct": false,
+                "count": 3317
+            },
+            {
+                "answer": "David Price",
+                "correct": true,
+                "count": 13615
+            }
+        ]
+    },
+    {
+        "question": "Randy Moss once said \"When you're rich, you don't\" what?",
+        "questionNumber": 5,
+        "time": 1539644843.5661016,
+        "category": "Sports",
+        "answers": [
+            {
+                "answer": "Take the bus",
+                "correct": false,
+                "count": 5266
+            },
+            {
+                "answer": "Write checks",
+                "correct": true,
+                "count": 6675
+            },
+            {
+                "answer": "Lose",
+                "correct": false,
+                "count": 2124
+            }
+        ]
+    },
+    {
+        "question": "Which of these is NOT a hall of fame that has enshrined Wilt Chamberlain?",
+        "questionNumber": 6,
+        "time": 1539644901.356778,
+        "category": "Sports",
+        "answers": [
+            {
+                "answer": "Volleyball",
+                "correct": false,
+                "count": 3410
+            },
+            {
+                "answer": "Basketball",
+                "correct": false,
+                "count": 154
+            },
+            {
+                "answer": "Track & Field",
+                "correct": true,
+                "count": 3666
+            }
+        ]
+    },
+    {
+        "question": "What did lightweight champion Khabib Nurmagomedov say would make him quit UFC?",
+        "questionNumber": 7,
+        "time": 1539644951.2471387,
+        "category": "Sports",
+        "answers": [
+            {
+                "answer": "Suspension",
+                "correct": false,
+                "count": 686
+            },
+            {
+                "answer": "Rematch with McGregor",
+                "correct": false,
+                "count": 573
+            },
+            {
+                "answer": "The firing of a teammate",
+                "correct": true,
+                "count": 2662
+            }
+        ]
+    },
+    {
+        "question": "What women's skier has the record for most World Cup victories, all time?",
+        "questionNumber": 8,
+        "time": 1539644995.7762024,
+        "category": "Sports",
+        "answers": [
+            {
+                "answer": "Janica Kostelic",
+                "correct": false,
+                "count": 719
+            },
+            {
+                "answer": "Mikaela Shiffrin",
+                "correct": false,
+                "count": 592
+            },
+            {
+                "answer": "Lindsey Vonn",
+                "correct": true,
+                "count": 1432
+            }
+        ]
+    },
+    {
+        "question": "What goaltender has the NHL record for scoring the most goals?",
+        "questionNumber": 9,
+        "time": 1539645036.9954467,
+        "category": "Sports",
+        "answers": [
+            {
+                "answer": "Patrick Roy",
+                "correct": false,
+                "count": 498
+            },
+            {
+                "answer": "Dominik Hasek",
+                "correct": false,
+                "count": 397
+            },
+            {
+                "answer": "Martin Brodeur",
+                "correct": true,
+                "count": 806
+            }
+        ]
+    },
+    {
+        "question": "What is the only pair of MLB teams to match up in a League Championship Series three years straight?",
+        "questionNumber": 10,
+        "time": 1539645090.066208,
+        "category": "Sports",
+        "answers": [
+            {
+                "answer": "Yankees / Royals",
+                "correct": true,
+                "count": 186
+            },
+            {
+                "answer": "Braves / Pirates",
+                "correct": false,
+                "count": 249
+            },
+            {
+                "answer": "Dodgers / Cardinals",
+                "correct": false,
+                "count": 469
+            }
+        ]
+    },
+    {
+        "question": "What unique specification did Rasheed Wallace request for his 2004 Pistons championship ring?",
+        "questionNumber": 11,
+        "time": 1539645139.8849616,
+        "category": "Sports",
+        "answers": [
+            {
+                "answer": "Sized for middle finger",
+                "correct": true,
+                "count": 230
+            },
+            {
+                "answer": "No diamonds",
+                "correct": false,
+                "count": 59
+            },
+            {
+                "answer": "His initials",
+                "correct": false,
+                "count": 25
+            }
+        ]
+    },
+    {
+        "question": "What is the only city to win three major American pro sports titles within 12 months?",
+        "questionNumber": 12,
+        "time": 1539645216.8980827,
+        "category": "Sports",
+        "answers": [
+            {
+                "answer": "Pittsburgh",
+                "correct": false,
+                "count": 49
+            },
+            {
+                "answer": "Boston",
+                "correct": false,
+                "count": 172
+            },
+            {
+                "answer": "Detroit",
+                "correct": true,
+                "count": 19
+            }
+        ]
     }
 ]
