@@ -8637,5 +8637,281 @@
                 "count": 400
             }
         ]
+    },
+    {
+        "question": "Which of these is a traditional formation in American football?",
+        "questionNumber": 1,
+        "time": 1539817501.6919997,
+        "category": "Sports",
+        "answers": [
+            {
+                "answer": "Wishbone",
+                "correct": true,
+                "count": 95416
+            },
+            {
+                "answer": "Funny bone",
+                "correct": false,
+                "count": 3750
+            },
+            {
+                "answer": "Bone Thugs-N-Harmony",
+                "correct": false,
+                "count": 2247
+            }
+        ]
+    },
+    {
+        "question": "What league began regular season play last night?",
+        "questionNumber": 2,
+        "time": 1539817537.3137076,
+        "category": "Sports",
+        "answers": [
+            {
+                "answer": "MLS",
+                "correct": false,
+                "count": 4493
+            },
+            {
+                "answer": "NHL",
+                "correct": false,
+                "count": 13883
+            },
+            {
+                "answer": "NBA",
+                "correct": true,
+                "count": 75861
+            }
+        ]
+    },
+    {
+        "question": "Catcher Yasmani Grandal just made history in the NLCS with a series of what?",
+        "questionNumber": 3,
+        "time": 1539817569.062319,
+        "category": "Sports",
+        "answers": [
+            {
+                "answer": "Interference calls",
+                "correct": false,
+                "count": 8173
+            },
+            {
+                "answer": "Runners caught stealing",
+                "correct": false,
+                "count": 30291
+            },
+            {
+                "answer": "Errors and passed balls",
+                "correct": true,
+                "count": 30905
+            }
+        ]
+    },
+    {
+        "question": "In the \"Battle of the Sexes,\" how many sets did Bobby Riggs win against Billie Jean King?",
+        "questionNumber": 4,
+        "time": 1539817616.3385828,
+        "category": "Sports",
+        "answers": [
+            {
+                "answer": "One",
+                "correct": false,
+                "count": 13944
+            },
+            {
+                "answer": "Zero",
+                "correct": true,
+                "count": 12248
+            },
+            {
+                "answer": "Two",
+                "correct": false,
+                "count": 7013
+            }
+        ]
+    },
+    {
+        "question": "What remaining MLB playoff team had the fewest regular season wins this year?",
+        "questionNumber": 5,
+        "time": 1539817660.4761786,
+        "category": "Sports",
+        "answers": [
+            {
+                "answer": "Brewers",
+                "correct": false,
+                "count": 4005
+            },
+            {
+                "answer": "Astros",
+                "correct": false,
+                "count": 1392
+            },
+            {
+                "answer": "Dodgers",
+                "correct": true,
+                "count": 8579
+            }
+        ]
+    },
+    {
+        "question": "Which \"power five\" conference is currently NOT represented in the top 10 in either NCAA football poll?",
+        "questionNumber": 6,
+        "time": 1539817719.1137948,
+        "category": "Sports",
+        "answers": [
+            {
+                "answer": "Pac-12",
+                "correct": true,
+                "count": 5526
+            },
+            {
+                "answer": "Big 12",
+                "correct": false,
+                "count": 2037
+            },
+            {
+                "answer": "Big Ten",
+                "correct": false,
+                "count": 956
+            }
+        ]
+    },
+    {
+        "question": "Which sport can have the largest playing surface, in square feet?",
+        "questionNumber": 7,
+        "time": 1539817762.7270298,
+        "category": "Sports",
+        "answers": [
+            {
+                "answer": "NHL hockey",
+                "correct": false,
+                "count": 94
+            },
+            {
+                "answer": "NFL football",
+                "correct": false,
+                "count": 348
+            },
+            {
+                "answer": "FIFA soccer",
+                "correct": true,
+                "count": 5571
+            }
+        ]
+    },
+    {
+        "question": "What soccer player currently holds the record for largest transfer fee?",
+        "questionNumber": 8,
+        "time": 1539817803.1445637,
+        "category": "Sports",
+        "answers": [
+            {
+                "answer": "Neymar",
+                "correct": true,
+                "count": 2531
+            },
+            {
+                "answer": "Cristiano Ronaldo",
+                "correct": false,
+                "count": 2356
+            },
+            {
+                "answer": "Lionel Messi",
+                "correct": false,
+                "count": 739
+            }
+        ]
+    },
+    {
+        "question": "What NHL team rejected the winner of its own naming contest due to weapons connotations?",
+        "questionNumber": 9,
+        "time": 1539817846.2688851,
+        "category": "Sports",
+        "answers": [
+            {
+                "answer": "Hurricanes",
+                "correct": false,
+                "count": 748
+            },
+            {
+                "answer": "Sharks",
+                "correct": true,
+                "count": 489
+            },
+            {
+                "answer": "Predators",
+                "correct": false,
+                "count": 1918
+            }
+        ]
+    },
+    {
+        "question": "In 1999, what golfer did Sports Illustrated declare to be \"the best player in the game\"?",
+        "questionNumber": 10,
+        "time": 1539817893.6391835,
+        "category": "Sports",
+        "answers": [
+            {
+                "answer": "David Duval",
+                "correct": true,
+                "count": 721
+            },
+            {
+                "answer": "Phil Mickelson",
+                "correct": false,
+                "count": 144
+            },
+            {
+                "answer": "Tiger Woods",
+                "correct": false,
+                "count": 282
+            }
+        ]
+    },
+    {
+        "question": "Which of these was NOT the name of an NBA team that predated the Bulls in Chicago?",
+        "questionNumber": 11,
+        "time": 1539817934.4560149,
+        "category": "Sports",
+        "answers": [
+            {
+                "answer": "Zephyrs",
+                "correct": false,
+                "count": 112
+            },
+            {
+                "answer": "Olympians",
+                "correct": true,
+                "count": 446
+            },
+            {
+                "answer": "Stags",
+                "correct": false,
+                "count": 205
+            }
+        ]
+    },
+    {
+        "question": "The NFL's current active leader in career touchdowns plays what position?",
+        "questionNumber": 12,
+        "time": 1539817989.2158377,
+        "category": "Sports",
+        "answers": [
+            {
+                "answer": "Wide receiver",
+                "correct": false,
+                "count": 121
+            },
+            {
+                "answer": "Running back",
+                "correct": false,
+                "count": 118
+            },
+            {
+                "answer": "Tight end",
+                "correct": true,
+                "count": 249
+            }
+        ]
     }
 ]
