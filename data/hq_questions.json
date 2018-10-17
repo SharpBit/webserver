@@ -8361,5 +8361,281 @@
                 "count": 19
             }
         ]
+    },
+    {
+        "question": "Someone with no worries is said to \"have it made in the\" what?",
+        "questionNumber": 1,
+        "time": 1539738420.3413653,
+        "category": "Language",
+        "answers": [
+            {
+                "answer": "Outer rings of Saturn",
+                "correct": false,
+                "count": 33228
+            },
+            {
+                "answer": "Town of Perth Amboy",
+                "correct": false,
+                "count": 10002
+            },
+            {
+                "answer": "Shade",
+                "correct": true,
+                "count": 430490
+            }
+        ]
+    },
+    {
+        "question": "What did the band Three Dog Night call \"the loneliest number\"?",
+        "questionNumber": 2,
+        "time": 1539738463.214236,
+        "category": "Music",
+        "answers": [
+            {
+                "answer": "Avogadro's number",
+                "correct": false,
+                "count": 7635
+            },
+            {
+                "answer": "Pi",
+                "correct": false,
+                "count": 20823
+            },
+            {
+                "answer": "One",
+                "correct": true,
+                "count": 411093
+            }
+        ]
+    },
+    {
+        "question": "What would you expect to see at the Louvre in Paris?",
+        "questionNumber": 3,
+        "time": 1539738506.364452,
+        "category": "Art & Design",
+        "answers": [
+            {
+                "answer": "Plays",
+                "correct": false,
+                "count": 17755
+            },
+            {
+                "answer": "Movies",
+                "correct": false,
+                "count": 6428
+            },
+            {
+                "answer": "Art",
+                "correct": true,
+                "count": 392543
+            }
+        ]
+    },
+    {
+        "question": "Which is NOT a common way of saying \"goodbye\" in Spanish?",
+        "questionNumber": 4,
+        "time": 1539738540.4201026,
+        "category": "Language",
+        "answers": [
+            {
+                "answer": "Hasta manana",
+                "correct": false,
+                "count": 33202
+            },
+            {
+                "answer": "Comamos",
+                "correct": true,
+                "count": 228629
+            },
+            {
+                "answer": "Nos vemos",
+                "correct": false,
+                "count": 129109
+            }
+        ]
+    },
+    {
+        "question": "What sauce results from adding cheese to a bechamel?",
+        "questionNumber": 5,
+        "time": 1539738577.989493,
+        "category": "Cuisine",
+        "answers": [
+            {
+                "answer": "Hollandaise",
+                "correct": false,
+                "count": 151661
+            },
+            {
+                "answer": "Marinara",
+                "correct": false,
+                "count": 12527
+            },
+            {
+                "answer": "Mornay",
+                "correct": true,
+                "count": 113795
+            }
+        ]
+    },
+    {
+        "question": "Which of these is closest to the thickness of Saturn's rings?",
+        "questionNumber": 6,
+        "time": 1539738619.7042484,
+        "category": "Science",
+        "answers": [
+            {
+                "answer": "Height of Burj Khalifa",
+                "correct": true,
+                "count": 22537
+            },
+            {
+                "answer": "Diameter of Earth",
+                "correct": false,
+                "count": 86976
+            },
+            {
+                "answer": "Length of Florida",
+                "correct": false,
+                "count": 45107
+            }
+        ]
+    },
+    {
+        "question": "The Village People featured which of these costumed personas?",
+        "questionNumber": 7,
+        "time": 1539738678.714994,
+        "category": "Entertainment",
+        "answers": [
+            {
+                "answer": "Plumber",
+                "correct": false,
+                "count": 28059
+            },
+            {
+                "answer": "Soldier",
+                "correct": true,
+                "count": 22031
+            },
+            {
+                "answer": "Baseball player",
+                "correct": false,
+                "count": 4195
+            }
+        ]
+    },
+    {
+        "question": "The McDonald's Corporation was sued in the 1970s for creating characters too similar to whose?",
+        "questionNumber": 8,
+        "time": 1539738724.9919798,
+        "category": "Business",
+        "answers": [
+            {
+                "answer": "Sid & Marty Krofft",
+                "correct": true,
+                "count": 6706
+            },
+            {
+                "answer": "The Muppets",
+                "correct": false,
+                "count": 11558
+            },
+            {
+                "answer": "Hanna-Barbera",
+                "correct": false,
+                "count": 7677
+            }
+        ]
+    },
+    {
+        "question": "What English city is home to the soccer team whose fans are known as \"Gooners\"?",
+        "questionNumber": 9,
+        "time": 1539738770.3702147,
+        "category": "Sports",
+        "answers": [
+            {
+                "answer": "London",
+                "correct": true,
+                "count": 1345
+            },
+            {
+                "answer": "Liverpool",
+                "correct": false,
+                "count": 4863
+            },
+            {
+                "answer": "Manchester",
+                "correct": false,
+                "count": 2441
+            }
+        ]
+    },
+    {
+        "question": "What best-selling novel did Salman Rushdie call \"so bad that it gives bad novels a bad name\"?",
+        "questionNumber": 10,
+        "time": 1539738822.2535453,
+        "category": "Literature",
+        "answers": [
+            {
+                "answer": "Fifty Shades of Grey",
+                "correct": false,
+                "count": 548
+            },
+            {
+                "answer": "The Da Vinci Code",
+                "correct": true,
+                "count": 1080
+            },
+            {
+                "answer": "Twilight",
+                "correct": false,
+                "count": 552
+            }
+        ]
+    },
+    {
+        "question": "Which US state's abbreviation is in the official Scrabble dictionary?",
+        "questionNumber": 11,
+        "time": 1539738867.671661,
+        "category": "Games",
+        "answers": [
+            {
+                "answer": "Nebraska",
+                "correct": true,
+                "count": 485
+            },
+            {
+                "answer": "Minnesota",
+                "correct": false,
+                "count": 230
+            },
+            {
+                "answer": "Rhode Island",
+                "correct": false,
+                "count": 434
+            }
+        ]
+    },
+    {
+        "question": "In most of Latin America, \"My Poor Little Angel\" is the translated title of what film?",
+        "questionNumber": 12,
+        "time": 1539738938.8119218,
+        "category": "Movies",
+        "answers": [
+            {
+                "answer": "The Karate Kid",
+                "correct": false,
+                "count": 45
+            },
+            {
+                "answer": "Finding Nemo",
+                "correct": false,
+                "count": 101
+            },
+            {
+                "answer": "Home Alone",
+                "correct": true,
+                "count": 400
+            }
+        ]
     }
 ]
