@@ -9166,5 +9166,281 @@
                 "count": 36696
             }
         ]
+    },
+    {
+        "question": "A large mass of snow rushing down a mountain is typically referred to as what?",
+        "questionNumber": 1,
+        "time": 1540083897.539121,
+        "category": "Language",
+        "answers": [
+            {
+                "answer": "Frosty's Revenge",
+                "correct": false,
+                "count": 2318
+            },
+            {
+                "answer": "Snowy Surprise",
+                "correct": false,
+                "count": 2254
+            },
+            {
+                "answer": "Avalanche",
+                "correct": true,
+                "count": 296072
+            }
+        ]
+    },
+    {
+        "question": "The most important bee in a hive is given what royal title?",
+        "questionNumber": 2,
+        "time": 1540083940.4164765,
+        "category": "Nature",
+        "answers": [
+            {
+                "answer": "Queen",
+                "correct": true,
+                "count": 292463
+            },
+            {
+                "answer": "Duke Ellington",
+                "correct": false,
+                "count": 735
+            },
+            {
+                "answer": "Earl of Sandwich",
+                "correct": false,
+                "count": 257
+            }
+        ]
+    },
+    {
+        "question": "The curved pasta known in Italy as gomiti is usually called what in the US?",
+        "questionNumber": 3,
+        "time": 1540083979.0269957,
+        "category": "Cuisine",
+        "answers": [
+            {
+                "answer": "Elbow macaroni",
+                "correct": true,
+                "count": 271182
+            },
+            {
+                "answer": "Toe fettuccine",
+                "correct": false,
+                "count": 7207
+            },
+            {
+                "answer": "Kneecap linguini",
+                "correct": false,
+                "count": 5729
+            }
+        ]
+    },
+    {
+        "question": "Mr. Darcy appears in which Jane Austen novel?",
+        "questionNumber": 4,
+        "time": 1540084023.6095638,
+        "category": "Literature",
+        "answers": [
+            {
+                "answer": "Emma",
+                "correct": false,
+                "count": 12649
+            },
+            {
+                "answer": "Sense and Sensibility",
+                "correct": false,
+                "count": 47614
+            },
+            {
+                "answer": "Pride and Prejudice",
+                "correct": true,
+                "count": 208552
+            }
+        ]
+    },
+    {
+        "question": "Acetone is the organic compound commonly found in what?",
+        "questionNumber": 5,
+        "time": 1540084070.6027503,
+        "category": "Science",
+        "answers": [
+            {
+                "answer": "Nail polish remover",
+                "correct": true,
+                "count": 207869
+            },
+            {
+                "answer": "Toothpaste",
+                "correct": false,
+                "count": 2440
+            },
+            {
+                "answer": "Shampoo",
+                "correct": false,
+                "count": 924
+            }
+        ]
+    },
+    {
+        "question": "Heat lightning is an erroneous weather term often given to lightning that is what?",
+        "questionNumber": 6,
+        "time": 1540084128.7186425,
+        "category": "Nature",
+        "answers": [
+            {
+                "answer": "Exceptionally hot",
+                "correct": false,
+                "count": 57983
+            },
+            {
+                "answer": "Only during the daytime",
+                "correct": false,
+                "count": 64328
+            },
+            {
+                "answer": "Very far away",
+                "correct": true,
+                "count": 66097
+            }
+        ]
+    },
+    {
+        "question": "Which celebrity reality TV show premiered first?",
+        "questionNumber": 7,
+        "time": 1540084182.5991545,
+        "category": "TV",
+        "answers": [
+            {
+                "answer": "The Osbournes",
+                "correct": true,
+                "count": 37585
+            },
+            {
+                "answer": "The Simple Life",
+                "correct": false,
+                "count": 20095
+            },
+            {
+                "answer": "Newlyweds Nick & Jessica",
+                "correct": false,
+                "count": 20432
+            }
+        ]
+    },
+    {
+        "question": "Which athlete plays for the NFL team with the highest value, according to Forbes?",
+        "questionNumber": 8,
+        "time": 1540084242.6014125,
+        "category": "Sports",
+        "answers": [
+            {
+                "answer": "Eli Manning",
+                "correct": false,
+                "count": 4554
+            },
+            {
+                "answer": "Tom Brady",
+                "correct": false,
+                "count": 23894
+            },
+            {
+                "answer": "Dak Prescott",
+                "correct": true,
+                "count": 13084
+            }
+        ]
+    },
+    {
+        "question": "The film \"Cloudy With a Chance of Meatballs\" does NOT feature which of these characters?",
+        "questionNumber": 9,
+        "time": 1540084306.9127696,
+        "category": "Movies",
+        "answers": [
+            {
+                "answer": "Slothee",
+                "correct": true,
+                "count": 7406
+            },
+            {
+                "answer": "Tacodile",
+                "correct": false,
+                "count": 4067
+            },
+            {
+                "answer": "Hippotatomus",
+                "correct": false,
+                "count": 4678
+            }
+        ]
+    },
+    {
+        "question": "According to the artist, the original art on the Macintosh computer box was inspired by who?",
+        "questionNumber": 10,
+        "time": 1540084348.5746083,
+        "category": "Tech",
+        "answers": [
+            {
+                "answer": "Henri Matisse",
+                "correct": true,
+                "count": 2726
+            },
+            {
+                "answer": "Pablo Picasso",
+                "correct": false,
+                "count": 4678
+            },
+            {
+                "answer": "Leonardo da Vinci",
+                "correct": false,
+                "count": 1753
+            }
+        ]
+    },
+    {
+        "question": "Which of these fashion houses is the oldest?",
+        "questionNumber": 11,
+        "time": 1540084406.237571,
+        "category": "Fashion",
+        "answers": [
+            {
+                "answer": "Stella McCartney",
+                "correct": false,
+                "count": 891
+            },
+            {
+                "answer": "Jil Sander",
+                "correct": true,
+                "count": 981
+            },
+            {
+                "answer": "Isabel Marant",
+                "correct": false,
+                "count": 2037
+            }
+        ]
+    },
+    {
+        "question": "Which of these musical acts has Limp Bizkit NOT recorded a cover of?",
+        "questionNumber": 12,
+        "time": 1540084460.2106154,
+        "category": "Music",
+        "answers": [
+            {
+                "answer": "The Who",
+                "correct": false,
+                "count": 385
+            },
+            {
+                "answer": "George Michael",
+                "correct": false,
+                "count": 248
+            },
+            {
+                "answer": "The Doors",
+                "correct": true,
+                "count": 819
+            }
+        ]
     }
 ]
