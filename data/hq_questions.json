@@ -9442,5 +9442,281 @@
                 "count": 819
             }
         ]
+    },
+    {
+        "question": "Which is a nickname for the American flag?",
+        "questionNumber": 1,
+        "time": 1540321505.7182238,
+        "category": "Civics",
+        "answers": [
+            {
+                "answer": "Stars and stripes",
+                "correct": true,
+                "count": 215393
+            },
+            {
+                "answer": "Pork and beans",
+                "correct": false,
+                "count": 854
+            },
+            {
+                "answer": "Hall and Oates",
+                "correct": false,
+                "count": 630
+            }
+        ]
+    },
+    {
+        "question": "A positive number multiplied by a positive number makes what?",
+        "questionNumber": 2,
+        "time": 1540321559.2952805,
+        "category": "Math",
+        "answers": [
+            {
+                "answer": "A positive number",
+                "correct": true,
+                "count": 210907
+            },
+            {
+                "answer": "Dogs itchy",
+                "correct": false,
+                "count": 332
+            },
+            {
+                "answer": "No sense",
+                "correct": false,
+                "count": 1012
+            }
+        ]
+    },
+    {
+        "question": "The slang phrase \"spilling the tea\" usually refers to doing what?",
+        "questionNumber": 3,
+        "time": 1540321636.815731,
+        "category": "Culture",
+        "answers": [
+            {
+                "answer": "Gossiping",
+                "correct": true,
+                "count": 203409
+            },
+            {
+                "answer": "Tanning",
+                "correct": false,
+                "count": 2194
+            },
+            {
+                "answer": "Laundry",
+                "correct": false,
+                "count": 1571
+            }
+        ]
+    },
+    {
+        "question": "Which of these artists dropped a surprise new single earlier today?",
+        "questionNumber": 4,
+        "time": 1540321688.172722,
+        "category": "Music",
+        "answers": [
+            {
+                "answer": "Rihanna",
+                "correct": false,
+                "count": 56297
+            },
+            {
+                "answer": "Cardi B",
+                "correct": true,
+                "count": 99907
+            },
+            {
+                "answer": "Taylor Swift",
+                "correct": false,
+                "count": 42812
+            }
+        ]
+    },
+    {
+        "question": "Which of these plants typically grows a beautiful, colorful flower?",
+        "questionNumber": 5,
+        "time": 1540321729.3150027,
+        "category": "Nature",
+        "answers": [
+            {
+                "answer": "Dragon tree",
+                "correct": false,
+                "count": 24871
+            },
+            {
+                "answer": "Fiddle leaf fig",
+                "correct": false,
+                "count": 6600
+            },
+            {
+                "answer": "Bird of paradise",
+                "correct": true,
+                "count": 70319
+            }
+        ]
+    },
+    {
+        "question": "In the original \"The Little Mermaid\" tale, what does the title character do at the end?",
+        "questionNumber": 6,
+        "time": 1540321770.4438853,
+        "category": "Literature",
+        "answers": [
+            {
+                "answer": "Turn into foam",
+                "correct": true,
+                "count": 22076
+            },
+            {
+                "answer": "Marry a merman",
+                "correct": false,
+                "count": 6804
+            },
+            {
+                "answer": "Marry the human prince",
+                "correct": false,
+                "count": 40423
+            }
+        ]
+    },
+    {
+        "question": "What company supplied the first computer to publicly beat a human grandmaster in chess?",
+        "questionNumber": 7,
+        "time": 1540321831.798719,
+        "category": "Tech",
+        "answers": [
+            {
+                "answer": "IBM",
+                "correct": true,
+                "count": 22223
+            },
+            {
+                "answer": "Dell",
+                "correct": false,
+                "count": 1671
+            },
+            {
+                "answer": "Apple",
+                "correct": false,
+                "count": 728
+            }
+        ]
+    },
+    {
+        "question": "In its heyday, which of these fashion brands used a crest featuring terrier dogs?",
+        "questionNumber": 8,
+        "time": 1540321877.5936675,
+        "category": "Fashion",
+        "answers": [
+            {
+                "answer": "BCBG",
+                "correct": false,
+                "count": 5450
+            },
+            {
+                "answer": "Juicy Couture",
+                "correct": true,
+                "count": 11118
+            },
+            {
+                "answer": "Guess?",
+                "correct": false,
+                "count": 5512
+            }
+        ]
+    },
+    {
+        "question": "Carb Day, the Friday before the Indy 500, is traditionally a day for racers to do what?",
+        "questionNumber": 9,
+        "time": 1540321930.678099,
+        "category": "Sports",
+        "answers": [
+            {
+                "answer": "Practice driving",
+                "correct": true,
+                "count": 3957
+            },
+            {
+                "answer": "Test carbon levels",
+                "correct": false,
+                "count": 4429
+            },
+            {
+                "answer": "Load up on calories",
+                "correct": false,
+                "count": 3748
+            }
+        ]
+    },
+    {
+        "question": "According to Yahoo! Finance, which of these three states has the most expensive date nights?",
+        "questionNumber": 10,
+        "time": 1540321995.7552114,
+        "category": "Business",
+        "answers": [
+            {
+                "answer": "Texas",
+                "correct": false,
+                "count": 1966
+            },
+            {
+                "answer": "Nevada",
+                "correct": false,
+                "count": 1692
+            },
+            {
+                "answer": "Florida",
+                "correct": true,
+                "count": 1484
+            }
+        ]
+    },
+    {
+        "question": "Who starred in the film with the biggest-ever opening weekend with a female lead over 55?",
+        "questionNumber": 11,
+        "time": 1540322049.8418074,
+        "category": "Movies",
+        "answers": [
+            {
+                "answer": "Meryl Streep",
+                "correct": false,
+                "count": 477
+            },
+            {
+                "answer": "Kathy Bates",
+                "correct": false,
+                "count": 186
+            },
+            {
+                "answer": "Jamie Lee Curtis",
+                "correct": true,
+                "count": 1229
+            }
+        ]
+    },
+    {
+        "question": "Which artist does NOT appear in their own most-viewed music video on YouTube?",
+        "questionNumber": 12,
+        "time": 1540322101.3169415,
+        "category": "Music",
+        "answers": [
+            {
+                "answer": "Katy Perry",
+                "correct": false,
+                "count": 216
+            },
+            {
+                "answer": "Ed Sheeran",
+                "correct": false,
+                "count": 691
+            },
+            {
+                "answer": "Justin Bieber",
+                "correct": true,
+                "count": 374
+            }
+        ]
     }
 ]
