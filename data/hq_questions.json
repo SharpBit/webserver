@@ -9718,5 +9718,281 @@
                 "count": 374
             }
         ]
+    },
+    {
+        "question": "Which of these words starts with the third letter of the English alphabet?",
+        "questionNumber": 1,
+        "time": 1540429714.0875423,
+        "category": "Language",
+        "answers": [
+            {
+                "answer": "Cookie",
+                "correct": true,
+                "count": 402277
+            },
+            {
+                "answer": "Xylophone",
+                "correct": false,
+                "count": 2634
+            },
+            {
+                "answer": "Zebra",
+                "correct": false,
+                "count": 7750
+            }
+        ]
+    },
+    {
+        "question": "Which of these is the name of a very old, very popular board game?",
+        "questionNumber": 2,
+        "time": 1540429757.7163007,
+        "category": "Games",
+        "answers": [
+            {
+                "answer": "Snakes and Ladders",
+                "correct": true,
+                "count": 330527
+            },
+            {
+                "answer": "Cats and Pajamas",
+                "correct": false,
+                "count": 27809
+            },
+            {
+                "answer": "Worms and Cans",
+                "correct": false,
+                "count": 27539
+            }
+        ]
+    },
+    {
+        "question": "In which sport do announcers rarely use the word \"goal\"?",
+        "questionNumber": 3,
+        "time": 1540429796.1803303,
+        "category": "Sports",
+        "answers": [
+            {
+                "answer": "Baseball",
+                "correct": true,
+                "count": 263889
+            },
+            {
+                "answer": "Hockey",
+                "correct": false,
+                "count": 34630
+            },
+            {
+                "answer": "Football",
+                "correct": false,
+                "count": 30045
+            }
+        ]
+    },
+    {
+        "question": "Which US president used a wheelchair for much of his presidency?",
+        "questionNumber": 4,
+        "time": 1540429848.913227,
+        "category": "History",
+        "answers": [
+            {
+                "answer": "Franklin D. Roosevelt",
+                "correct": true,
+                "count": 207373
+            },
+            {
+                "answer": "Dwight D. Eisenhower",
+                "correct": false,
+                "count": 33573
+            },
+            {
+                "answer": "Harry S. Truman",
+                "correct": false,
+                "count": 24623
+            }
+        ]
+    },
+    {
+        "question": "Which of these sea creatures is known for having photophores?",
+        "questionNumber": 5,
+        "time": 1540429893.2773614,
+        "category": "Nature",
+        "answers": [
+            {
+                "answer": "Lanternfish",
+                "correct": true,
+                "count": 150147
+            },
+            {
+                "answer": "Blue whale",
+                "correct": false,
+                "count": 11219
+            },
+            {
+                "answer": "Giant octopus",
+                "correct": false,
+                "count": 47204
+            }
+        ]
+    },
+    {
+        "question": "Which of these classic desserts is usually NOT flambeed during preparation?",
+        "questionNumber": 6,
+        "time": 1540429963.9448109,
+        "category": "Cuisine",
+        "answers": [
+            {
+                "answer": "Peach Melba",
+                "correct": true,
+                "count": 95327
+            },
+            {
+                "answer": "Cherries Jubilee",
+                "correct": false,
+                "count": 31719
+            },
+            {
+                "answer": "Bananas Foster",
+                "correct": false,
+                "count": 22286
+            }
+        ]
+    },
+    {
+        "question": "A famous 1960s experiment about delayed gratification is known as \"The Stanford\" what?",
+        "questionNumber": 7,
+        "time": 1540430011.096075,
+        "category": "Culture",
+        "answers": [
+            {
+                "answer": "Gift Drop",
+                "correct": false,
+                "count": 13519
+            },
+            {
+                "answer": "White Elephant Swap",
+                "correct": false,
+                "count": 13230
+            },
+            {
+                "answer": "Marshmallow Test",
+                "correct": true,
+                "count": 68643
+            }
+        ]
+    },
+    {
+        "question": "Which of these viral dance crazes came along first?",
+        "questionNumber": 8,
+        "time": 1540430064.5253134,
+        "category": "Culture",
+        "answers": [
+            {
+                "answer": "Dougie",
+                "correct": true,
+                "count": 43998
+            },
+            {
+                "answer": "Dab",
+                "correct": false,
+                "count": 4995
+            },
+            {
+                "answer": "Gangnam style",
+                "correct": false,
+                "count": 22572
+            }
+        ]
+    },
+    {
+        "question": "A muscle whose name means \"two heads\" in Latin is found in which body part?",
+        "questionNumber": 9,
+        "time": 1540430141.4524822,
+        "category": "Nature",
+        "answers": [
+            {
+                "answer": "Arm",
+                "correct": true,
+                "count": 25001
+            },
+            {
+                "answer": "Torso",
+                "correct": false,
+                "count": 11942
+            },
+            {
+                "answer": "Lower leg",
+                "correct": false,
+                "count": 10424
+            }
+        ]
+    },
+    {
+        "question": "In what tennis Grand Slam did Serena Williams first win a match after giving birth?",
+        "questionNumber": 10,
+        "time": 1540430189.296035,
+        "category": "Sports",
+        "answers": [
+            {
+                "answer": "US Open",
+                "correct": false,
+                "count": 6145
+            },
+            {
+                "answer": "French Open",
+                "correct": true,
+                "count": 13906
+            },
+            {
+                "answer": "Australian Open",
+                "correct": false,
+                "count": 8820
+            }
+        ]
+    },
+    {
+        "question": "The voice actor of the main character in \"Finding Nemo\" was born with the same name as an iconic what?",
+        "questionNumber": 11,
+        "time": 1540430243.40084,
+        "category": "Entertainment",
+        "answers": [
+            {
+                "answer": "Scientist",
+                "correct": true,
+                "count": 9779
+            },
+            {
+                "answer": "President",
+                "correct": false,
+                "count": 3791
+            },
+            {
+                "answer": "Athlete",
+                "correct": false,
+                "count": 2581
+            }
+        ]
+    },
+    {
+        "question": "Which of these nations regularly changes the lyrics and title of its national anthem?",
+        "questionNumber": 12,
+        "time": 1540430302.023517,
+        "category": "Geography",
+        "answers": [
+            {
+                "answer": "Australia",
+                "correct": false,
+                "count": 6145
+            },
+            {
+                "answer": "France",
+                "correct": false,
+                "count": 1643
+            },
+            {
+                "answer": "United Kingdom",
+                "correct": true,
+                "count": 3318
+            }
+        ]
     }
 ]
