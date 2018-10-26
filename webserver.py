@@ -25,10 +25,10 @@ def authorized():
     return decorator
 
 
-async def git_commit(session):
+async def git_commit():
     url = 'https://api.github.com/repos/SharpBit/webserver/contents/data/hq_questions.json'
     base64content = base64.b64encode(open('data/hq_questions.json', 'rb').read())
-    async with session.get(url + '?ref=master', headers={'Authorization': 'token ' + os.environ.get('github-token')}) as resp:
+    async with app.session.get(url + '?ref=master', headers={'Authorization': 'token ' + os.environ.get('github-token')}) as resp:
         data = await resp.json()
         sha = data['sha']
     if base64content.decode('utf-8') + '\n' != data['content']:
@@ -120,9 +120,9 @@ async def submit_answer(request):
         f.seek(0)
         json.dump(questions, f, indent=4)
     if request.json['final']:
-        await git_commit(app.session)
+        await git_commit()
     return response.json({'error': False, 'message': 'Answer successfully submitted'})
 
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=os.getenv('PORT'))
+    app.run(port=os.getenv('PORT'))
