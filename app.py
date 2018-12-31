@@ -9,9 +9,6 @@ import os
 
 app = Sanic(__name__)
 
-with open('data/status_codes.json') as f:
-    app.status_codes = json.load(f)
-
 
 def authorized():
     def decorator(f):
@@ -40,4 +37,4 @@ async def index(request):
 
 
 if __name__ == '__main__':
-    app.run(port=8080)
+    app.run(port=4000)
