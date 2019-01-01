@@ -91,9 +91,13 @@ async def callback(request):
     data = {
         'name': user['username'],
         'discrim': user['discriminator'],
-        'id': user['id'],
-        'avatar_url': 'https://cdn.discordapp.com/avatars/{}/{}.png'.format(user['id'], user.get('avatar'))
+        'id': user['id']
     }
+
+    if user.get('avatar'):
+        data['avatar_url'] = 'https://cdn.discordapp.com/avatars/{}/{}.png'.format(user['id'], user['avatar'])
+    else: # in case of default avatar users
+        data['avatar_url'] = 'https://cdn.discordapp.com/embed/avatars/{}.png'.format(user['discriminator'] % 5)
 
     coll = request.app.config.MONGO.user_info
     await coll.find_one_and_update({'id': user.get('id')}, {'$set': data}, upsert=True)
