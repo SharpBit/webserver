@@ -66,7 +66,7 @@ def base36encode(number):
 
     return base36 or alphabet[0]
 
-@app.post('/ush')
+@app.post('/url')
 async def ush(request):
     coll = request.app.config.MONGO.urls
     code = base36encode(int(time.time() * 1000))
@@ -80,6 +80,25 @@ async def short(request, code):
     if not res:
         return response.text(f'No such URL shortener code "{code}" found.')
     return response.redirect(res['url'])
+
+@app.route('/pastebin')
+async def pastebin_home(request):
+    return response.html(open('templates/pastebin.html').read())
+
+@app.post('/pb')
+async def pb(request):
+    coll = request.app.config.MONGO.pastebin
+    code = base36encode(int(time.time() * 1000))
+    await coll.insert_one({'code': code, 'text': request.form['text'][0]})
+    return response.text(f'Here is your pastebin url: https://sharpbit.tk/pastebin/{code}')
+
+@app.route('/pastebin/<code>')
+async def pastebin(request, code):
+    coll = request.app.config.MONGO.pastebin
+    res = await coll.find_one({'code': code})
+    if not res:
+        return response.text(f'No such pastebin code "{code}" found.')
+    return response.text(res['text'])
 
 
 if __name__ == '__main__':
