@@ -1,0 +1,6 @@
+sanic
+aiohttp
+motor
+dnspython
+jinja2
+python-dotenv
