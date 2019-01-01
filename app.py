@@ -37,7 +37,7 @@ async def create_session(app, loop):
         app.config.DISCORD_CLIENT_ID,
         app.config.DISCORD_CLIENT_SECRET,
         scope='identify',
-        redirect_uri='http://127.0.0.1:4000/callback',
+        redirect_uri='https://sharpbit.tk/callback',
         session=app.session
     )
 
