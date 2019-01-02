@@ -88,6 +88,7 @@ async def callback(request):
     code = request.raw_args.get('code')
     access_token, expires_in = await app.oauth.get_access_token(code)
     user = await app.oauth.get_user_json(access_token)
+    print(user)
 
     data = {
         'name': user['username'],
