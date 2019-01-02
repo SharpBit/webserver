@@ -86,9 +86,7 @@ async def login(request):
 @app.get('/callback')
 async def callback(request):
     code = request.raw_args.get('code')
-    print(code)
     access_token, expires_in = await app.oauth.get_access_token(code)
-    print(access_token, expires_in)
     user = await app.oauth.get_user_json(access_token)
 
     data = {
