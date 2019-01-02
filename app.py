@@ -33,11 +33,12 @@ async def create_session(app, loop):
     app.config.MONGO = AsyncIOMotorClient(os.getenv('MONGO'), io_loop=loop).sharpbit.sharpbit
     app.config.DISCORD_CLIENT_ID = os.getenv('DISCORD_CLIENT_ID')
     app.config.DISCORD_CLIENT_SECRET = os.getenv('DISCORD_CLIENT_SECRET')
+    prod = os.getenv('ENV') == 'production'
     app.oauth = Oauth(
         app.config.DISCORD_CLIENT_ID,
         app.config.DISCORD_CLIENT_SECRET,
         scope='identify',
-        redirect_uri='https://sharpbit.tk/callback',
+        redirect_uri='https://sharpbit.tk/callback' if prod else 'http://127.0.0.1:4000/callback',
         session=app.session
     )
 
