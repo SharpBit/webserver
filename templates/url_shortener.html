@@ -10,10 +10,19 @@
     <form method="POST" action="/url">
       <div class="form-group">
         <label for="url">URL</label>
-        <textarea name="url" type="url" class="form-control" id="url"></textarea>
+        <textarea name="url" type="url" class="form-control" id="url" style="background-color: #dfdfdf"></textarea>
       </div>
       <button type="submit" class="btn btn-primary">Submit</button>
     </form>
     {% include 'snippets/scripts.html' %}
   </body>
 </html>
+<style>
+    body {
+      background-color: #2C2F33;
+    }
+
+    h1, h3 {
+      color: #dfdfdf;
+    }
+</style>

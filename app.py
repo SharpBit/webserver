@@ -14,6 +14,7 @@ from oauth import Oauth
 
 app = Sanic(__name__)
 env = Environment(loader=PackageLoader('app', 'templates'))
+app.static('/static', './static')
 
 
 def authorized():

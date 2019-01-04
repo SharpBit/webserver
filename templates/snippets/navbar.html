@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #7289DA;">
+<nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #23272A;">
     <a href="/" class="navbar-brand">SharpBit</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarList" aria-controls="navbarList" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -21,11 +21,11 @@
         <ul class="navbar-nav">
             {% if logged_in == 'y' %}
                 <div class="dropdown">
-                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <img src="{{ avatar }}" alt="avatar" height="25" width="25">    {{ username }}#{{ discrim }}<i class="fa fa-caret-down"></i>
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" style="background-color: #23272A;">
+                        <img src="{{ avatar }}" alt="avatar" height="25" width="25">    {{ username }}#{{ discrim }}
                     </button>
-                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                        <a class="dropdown-item" href="/logout">Logout</a>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" style="background-color: #23272A;">
+                        <a class="dropdown-item" href="/logout" style="color: #dfdfdf">Logout</a>
                     </div>
                 </div>
             {% else %}
@@ -36,3 +36,8 @@
         </ul>
     </div>
 </nav>
+<style>
+    .dropdown a:hover {
+        background-color: #2C2F33;
+    }
+</style>
