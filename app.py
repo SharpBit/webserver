@@ -148,8 +148,16 @@ def base36encode(number):
 async def url(request):
     coll = request.app.config.MONGO.urls
     code = base36encode(int(time.time() * 1000))
-    await coll.insert_one({'code': code, 'url': request.form['url'][0]})
-    return response.text(f'Here is your shortened url: https://sharpbit.tk/{code}')
+    if request.form['code'][0]:
+        code = request.form['code'][0]
+        existing = await coll.find_one({'code': code})
+        if existing:
+            return response.text('Error: Code already exists')
+    logged_in = request.cookies.get('logged_in')
+    if logged_in == 'n':
+        return await render_template('not_logged_in.html')
+    await coll.insert_one({'code': code, 'url': request.form['url'][0], 'id': request.cookies.get('id')})
+    return response.text(f'Here is your shortened URL: https://sharpbit.tk/{code}')
 
 @app.get('/<code>')
 async def short(request, code):

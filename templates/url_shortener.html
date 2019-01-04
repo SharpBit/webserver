@@ -7,10 +7,13 @@
   <body>
     {% include 'snippets/navbar.html' %}
     <h1>SharpBit URL Shortener</h1>
+    <h3>Note: You must be logged in with Discord to use the URL shortener.</h3>
     <form method="POST" action="/url">
       <div class="form-group">
-        <label for="url">URL</label>
-        <textarea name="url" type="url" class="form-control" id="url" style="background-color: #dfdfdf"></textarea>
+        <label for="url" style="color: #dfdfdf"">URL</label>
+        <input name="url" type="url" class="form-control" id="url" style="background-color: #dfdfdf"></input>
+        <label for="code" style="color: #dfdfdf"">Shortened Code</label>
+        <input name="code" type="code" class="form-control" id="code" style="background-color: #dfdfdf"></input>
       </div>
       <button type="submit" class="btn btn-primary">Submit</button>
     </form>

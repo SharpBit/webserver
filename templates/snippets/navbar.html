@@ -22,7 +22,7 @@
             {% if logged_in == 'y' %}
                 <div class="dropdown">
                     <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" style="background-color: #23272A;">
-                        <img src="{{ avatar }}" alt="avatar" height="25" width="25">    {{ username }}#{{ discrim }}
+                        <img src="{{ avatar }}" style="border-radius: 50%;" alt="avatar" height="25" width="25">    {{ username }}#{{ discrim }}
                     </button>
                     <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" style="background-color: #23272A;">
                         <a class="dropdown-item" href="/logout" style="color: #dfdfdf">Logout</a>
