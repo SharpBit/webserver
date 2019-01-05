@@ -153,10 +153,7 @@ async def url(request):
         existing = await coll.find_one({'code': code})
         if existing:
             return response.text('Error: Code already exists')
-    logged_in = request.cookies.get('logged_in')
-    if logged_in == 'n':
-        return await render_template('not_logged_in.html')
-    await coll.insert_one({'code': code, 'url': request.form['url'][0], 'id': request.cookies.get('id')})
+    await coll.insert_one({'code': code, 'url': request.form['url'][0], 'id': request.cookies.get('id', 'no_account')})
     return response.text(f'Here is your shortened URL: https://sharpbit.tk/{code}')
 
 @app.get('/<code>')
@@ -176,7 +173,7 @@ async def pb(request):
     coll = request.app.config.MONGO.pastebin
     code = base36encode(int(time.time() * 1000))
     text = request.form['text'][0]
-    await coll.insert_one({'code': code, 'text': text})
+    await coll.insert_one({'code': code, 'text': text, 'id': request.cookies.get('id', 'no_account')})
     return response.text(f'Here is your pastebin url: https://sharpbit.tk/pastebin/{code}')
 
 @app.get('/pastebin/<code>')
