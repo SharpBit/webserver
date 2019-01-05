@@ -148,7 +148,7 @@ def base36encode(number):
 async def url(request):
     coll = request.app.config.MONGO.urls
     code = base36encode(int(time.time() * 1000))
-    if request.form['code'][0]:
+    if request.form.get('code'):
         code = request.form['code'][0]
         existing = await coll.find_one({'code': code})
         if existing:
