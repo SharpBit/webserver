@@ -9,12 +9,14 @@ from jinja2 import Environment, PackageLoader
 from sanic import response, Sanic
 from motor.motor_asyncio import AsyncIOMotorClient
 
-from oauth import Oauth
+from core import Oauth
 
 
 app = Sanic(__name__)
-env = Environment(loader=PackageLoader('app', 'templates'))
+
 app.static('/static', './static')
+
+env = Environment(loader=PackageLoader('app', 'templates'))
 
 
 def authorized():
@@ -28,7 +30,7 @@ def authorized():
     return decorator
 
 @app.listener('before_server_start')
-async def create_session(app, loop):
+async def init(app, loop):
     app.session = aiohttp.ClientSession(loop=loop)
     load_dotenv(find_dotenv('.env'))
     app.config.MONGO = AsyncIOMotorClient(os.getenv('MONGO'), io_loop=loop).sharpbit.sharpbit
@@ -73,6 +75,8 @@ async def render_template(template, **kwargs):
         kwargs['discrim'] = user.get('discrim')
     html_content = template.render(**kwargs)
     return response.html(html_content)
+
+app.render_template = render_template
 
 @app.get('/')
 async def index(request):
