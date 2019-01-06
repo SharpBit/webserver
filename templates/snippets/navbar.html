@@ -1,43 +1,42 @@
-<nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #23272A;">
-    <a href="/" class="navbar-brand">SharpBit</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarList" aria-controls="navbarList" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarList">
-        <ul class="navbar-nav mr-auto">
-            <li class="navbar-item active">
-                <a class="nav-link" href="/">Home</a>
-            </li>
-            <li class="navbar-item active">
-                <a class="nav-link" href="/invite">Discord</a>
-            </li>
-            <li class="navbar-item active">
-                <a class="nav-link" href="/shorturl">URL Shortener</a>
-            </li>
-            <li class="navbar-item active">
-                <a class="nav-link" href="/pastebin">Pastebin</a>
-            </li>
-        </ul>
-        <ul class="navbar-nav">
-            {% if logged_in == 'y' %}
-                <div class="dropdown">
-                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" style="background-color: #23272A;">
-                        <img src="{{ avatar }}" style="border-radius: 50%;" alt="avatar" height="25" width="25">    {{ username }}#{{ discrim }}
-                    </button>
-                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" style="background-color: #23272A;">
-                        <a class="dropdown-item" href="/logout" style="color: #dfdfdf">Logout</a>
-                    </div>
-                </div>
-            {% else %}
-                <li class="navbar-item active">
-                    <a class="nav-link" href="/login">Login with Discord</a>
-                </li>
-            {% endif %}
-        </ul>
-    </div>
+<nav class="navbar navbar-expand-lg navbar-dark">
+  <a href="/" class="navbar-brand">SharpBit</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarList" aria-controls="navbarList" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarList">
+    <ul class="navbar-nav mr-auto">
+      <li class="navbar-item active">
+        <a class="nav-link" href="/">Home</a>
+      </li>
+      <li class="navbar-item active">
+        <a class="nav-link" href="/invite">Discord</a>
+      </li>
+      <li class="navbar-item active">
+        <a class="nav-link" href="/shorturl">URL Shortener</a>
+      </li>
+      <li class="navbar-item active">
+        <a class="nav-link" href="/pastebin">Pastebin</a>
+      </li>
+    </ul>
+    <ul class="navbar-nav">
+      {% if logged_in == 'y' %}
+        <div class="dropdown">
+          {% if theme == 'light' %}
+            <button class="btn btn-light dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown">
+          {% else %}
+            <button class="btn btn-dark dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown">
+          {% endif %}
+            <img src="{{ avatar }}" style="border-radius: 50%;" alt="avatar" height="25" width="25">    {{ username }}#{{ discrim }}
+          </button>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item" href="/logout">Logout</a>
+          </div>
+        </div>
+      {% else %}
+        <li class="navbar-item active">
+          <a class="nav-link" href="/login">Login with Discord</a>
+        </li>
+       {% endif %}
+    </ul>
+  </div>
 </nav>
-<style>
-    .dropdown a:hover {
-        background-color: #2C2F33;
-    }
-</style>

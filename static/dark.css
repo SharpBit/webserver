@@ -1,0 +1,27 @@
+body {
+  background-color: #2C2F33;
+}
+
+h1, h3, h6, h7 {
+  color: #dfdfdf;
+}
+
+.dropdown-menu {
+  background-color: #23272A;
+}
+
+.dropdown a.dropdown-item {
+  color: #dfdfdf;
+}
+
+.dropdown a:hover {
+  background-color: #2C2F33;
+}
+
+.navbar.navbar-expand-lg.navbar-dark {
+  background-color: #23272A;
+}
+
+.form {
+  color: #dfdfdf
+}

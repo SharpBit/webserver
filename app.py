@@ -4,7 +4,6 @@ import time
 import os
 
 from dotenv import load_dotenv, find_dotenv
-from functools import wraps
 from jinja2 import Environment, PackageLoader
 from sanic import response, Sanic
 from motor.motor_asyncio import AsyncIOMotorClient
@@ -13,21 +12,9 @@ from core import Oauth
 
 
 app = Sanic(__name__)
-
 app.static('/static', './static')
-
 env = Environment(loader=PackageLoader('app', 'templates'))
 
-
-def authorized():
-    def decorator(f):
-        @wraps(f)
-        async def decorated_function(request, *args, **kwargs):
-            if request.token == os.getenv('AUTH_TOKEN'):
-                return await f(request, *args, **kwargs)
-            return response.json({'error': True, 'message': 'Unauthorized'}, status=401)
-        return decorated_function
-    return decorator
 
 @app.listener('before_server_start')
 async def init(app, loop):
@@ -80,7 +67,7 @@ app.render_template = render_template
 
 @app.get('/')
 async def index(request):
-    return await render_template('index.html', description='Home Page')
+    return await render_template('index.html', description='Home Page', theme='dark')
 
 @app.get('/login')
 async def login(request):
