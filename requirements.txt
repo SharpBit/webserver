@@ -4,3 +4,4 @@ motor
 dnspython
 jinja2
 python-dotenv
+sanic_session

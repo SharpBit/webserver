@@ -2,6 +2,7 @@
   <head>
     <title>URL Shortener</title>
     {% include 'snippets/header.html' %}
+    <link rel="stylesheet" type="text/css" href="/static/{{ theme }}.css">
     {% include 'snippets/meta.html' %}
   </head>
   <body>
@@ -10,22 +11,13 @@
     <h3>Note: You must be signed in to view your URLs and pastebins on your dashboard.</h3>
     <form method="POST" action="/url">
       <div class="form-group">
-        <label for="url" style="color: #dfdfdf"">URL</label>
-        <input name="url" type="url" class="form-control" id="url" style="background-color: #dfdfdf"></input>
-        <label for="code" style="color: #dfdfdf"">Shortened Code</label>
-        <input name="code" type="code" class="form-control" id="code" style="background-color: #dfdfdf"></input>
+        <label for="url" class="label">URL</label>
+        <input name="url" type="url" class="form-control" id="url"></input>
+        <label for="code" class="label">Shortened Code</label>
+        <input name="code" type="code" class="form-control" id="code"></input>
       </div>
       <button type="submit" class="btn btn-primary">Submit</button>
     </form>
     {% include 'snippets/scripts.html' %}
   </body>
 </html>
-<style>
-    body {
-      background-color: #2C2F33;
-    }
-
-    h1, h3 {
-      color: #dfdfdf;
-    }
-</style>

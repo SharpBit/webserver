@@ -3,7 +3,7 @@ body {
 }
 
 h1, h3, h6, h7 {
-  color: #dfdfdf;
+  color: #f1f1f1;
 }
 
 .dropdown-menu {
@@ -11,7 +11,7 @@ h1, h3, h6, h7 {
 }
 
 .dropdown a.dropdown-item {
-  color: #dfdfdf;
+  color: #f1f1f1;
 }
 
 .dropdown a:hover {
@@ -23,5 +23,13 @@ h1, h3, h6, h7 {
 }
 
 .form {
-  color: #dfdfdf
+  color: #f1f1f1;
+}
+
+.label {
+  color: #f1f1f1;
+}
+
+.form-control {
+  background-color: #f1f1f1;
 }

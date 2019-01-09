@@ -6,6 +6,7 @@ import os
 from dotenv import load_dotenv, find_dotenv
 from jinja2 import Environment, PackageLoader
 from sanic import response, Sanic
+from sanic_session import Session
 from motor.motor_asyncio import AsyncIOMotorClient
 
 from core import Oauth
@@ -13,6 +14,9 @@ from core import Oauth
 
 app = Sanic(__name__)
 app.static('/static', './static')
+app.static('/favicon.ico', './static/favicon.ico')
+
+Session(app)
 env = Environment(loader=PackageLoader('app', 'templates'))
 
 
@@ -53,13 +57,19 @@ def get_stack_variable(name):
 async def render_template(template, **kwargs):
     template = env.get_template(template)
     request = get_stack_variable('request')
-    kwargs['logged_in'] = request.cookies.get('logged_in', 'n')
-    if kwargs['logged_in'] == 'y':
+    kwargs['logged_in'] = request['session'].get('logged_in', False)
+
+    if kwargs['logged_in']:
         coll = app.config.MONGO.user_info
-        user = await coll.find_one({'id': request.cookies.get('id')})
+        user = await coll.find_one({'id': request['session'].get('id')})
         kwargs['avatar'] = user.get('avatar_url')
         kwargs['username'] = user.get('name')
         kwargs['discrim'] = user.get('discrim')
+
+    if not request['session'].get('theme'):
+        request['session']['theme'] = 'dark'
+    kwargs['theme'] = request['session']['theme']
+
     html_content = template.render(**kwargs)
     return response.html(html_content)
 
@@ -67,11 +77,11 @@ app.render_template = render_template
 
 @app.get('/')
 async def index(request):
-    return await render_template('index.html', description='Home Page', theme='dark')
+    return await render_template('index.html', description='Home Page')
 
 @app.get('/login')
 async def login(request):
-    if request.cookies.get('logged_in') == 'y':
+    if request['session'].get('logged_in'):
         return response.redirect('/')
     return response.redirect(app.oauth.discord_login_url)
 
@@ -96,17 +106,16 @@ async def callback(request):
     await coll.find_one_and_update({'id': user.get('id')}, {'$set': data}, upsert=True)
     resp = response.redirect('/')
 
-    resp.cookies['logged_in'] = 'y'
-    resp.cookies['logged_in']['max-age'] = expires_in
-    resp.cookies['id'] = user['id']
-    resp.cookies['id']['max-age'] = expires_in
+    request['session']['logged_in'] = True
+    request['session']['id'] = user['id']
 
     return resp
 
 @app.get('/logout')
 async def logout(request):
     resp = response.redirect('/')
-    resp.cookies['logged_in'] = 'n'
+    del request['session']['logged_in']
+    del request['session']['id']
     return resp
 
 @app.get('/invite')
@@ -116,6 +125,12 @@ async def invite(request):
 @app.get('/repo/<name>')
 async def repo(request, name):
     return response.redirect(f'https://github.com/SharpBit/{name}')
+
+@app.get('/theme')
+async def change_theme(request):
+    theme = request['session']['theme']
+    request['session']['theme'] = 'light' if theme == 'dark' else 'dark'
+    return response.redirect('/')
 
 @app.get('/shorturl')
 async def url_shortener(request):
@@ -144,7 +159,7 @@ async def url(request):
         existing = await coll.find_one({'code': code})
         if existing:
             return response.text('Error: Code already exists')
-    await coll.insert_one({'code': code, 'url': request.form['url'][0], 'id': request.cookies.get('id', 'no_account')})
+    await coll.insert_one({'code': code, 'url': request.form['url'][0], 'id': request['session'].get('id', 'no_account')})
     return response.text(f'Here is your shortened URL: https://sharpbit.tk/{code}')
 
 @app.get('/<code>')
@@ -164,7 +179,7 @@ async def pb(request):
     coll = request.app.config.MONGO.pastebin
     code = base36encode(int(time.time() * 1000))
     text = request.form['text'][0]
-    await coll.insert_one({'code': code, 'text': text, 'id': request.cookies.get('id', 'no_account')})
+    await coll.insert_one({'code': code, 'text': text, 'id': request['session'].get('id', 'no_account')})
     return response.text(f'Here is your pastebin url: https://sharpbit.tk/pastebin/{code}')
 
 @app.get('/pastebin/<code>')

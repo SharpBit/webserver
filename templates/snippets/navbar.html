@@ -19,7 +19,10 @@
       </li>
     </ul>
     <ul class="navbar-nav">
-      {% if logged_in == 'y' %}
+      <li class="navbar-item active">
+        <a class="nav-link" href="/theme">Change Theme</a>
+      </li>
+      {% if logged_in %}
         <div class="dropdown">
           {% if theme == 'light' %}
             <button class="btn btn-light dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown">
