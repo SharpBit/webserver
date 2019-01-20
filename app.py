@@ -1,15 +1,13 @@
 import aiohttp
 import inspect
 import time
-import os
 
-from dotenv import load_dotenv, find_dotenv
 from jinja2 import Environment, PackageLoader
 from sanic import response, Sanic
 from sanic_session import Session
 from motor.motor_asyncio import AsyncIOMotorClient
 
-from core import Oauth
+from core import config, login_required, Oauth
 
 
 app = Sanic(__name__)
@@ -23,16 +21,12 @@ env = Environment(loader=PackageLoader('app', 'templates'))
 @app.listener('before_server_start')
 async def init(app, loop):
     app.session = aiohttp.ClientSession(loop=loop)
-    load_dotenv(find_dotenv('.env'))
-    app.config.MONGO = AsyncIOMotorClient(os.getenv('MONGO'), io_loop=loop).sharpbit.sharpbit
-    app.config.DISCORD_CLIENT_ID = os.getenv('DISCORD_CLIENT_ID')
-    app.config.DISCORD_CLIENT_SECRET = os.getenv('DISCORD_CLIENT_SECRET')
-    prod = os.getenv('ENV') == 'production'
+    app.config.MONGO = AsyncIOMotorClient(config.MONGO, io_loop=loop).sharpbit.sharpbit
     app.oauth = Oauth(
-        app.config.DISCORD_CLIENT_ID,
-        app.config.DISCORD_CLIENT_SECRET,
+        config.DISCORD_CLIENT_ID,
+        config.DISCORD_CLIENT_SECRET,
         scope='identify',
-        redirect_uri='https://sharpbit.tk/callback' if prod else 'http://127.0.0.1:4000/callback',
+        redirect_uri='https://sharpbit.tk/callback' if not config.DEV else 'http://127.0.0.1:4000/callback',
         session=app.session
     )
 
@@ -104,7 +98,7 @@ async def callback(request):
 
     coll = request.app.config.MONGO.user_info
     await coll.find_one_and_update({'id': user.get('id')}, {'$set': data}, upsert=True)
-    resp = response.redirect('/')
+    resp = response.redirect('/dashboard')
 
     request['session']['logged_in'] = True
     request['session']['id'] = user['id']
@@ -190,6 +184,11 @@ async def pastebin(request, code):
         return response.text(f'No such pastebin code "{code}" found.')
     text = res['text'].replace('&', '&amp;').replace('<', '&lt;').replace('>', '&gt;')
     return await render_template('saved_pastebin.html', code=text)
+
+@app.get('/dashboard')
+@login_required()
+async def dashboard(request):
+    return await render_template('dashboard.html', description='Dashboard for your account.')
 
 
 if __name__ == '__main__':

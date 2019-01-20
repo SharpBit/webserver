@@ -11,8 +11,18 @@ def authorized():
     def decorator(f):
         @wraps(f)
         async def decorated_function(request, *args, **kwargs):
-            if request.token == os.getenv('AUTH_TOKEN'):
+            if request.token == os.getenv('AUTH'):
                 return await f(request, *args, **kwargs)
             return response.json({'error': True, 'message': 'Unauthorized'}, status=401)
         return decorated_function
+    return decorator
+
+def login_required():
+    def decorator(func):
+        @wraps(func)
+        async def wrapper(request, *args, **kwargs):
+            if not request['session'].get('logged_in'):
+                return response.redirect('/login')
+            return await func(request, *args, **kwargs)
+        return wrapper
     return decorator
