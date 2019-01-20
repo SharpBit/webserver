@@ -97,9 +97,11 @@ async def callback(request):
     else: # in case of default avatar users
         data['avatar_url'] = 'https://cdn.discordapp.com/embed/avatars/{}.png'.format(user['discriminator'] % 5)
 
-    data['theme'] = 'dark'
-
     coll = request.app.config.MONGO.user_info
+    existing_user = await coll.find_one({'id': user.get('id')})
+    if not existing_user:
+        data['theme'] = 'dark'
+
     await coll.find_one_and_update({'id': user.get('id')}, {'$set': data}, upsert=True)
     resp = response.redirect('/dashboard')
 
@@ -197,7 +199,9 @@ async def pastebin(request, code):
 @app.get('/dashboard')
 @login_required()
 async def dashboard(request):
-    return await render_template('dashboard.html', description='Dashboard for your account.')
+    urls = await app.config.MONGO.urls.find({'id': request['session']['id']}).to_list(1000)
+    pastes = await app.config.MONGO.pastebin.find({'id': request['session']['id']}).to_list(1000)
+    return await render_template('dashboard.html', description='Dashboard for your account.', urls=urls, pastes=pastes)
 
 
 if __name__ == '__main__':
