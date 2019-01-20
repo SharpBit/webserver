@@ -19,9 +19,6 @@
       </li>
     </ul>
     <ul class="navbar-nav">
-      <li class="navbar-item active">
-        <a class="nav-link" href="/theme">Change Theme</a>
-      </li>
       {% if logged_in %}
         <div class="dropdown">
           {% if theme == 'light' %}
@@ -33,10 +30,8 @@
           </button>
           <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
             <a class="dropdown-item" href="/dashboard">Dashboard</a>
-          </div>
-          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item" href="/theme">Change Theme</a>
             <a class="dropdown-item" href="/logout">Logout</a>
-          </div>
         </div>
       {% else %}
         <li class="navbar-item active">

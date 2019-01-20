@@ -59,10 +59,9 @@ async def render_template(template, **kwargs):
         kwargs['avatar'] = user.get('avatar_url')
         kwargs['username'] = user.get('name')
         kwargs['discrim'] = user.get('discrim')
-
-    if not request['session'].get('theme'):
-        request['session']['theme'] = 'dark'
-    kwargs['theme'] = request['session']['theme']
+        kwargs['theme'] = user.get('theme', 'dark')
+    else:
+        kwargs['theme'] = 'dark'
 
     html_content = template.render(**kwargs)
     return response.html(html_content)
@@ -84,6 +83,8 @@ async def callback(request):
     code = request.raw_args.get('code')
     access_token, expires_in = await app.oauth.get_access_token(code)
     user = await app.oauth.get_user_json(access_token)
+    if user.get('message'):
+        return await render_template('unauthorized.html', description='Discord Oauth Unauthorized.')
 
     data = {
         'name': user['username'],
@@ -95,6 +96,8 @@ async def callback(request):
         data['avatar_url'] = 'https://cdn.discordapp.com/avatars/{}/{}.png'.format(user['id'], user['avatar'])
     else: # in case of default avatar users
         data['avatar_url'] = 'https://cdn.discordapp.com/embed/avatars/{}.png'.format(user['discriminator'] % 5)
+
+    data['theme'] = 'dark'
 
     coll = request.app.config.MONGO.user_info
     await coll.find_one_and_update({'id': user.get('id')}, {'$set': data}, upsert=True)
@@ -121,9 +124,15 @@ async def repo(request, name):
     return response.redirect(f'https://github.com/SharpBit/{name}')
 
 @app.get('/theme')
+@login_required()
 async def change_theme(request):
-    theme = request['session']['theme']
-    request['session']['theme'] = 'light' if theme == 'dark' else 'dark'
+    coll = app.config.MONGO.user_info
+    theme = (await coll.find_one({'id': request['session']['id']})).get('theme', 'dark')
+    await coll.find_one_and_update(
+        {'id': request['session']['id']},
+        {'$set': {'theme': 'light' if theme == 'dark' else 'dark'}},
+        upsert=True
+    )
     return response.redirect('/')
 
 @app.get('/shorturl')
