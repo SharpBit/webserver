@@ -10,16 +10,18 @@
     <div class="container" align="center">
       <h1> </h1><br />
       <h1>Dashboard</h1>
-      <h3>Shortened URLs</h3>
-      {% for url in urls %}
-        <a href="{{ url.url }}">https://sharpbit.tk/{{ url.code }}</a><h7> - {{ url.url }}</h7>
-        <hr />
-      {% endfor %}
-      <h3>Pastebins</h3>
-      {% for p in pastes %}
-        <a href="https://sharpbit.tk/pastebin/{{ p.code }}">https://sharpbit.tk/pastebin/{{ p.code }}</a>
-        <hr />
-      {% endfor %}
+      <div class="content-section">
+        <h3>Shortened URLs</h3>
+        {% for url in urls %}
+          <a href="{{ url.url }}">https://sharpbit.tk/{{ url.code }}</a><h7> - {{ url.url }}</h7><br />
+        {% endfor %}
+      </div>
+      <div class="content-section">
+        <h3>Pastebins</h3>
+        {% for p in pastes %}
+          <a href="https://sharpbit.tk/pastebin/{{ p.code }}">https://sharpbit.tk/pastebin/{{ p.code }}</a><br />
+        {% endfor %}
+      </div>
     </div>
     {% include 'snippets/scripts.html' %}
   </body>

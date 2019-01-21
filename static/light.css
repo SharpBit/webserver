@@ -1,7 +1,29 @@
 body {
-  background-color: #f1f1f1;
+  background-color: #fafafa;
+  color: #333333;
 }
 
 .navbar.navbar-expand-lg.navbar-dark {
   background-color: #7289DA;
+}
+
+.navbar.navbar-expand-lg.navbar-dark .navbar-brand {
+  color: #212121
+}
+
+.collapse.navbar-collapse .navbar-nav .nav-link {
+  color: #212121;
+}
+
+.collapse.navbar-collapse .navbar-nav .nav-link:hover {
+  color: #ffffff;
+}
+
+.content-section {
+  background: #ffffff;
+  padding: 10px 20px;
+  border: 1px solid #dddddd;
+  border-radius: 3px;
+  margin-bottom: 20px;
+  width: 700px;
 }

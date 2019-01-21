@@ -3,14 +3,7 @@ body {
 }
 
 h1, h3, h6, h7 {
-  color: #f1f1f1;
-}
-
-hr {
-  height: 1px;
-  color: #f1f1f1;
-  background-color: #f1f1f1;
-  border: none;
+  color: #fafafa;
 }
 
 .dropdown-menu {
@@ -18,7 +11,7 @@ hr {
 }
 
 .dropdown a.dropdown-item {
-  color: #f1f1f1;
+  color: #fafafa;
 }
 
 .dropdown a:hover {
@@ -30,13 +23,26 @@ hr {
 }
 
 .form {
-  color: #f1f1f1;
+  color: #fafafa;
 }
 
 .label {
-  color: #f1f1f1;
+  color: #fafafa;
 }
 
 .form-control {
-  background-color: #f1f1f1;
+  background-color: #fafafa;
+}
+
+.collapse.navbar-collapse .navbar-nav .nav-link:hover {
+  color: #cacaca;
+}
+
+.content-section {
+  background: #2a2a2a;
+  padding: 10px 20px;
+  border: 1px solid #606060;
+  border-radius: 3px;
+  margin-bottom: 20px;
+  width: 700px;
 }
