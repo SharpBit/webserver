@@ -72,6 +72,10 @@ app.render_template = render_template
 async def index(request):
     return await render_template('index.html', description='Home Page')
 
+@app.get('/base32')
+async def rickroll(request):
+    return response.redirect('https://www.youtube.com/watch?v=dQw4w9WgXcQ')
+
 @app.get('/login')
 async def login(request):
     if request['session'].get('logged_in'):
