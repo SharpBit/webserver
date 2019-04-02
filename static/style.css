@@ -1,0 +1,36 @@
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Lato';
+}
+
+.collapse.navbar-collapse .navbar-nav .nav-link:hover {
+  color: #eee;
+}
+
+.navbar-dark {
+  background-color: #6EB694;
+}
+
+.dropdown-toggle {
+  color: #2C2F33;
+  border-color: #2C2F33;
+  background-color: #6EB694;
+  font-weight: 500;
+}
+
+.dropdown-toggle:hover{
+  background-color: #2C2F33;
+  color: #6EB694;
+}
+
+.content-section {
+  background: #ffffff;
+  padding: 10px 20px;
+  border: 1px solid #dddddd;
+  border-radius: 3px;
+  margin-bottom: 20px;
+  width: 700px;
+}
+
+.hideme {
+    opacity:0;
+}

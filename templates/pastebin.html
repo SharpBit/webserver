@@ -2,20 +2,26 @@
   <head>
     <title>Pastebin</title>
     {% include 'snippets/header.html' %}
-    <link rel="stylesheet" type="text/css" href="/static/{{ theme }}.css">
+    <link rel="stylesheet" type="text/css" href="/static/style.css">
     {% include 'snippets/meta.html' %}
   </head>
   <body>
     {% include 'snippets/navbar.html' %}
-    <h1>SharpBit Pastebin</h1>
-    <h3>Note: You must be signed in to view your URLs and pastebins on your dashboard.</h3>
-    <form class="form" method="POST" action="/pb">
-      <div class="form-group">
-        <label class="label" for="text">Code</label>
-        <textarea name="text" type="text" class="form-control" id="text"></textarea>
-      </div>
-      <button type="submit" class="btn btn-primary">Submit</button>
-    </form>
+    <div class="container">
+        <div class="info">
+            <h1>Pastebin</h1>
+            <h3>Note: You must be signed in to view your URLs and pastebins on your dashboard.</h3>
+        </div>
+        <div class="form-items">
+            <form class="form" method="POST" action="/pb">
+              <div class="form-group">
+                <label class="label" for="text">Code</label>
+                <textarea name="text" type="text" class="form-control" id="text" placeholder="print('Hello, world!')"></textarea>
+              </div>
+              <button type="submit" class="btn btn-success">Submit</button>
+            </form>
+        </div>
+    </div>
     {% include 'snippets/scripts.html' %}
   </body>
 </html>

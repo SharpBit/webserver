@@ -1,17 +1,17 @@
-import aiohttp
-import inspect
-import time
-
-from jinja2 import Environment, PackageLoader
 from sanic import response, Sanic
 from sanic_session import Session
-from motor.motor_asyncio import AsyncIOMotorClient
 
 from core import config, login_required, Oauth
+from jinja2 import Environment, PackageLoader
+from motor.motor_asyncio import AsyncIOMotorClient
+
+import aiohttp
+import time
 
 
 app = Sanic(__name__)
 app.static('/static', './static')
+app.static('/js', './js')
 app.static('/favicon.ico', './static/favicon.ico')
 
 Session(app)
@@ -34,23 +34,8 @@ async def init(app, loop):
 async def close_session(app, loop):
     await app.session.close()
 
-def get_stack_variable(name):
-    stack = inspect.stack()
-    try:
-        for frames in stack:
-            try:
-                frame = frames[0]
-                current_locals = frame.f_locals
-                if name in current_locals:
-                    return current_locals[name]
-            finally:
-                del frame
-    finally:
-        del stack
-
-async def render_template(template, **kwargs):
+async def render_template(template, request, **kwargs):
     template = env.get_template(template)
-    request = get_stack_variable('request')
     kwargs['logged_in'] = request['session'].get('logged_in', False)
 
     if kwargs['logged_in']:
@@ -59,9 +44,6 @@ async def render_template(template, **kwargs):
         kwargs['avatar'] = user.get('avatar_url')
         kwargs['username'] = user.get('name')
         kwargs['discrim'] = user.get('discrim')
-        kwargs['theme'] = user.get('theme', 'dark')
-    else:
-        kwargs['theme'] = 'dark'
 
     html_content = template.render(**kwargs)
     return response.html(html_content)
@@ -70,11 +52,7 @@ app.render_template = render_template
 
 @app.get('/')
 async def index(request):
-    return await render_template('index.html', description='Home Page')
-
-@app.get('/base32')
-async def rickroll(request):
-    return response.redirect('https://www.youtube.com/watch?v=dQw4w9WgXcQ')
+    return await render_template('index.html', request, description='Home Page')
 
 @app.get('/login')
 async def login(request):
@@ -88,7 +66,7 @@ async def callback(request):
     access_token, expires_in = await app.oauth.get_access_token(code)
     user = await app.oauth.get_user_json(access_token)
     if user.get('message'):
-        return await render_template('unauthorized.html', description='Discord Oauth Unauthorized.')
+        return await render_template('unauthorized.html', request, description='Discord Oauth Unauthorized.')
 
     data = {
         'name': user['username'],
@@ -102,9 +80,6 @@ async def callback(request):
         data['avatar_url'] = 'https://cdn.discordapp.com/embed/avatars/{}.png'.format(user['discriminator'] % 5)
 
     coll = request.app.config.MONGO.user_info
-    existing_user = await coll.find_one({'id': user.get('id')})
-    if not existing_user:
-        data['theme'] = 'dark'
 
     await coll.find_one_and_update({'id': user.get('id')}, {'$set': data}, upsert=True)
     resp = response.redirect('/dashboard')
@@ -129,21 +104,9 @@ async def invite(request):
 async def repo(request, name):
     return response.redirect(f'https://github.com/SharpBit/{name}')
 
-@app.get('/theme')
-@login_required()
-async def change_theme(request):
-    coll = app.config.MONGO.user_info
-    theme = (await coll.find_one({'id': request['session']['id']})).get('theme', 'dark')
-    await coll.find_one_and_update(
-        {'id': request['session']['id']},
-        {'$set': {'theme': 'light' if theme == 'dark' else 'dark'}},
-        upsert=True
-    )
-    return response.redirect('/')
-
 @app.get('/shorturl')
 async def url_shortener(request):
-    return await render_template('url_shortener.html', description='Shorten a URL!')
+    return await render_template('url_shortener.html', request, description='Shorten a URL!')
 
 def base36encode(number):
     if not isinstance(number, int):
@@ -181,7 +144,7 @@ async def short(request, code):
 
 @app.get('/pastebin')
 async def pastebin_home(request):
-    return await render_template('pastebin.html', description='Paste in code for easy access later!')
+    return await render_template('pastebin.html', request, description='Paste in code for easy access later!')
 
 @app.post('/pb')
 async def pb(request):
@@ -198,14 +161,14 @@ async def pastebin(request, code):
     if not res:
         return response.text(f'No such pastebin code "{code}" found.')
     text = res['text'].replace('&', '&amp;').replace('<', '&lt;').replace('>', '&gt;')
-    return await render_template('saved_pastebin.html', code=text)
+    return await render_template('saved_pastebin.html', request, code=text)
 
 @app.get('/dashboard')
 @login_required()
 async def dashboard(request):
     urls = await app.config.MONGO.urls.find({'id': request['session']['id']}).to_list(1000)
     pastes = await app.config.MONGO.pastebin.find({'id': request['session']['id']}).to_list(1000)
-    return await render_template('dashboard.html', description='Dashboard for your account.', urls=urls, pastes=pastes)
+    return await render_template('dashboard.html', request, description='Dashboard for your account.', urls=urls, pastes=pastes)
 
 
 if __name__ == '__main__':
