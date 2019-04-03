@@ -16,13 +16,6 @@ body {
   padding-top: 200px;
 }
 
-.inner-container {
-  max-width: 960px;
-  margin: 0 auto;
-	font-size: 24px;
-	padding: 25px;
-}
-
 h1 {
   color: white;
 	font-family: 'Open Sans';

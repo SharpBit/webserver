@@ -52,7 +52,10 @@ app.render_template = render_template
 
 @app.get('/')
 async def index(request):
-    return await render_template('index.html', request, description='Home Page')
+    async with app.session.get('https://api.github.com/users/SharpBit/events/public') as resp:
+        info = await resp.json()
+    recent_commits = filter(lambda x: x['repo']['name'] != 'SharpBit/modmail' and x['type'] == 'PushEvent', info)
+    return await render_template('index.html', request, description='Home Page', recent=recent_commits)
 
 @app.get('/login')
 async def login(request):

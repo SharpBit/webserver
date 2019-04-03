@@ -12,19 +12,34 @@
     <div class="background">
       <div class="header">
         <h1>I am a python developer</h1>
-        <div class="arrow-down" style="opacity: 1;"></div>
+        <div class="arrow-down"></div>
       </div>
     </div>
     <div class="content">
       <div class="container">
         <div class="hideme">
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nulla facilisi nullam vehicula ipsum a arcu. Praesent semper feugiat nibh sed pulvinar proin gravida hendrerit lectus. Mauris vitae ultricies leo integer malesuada. Sem viverra aliquet eget sit amet. Massa enim nec dui nunc. Urna nunc id cursus metus aliquam eleifend mi. A lacus vestibulum sed arcu non odio euismod. Integer enim neque volutpat ac. Sem et tortor consequat id porta nibh venenatis cras. Sit amet dictum sit amet justo donec enim diam vulputate. Dignissim suspendisse in est ante in nibh mauris cursus. Id faucibus nisl tincidunt eget nullam non nisi.</p>
+          <p class="lorem-ipsum">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nulla facilisi nullam vehicula ipsum a arcu. Praesent semper feugiat nibh sed pulvinar proin gravida hendrerit lectus. Mauris vitae ultricies leo integer malesuada. Sem viverra aliquet eget sit amet. Massa enim nec dui nunc. Urna nunc id cursus metus aliquam eleifend mi. A lacus vestibulum sed arcu non odio euismod. Integer enim neque volutpat ac. Sem et tortor consequat id porta nibh venenatis cras. Sit amet dictum sit amet justo donec enim diam vulputate. Dignissim suspendisse in est ante in nibh mauris cursus. Id faucibus nisl tincidunt eget nullam non nisi.</p>
+        </div>
+        <div class="inner-container">
+          <div class="github">
+            {% for push in recent %}
+              <div class="content-section">
+                <span style="font-size: 12px">{{ push.repo.name }}</span>
+                {% for commit in push.payload.commits %}
+                  <p class="commit-info">
+                    <a href="{{ commit.url.replace('api.', '').replace('/repos', '').replace('commits', 'commit') }}" target="_blank">
+                      <code class="inlinecode">{{ commit.sha[:7] }}</code>
+                    </a> {{ commit.message }}
+                  </p>
+                {% endfor %}
+              </div>
+            {% endfor %}
+          </div>
         </div>
       </div>
     </div>
   </body>
   {% include 'snippets/scripts.html' %}
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-  <script src="/js/parallax.min.js"></script>
   <script src="/js/scroll-fade.js"></script>
 </html>

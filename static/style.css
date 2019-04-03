@@ -22,13 +22,21 @@ h1, h2, h3, h4, h5, h6 {
   color: #6EB694;
 }
 
+.inner-container {
+  max-width: 640px;
+	padding: 25px;
+}
+
 .content-section {
-  background: #ffffff;
-  padding: 10px 20px;
-  border: 1px solid #dddddd;
+  color: #28a745;
+  padding-top: 10px;
+  padding-right: 20px;
+  padding-bottom: 0px;
+  padding-left: 20px;
+  border: 2px solid #28a745;
   border-radius: 3px;
   margin-bottom: 20px;
-  width: 700px;
+  max-width: 640px;
 }
 
 .hideme {
