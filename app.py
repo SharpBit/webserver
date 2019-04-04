@@ -1,185 +1,30 @@
-from sanic import response, Sanic
+from sanic import Sanic
 from sanic_session import Session
 
-from core import config, login_required, Oauth
-from jinja2 import Environment, PackageLoader
-from motor.motor_asyncio import AsyncIOMotorClient
-
-import aiohttp
-import time
-
-
-app = Sanic(__name__)
-app.static('/static', './static')
-app.static('/js', './js')
-app.static('/favicon.ico', './static/favicon.ico')
-
-Session(app)
-env = Environment(loader=PackageLoader('app', 'templates'))
-
-
-@app.listener('before_server_start')
-async def init(app, loop):
-    app.session = aiohttp.ClientSession(loop=loop)
-    app.config.MONGO = AsyncIOMotorClient(config.MONGO, io_loop=loop).sharpbit.sharpbit
-    app.oauth = Oauth(
-        config.DISCORD_CLIENT_ID,
-        config.DISCORD_CLIENT_SECRET,
-        scope='identify',
-        redirect_uri='https://sharpbit.tk/callback' if not config.DEV else 'http://127.0.0.1:4000/callback',
-        session=app.session
-    )
-
-@app.listener('after_server_stop')
-async def close_session(app, loop):
-    await app.session.close()
-
-async def render_template(template, request, **kwargs):
-    template = env.get_template(template)
-    kwargs['logged_in'] = request['session'].get('logged_in', False)
-
-    if kwargs['logged_in']:
-        coll = app.config.MONGO.user_info
-        user = await coll.find_one({'id': request['session'].get('id')})
-        kwargs['avatar'] = user.get('avatar_url')
-        kwargs['username'] = user.get('name')
-        kwargs['discrim'] = user.get('discrim')
-
-    html_content = template.render(**kwargs)
-    return response.html(html_content)
-
-app.render_template = render_template
-
-@app.get('/')
-async def index(request):
-    async with app.session.get('https://api.github.com/users/SharpBit/events/public') as resp:
-        info = await resp.json()
-    recent_commits = filter(lambda x: x['repo']['name'] != 'SharpBit/modmail' and x['type'] == 'PushEvent', info)
-    return await render_template('index.html', request, title="Home Page", description='Home Page', recent=recent_commits)
-
-@app.get('/login')
-async def login(request):
-    if request['session'].get('logged_in'):
-        return response.redirect('/')
-    return response.redirect(app.oauth.discord_login_url)
-
-@app.get('/callback')
-async def callback(request):
-    code = request.raw_args.get('code')
-    access_token, expires_in = await app.oauth.get_access_token(code)
-    user = await app.oauth.get_user_json(access_token)
-    if user.get('message'):
-        return await render_template('unauthorized.html', request, description='Discord Oauth Unauthorized.')
-
-    data = {
-        'name': user['username'],
-        'discrim': user['discriminator'],
-        'id': user['id']
-    }
-
-    if user.get('avatar'):
-        data['avatar_url'] = 'https://cdn.discordapp.com/avatars/{}/{}.png'.format(user['id'], user['avatar'])
-    else: # in case of default avatar users
-        data['avatar_url'] = 'https://cdn.discordapp.com/embed/avatars/{}.png'.format(user['discriminator'] % 5)
-
-    coll = request.app.config.MONGO.user_info
-
-    await coll.find_one_and_update({'id': user.get('id')}, {'$set': data}, upsert=True)
-    resp = response.redirect('/dashboard')
-
-    request['session']['logged_in'] = True
-    request['session']['id'] = user['id']
-
-    return resp
-
-@app.get('/logout')
-async def logout(request):
-    resp = response.redirect('/')
-    del request['session']['logged_in']
-    del request['session']['id']
-    return resp
-
-@app.get('/invite')
-async def invite(request):
-    return response.redirect('https://discord.gg/C2tnmHa')
-
-@app.get('/repo/<name>')
-async def repo(request, name):
-    return response.redirect(f'https://github.com/SharpBit/{name}')
-
-@app.get('/shorturl')
-async def url_shortener(request):
-    return await render_template('url_shortener.html', request, title="URL Shortener", description='Shorten a URL!')
-
-def base36encode(number):
-    if not isinstance(number, int):
-        raise TypeError('number must be an integer')
-    if number < 0:
-        raise ValueError('number must be positive')
-
-    alphabet, base36 = ['0123456789abcdefghijklmnopqrstuvwxyz', '']
-
-    while number:
-        number, i = divmod(number, 36)
-        base36 = alphabet[i] + base36
-
-    return base36 or alphabet[0]
-
-@app.post('/url')
-async def url(request):
-    coll = request.app.config.MONGO.urls
-    code = base36encode(int(time.time() * 1000))
-    if request.form.get('code'):
-        code = request.form['code'][0]
-        existing = await coll.find_one({'code': code})
-        if existing:
-            return response.text('Error: Code already exists')
-    await coll.insert_one({'code': code, 'url': request.form['url'][0], 'id': request['session'].get('id', 'no_account')})
-    return response.text(f'Here is your shortened URL: https://sharpbit.tk/{code}')
-
-@app.get('/<code>')
-async def short(request, code):
-    coll = request.app.config.MONGO.urls
-    res = await coll.find_one({'code': code})
-    if not res:
-        return response.text(f'No such URL shortener code "{code}" found.')
-    return response.redirect(res['url'])
-
-@app.get('/pastebin')
-async def pastebin_home(request):
-    return await render_template('pastebin.html', request, title="Pastebin", description='Paste in code for easy access later!')
-
-@app.post('/pb')
-async def pb(request):
-    coll = request.app.config.MONGO.pastebin
-    code = base36encode(int(time.time() * 1000))
-    text = request.form['text'][0]
-    await coll.insert_one({'code': code, 'text': text, 'id': request['session'].get('id', 'no_account')})
-    return response.text(f'Here is your pastebin url: https://sharpbit.tk/pastebin/{code}')
-
-@app.get('/pastebin/<code>')
-async def pastebin(request, code):
-    coll = request.app.config.MONGO.pastebin
-    res = await coll.find_one({'code': code})
-    if not res:
-        return response.text(f'No such pastebin code "{code}" found.')
-    text = res['text'].replace('&', '&amp;').replace('<', '&lt;').replace('>', '&gt;')
-    return await render_template('saved_pastebin.html', request, title="Pastebin - Saved", description="Saved Pastebin", code=text)
-
-@app.get('/dashboard')
-@login_required()
-async def dashboard(request):
-    urls = await app.config.MONGO.urls.find({'id': request['session']['id']}).to_list(1000)
-    pastes = await app.config.MONGO.pastebin.find({'id': request['session']['id']}).to_list(1000)
-    return await render_template(
-        'dashboard.html',
-        request,
-        title="Dashboard",
-        description='Dashboard for your account.',
-        urls=urls,
-        pastes=pastes
-    )
+# Import blueprints
+from core import home, listeners, account, dashboard, pastebin, url
+from core.config import Config
 
 
 if __name__ == '__main__':
-    app.run(port=4000)
+    app = Sanic(__name__)
+
+    # Host static files
+    app.static('/static', './static')
+    app.static('/js', './js')
+    app.static('/favicon.ico', './static/favicon.ico')
+
+    # Blueprints
+    app.blueprint(home)
+    app.blueprint(listeners)
+    app.blueprint(account)
+    app.blueprint(dashboard)
+    app.blueprint(pastebin)
+    app.blueprint(url)
+
+    Session(app)  # Sanic session
+
+    if Config.DEV:
+        app.run(port=4000, debug=True)
+    else:
+        app.run(port=4000, debug=False)
