@@ -2,12 +2,22 @@ h1, h2, h3, h4, h5, h6 {
   font-family: 'Lato';
 }
 
-.collapse.navbar-collapse .navbar-nav .nav-link:hover {
-  color: #eee;
+#container-override {
+  max-width: 1920px;
+  padding-right: 0px;
+  padding-left: 0px;
 }
 
 .navbar-dark {
   background-color: #6EB694;
+}
+
+#non-colorblind {
+  color: white;
+}
+
+#non-colorblind:hover {
+  color: #eee;
 }
 
 .dropdown-toggle {

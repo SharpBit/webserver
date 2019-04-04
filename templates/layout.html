@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>{{ title }}</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <!-- Main Style Sheet -->
+    <link rel="stylesheet" type="text/css" href="/static/style.css">
+    {% if description == 'Home Page' %}
+      <link rel="stylesheet" type="text/css" href="/static/background.css">
+    {% endif %}
+
+    <!-- Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300" type="text/css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300" type="text/css" />
+
+    <!-- Embed Properties -->
+    <meta property="og:title" content="SharpBit">
+    <meta property="og:image" content="https://sharpbit.tk/static/discord_av.png">
+    <meta name="theme-color" content="#7289DA">
+    <meta property="og:url" content="https://sharpbit.tk">
+    <meta property="og:description" content="{{ description }}">
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="nav-container">
+        <nav class="navbar navbar-expand-md navbar-dark">
+          <a href="/" class="navbar-brand">SharpBit</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle" aria-controls="navbarToggle" aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarToggle">
+            <!-- Navbar Left Side -->
+            <div class="navbar-nav mr-auto">
+              <a id="non-colorblind" class="nav-item nav-link" href="/">Home</a>
+              <a id="non-colorblind" class="nav-item nav-link" href="/invite">Discord</a>
+              <a id="non-colorblind" class="nav-item nav-link" href="/shorturl">URL Shortener</a>
+              <a id="non-colorblind" class="nav-item nav-link" href="/pastebin">Pastebin</a>
+            </div>
+            <!-- Navbar Right Side -->
+            <div class="navbar-nav">
+              {% if logged_in %}
+                <div class="dropdown">
+                  <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown">
+                    <img src="{{ avatar }}" style="border-radius: 50%;" alt="avatar" height="25" width="25">    {{ username }}#{{ discrim }}
+                  </button>
+                  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <a class="dropdown-item" href="/dashboard">Dashboard</a>
+                    <a class="dropdown-item" href="/logout">Logout</a>
+                  </div>
+                </div>
+              {% else %}
+                <a id="non-colorblind" class="nav-item nav-link" href="/login">Login with Discord</a>
+              {% endif %}
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <main role="main" id="container-override" class="container">
+      {% block content %}{% endblock %}
+    </main>
+    <!-- JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script src="/js/scroll-fade.js"></script>
+  </body>
+</html>

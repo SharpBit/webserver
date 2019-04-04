@@ -55,7 +55,7 @@ async def index(request):
     async with app.session.get('https://api.github.com/users/SharpBit/events/public') as resp:
         info = await resp.json()
     recent_commits = filter(lambda x: x['repo']['name'] != 'SharpBit/modmail' and x['type'] == 'PushEvent', info)
-    return await render_template('index.html', request, description='Home Page', recent=recent_commits)
+    return await render_template('index.html', request, title="Home Page", description='Home Page', recent=recent_commits)
 
 @app.get('/login')
 async def login(request):
@@ -109,7 +109,7 @@ async def repo(request, name):
 
 @app.get('/shorturl')
 async def url_shortener(request):
-    return await render_template('url_shortener.html', request, description='Shorten a URL!')
+    return await render_template('url_shortener.html', request, title="URL Shortener", description='Shorten a URL!')
 
 def base36encode(number):
     if not isinstance(number, int):
@@ -147,7 +147,7 @@ async def short(request, code):
 
 @app.get('/pastebin')
 async def pastebin_home(request):
-    return await render_template('pastebin.html', request, description='Paste in code for easy access later!')
+    return await render_template('pastebin.html', request, title="Pastebin", description='Paste in code for easy access later!')
 
 @app.post('/pb')
 async def pb(request):
@@ -164,14 +164,21 @@ async def pastebin(request, code):
     if not res:
         return response.text(f'No such pastebin code "{code}" found.')
     text = res['text'].replace('&', '&amp;').replace('<', '&lt;').replace('>', '&gt;')
-    return await render_template('saved_pastebin.html', request, code=text)
+    return await render_template('saved_pastebin.html', request, title="Pastebin - Saved", description="Saved Pastebin", code=text)
 
 @app.get('/dashboard')
 @login_required()
 async def dashboard(request):
     urls = await app.config.MONGO.urls.find({'id': request['session']['id']}).to_list(1000)
     pastes = await app.config.MONGO.pastebin.find({'id': request['session']['id']}).to_list(1000)
-    return await render_template('dashboard.html', request, description='Dashboard for your account.', urls=urls, pastes=pastes)
+    return await render_template(
+        'dashboard.html',
+        request,
+        title="Dashboard",
+        description='Dashboard for your account.',
+        urls=urls,
+        pastes=pastes
+    )
 
 
 if __name__ == '__main__':

@@ -1,28 +1,18 @@
-<html>
-  <head>
-    <title>Dashboard</title>
-    {% include 'snippets/header.html' %}
-    <link rel="stylesheet" type="text/css" href="/static/style.css">
-    {% include 'snippets/meta.html' %}
-  </head>
-  <body>
-    {% include 'snippets/navbar.html' %}
-    <div class="container">
-      <h1> </h1><br />
-      <h1>Dashboard</h1>
-      <div class="content-section">
-        <h3>Shortened URLs</h3>
-        {% for url in urls %}
-          <a href="{{ url.url }}">https://sharpbit.tk/{{ url.code }}</a><h7> - {{ url.url }}</h7><br />
-        {% endfor %}
-      </div>
-      <div class="content-section">
-        <h3>Pastebins</h3>
-        {% for p in pastes %}
-          <a href="https://sharpbit.tk/pastebin/{{ p.code }}">https://sharpbit.tk/pastebin/{{ p.code }}</a><br />
-        {% endfor %}
-      </div>
-    </div>
-    {% include 'snippets/scripts.html' %}
-  </body>
-</html>
+{% extends "layout.html" %}
+{% block content %}
+<div class="container">
+  <h1 style="padding-top:20px">Dashboard</h1>
+  <div class="content-section" style="border:1px solid #28a745;padding-bottom:20px">
+    <h3>Shortened URLs</h3>
+    {% for url in urls %}
+      <a href="{{ url.url }}">https://sharpbit.tk/{{ url.code }}</a><h7> - {{ url.url }}</h7><br />
+    {% endfor %}
+  </div>
+  <div class="content-section" style="border:1px solid #28a745;padding-bottom:20px">
+    <h3>Pastebins</h3>
+    {% for p in pastes %}
+      <a href="https://sharpbit.tk/pastebin/{{ p.code }}">https://sharpbit.tk/pastebin/{{ p.code }}</a><br />
+    {% endfor %}
+  </div>
+</div>
+{% endblock content %}

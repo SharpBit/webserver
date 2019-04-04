@@ -1,25 +1,16 @@
-<html>
-  <head>
-    <title>URL Shortener</title>
-    {% include 'snippets/header.html' %}
-    <link rel="stylesheet" type="text/css" href="/static/style.css">
-    {% include 'snippets/meta.html' %}
-  </head>
-  <body>
-    {% include 'snippets/navbar.html' %}
-    <div class="container">
-        <h1>URL Shortener</h1>
-        <h3>Note: You must be signed in to view your URLs and pastebins on your dashboard.</h3>
-        <form method="POST" action="/url">
-          <div class="form-group">
-            <label for="url" class="label">URL</label>
-            <input name="url" type="url" class="form-control" id="url" placeholder="https://www.example.com"></input>
-            <label for="code" class="label">Shortened Code</label>
-            <input name="code" type="code" class="form-control" id="code" placeholder="mycustomurl"></input>
-          </div>
-          <button type="submit" class="btn btn-success">Submit</button>
-        </form>
+{% extends "layout.html" %}
+{% block content %}
+<div class="container">
+  <h1>URL Shortener</h1>
+  <h3>Note: You must be signed in to view your URLs and pastebins on your dashboard.</h3>
+  <form method="POST" action="/url">
+    <div class="form-group">
+      <label for="url" class="label">URL</label>
+      <input name="url" type="url" class="form-control" id="url" placeholder="https://www.example.com"></input>
+      <label for="code" class="label">Shortened Code</label>
+      <input name="code" type="code" class="form-control" id="code" placeholder="mycustomurl"></input>
     </div>
-    {% include 'snippets/scripts.html' %}
-  </body>
-</html>
+    <button type="submit" class="btn btn-success">Submit</button>
+  </form>
+</div>
+{% endblock content %}
