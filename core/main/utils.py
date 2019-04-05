@@ -1,4 +1,4 @@
-class Oauth:
+class Oauth2:
     def __init__(self, client_id, client_secret, scope=None, redirect_uri=None, session=None):
         self.client_id = client_id
         self.client_secret = client_secret

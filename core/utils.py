@@ -9,7 +9,7 @@ import os
 load_dotenv(find_dotenv('.env'))
 
 async def render_template(template, request, **kwargs):
-    env = Environment(loader=PackageLoader('app', 'templates'))
+    env = Environment(loader=PackageLoader('core', 'templates'))
     template = env.get_template(template)
     kwargs['logged_in'] = request['session'].get('logged_in', False)
 
