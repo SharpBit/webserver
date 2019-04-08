@@ -2,7 +2,6 @@ from sanic import Blueprint
 
 from core.config import Config
 from core.main.utils import Oauth2
-from motor.motor_asyncio import AsyncIOMotorClient
 
 import aiohttp
 
@@ -12,7 +11,6 @@ listeners = Blueprint('listeners')
 @listeners.listener('before_server_start')
 async def init(app, loop):
     app.session = aiohttp.ClientSession(loop=loop)
-    app.config.MONGO = AsyncIOMotorClient(Config.MONGO, io_loop=loop).sharpbit.sharpbit
     app.oauth = Oauth2(
         Config.DISCORD_CLIENT_ID,
         Config.DISCORD_CLIENT_SECRET,

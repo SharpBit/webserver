@@ -1,7 +1,6 @@
 sanic
-aiohttp
-motor
-dnspython
+sanic_session
 jinja2
 python-dotenv
-sanic_session
+asyncpg
+aiohttp

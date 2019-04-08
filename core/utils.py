@@ -1,12 +1,28 @@
 from sanic import response
+
 from dotenv import load_dotenv, find_dotenv
 from jinja2 import Environment, PackageLoader
 from functools import wraps
+from contextlib import asynccontextmanager
 
+import asyncpg
 import os
 
 
 load_dotenv(find_dotenv('.env'))
+
+@asynccontextmanager
+async def open_db_connection(**options):
+    user = options.pop('user', os.getenv('DB_USERNAME'))
+    password = options.pop('password', os.getenv('DB_PASSWORD'))
+    database = options.pop('database', os.getenv('DB_NAME'))
+    host = options.pop('host', os.getenv('DB_HOST'))
+
+    try:
+        conn = await asyncpg.connect(user=user, password=password, database=database, host=host)
+        yield conn
+    finally:
+        await conn.close()
 
 async def render_template(template, request, **kwargs):
     env = Environment(loader=PackageLoader('core', 'templates'))
@@ -14,11 +30,11 @@ async def render_template(template, request, **kwargs):
     kwargs['logged_in'] = request['session'].get('logged_in', False)
 
     if kwargs['logged_in']:
-        coll = request.app.config.MONGO.user_info
-        user = await coll.find_one({'id': request['session'].get('id')})
-        kwargs['avatar'] = user.get('avatar_url')
-        kwargs['username'] = user.get('name')
-        kwargs['discrim'] = user.get('discrim')
+        async with open_db_connection() as conn:
+            user = await conn.fetchrow('SELECT * FROM users WHERE id = $1', request['session']['id'])
+        kwargs['avatar'] = user['avatar']
+        kwargs['username'] = user['name']
+        kwargs['discrim'] = user['discrim']
 
     html_content = template.render(**kwargs)
     return response.html(html_content)

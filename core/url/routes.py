@@ -1,5 +1,5 @@
 from sanic import Blueprint, response
-from core.utils import render_template, base36encode
+from core.utils import render_template, open_db_connection, base36encode
 import time
 
 
@@ -9,22 +9,25 @@ url = Blueprint('shortenurl')
 async def url_shortener_home(request):
     return await render_template('url_shortener.html', request, title="URL Shortener", description='Shorten a URL!')
 
-@url.post('/createurl')
+@url.post('/url/create')
 async def create_url(request):
-    coll = request.app.config.MONGO.urls
     code = base36encode(int(time.time() * 1000))
-    if request.form.get('code'):
-        code = request.form['code'][0]
-        existing = await coll.find_one({'code': code})
-        if existing:
-            return response.text('Error: Code already exists')
-    await coll.insert_one({'code': code, 'url': request.form['url'][0], 'id': request['session'].get('id', 'no_account')})
+    url = request.form['url'][0]
+    account = request['session'].get('id', 'no_account')
+
+    async with open_db_connection() as conn:
+        if request.form.get('code'):
+            code = request.form['code'][0]
+            existing = await conn.fetchrow('SELECT * FROM urls WHERE code = $1', code)
+            if existing:
+                return response.text('Error: Code already exists')
+        await conn.execute('INSERT INTO urls(id, code, url) VALUES ($1, $2, $3)', account, code, url)
     return response.text(f'Here is your shortened URL: https://sharpbit.tk/{code}')
 
 @url.get('/<code>')
 async def existing_code(request, code):
-    coll = request.app.config.MONGO.urls
-    res = await coll.find_one({'code': code})
+    async with open_db_connection() as conn:
+        res = await conn.fetchrow('SELECT * FROM urls WHERE code = $1', code)
     if not res:
         return response.text(f'No such URL shortener code "{code}" found.')
     return response.redirect(res['url'])

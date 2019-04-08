@@ -1,5 +1,5 @@
 from sanic import Blueprint, response
-from core.utils import render_template
+from core.utils import render_template, open_db_connection
 
 
 account = Blueprint('accounts')
@@ -19,20 +19,18 @@ async def callback(request):
     if user.get('message'):
         return await render_template('unauthorized.html', request, description='Discord Oauth Unauthorized.')
 
-    data = {
-        'name': user['username'],
-        'discrim': user['discriminator'],
-        'id': user['id']
-    }
-
     if user.get('avatar'):
-        data['avatar_url'] = 'https://cdn.discordapp.com/avatars/{}/{}.png'.format(user['id'], user['avatar'])
+        avatar = 'https://cdn.discordapp.com/avatars/{}/{}.png'.format(user['id'], user['avatar'])
     else: # in case of default avatar users
-        data['avatar_url'] = 'https://cdn.discordapp.com/embed/avatars/{}.png'.format(user['discriminator'] % 5)
+        avatar = 'https://cdn.discordapp.com/embed/avatars/{}.png'.format(user['discriminator'] % 5)
 
-    coll = request.app.config.MONGO.user_info
+    async with open_db_connection() as conn:
+        await conn.executemany(
+            '''INSERT INTO users(id, name, discrim, avatar) VALUES ($1, $2, $3, $4)
+            ON CONFLICT (id) DO UPDATE SET id=$1, name=$2, discrim=$3, avatar=$4''',
+            [(user['id'], user['username'], user['discriminator'], avatar), (user['id'], user['username'], user['discriminator'], avatar)]
+        )
 
-    await coll.find_one_and_update({'id': user.get('id')}, {'$set': data}, upsert=True)
     resp = response.redirect('/dashboard')
 
     request['session']['logged_in'] = True
