@@ -14,7 +14,7 @@ async def login(request):
 async def callback(request):
     app = request.app
     code = request.raw_args.get('code')
-    access_token, expires_in = await app.oauth.get_access_token(code)
+    access_token = await app.oauth.get_access_token(code)
     user = await app.oauth.get_user_json(access_token)
     if user.get('message'):
         return await render_template('unauthorized.html', request, description='Discord Oauth Unauthorized.')

@@ -25,7 +25,7 @@ class Oauth2:
 
         async with self.session.post(self.discord_token_url, data=payload, headers=headers) as z:
             resp = await z.json()
-        return resp.get('access_token'), resp.get('expires_in')
+        return resp.get('access_token')
 
     async def get_user_json(self, access_token):
         url = self.discord_api_url + '/users/@me'
