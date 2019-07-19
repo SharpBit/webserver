@@ -21,7 +21,7 @@ async def create_url(request):
             existing = await conn.fetchrow('SELECT * FROM urls WHERE code = $1', code)
             if existing:
                 return response.text('Error: Code already exists')
-        await conn.execute('INSERT INTO urls(id, code, url) VALUES ($1, $2, $3)', account, code, url)
+        await conn.execute('INSERT INTO urls(user_id, code, url) VALUES ($1, $2, $3)', account, code, url)
     return response.text(f'Here is your shortened URL: https://sharpbit.tk/{code}')
 
 @url.get('/<code>')

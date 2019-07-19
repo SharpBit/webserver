@@ -15,7 +15,7 @@ async def create_pastebin(request):
     text = request.form['text'][0]
     account = request['session'].get('id', 'no_account')
     async with open_db_connection() as conn:
-        await conn.execute('INSERT INTO pastebin(id, code, text) VALUES ($1, $2, $3)', account, code, text)
+        await conn.execute('INSERT INTO pastebin(user_id, code, text) VALUES ($1, $2, $3)', account, code, text)
     return response.text(f'Here is your pastebin url: https://sharpbit.tk/pastebin/{code}')
 
 @pastebin.get('/pastebin/<code>')
