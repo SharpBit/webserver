@@ -1,7 +1,14 @@
 .background {
-  background: url('https://hdqwalls.com/download/macos-mojave-day-mode-stock-pb-1280x720.jpg') no-repeat center;
+  background: url(/core/static/img/background_main.jpg) no-repeat center;
   background-size: cover;
   min-height: 665px;
+}
+
+@media all and (max-width: 499px) {
+  .background {
+    background-image: url(/core/static/img/background_mobile.jpg) no-repeat center;
+    background-size: cover;
+  }
 }
 
 body {
@@ -10,6 +17,10 @@ body {
   width: 100%;
   overflow-x: hidden;
   background-color: black;
+}
+
+a:hover {
+  text-decoration: none;
 }
 
 .content {
