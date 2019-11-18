@@ -8,7 +8,7 @@ dashboard = Blueprint('dashboard')
 @dashboard.get('/dashboard')
 @login_required()
 async def dashboard_home(request):
-    async with open_db_connection() as conn:
+    async with open_db_connection(request.app) as conn:
         urls = await conn.fetch('SELECT * FROM urls WHERE user_id = $1', request['session']['id'])
         pastes = await conn.fetch('SELECT * FROM pastebin WHERE user_id = $1', request['session']['id'])
     return await render_template(

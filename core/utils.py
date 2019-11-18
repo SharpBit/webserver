@@ -12,17 +12,17 @@ import os
 load_dotenv(find_dotenv('.env'))
 
 @asynccontextmanager
-async def open_db_connection(**options):
-    user = options.pop('user', os.getenv('DB_USERNAME'))
-    password = options.pop('password', os.getenv('DB_PASSWORD'))
-    database = options.pop('database', os.getenv('DB_NAME'))
-    host = options.pop('host', os.getenv('DB_HOST'))
+async def open_db_connection(app, **options):
+    user = options.pop('user', app.config.DB_USERNAME)
+    password = options.pop('password', app.config.DB_PASSWORD)
+    database = options.pop('database', app.config.DB_NAME)
+    host = options.pop('host', app.config.DB_HOST)
 
-    try:
-        conn = await asyncpg.connect(user=user, password=password, database=database, host=host)
-        yield conn
-    finally:
-        await conn.close()
+    # try:
+    conn = await asyncpg.connect(user=user, password=password, database=database, host=host)
+    yield conn
+    # finally:
+    await conn.close()
 
 async def render_template(template, request, **kwargs):
     env = Environment(loader=PackageLoader('core', 'templates'))
@@ -30,7 +30,7 @@ async def render_template(template, request, **kwargs):
     kwargs['logged_in'] = request['session'].get('logged_in', False)
 
     if kwargs['logged_in']:
-        async with open_db_connection() as conn:
+        async with open_db_connection(request.app) as conn:
             user = await conn.fetchrow('SELECT * FROM users WHERE id = $1', request['session']['id'])
         kwargs['avatar'] = user['avatar']
         kwargs['username'] = user['name']

@@ -14,13 +14,13 @@ async def create_pastebin(request):
     code = base36encode(int(time.time() * 1000))
     text = request.form['text'][0]
     account = request['session'].get('id', 'no_account')
-    async with open_db_connection() as conn:
+    async with open_db_connection(request.app) as conn:
         await conn.execute('INSERT INTO pastebin(user_id, code, text) VALUES ($1, $2, $3)', account, code, text)
     return response.text(f'Here is your pastebin url: https://sharpbit.tk/pastebin/{code}')
 
 @pastebin.get('/pastebin/<code>')
 async def existing_pastebin(request, code):
-    async with open_db_connection() as conn:
+    async with open_db_connection(request.app) as conn:
         res = await conn.fetchrow('SELECT * FROM pastebin WHERE code = $1', code)
     if not res:
         return response.text(f'No such pastebin code "{code}" found.')

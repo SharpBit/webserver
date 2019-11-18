@@ -9,6 +9,10 @@ class Config:
     DEV = ENV == 'development'
     DISCORD_CLIENT_ID = os.getenv('DISCORD_CLIENT_ID')
     DISCORD_CLIENT_SECRET = os.getenv('DISCORD_CLIENT_SECRET')
-    MONGO = os.getenv('MONGO')
     AUTH = os.getenv('AUTH')
-    DOMAIN = 'sharpbit.tk' if not DEV else '127.0.0.1:4000'
+    PORT = int(os.getenv('PORT'))
+    DOMAIN = 'sharpbit.tk' if not DEV else f'127.0.0.1:{PORT}'
+    DB_USERNAME = os.getenv('DB_USERNAME')
+    DB_PASSWORD = os.getenv('DB_PASSWORD')
+    DB_NAME = os.getenv('DB_NAME')
+    DB_HOST = os.getenv('DB_HOST')

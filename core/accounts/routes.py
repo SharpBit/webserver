@@ -24,7 +24,7 @@ async def callback(request):
     else: # in case of default avatar users
         avatar = 'https://cdn.discordapp.com/embed/avatars/{}.png'.format(user['discriminator'] % 5)
 
-    async with open_db_connection() as conn:
+    async with open_db_connection(request.app) as conn:
         await conn.executemany(
             '''INSERT INTO users(id, name, discrim, avatar) VALUES ($1, $2, $3, $4)
             ON CONFLICT (id) DO UPDATE SET id=$1, name=$2, discrim=$3, avatar=$4''',

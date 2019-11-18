@@ -15,7 +15,7 @@ async def create_url(request):
     url = request.form['url'][0]
     account = request['session'].get('id', 'no_account')
 
-    async with open_db_connection() as conn:
+    async with open_db_connection(request.app) as conn:
         if request.form.get('code'):
             code = request.form['code'][0]
             existing = await conn.fetchrow('SELECT * FROM urls WHERE code = $1', code)
@@ -26,7 +26,7 @@ async def create_url(request):
 
 @url.get('/<code>')
 async def existing_code(request, code):
-    async with open_db_connection() as conn:
+    async with open_db_connection(request.app) as conn:
         res = await conn.fetchrow('SELECT * FROM urls WHERE code = $1', code)
     if not res:
         return response.text(f'No such URL shortener code "{code}" found.')
