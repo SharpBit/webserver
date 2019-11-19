@@ -1,7 +1,7 @@
 from sanic import Blueprint
 
 from core.config import Config
-from core.main.utils import Oauth2
+from core.utils import Oauth2
 
 import aiohttp
 

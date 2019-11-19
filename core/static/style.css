@@ -32,8 +32,8 @@ h1, h2, h3, h4, h5, h6 {
   color: #6EB694;
 }
 
-.inner-container {
-  max-width: 640px;
+.container {
+  max-width: 900px;
 	padding: 25px;
 }
 
@@ -50,5 +50,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .hideme {
-    opacity:0;
+    opacity: 0;
+}
+
+a:hover {
+  text-decoration: none;
 }

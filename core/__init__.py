@@ -3,13 +3,8 @@ from sanic_session import Session
 
 from core.config import Config
 
-# Routes
-from core.accounts.routes import account
-from core.dashboard.routes import dashboard
-from core.main.routes import home
-from core.main.listeners import listeners
-from core.pastebin.routes import pastebin
-from core.url.routes import url
+from core.routes import root
+from core.listeners import listeners
 
 
 def create_app(config_class=Config):
@@ -17,15 +12,12 @@ def create_app(config_class=Config):
     app.config.from_object(Config)
 
     # Host static files
-    app.static('/core', './core')
+    app.static('/static', './core/static')
+    app.static('/js', './core/js')
 
     # Blueprints
-    app.blueprint(home)
+    app.blueprint(root)
     app.blueprint(listeners)
-    app.blueprint(account)
-    app.blueprint(dashboard)
-    app.blueprint(pastebin)
-    app.blueprint(url)
 
     Session(app)  # sanic_session
 
