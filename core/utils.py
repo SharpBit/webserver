@@ -99,17 +99,3 @@ def authorized():
             return response.json({'error': True, 'message': 'Unauthorized'}, status=401)
         return decorated_function
     return decorator
-
-def base36encode(number):
-    if not isinstance(number, int):
-        raise TypeError('number must be an integer')
-    if number < 0:
-        raise ValueError('number must be positive')
-
-    alphabet, base36 = ['0123456789abcdefghijklmnopqrstuvwxyz', '']
-
-    while number:
-        number, i = divmod(number, 36)
-        base36 = alphabet[i] + base36
-
-    return base36 or alphabet[0]

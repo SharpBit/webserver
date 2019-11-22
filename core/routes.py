@@ -1,8 +1,9 @@
-import time
+import random
+import string
 
 from sanic import Blueprint, response
 
-from core.utils import authorized, base36encode, login_required, open_db_connection, render_template
+from core.utils import login_required, open_db_connection, render_template
 
 root = Blueprint('root')
 
@@ -84,7 +85,8 @@ async def url_shortener_home(request):
 @root.post('/url/create')
 # @authorized()
 async def create_url(request):
-    code = base36encode(int(time.time() * 1000))
+    chars = string.ascii_letters + string.digits
+    code = ''.join(random.choice(chars) for i in range(8))
     url = request.form['url'][0]
     account = request['session'].get('id', 'no_account')
 
@@ -112,7 +114,8 @@ async def pastebin_home(request):
 @root.post('/pastebin/create')
 # @authorized()
 async def create_pastebin(request):
-    code = base36encode(int(time.time() * 1000))
+    chars = string.ascii_letters + string.digits
+    code = ''.join(random.choice(chars) for i in range(8))
     text = request.form['text'][0]
     account = request['session'].get('id', 'no_account')
     async with open_db_connection(request.app) as conn:
