@@ -132,7 +132,7 @@ async def existing_pastebin(request, code):
     text = res['text'].replace('&', '&amp;').replace('<', '&lt;').replace('>', '&gt;')
     return await render_template('saved_pastebin.html', request, title="Pastebin - Saved", description="Saved Pastebin", code=text)
 
-@root.get('/brawlstats/<endpoint>')
+@root.get('/brawlstats/<endpoint:[\w=\/%?]*>')
 async def brawlstats_tests_proxy(request, endpoint):
     app = request.app
     headers = {
