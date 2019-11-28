@@ -1,3 +1,4 @@
+import asyncio
 import random
 import string
 
@@ -130,3 +131,16 @@ async def existing_pastebin(request, code):
         return response.text(f'No such pastebin code "{code}" found.')
     text = res['text'].replace('&', '&amp;').replace('<', '&lt;').replace('>', '&gt;')
     return await render_template('saved_pastebin.html', request, title="Pastebin - Saved", description="Saved Pastebin", code=text)
+
+@root.get('/brawlstats/<endpoint>')
+async def brawlstats_tests_proxy(request, endpoint):
+    app = request.app
+    headers = {
+        'Authorization': 'Bearer {}'.format(app.config.BRAWLSTATS_OFFICIAL_TOKEN),
+        'Accept-Encoding': 'gzip'
+    }
+    try:
+        async with app.session.get(f'https://api.brawlstars.com/v1/{endpoint}', timeout=30, headers=headers) as resp:
+            return response.json(await resp.json(), status=resp.status)
+    except asyncio.TimeoutError:
+        return response.text("Request failed", status=503)
