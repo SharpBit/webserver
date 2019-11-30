@@ -136,12 +136,13 @@ async def existing_pastebin(request, code):
 async def brawlstats_tests_proxy(request, endpoint):
     app = request.app
     endpoint = endpoint.replace('#', '%23')
+    limit = request.args.get('limit', 200)
     headers = {
         'Authorization': 'Bearer {}'.format(app.config.BRAWLSTATS_OFFICIAL_TOKEN),
         'Accept-Encoding': 'gzip'
     }
     try:
-        async with app.session.get(f'https://api.brawlstars.com/v1/{endpoint}', timeout=30, headers=headers) as resp:
+        async with app.session.get(f'https://api.brawlstars.com/v1/{endpoint}?limit={limit}', timeout=30, headers=headers) as resp:
             return response.json(await resp.json(), status=resp.status)
     except asyncio.TimeoutError:
         return response.text("Request failed", status=503)
