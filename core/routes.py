@@ -135,7 +135,7 @@ async def existing_pastebin(request, code):
 
 @root.get('/bschampionship')
 async def bschampionship_home(request):
-    return await render_template('bschamp_home', request)
+    return await render_template('bschamp_home', request, title='Brawl Stars Championship', description='Search up your tag to view the logs of your Brawl Stars championship games.')
 
 @root.post('/bschampionship/post')
 async def bschampionship_post(request):
@@ -144,7 +144,13 @@ async def bschampionship_post(request):
     except brawlstats.NotFoundError as e:
         invalid_chars = e.error.split('\n')
         invalid_chars = invalid_chars[len(invalid_chars) - 1]
-        return await render_template('bschamp_home', request, invalid_chars=invalid_chars)
+        return await render_template(
+            'bschamp_home',
+            request,
+            invalid_chars=invalid_chars,
+            title='Brawl Stars Championship',
+            description='Search up your tag to view the logs of your Brawl Stars championship games.'
+        )
     return response.redirect(f'/bschampionship/{tag}')
 
 @root.get('/bschampionship/<tag>')
@@ -153,7 +159,14 @@ async def bschampionship_stats(request, tag):
     try:
         logs = await client.get_battle_logs(tag)
     except brawlstats.NotFoundError:
-        return await render_template('bschamp_stats', request, tag_found=False, entered_tag=tag.upper())
+        return await render_template(
+            'bschamp_stats',
+            request,
+            tag_found=False,
+            entered_tag=tag.upper(),
+            title='Brawl Stars Championship',
+            description='View the logs of your Brawl Stars championship games.'
+        )
 
     event_map = {
         'gemGrab': 'Gem Grab',
@@ -182,7 +195,15 @@ async def bschampionship_stats(request, tag):
     games = list(filter(filter_championship_games, logs))[::-1]
 
     if len(games) == 0:
-        return await render_template('bschamp_stats', request, tag_found=True, games=[], len=len)
+        return await render_template(
+            'bschamp_stats',
+            request,
+            tag_found=True,
+            games=[],
+            len=len,
+            title='Brawl Stars Championship',
+            description='View the logs of your Brawl Stars championship games.'
+        )
 
     battlelog = []
     for battle in games:
@@ -200,7 +221,16 @@ async def bschampionship_stats(request, tag):
                     battle_info['teams'][i][j]['star_player'] = 'normal'
 
         battlelog.append(battle_info)
-    return await render_template('bschamp_stats', request, tag_found=True, games=battlelog, brawler_key={'EL PRIMO': 'El-Primo', 'MR. P': 'Mr.P'}, len=len)
+    return await render_template(
+        'bschamp_stats',
+        request,
+        tag_found=True,
+        games=battlelog,
+        brawler_key={'EL PRIMO': 'El-Primo', 'MR. P': 'Mr.P'},
+        len=len,
+        title='Brawl Stars Championship',
+        description='View the logs of your Brawl Stars championship games.'
+    )
 
 @root.get('/brawlstats/<endpoint:path>')
 async def brawlstats_tests_proxy(request, endpoint):
