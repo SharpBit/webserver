@@ -66,8 +66,11 @@ async def open_db_connection(app, **options):
     await conn.close()
 
 async def render_template(template, request, **kwargs):
+    """
+    Function to return jinja variables to the html
+    """
     env = Environment(loader=PackageLoader('core', 'templates'))
-    template = env.get_template(template)
+    template = env.get_template(template + '.html')
     kwargs['logged_in'] = request['session'].get('logged_in', False)
 
     if kwargs['logged_in']:
