@@ -20,7 +20,9 @@
       <h4>Recent GitHub Commits</h4>
       {% for push in recent %}
         <div class="content-section">
-          <span style="font-size: 12px">{{ push.repo.name }}</span>
+          <span style="font-size: 12px">
+            <a href="https://github.com/{{ push.repo.name }}" target="_blank">{{ push.repo.name }}</a>
+          </span>
           {% for commit in push.payload.commits %}
             <p class="commit-info">
               <a href="{{ commit.url.replace('api.', '').replace('/repos', '').replace('commits', 'commit') }}" target="_blank">
