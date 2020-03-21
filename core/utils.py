@@ -83,6 +83,10 @@ async def render_template(template, request, **kwargs):
     html_content = template.render(**kwargs)
     return response.html(html_content)
 
+def disable_xss(content):
+    """Prevent cross-site scripting (a common exploit in websites)"""
+    return content.replace('&', '&amp;').replace('<', '&lt;').replace('>', '&gt;')
+
 def login_required():
     def decorator(func):
         @wraps(func)

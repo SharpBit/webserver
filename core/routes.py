@@ -5,7 +5,7 @@ import string
 import brawlstats
 from sanic import Blueprint, response
 
-from core.utils import login_required, open_db_connection, render_template
+from core.utils import disable_xss, login_required, open_db_connection, render_template
 
 root = Blueprint('root')
 
@@ -38,7 +38,7 @@ async def callback(request):
     access_token = await app.oauth.get_access_token(code)
     user = await app.oauth.get_user_json(access_token)
     if user.get('message'):
-        return await render_template('unauthorized.html', request, description='Discord Oauth Unauthorized.')
+        return await render_template('unauthorized', request, description='Discord Oauth Unauthorized.')
 
     if user.get('avatar'):
         avatar = 'https://cdn.discordapp.com/avatars/{}/{}.png'.format(user['id'], user['avatar'])
@@ -82,7 +82,7 @@ async def dashboard_home(request):
 
 @root.get('/urlshortener')
 async def url_shortener_home(request):
-    return await render_template('url_shortener', request, title="URL Shortener", description='Shorten a URL!')
+    return await render_template('url_shortener', request, title='URL Shortener', description='Shorten a URL!')
 
 @root.post('/url/create')
 # @authorized()
@@ -130,42 +130,47 @@ async def existing_pastebin(request, code):
         res = await conn.fetchrow('SELECT * FROM pastebin WHERE code = $1', code)
     if not res:
         return response.text(f'No such pastebin code "{code}" found.')
-    text = res['text'].replace('&', '&amp;').replace('<', '&lt;').replace('>', '&gt;')
+    text = disable_xss(res['text'])
     return await render_template('saved_pastebin', request, title="Pastebin - Saved", description="Saved Pastebin", code=text)
 
-@root.get('/bschampionship')
-async def bschampionship_home(request):
-    return await render_template('bschamp_home', request, title='Brawl Stars Championship', description='Search up your tag to view the logs of your Brawl Stars championship games.')
+@root.get('/challenges')
+async def challenge_home(request):
+    return await render_template(
+        template='challenge_home',
+        request=request,
+        title='Brawl Stars Challenges',
+        description='Search up your tag to view the logs of your Brawl Stars challenge games.'
+    )
 
-@root.post('/bschampionship/post')
-async def bschampionship_post(request):
+@root.post('/challenges/post')
+async def challenge_post(request):
     try:
-        tag = brawlstats.officialapi.utils.bstag(request.form['tag'][0])
+        tag = brawlstats.utils.bstag(request.form['tag'][0])
     except brawlstats.NotFoundError as e:
         invalid_chars = e.error.split('\n')
         invalid_chars = invalid_chars[len(invalid_chars) - 1]
         return await render_template(
-            'bschamp_home',
-            request,
+            template='challenge_home',
+            request=request,
             invalid_chars=invalid_chars,
-            title='Brawl Stars Championship',
-            description='Search up your tag to view the logs of your Brawl Stars championship games.'
+            title='Brawl Stars Challenges',
+            description='Search up your tag to view the logs of your Brawl Stars challenge games.'
         )
-    return response.redirect(f'/bschampionship/{tag}')
+    return response.redirect(f'/challenges/{tag}')
 
-@root.get('/bschampionship/<tag>')
-async def bschampionship_stats(request, tag):
+@root.get('/challenges/<tag>')
+async def challenge_stats(request, tag):
     client = request.app.brawl_client
     try:
         logs = await client.get_battle_logs(tag)
     except brawlstats.NotFoundError:
         return await render_template(
-            'bschamp_stats',
+            'challenge_stats',
             request,
             tag_found=False,
-            entered_tag=tag.upper(),
+            entered_tag=disable_xss(tag.upper()),
             title='Brawl Stars Championship',
-            description='View the logs of your Brawl Stars championship games.'
+            description='View the logs of your Brawl Stars challenge games.'
         )
 
     event_map = {
@@ -196,13 +201,13 @@ async def bschampionship_stats(request, tag):
 
     if len(games) == 0:
         return await render_template(
-            'bschamp_stats',
-            request,
+            template='challenge_stats',
+            request=request,
             tag_found=True,
             games=[],
             len=len,
             title='Brawl Stars Championship',
-            description='View the logs of your Brawl Stars championship games.'
+            description='View the logs of your Brawl Stars challenge games.'
         )
 
     battlelog = []
@@ -222,14 +227,14 @@ async def bschampionship_stats(request, tag):
 
         battlelog.append(battle_info)
     return await render_template(
-        'bschamp_stats',
-        request,
+        template='challenge_stats',
+        request=request,
         tag_found=True,
         games=battlelog,
         brawler_key={'EL PRIMO': 'El-Primo', 'MR. P': 'Mr.P'},
-        len=len,
-        title='Brawl Stars Championship',
-        description='View the logs of your Brawl Stars championship games.'
+        len=len,  # allow len() to be called in the template
+        title='Brawl Stars Challenges',
+        description='View the logs of your Brawl Stars challenge games.'
     )
 
 @root.get('/brawlstats/<endpoint:path>')

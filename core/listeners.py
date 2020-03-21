@@ -10,8 +10,8 @@ listeners = Blueprint('listeners')
 @listeners.listener('before_server_start')
 async def init(app, loop):
     app.session = aiohttp.ClientSession(loop=loop)
-    app.brawl_client = brawlstats.OfficialAPI(
-        token=Config.BRAWLSTATS_OFFICIAL_TOKEN,
+    app.brawl_client = brawlstats.Client(
+        token=Config.BRAWLSTATS_TOKEN,
         session=app.session,
         is_async=True
     )

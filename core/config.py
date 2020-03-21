@@ -16,4 +16,4 @@ class Config:
     DB_PASSWORD = os.getenv('DB_PASSWORD')
     DB_NAME = os.getenv('DB_NAME')
     DB_HOST = os.getenv('DB_HOST')
-    BRAWLSTATS_OFFICIAL_TOKEN = os.getenv('BRAWLSTATS_OFFICIAL_TOKEN')
+    BRAWLSTATS_TOKEN = os.getenv('BRAWLSTATS_TOKEN')
