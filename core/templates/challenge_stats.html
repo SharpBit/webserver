@@ -11,7 +11,7 @@
       <h7 style="font-family: 'LilitaOne';color: #C73930">Tag #{{ entered_tag }} was not found.</h7>
     {% else %}
       {% if len(games) == 0 %}
-        <h7 style="font-family: 'LilitaOne';color: #C73930">No recent championship games were found.</h7>
+        <h7 style="font-family: 'LilitaOne';color: #C73930">No recent challenge games were found.</h7>
       {% else %}
         {% for battle in games %}
           <div class="battle-{{ battle.result.lower() }}">

@@ -169,7 +169,7 @@ async def challenge_stats(request, tag):
             request,
             tag_found=False,
             entered_tag=disable_xss(tag.upper()),
-            title='Brawl Stars Championship',
+            title='Brawl Stars Challenges',
             description='View the logs of your Brawl Stars challenge games.'
         )
 
@@ -181,7 +181,7 @@ async def challenge_stats(request, tag):
         'siege': 'Siege'
     }
 
-    def filter_championship_games(battle):
+    def filter_challenge_games(battle):
         try:
             if battle.battle.trophy_change == 1 and 'Showdown' not in battle.event.mode:
                 return True
@@ -197,7 +197,7 @@ async def challenge_stats(request, tag):
                 return True
         return False
 
-    games = list(filter(filter_championship_games, logs))[::-1]
+    games = list(filter(filter_challenge_games, logs))[::-1]
 
     if len(games) == 0:
         return await render_template(
@@ -206,7 +206,7 @@ async def challenge_stats(request, tag):
             tag_found=True,
             games=[],
             len=len,
-            title='Brawl Stars Championship',
+            title='Brawl Stars Challenges',
             description='View the logs of your Brawl Stars challenge games.'
         )
 
