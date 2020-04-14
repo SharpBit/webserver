@@ -19,7 +19,7 @@ async def init(app, loop):
         Config.DISCORD_CLIENT_ID,
         Config.DISCORD_CLIENT_SECRET,
         scope='identify',
-        redirect_uri='https://sharpbit.tk/callback' if not Config.DEV else 'http://127.0.0.1:4000/callback',
+        redirect_uri='https://sharpbit.dev/callback' if not Config.DEV else 'http://127.0.0.1:4000/callback',
         session=app.session
     )
 

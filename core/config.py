@@ -11,7 +11,7 @@ class Config:
     DISCORD_CLIENT_SECRET = os.getenv('DISCORD_CLIENT_SECRET')
     AUTH = os.getenv('AUTH')
     PORT = int(os.getenv('PORT'))
-    DOMAIN = 'sharpbit.tk' if not DEV else f'127.0.0.1:{PORT}'
+    DOMAIN = 'sharpbit.dev' if not DEV else f'127.0.0.1:{PORT}'
     DB_USERNAME = os.getenv('DB_USERNAME')
     DB_PASSWORD = os.getenv('DB_PASSWORD')
     DB_NAME = os.getenv('DB_NAME')
