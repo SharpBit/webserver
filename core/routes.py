@@ -241,6 +241,8 @@ async def challenge_stats(request, tag):
 async def brawlstats_tests_proxy(request, endpoint):
     app = request.app
     endpoint = request.url.split('/')[-1]
+    if not request.token:
+        return response.text('Invalid authorization', status=403)
     headers = {
         'Authorization': request.token,
         'Accept-Encoding': 'gzip'
