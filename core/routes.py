@@ -247,6 +247,7 @@ async def brawlstats_tests_proxy(request, endpoint):
         'Authorization': request.token,
         'Accept-Encoding': 'gzip'
     }
+    print(headers)
     try:
         async with app.session.get(f'https://api.brawlstars.com/v1/{endpoint}', timeout=30, headers=headers) as resp:
             return response.json(await resp.json(), status=resp.status)
