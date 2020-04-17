@@ -240,7 +240,7 @@ async def challenge_stats(request, tag):
 @root.get('/brawlstats/<endpoint:path>')
 async def brawlstats_tests_proxy(request, endpoint):
     app = request.app
-    endpoint = request.url.split('/')[4:]
+    endpoint = '/'.join(request.url.split('/')[4:])
     if not request.token:
         return response.text('Invalid authorization', status=403)
     headers = {
