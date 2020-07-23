@@ -1,14 +1,10 @@
 from sanic import response
 
-from dotenv import load_dotenv, find_dotenv
 from jinja2 import Environment, PackageLoader
 from functools import wraps
 from contextlib import asynccontextmanager
 
 import asyncpg
-
-
-load_dotenv(find_dotenv('.env'))
 
 
 class Oauth2:
@@ -17,9 +13,9 @@ class Oauth2:
         self.client_secret = client_secret
         self.scope = scope
         self.redirect_uri = redirect_uri
-        self.discord_login_url = 'https://discordapp.com/api/oauth2/authorize?client_id={}&redirect_uri={}&response_type=code&scope={}'.format(client_id, redirect_uri, scope)
-        self.discord_token_url = 'https://discordapp.com/api/oauth2/token'
-        self.discord_api_url = 'https://discordapp.com/api/v6'
+        self.discord_login_url = 'https://discord.com/api/oauth2/authorize?client_id={}&redirect_uri={}&response_type=code&scope={}'.format(client_id, redirect_uri, scope)
+        self.discord_token_url = 'https://discord.com/api/oauth2/token'
+        self.discord_api_url = 'https://discord.com/api/v6'
         self.session = session
 
     async def get_access_token(self, code):
@@ -65,22 +61,22 @@ async def open_db_connection(app, **options):
     # finally:
     await conn.close()
 
-async def render_template(template, request, **kwargs):
+async def render_template(template, request, **context):
     """
     Function to return jinja variables to the html
     """
     env = Environment(loader=PackageLoader('core', 'templates'))
     template = env.get_template(template + '.html')
-    kwargs['logged_in'] = request['session'].get('logged_in', False)
+    context['logged_in'] = request['session'].get('logged_in', False)
 
-    if kwargs['logged_in']:
+    if context['logged_in']:
         async with open_db_connection(request.app) as conn:
             user = await conn.fetchrow('SELECT * FROM users WHERE id = $1', request['session']['id'])
-        kwargs['avatar'] = user['avatar']
-        kwargs['username'] = user['name']
-        kwargs['discrim'] = user['discrim']
+        context['avatar'] = user['avatar']
+        context['username'] = user['name']
+        context['discrim'] = user['discrim']
 
-    html_content = template.render(**kwargs)
+    html_content = template.render(**context)
     return response.html(html_content)
 
 def disable_xss(content):

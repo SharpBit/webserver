@@ -99,7 +99,7 @@ async def create_url(request):
             if existing:
                 return response.text('Error: Code already exists')
         await conn.execute('INSERT INTO urls(user_id, code, url) VALUES ($1, $2, $3)', account, code, url)
-    return response.text(f'Here is your shortened URL: https://sharpbit.dev/{code}')
+    return response.text(f'Here is your shortened URL: https://{request.app.config.DOMAIN}/{code}')
 
 @root.get('/<code>')
 async def existing_code(request, code):
