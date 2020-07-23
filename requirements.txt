@@ -1,7 +1,7 @@
-sanic
-sanic_session
-jinja2
-python-dotenv
-asyncpg
-aiohttp
-brawlstats
+sanic~=20.6.3
+sanic_session~=0.7.3
+jinja2~=2.11.2
+python-dotenv~=0.13.0
+asyncpg~=0.20.1
+aiohttp~=3.6.2
+brawlstats==4.0.4

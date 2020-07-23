@@ -67,11 +67,11 @@ async def render_template(template, request, **context):
     """
     env = Environment(loader=PackageLoader('core', 'templates'))
     template = env.get_template(template + '.html')
-    context['logged_in'] = request['session'].get('logged_in', False)
+    context['logged_in'] = request.ctx.session.get('logged_in', False)
 
     if context['logged_in']:
         async with open_db_connection(request.app) as conn:
-            user = await conn.fetchrow('SELECT * FROM users WHERE id = $1', request['session']['id'])
+            user = await conn.fetchrow('SELECT * FROM users WHERE id = $1', request.ctx.session['id'])
         context['avatar'] = user['avatar']
         context['username'] = user['name']
         context['discrim'] = user['discrim']
@@ -87,7 +87,7 @@ def login_required():
     def decorator(func):
         @wraps(func)
         async def wrapper(request, *args, **kwargs):
-            if not request['session'].get('logged_in'):
+            if not request.ctx.session.get('logged_in'):
                 return response.redirect('/login')
             return await func(request, *args, **kwargs)
         return wrapper

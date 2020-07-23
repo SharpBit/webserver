@@ -27,7 +27,7 @@ async def repo(request, name):
 
 @root.get('/login')
 async def login(request):
-    if request['session'].get('logged_in'):
+    if request.ctx.session.get('logged_in'):
         return response.redirect('/')
     return response.redirect(request.app.oauth.discord_login_url)
 
@@ -54,23 +54,23 @@ async def callback(request):
 
     resp = response.redirect('/dashboard')
 
-    request['session']['logged_in'] = True
-    request['session']['id'] = user['id']
+    request.ctx.session['logged_in'] = True
+    request.ctx.session['id'] = user['id']
 
     return resp
 
 @root.get('/logout')
 async def logout(request):
-    del request['session']['logged_in']
-    del request['session']['id']
+    del request.ctx.session['logged_in']
+    del request.ctx.session['id']
     return response.redirect('/')
 
 @root.get('/dashboard')
 @login_required()
 async def dashboard_home(request):
     async with open_db_connection(request.app) as conn:
-        urls = await conn.fetch('SELECT * FROM urls WHERE user_id = $1', request['session']['id'])
-        pastes = await conn.fetch('SELECT * FROM pastebin WHERE user_id = $1', request['session']['id'])
+        urls = await conn.fetch('SELECT * FROM urls WHERE user_id = $1', request.ctx.session['id'])
+        pastes = await conn.fetch('SELECT * FROM pastebin WHERE user_id = $1', request.ctx.session['id'])
     return await render_template(
         template='dashboard',
         request=request,
@@ -90,7 +90,7 @@ async def create_url(request):
     chars = string.ascii_letters + string.digits
     code = ''.join(random.choice(chars) for i in range(8))
     url = request.form['url'][0]
-    account = request['session'].get('id', 'no_account')
+    account = request.ctx.session.get('id', 'no_account')
 
     async with open_db_connection(request.app) as conn:
         if request.form.get('code'):
@@ -119,7 +119,7 @@ async def create_pastebin(request):
     chars = string.ascii_letters + string.digits
     code = ''.join(random.choice(chars) for i in range(8))
     text = request.form['text'][0]
-    account = request['session'].get('id', 'no_account')
+    account = request.ctx.session.get('id', 'no_account')
     async with open_db_connection(request.app) as conn:
         await conn.execute('INSERT INTO pastebin(user_id, code, text) VALUES ($1, $2, $3)', account, code, text)
     return response.redirect(f'/pastebin/{code}')
