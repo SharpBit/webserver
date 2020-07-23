@@ -34,7 +34,7 @@ async def login(request):
 @root.get('/callback')
 async def callback(request):
     app = request.app
-    code = request.raw_args.get('code')
+    code = request.args.get('code')
     access_token = await app.oauth.get_access_token(code)
     user = await app.oauth.get_user_json(access_token)
     if user.get('message'):
@@ -52,12 +52,10 @@ async def callback(request):
             [(user['id'], user['username'], user['discriminator'], avatar), (user['id'], user['username'], user['discriminator'], avatar)]
         )
 
-    resp = response.redirect('/dashboard')
-
     request.ctx.session['logged_in'] = True
     request.ctx.session['id'] = user['id']
 
-    return resp
+    return response.redirect('/dashboard')
 
 @root.get('/logout')
 async def logout(request):

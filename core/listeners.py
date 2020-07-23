@@ -18,7 +18,7 @@ async def init(app, loop):
         app.config.DISCORD_CLIENT_ID,
         app.config.DISCORD_CLIENT_SECRET,
         scope='identify',
-        redirect_uri=f'https://{app.config.DOMAIN}/callback',
+        redirect_uri=f"http{'s' if not app.config.DEV else ''}://{app.config.DOMAIN}/callback",
         session=app.session
     )
 
