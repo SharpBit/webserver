@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+{% block content %}
+<div class="container">
+  <div class="info" style="padding-top:40px;padding-bottom:10px;">
+    <h1>School Week</h1>
+    <h5>This week's maroon and gray A and B days.</h5>
+  </div>
+  <table>
+    <tr>
+      {% for day in week %}
+        <td style="padding:10px;">{{ day }}</td>
+      {% endfor %}
+    </tr>
+  </table>
+</div>
+{% endblock content %}

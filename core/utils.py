@@ -1,3 +1,5 @@
+from datetime import date, timedelta
+
 from sanic import response
 
 from jinja2 import Environment, PackageLoader
@@ -102,3 +104,21 @@ def authorized():
             return response.json({'error': True, 'message': 'Unauthorized'}, status=401)
         return decorated_function
     return decorator
+
+
+def daterange(start_date: date, end_date: date) -> list:
+    '''Creates a list of dates from the start date to end date, inclusive'''
+    day_count = (end_date - start_date).days + 1
+    return [start_date + timedelta(days=i) for i in range(day_count)]
+
+
+
+def thisweek(today: date) -> list:
+    if 0 <= today.weekday() <= 4:
+        # Monday to Friday
+        monday = today - timedelta(days=today.weekday())  # Last Monday
+    else:
+        monday = today - timedelta(days=today.weekday() - 7)
+    friday = monday + timedelta(days=4)
+
+    return daterange(monday, friday)

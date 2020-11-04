@@ -1,11 +1,13 @@
 import asyncio
 import random
 import string
+from datetime import date
 
 import brawlstats
 from sanic import Blueprint, response
 
 from core.utils import disable_xss, login_required, open_db_connection, render_template
+from core.utils import daterange, thisweek
 
 root = Blueprint('root')
 
@@ -252,3 +254,80 @@ async def brawlstats_tests_proxy(request, endpoint):
             return response.json(await resp.json(), status=resp.status)
     except asyncio.TimeoutError:
         return response.text('Request failed', status=503)
+
+@root.get('/schoolweek')
+async def schoolweek(request):
+    first_day = date(2020, 9, 8)
+    no_school = [
+        date(2020, 9, 28),  # Yom Kippur
+        date(2020, 10, 12),  # Columbus day
+        date(2020, 11, 3),  # Election day
+        date(2020, 11, 11),  # Veteran's day
+        *daterange(date(2020, 11, 25), date(2020, 11, 27)),  # Thanksgiving break
+        *daterange(date(2020, 12, 24), date(2021, 1, 1))  # Holiday break
+    ]
+    special_days = [
+        date(2020, 10, 2)
+    ]
+
+    all_days = []
+    day_map = {
+        1: 'A',
+        0: 'B'
+    }
+
+    next_friday = thisweek(date.today())[-1]
+    elapsed_dates = daterange(first_day, next_friday)
+    mondays = [d for d in elapsed_dates if d.weekday() == 0 and d not in no_school]
+    cohort_day = 'maroon'
+
+    for d in elapsed_dates:
+        if d in no_school:
+            continue
+        dow = d.weekday()
+        if dow in (5, 6):
+            continue
+        if dow in (1, 3):
+            cohort_day = 'maroon'
+        elif dow in (2, 4):
+            cohort_day = 'gray'
+        elif dow == 0:
+            # Mondays
+            if d not in mondays:
+                continue
+            if mondays.index(d) % 2 == 0:
+                cohort_day = 'maroon'
+            else:
+                cohort_day = 'gray'
+
+        try:
+            prev_day = [day for day in all_days if day['cohort'] == cohort_day][-1]['day']
+        except IndexError:
+            # We are adding 1 for the first day of each cohort so we "start" with a B (0) day
+            prev_day = 0
+
+        if d in special_days:
+            # Skip a day
+            all_days.append({
+                'cohort': cohort_day,
+                'date': d,
+                'day': prev_day + 2})
+        else:
+            all_days.append({
+                'cohort': cohort_day,
+                'date': d,
+                'day': prev_day + 1})
+
+
+    week = thisweek(date.today())
+
+    week_fmt = []
+    for day in week:
+        try:
+            day_info = list(filter(lambda d: d['date'] == day, all_days))[0]
+        except IndexError:
+            week_fmt.append(f"{day}<br>NO SCHOOL")
+        else:
+            week_fmt.append(f"{day}<br>{day_info['cohort'].title()} {day_map[day_info['day'] % 2]} day")
+
+    return await render_template('schoolweek', request, week=week_fmt, title='School Week', description='This week\'s maroon and gray A and B days.')
