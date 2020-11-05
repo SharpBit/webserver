@@ -8,7 +8,7 @@
   <table>
     <tr>
       {% for day in week %}
-        <td style="padding:10px;">{{ day }}</td>
+        <td class="{{ day.split('<br>')[1] }}" style="padding:10px;">{{ day }}</td>
       {% endfor %}
     </tr>
   </table>
@@ -19,6 +19,13 @@
   }
   table {
     border-collapse: collapse;
+  }
+
+  .Maroon {
+    color: #8d0000;
+  }
+  .Gray {
+    color: #808080;
   }
 </style>
 {% endblock content %}
