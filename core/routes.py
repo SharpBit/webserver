@@ -326,8 +326,8 @@ async def schoolweek(request):
         try:
             day_info = list(filter(lambda d: d['date'] == day, all_days))[0]
         except IndexError:
-            week_fmt.append(f"{day}<br>NO SCHOOL")
+            week_fmt.append(f"{day.strftime('%a %m/%d')}<br>NO SCHOOL")
         else:
-            week_fmt.append(f"{day}<br>{day_info['cohort'].title()} {day_map[day_info['day'] % 2]} day")
+            week_fmt.append(f"{day.strftime('%a %m/%d')}<br>{day_info['cohort'].title()} {day_map[day_info['day'] % 2]} day")
 
     return await render_template('schoolweek', request, week=week_fmt, title='School Week', description='This week\'s maroon and gray A and B days.')
