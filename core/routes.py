@@ -256,7 +256,11 @@ async def brawlstats_tests_proxy(request, endpoint):
         return response.text('Request failed', status=503)
 
 @root.get('/schoolweek')
-async def schoolweek(request):
+async def schoolweektoday(request):
+    return response.redirect(f'/schoolweek/{date.today()}')
+
+@root.get('/schoolweek/<requested_date_str>')
+async def schoolweek(request, requested_date_str):
     first_day = date(2020, 9, 8)
     no_school = [
         date(2020, 9, 28),  # Yom Kippur
@@ -276,7 +280,8 @@ async def schoolweek(request):
         0: 'B'
     }
 
-    next_friday = thisweek(date.today())[-1]
+    requested_date = date(*map(int, requested_date_str.split('-')))
+    next_friday = thisweek(requested_date)[-1]
     elapsed_dates = daterange(first_day, next_friday)
     mondays = [d for d in elapsed_dates if d.weekday() == 0 and d not in no_school]
     cohort_day = 'maroon'
@@ -319,7 +324,7 @@ async def schoolweek(request):
                 'day': prev_day + 1})
 
 
-    week = thisweek(date.today())
+    week = thisweek(requested_date)
 
     week_fmt = []
     for day in week:
@@ -330,4 +335,11 @@ async def schoolweek(request):
         else:
             week_fmt.append(f"{day.strftime('%a %m/%d')}<br>{day_info['cohort'].title()} {day_map[day_info['day'] % 2]} day")
 
-    return await render_template('schoolweek', request, week=week_fmt, title='School Week', description='This week\'s maroon and gray A and B days.')
+    return await render_template(
+        template='schoolweek',
+        request=request,
+        week=week_fmt,
+        title='School Week',
+        requested_date=requested_date,
+        description='This week\'s maroon and gray A and B days.'
+    )

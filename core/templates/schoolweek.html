@@ -3,7 +3,11 @@
 <div class="container">
   <div class="info" style="padding-top:40px;padding-bottom:10px;">
     <h1>School Week</h1>
-    <h5>This week's maroon and gray A and B days.</h5>
+    <h5>Maroon and gray A and B days for the week of {{ requested_date.strftime('%m/%d/%Y') }}</h5>
+    <label for="requested-date">Choose date</label>
+    <input type="date" id="requested-date" name="requested-date"
+       value="{{ requested_date }}"
+       min="2020-09-05" max="2021-06-11" onchange="onDateChange(event);">
   </div>
   <table>
     <tr>
@@ -25,7 +29,12 @@
     color: #8d0000;
   }
   .Gray {
-    color: #808080;
+    color: #686868;
   }
 </style>
+<script>
+  function onDateChange(e){
+    window.location.href = `/schoolweek/${e.target.value}`;
+  }
+</script>
 {% endblock content %}
