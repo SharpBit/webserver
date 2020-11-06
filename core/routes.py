@@ -1,7 +1,10 @@
 import asyncio
 import random
+import smtplib
 import string
 from datetime import date
+from email.message import EmailMessage
+from email.mime.text import MIMEText
 
 import brawlstats
 from sanic import Blueprint, response
@@ -115,7 +118,8 @@ async def create_url(request):
     return add_message(
         request,
         'success',
-        f'Shortened URL created at <a href="https://{request.app.config.DOMAIN}/{code}">https://{request.app.config.DOMAIN}/{code}</a>',
+        f"Shortened URL created at <a href=\"http{'s' if not request.app.config.DEV else ''}://{request.app.config.DOMAIN}/{code}\">"
+        f"http{'s' if not request.app.config.DEV else ''}://{request.app.config.DOMAIN}/{code}</a>",
         '/urlshortener'
     )
 
@@ -262,6 +266,8 @@ async def schoolweektoday(request):
 
 @root.get('/schoolweek/<requested_date_str>')
 async def schoolweek(request, requested_date_str):
+    # TODO: webscrape online calendar to get days off
+    # TODO: possibly save days in sql db so email notifs can quickly access the day without processing all the info every time
     first_day = date(2020, 9, 8)
     no_school = [
         date(2020, 9, 28),  # Yom Kippur
@@ -354,10 +360,34 @@ async def email_subscribe(request):
     except KeyError:
         return add_message(request, 'error', 'Enter an email in the field.', '/schoolweek')
 
+    msg = EmailMessage()
+    msg['Subject'] = 'Thank you for subscribing to GCHS Daily Updates!'
+    # msg['Subject'] = f"GCHS Daily Email Notification ({date.today().strftime('%m/%d/%Y')})"
+    msg['From'] = 'gchs-noreply@sharpbit.dev'
+    msg['To'] = email
+    body = MIMEText(
+        f"If this wasn't you, click <a href=\"http{'s' if not request.app.config.DEV else ''}://{request.app.config.DOMAIN}"
+        f"/schoolweek/unsubscribe/{email}\">here</a> to unsubscribe.", 'html')
+    # body = f"Today, {date.today().strftime('%m/%d/%Y')}, is a maroon A day"
+    msg.set_content(body)
+
+    with smtplib.SMTP_SSL('smtp.gmail.com', 465) as smtp:
+        smtp.login(request.app.config.NOREPLY_EMAIL, request.app.config.EMAIL_APP_PASSWORD)
+
+        smtp.send_message(msg)
+
     async with open_db_connection(request.app) as conn:
         existing = await conn.fetchrow('SELECT * FROM mailing_list WHERE email = $1', email)
         if existing:
             return add_message(request, 'error', 'Email already subscribed.', '/schoolweek')
         await conn.execute('INSERT INTO mailing_list(email) VALUES ($1)', email)
 
+    # TODO: actually send the scheduled emails
     return add_message(request, 'success', 'Your email has been added to the mailing list.', '/schoolweek')
+
+@root.get('/schoolweek/unsubscribe/<email>')
+async def email_unsubscribe(request, email):
+    # TODO: somehow verify that the person visiting the link is actually the person who owns the email
+    async with open_db_connection(request.app) as conn:
+        await conn.execute('DELETE FROM mailing_list WHERE email = $1', email)
+    return add_message(request, 'success', 'Your email has been removed from mailing list.', '/schoolweek')
