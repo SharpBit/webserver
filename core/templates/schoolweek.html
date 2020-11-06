@@ -1,21 +1,32 @@
 {% extends "layout.html" %}
 {% block content %}
-<div class="container">
-  <div class="info" style="padding-top:40px;padding-bottom:10px;">
-    <h1>School Week</h1>
-    <h5>Maroon and gray A and B days for the week of {{ requested_date.strftime('%m/%d/%Y') }}</h5>
-    <label for="requested-date">Choose date</label>
-    <input type="date" id="requested-date" name="requested-date"
-       value="{{ requested_date }}"
-       min="2020-09-05" max="2021-06-11" onchange="onDateChange(event);">
-  </div>
-  <table>
-    <tr>
-      {% for day in week %}
-        <td class="{{ day.split('<br>')[1] }}" style="padding:10px;">{{ day }}</td>
-      {% endfor %}
-    </tr>
-  </table>
+{% if messages %}
+<div class="info" style="padding-top:10px;padding-bottom:10px;">
+{% else %}
+<div class="info" style="padding-top:40px;padding-bottom:10px;">
+{% endif %}
+  <h1>School Week</h1>
+  <h5>Maroon and gray A and B days for the week of {{ requested_date.strftime('%m/%d/%Y') }}</h5>
+  <label class="label" for="requested-date" style="margin-top: 5px;">Choose date</label>
+  <input type="date" id="requested-date" name="requested-date"
+      value="{{ requested_date }}"
+      min="2020-09-05" max="2021-06-11" onchange="onDateChange(event);">
+</div>
+<table>
+  <tr class="week-calendar">
+    {% for day in week %}
+      <td class="{{ day.split('<br>')[1] }}" style="padding:10px;">{{ day }}</td>
+    {% endfor %}
+  </tr>
+</table>
+<div class="form-items" style="max-width: 700px;margin-top:25px;">
+  <form class="form" method="POST" action="/schoolweek/subscribe">
+    <div class="form-group">
+      <label class="label" for="email">Subscribe to daily email notifications!</label>
+      <input name="email" type="email" class="form-control" id="email" placeholder="Email"></input>
+    </div>
+    <button type="submit" class="btn btn-success">Subscribe</button>
+  </form>
 </div>
 <style>
   table, td, th {

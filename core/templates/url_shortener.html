@@ -1,20 +1,22 @@
 {% extends "layout.html" %}
 {% block content %}
-<div class="container">
-  <div class="info" style="padding-top:40px;padding-bottom:10px;">
-    <h1>URL Shortener</h1>
-    <h5>Note: You must be signed in to view your URLs and pastebins on your dashboard.</h5>
-  </div>
-  <div class="form-items" style="max-width: 700px;">
-    <form method="POST" action="/url/create">
-      <div class="form-group">
-        <label for="url" class="label">URL</label>
-        <input name="url" type="url" class="form-control" id="url" placeholder="https://www.example.com"></input>
-        <label for="code" class="label">Shortened Code</label>
-        <input name="code" type="code" class="form-control" id="code" placeholder="mycustomurl"></input>
-      </div>
-      <button type="submit" class="btn btn-success">Submit</button>
-    </form>
-  </div>
+{% if messages %}
+<div class="info" style="padding-top:10px;padding-bottom:10px;">
+{% else %}
+<div class="info" style="padding-top:40px;padding-bottom:10px;">
+{% endif %}
+  <h1>URL Shortener</h1>
+  <h5>Note: You must be signed in to view your URLs and pastebins on your dashboard.</h5>
+</div>
+<div class="form-items" style="max-width: 700px;">
+  <form method="POST" action="/url/create">
+    <div class="form-group">
+      <label for="url" class="label">URL</label>
+      <input name="url" type="url" class="form-control" id="url" placeholder="https://www.example.com"></input>
+      <label for="code" class="label">Shortened Code</label>
+      <input name="code" type="code" class="form-control" id="code" placeholder="mycustomurl"></input>
+    </div>
+    <button type="submit" class="btn btn-success">Submit</button>
+  </form>
 </div>
 {% endblock content %}

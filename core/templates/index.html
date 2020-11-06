@@ -1,38 +1,34 @@
 {% extends "layout.html" %}
 {% block content %}
-<div class="content">
-  <div class="container">
-    <h1>Welcome to my website!</h1>
-    <div class="about-me">
-      <h4>About Me</h4>
-      <p class="info">
-        If you're here, you probably clicked on a link to this site I sent to you. I'm SharpBit, the creator of this website.
-        Originally, I created this website to learn more about web development. Now, I use it because I'm too lazy to create a UI so I just use html.
-        If you're interested, you can view the source code <a href="https://github.com/SharpBit/webserver" target="_blank">here</a>. My most popular project is <a href="https://github.com/SharpBit/brawlstats" target="_blank">brawlstats</a>, an API wrapper written in Python for the Brawl Stars API.
-        You can view all of my projects on my <a href="https://github.com/SharpBit" target="_blank">github page</a>. If you want to learn python too, I compiled a list of <a href="/learnpython" target="_blank">useful resources</a> to learn Python!
-      </p>
-      <h4>What can I do on this website?</h4>
-      <p class="this-website">
-        You can navigate the website by using the navigation bar at the top. It has the ability to shorten URLs and save code in pastebins. You can also log in using Discord before doing that to view all your shortened URLs and pastebins under your dashboard! There is also a schedule of the school week since my school has a hybrid model for fall 2020 and it becomes annoying to keep track of both maroon and gray A and B days.
-      </p>
-    </div>
-    <div class="github">
-      <h4>Recent GitHub Commits</h4>
-      {% for push in recent %}
-        <div class="content-section">
-          <span style="font-size: 12px">
-            <a href="https://github.com/{{ push.repo.name }}" target="_blank">{{ push.repo.name }}</a>
-          </span>
-          {% for commit in push.payload.commits %}
-            <p class="commit-info">
-              <a href="{{ commit.url.replace('api.', '').replace('/repos', '').replace('commits', 'commit') }}" target="_blank">
-                <code class="inlinecode">{{ commit.sha[:7] }}</code>
-              </a> {{ commit.message }}
-            </p>
-          {% endfor %}
-        </div>
+<h1>Welcome to my website!</h1>
+<div class="about-me">
+  <h4>About Me</h4>
+  <p class="info">
+    If you're here, you probably clicked on a link to this site I sent to you. I'm SharpBit, the creator of this website.
+    Originally, I created this website to learn more about web development. Now, I use it because I'm too lazy to create a UI so I just use html.
+    If you're interested, you can view the source code <a href="https://github.com/SharpBit/webserver" target="_blank">here</a>. My most popular project is <a href="https://github.com/SharpBit/brawlstats" target="_blank">brawlstats</a>, an API wrapper written in Python for the Brawl Stars API.
+    You can view all of my projects on my <a href="https://github.com/SharpBit" target="_blank">github page</a>. If you want to learn python too, I compiled a list of <a href="/learnpython" target="_blank">useful resources</a> to learn Python!
+  </p>
+  <h4>What can I do on this website?</h4>
+  <p class="this-website">
+    You can navigate the website by using the navigation bar at the top. It has the ability to shorten URLs and save code in pastebins. You can also log in using Discord before doing that to view all your shortened URLs and pastebins under your dashboard! There is also a schedule of the school week since my school has a hybrid model for fall 2020 and it becomes annoying to keep track of both maroon and gray A and B days.
+  </p>
+</div>
+<div class="github">
+  <h4>Recent GitHub Commits</h4>
+  {% for push in recent %}
+    <div class="content-section">
+      <span style="font-size: 12px">
+        <a href="https://github.com/{{ push.repo.name }}" target="_blank">{{ push.repo.name }}</a>
+      </span>
+      {% for commit in push.payload.commits %}
+        <p class="commit-info">
+          <a href="{{ commit.url.replace('api.', '').replace('/repos', '').replace('commits', 'commit') }}" target="_blank">
+            <code class="inlinecode">{{ commit.sha[:7] }}</code>
+          </a> {{ commit.message }}
+        </p>
       {% endfor %}
     </div>
-  </div>
+  {% endfor %}
 </div>
 {% endblock content %}

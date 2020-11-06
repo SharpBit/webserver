@@ -63,7 +63,14 @@
       </div>
     </header>
     <main role="main" id="container-override" class="container">
-      {% block content %}{% endblock %}
+      <div class="container">
+        {% for cat, msg in messages %}
+          <div class="content-section flash flash-{{ cat }}">
+            <p>{{ msg }}</p>
+          </div>
+        {% endfor %}
+        {% block content %}{% endblock %}
+      </div>
     </main>
     <!-- JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

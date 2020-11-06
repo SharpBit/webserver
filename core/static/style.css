@@ -3,7 +3,7 @@
   src: url('/static/fonts/LilitaOne-Regular.ttf');
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6, p, tr, td, input, a, button, .label{
   font-family: 'Lato';
 }
 
@@ -48,10 +48,33 @@ h1, h2, h3, h4, h5, h6 {
   padding-right: 20px;
   padding-bottom: 0px;
   padding-left: 20px;
-  border: 2px solid #28a745;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #28a745;
   border-radius: 3px;
   margin-bottom: 20px;
   max-width: 640px;
+}
+
+.flash {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.flash p {
+  margin-bottom: 0px; /*Override the margin-bottom of 20px in content-section*/
+}
+
+.flash-success {
+  border: 1px solid #a3c293;
+  color: #6b8c5c;
+  background-color: #fcfff5;
+}
+
+.flash-error {
+  border: 1px solid #e0b4b4;
+  color: #b7638a;
+  background-color: #fff6f6;
 }
 
 .battle-victory {

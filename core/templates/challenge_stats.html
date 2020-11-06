@@ -1,34 +1,24 @@
 {% extends "layout.html" %}
 {% block content %}
-<div class="container">
-  <div class="info" style="padding-top:20px;padding-bottom:10px">
-      <h1 style="font-family: 'LilitaOne'">BS Challenges</h1>
-      <h5 style="font-family: 'LilitaOne'">Your challenge games must be in your battlelog (last 25 games) for this to work.</h5>
-  </div>
-  <div class="battlelog">
-    <h4 style="font-family: 'LilitaOne'">Challenge games</h4>
-    {% if not tag_found %}
-      <h7 style="font-family: 'LilitaOne';color: #C73930">Tag #{{ entered_tag }} was not found.</h7>
-    {% else %}
-      {% if len(games) == 0 %}
-        <h7 style="font-family: 'LilitaOne';color: #C73930">No recent challenge games were found.</h7>
-      {% else %}
-        {% for battle in games %}
-          <div class="battle-{{ battle.result.lower() }}">
-            <img src="https://starlist.pro/assets/gamemode/{{ battle.event.replace(' ', '-') }}.png?v=1" height="25" width="25"></img>
-            <h7>{{ battle.event }} - {{ battle.map }} ({{ battle.result }})</h7><br />
-            {% for team in battle.teams %}
-              <div class="team" style="padding: 5px">
-                {% for player in team %}
-                  <h7 class="player-{{ player.star_player }}">{{ player.name }}</h7>
-                  <img src="https://starlist.pro/assets/brawler-bs/{{ brawler_key.get(player.brawler.name, player.brawler.name.title()) }}.png?v=2" height="20" width="20"></img>
-                {% endfor %}
-              </div>
-            {% endfor %}
-          </div>
-        {% endfor %}
-      {% endif %}
-    {% endif %}
-  </div>
+<div class="info" style="padding-top:20px;padding-bottom:10px">
+    <h1 style="font-family: 'LilitaOne'">BS Challenges</h1>
+    <h5 style="font-family: 'LilitaOne'">Your challenge games must be in your battlelog (last 25 games) for this to work.</h5>
+</div>
+<div class="battlelog">
+  <h4 style="font-family: 'LilitaOne'">Challenge games</h4>
+  {% for battle in games %}
+    <div class="battle-{{ battle.result.lower() }}">
+      <img src="https://starlist.pro/assets/gamemode/{{ battle.event.replace(' ', '-') }}.png?v=1" height="25" width="25"></img>
+      <p>{{ battle.event }} - {{ battle.map }} ({{ battle.result }})</p><br />
+      {% for team in battle.teams %}
+        <div class="team" style="padding: 5px">
+          {% for player in team %}
+            <p class="player-{{ player.star_player }}">{{ player.name }}</p>
+            <img src="https://starlist.pro/assets/brawler-bs/{{ brawler_key.get(player.brawler.name, player.brawler.name.title()) }}.png?v=2" height="20" width="20"></img>
+          {% endfor %}
+        </div>
+      {% endfor %}
+    </div>
+  {% endfor %}
 </div>
 {% endblock content %}

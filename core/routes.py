@@ -5,11 +5,21 @@ from datetime import date
 
 import brawlstats
 from sanic import Blueprint, response
+from sanic.exceptions import abort
 
-from core.utils import disable_xss, login_required, open_db_connection, render_template
+from core.utils import add_message, disable_xss, login_required, open_db_connection, render_template
 from core.utils import daterange, thisweek
 
 root = Blueprint('root')
+
+@root.middleware('request')
+async def setup_session_dict(request):
+    """Sets up session attributes if they do not exist already"""
+    if request.ctx.session.get('logged_in', None) is None:
+        request.ctx.session['logged_in'] = False
+
+    if request.ctx.session.get('messages', None) is None:
+        request.ctx.session['messages'] = []
 
 @root.get('/')
 async def index(request):
@@ -29,7 +39,7 @@ async def repo(request, name):
 
 @root.get('/login')
 async def login(request):
-    if request.ctx.session.get('logged_in'):
+    if request.ctx.session['logged_in']:
         return response.redirect('/')
     return response.redirect(request.app.oauth.discord_login_url)
 
@@ -89,7 +99,10 @@ async def url_shortener_home(request):
 async def create_url(request):
     chars = string.ascii_letters + string.digits
     code = ''.join(random.choice(chars) for i in range(8))
-    url = request.form['url'][0]
+    try:
+        url = request.form['url'][0]
+    except KeyError:
+        return add_message(request, 'error', 'Enter a URL to redirect to.', '/urlshortener')
     account = request.ctx.session.get('id', 'no_account')
 
     async with open_db_connection(request.app) as conn:
@@ -97,16 +110,21 @@ async def create_url(request):
             code = request.form['code'][0]
             existing = await conn.fetchrow('SELECT * FROM urls WHERE code = $1', code)
             if existing:
-                return response.text('Error: Code already exists')
+                return add_message(request, 'error', 'That code is already taken. Try another one.', '/urlshortener')
         await conn.execute('INSERT INTO urls(user_id, code, url) VALUES ($1, $2, $3)', account, code, url)
-    return response.text(f'Here is your shortened URL: https://{request.app.config.DOMAIN}/{code}')
+    return add_message(
+        request,
+        'success',
+        f'Shortened URL created at <a href="https://{request.app.config.DOMAIN}/{code}">https://{request.app.config.DOMAIN}/{code}</a>',
+        '/urlshortener'
+    )
 
 @root.get('/<code>')
 async def existing_code(request, code):
     async with open_db_connection(request.app) as conn:
         res = await conn.fetchrow('SELECT * FROM urls WHERE code = $1', code)
     if not res:
-        return response.text(f'No such URL shortener code "{code}" found.')
+        abort(404, message=f'Requested URL {request.path} not found')
     return response.redirect(res['url'])
 
 @root.get('/pastebin')
@@ -118,7 +136,10 @@ async def pastebin_home(request):
 async def create_pastebin(request):
     chars = string.ascii_letters + string.digits
     code = ''.join(random.choice(chars) for i in range(8))
-    text = request.form['text'][0]
+    try:
+        text = request.form['text'][0]
+    except KeyError:
+        return add_message(request, 'error', 'Paste some code in to save.', '/pastebin')
     account = request.ctx.session.get('id', 'no_account')
     async with open_db_connection(request.app) as conn:
         await conn.execute('INSERT INTO pastebin(user_id, code, text) VALUES ($1, $2, $3)', account, code, text)
@@ -129,7 +150,7 @@ async def existing_pastebin(request, code):
     async with open_db_connection(request.app) as conn:
         res = await conn.fetchrow('SELECT * FROM pastebin WHERE code = $1', code)
     if not res:
-        return response.text(f'No such pastebin code "{code}" found.')
+        abort(404, message=f'Requested URL {request.path} not found')
     text = disable_xss(res['text'])
     return await render_template('saved_pastebin', request, title="Pastebin - Saved", description="Saved Pastebin", code=text)
 
@@ -145,17 +166,16 @@ async def challenge_home(request):
 @root.post('/challenges/post')
 async def challenge_post(request):
     try:
-        tag = brawlstats.utils.bstag(request.form['tag'][0])
+        form_tag = request.form['tag'][0]
+    except KeyError:
+        return add_message(request, 'error', 'Enter a player tag.', '/challenges')
+
+    try:
+        tag = brawlstats.utils.bstag(form_tag)
     except brawlstats.NotFoundError as e:
-        invalid_chars = e.error.split('\n')
-        invalid_chars = invalid_chars[len(invalid_chars) - 1]
-        return await render_template(
-            template='challenge_home',
-            request=request,
-            invalid_chars=invalid_chars,
-            title='Brawl Stars Challenges',
-            description='Search up your tag to view the logs of your Brawl Stars challenge games.'
-        )
+        invalid_chars = e.message.split('\n')
+        invalid_chars = invalid_chars[-1]
+        return add_message(request, 'error', invalid_chars, '/challenges')
     return response.redirect(f'/challenges/{tag}')
 
 @root.get('/challenges/<tag>')
@@ -164,14 +184,7 @@ async def challenge_stats(request, tag):
     try:
         logs = await client.get_battle_logs(tag)
     except brawlstats.NotFoundError:
-        return await render_template(
-            'challenge_stats',
-            request,
-            tag_found=False,
-            entered_tag=disable_xss(tag.upper()),
-            title='Brawl Stars Challenges',
-            description='View the logs of your Brawl Stars challenge games.'
-        )
+        return add_message(request, 'error', f'Tag {disable_xss(tag.upper())} was not found.', '/challenges')
 
     event_map = {
         'gemGrab': 'Gem Grab',
@@ -200,15 +213,7 @@ async def challenge_stats(request, tag):
     games = list(filter(filter_challenge_games, logs))[::-1]
 
     if len(games) == 0:
-        return await render_template(
-            template='challenge_stats',
-            request=request,
-            tag_found=True,
-            games=[],
-            len=len,
-            title='Brawl Stars Challenges',
-            description='View the logs of your Brawl Stars challenge games.'
-        )
+        return add_message(request, 'error', 'No recent challenge games were found.', '/challenges')
 
     battlelog = []
     for battle in games:
@@ -229,10 +234,8 @@ async def challenge_stats(request, tag):
     return await render_template(
         template='challenge_stats',
         request=request,
-        tag_found=True,
         games=battlelog,
         brawler_key={'EL PRIMO': 'El-Primo', 'MR. P': 'Mr.P'},
-        len=len,  # allow len() to be called in the template
         title='Brawl Stars Challenges',
         description='View the logs of your Brawl Stars challenge games.'
     )
@@ -247,8 +250,6 @@ async def brawlstats_tests_proxy(request, endpoint):
         'Authorization': f'Bearer {request.token}',
         'Accept-Encoding': 'gzip'
     }
-    print(headers)
-    print(f'https://api.brawlstars.com/v1/{endpoint}')
     try:
         async with app.session.get(f'https://api.brawlstars.com/v1/{endpoint}', timeout=30, headers=headers) as resp:
             return response.json(await resp.json(), status=resp.status)
@@ -339,7 +340,24 @@ async def schoolweek(request, requested_date_str):
         template='schoolweek',
         request=request,
         week=week_fmt,
-        title='School Week',
         requested_date=requested_date,
+        title='School Week',
         description='This week\'s maroon and gray A and B days.'
     )
+
+
+@root.post('/schoolweek/subscribe')
+# @authorized()
+async def email_subscribe(request):
+    try:
+        email = request.form['email'][0]
+    except KeyError:
+        return add_message(request, 'error', 'Enter an email in the field.', '/schoolweek')
+
+    async with open_db_connection(request.app) as conn:
+        existing = await conn.fetchrow('SELECT * FROM mailing_list WHERE email = $1', email)
+        if existing:
+            return add_message(request, 'error', 'Email already subscribed.', '/schoolweek')
+        await conn.execute('INSERT INTO mailing_list(email) VALUES ($1)', email)
+
+    return add_message(request, 'success', 'Your email has been added to the mailing list.', '/schoolweek')

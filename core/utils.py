@@ -69,7 +69,7 @@ async def render_template(template, request, **context):
     """
     env = Environment(loader=PackageLoader('core', 'templates'))
     template = env.get_template(template + '.html')
-    context['logged_in'] = request.ctx.session.get('logged_in', False)
+    context['logged_in'] = request.ctx.session['logged_in']
 
     if context['logged_in']:
         async with open_db_connection(request.app) as conn:
@@ -77,19 +77,28 @@ async def render_template(template, request, **context):
         context['avatar'] = user['avatar']
         context['username'] = user['name']
         context['discrim'] = user['discrim']
+    context['messages'] = request.ctx.session['messages']
 
     html_content = template.render(**context)
+    request.ctx.session['messages'] = []  # Clear messages after every request
     return response.html(html_content)
 
+def add_message(request, category, message, redirect_to=None):
+    """Add a flash message to appear at the top of a page and redirect to an endpoint if provided"""
+    request.ctx.session['messages'].append([category, message])
+    if redirect_to:
+        return response.redirect(redirect_to)
+
+
 def disable_xss(content):
-    """Prevent cross-site scripting (a common exploit in websites)"""
+    """Prevent cross-site scripting"""
     return content.replace('&', '&amp;').replace('<', '&lt;').replace('>', '&gt;')
 
 def login_required():
     def decorator(func):
         @wraps(func)
         async def wrapper(request, *args, **kwargs):
-            if not request.ctx.session.get('logged_in'):
+            if not request.ctx.session['logged_in']:
                 return response.redirect('/login')
             return await func(request, *args, **kwargs)
         return wrapper

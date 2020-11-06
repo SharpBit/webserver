@@ -1,23 +1,17 @@
 {% extends "layout.html" %}
 {% block content %}
-<div class="container">
-  <div class="info" style="padding-top:20px;padding-bottom:10px">
-      <h1 style="font-family: 'LilitaOne'">Brawl Stars Challenges</h1>
-      <h5 style="font-family: 'LilitaOne'">This includes the Championship Challenge, the PSG challenge, and any other future challenges.</h5>
-      <h5 style="font-family: 'LilitaOne'">Your challenge games must be in your battlelog (last 25 games) for this to work.</h5>
-  </div>
-  <div class="form-items" style="max-width: 700px;">
-    <form class="form" method="POST" action="/challenges/post">
-      <div class="form-group">
-        <label class="label" for="tag" style="font-family: 'LilitaOne'">Tag</label>
-        {% if invalid_chars %}
-          <br />
-          <h7 style="font-family: 'LilitaOne';color: #C73930"">{{ invalid_chars }}</h7>
-        {% endif %}
-        <input name="tag" type="tag" class="form-control" id="tag" placeholder="Enter tag here"></input>
-      </div>
-      <button type="submit" class="btn btn-success">Submit</button>
-    </form>
-  </div>
+<div class="info" style="padding-top:20px;padding-bottom:10px">
+    <h1 style="font-family: 'LilitaOne'">Brawl Stars Challenges</h1>
+    <h5 style="font-family: 'LilitaOne'">This includes the Championship Challenge, the PSG challenge, and any other future challenges.</h5>
+    <h5 style="font-family: 'LilitaOne'">Your challenge games must be in your battlelog (last 25 games) for this to work.</h5>
+</div>
+<div class="form-items" style="max-width: 700px;">
+  <form class="form" method="POST" action="/challenges/post">
+    <div class="form-group">
+      <label class="label" for="tag" style="font-family: 'LilitaOne'">Tag</label>
+      <input name="tag" type="tag" class="form-control" id="tag" placeholder="Enter tag here"></input>
+    </div>
+    <button type="submit" class="btn btn-success">Submit</button>
+  </form>
 </div>
 {% endblock content %}

@@ -1,18 +1,20 @@
 {% extends "layout.html" %}
 {% block content %}
-<div class="container">
-  <div class="info" style="padding-top:40px;padding-bottom:10px;">
-    <h1>Pastebin</h1>
-    <h5>Note: You must be signed in to view your URLs and pastebins on your dashboard.</h5>
-  </div>
-  <div class="form-items" style="max-width: 700px;">
-    <form class="form" method="POST" action="/pastebin/create">
-      <div class="form-group">
-        <label class="label" for="text">Code</label>
-        <textarea name="text" type="text" class="form-control" id="text" placeholder="Paste your code here!"></textarea>
-      </div>
-      <button type="submit" class="btn btn-success">Submit</button>
-    </form>
-  </div>
+{% if messages %}
+<div class="info" style="padding-top:10px;padding-bottom:10px;">
+{% else %}
+<div class="info" style="padding-top:40px;padding-bottom:10px;">
+{% endif %}
+  <h1>Pastebin</h1>
+  <h5>Note: You must be signed in to view your URLs and pastebins on your dashboard.</h5>
+</div>
+<div class="form-items" style="max-width: 700px;">
+  <form class="form" method="POST" action="/pastebin/create">
+    <div class="form-group">
+      <label class="label" for="text">Code</label>
+      <textarea name="text" type="text" class="form-control" id="text" placeholder="Paste your code here!"></textarea>
+    </div>
+    <button type="submit" class="btn btn-success">Submit</button>
+  </form>
 </div>
 {% endblock content %}
