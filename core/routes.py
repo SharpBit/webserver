@@ -387,7 +387,6 @@ async def email_subscribe(request):
 
 @root.get('/schoolweek/unsubscribe/<email>')
 async def email_unsubscribe(request, email):
-    # TODO: somehow verify that the person visiting the link is actually the person who owns the email
     async with open_db_connection(request.app) as conn:
         await conn.execute('DELETE FROM mailing_list WHERE email = $1', email)
     return add_message(request, 'success', 'Your email has been removed from mailing list.', '/schoolweek')
