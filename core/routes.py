@@ -268,7 +268,11 @@ async def schoolweektoday(request):
 async def schoolweek(request, requested_date_str):
     # TODO: webscrape online calendar to get days off
     # TODO: possibly save days in sql db so email notifs can quickly access the day without processing all the info every time
+    requested_date = date(*map(int, requested_date_str.split('-')))
     first_day = date(2020, 9, 8)
+    if not first_day <= requested_date <= date(2021, 6, 11):
+        abort(404, message=f'Requested URL {request.path} not found')
+
     no_school = [
         date(2020, 9, 28),  # Yom Kippur
         date(2020, 10, 12),  # Columbus day
@@ -287,7 +291,6 @@ async def schoolweek(request, requested_date_str):
         0: 'B'
     }
 
-    requested_date = date(*map(int, requested_date_str.split('-')))
     next_friday = thisweek(requested_date)[-1]
     elapsed_dates = daterange(first_day, next_friday)
     mondays = [d for d in elapsed_dates if d.weekday() == 0 and d not in no_school]
