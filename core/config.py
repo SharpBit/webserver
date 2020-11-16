@@ -18,4 +18,5 @@ class Config:
     DB_HOST = os.getenv('DB_HOST')
     BRAWLSTATS_TOKEN = os.getenv('BRAWLSTATS_TOKEN')
     NOREPLY_EMAIL = os.getenv('NOREPLY_EMAIL')
+    CUSTOM_EMAIL = os.getenv('CUSTOM_EMAIL')
     EMAIL_APP_PASSWORD = os.getenv('NOREPLY_APP_PASSWORD')

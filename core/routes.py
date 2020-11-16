@@ -10,8 +10,8 @@ import brawlstats
 from sanic import Blueprint, response
 from sanic.exceptions import abort
 
-from core.utils import add_message, disable_xss, login_required, open_db_connection, render_template
-from core.utils import daterange, thisweek
+from core.utils import (add_message, disable_xss, get_school_week,
+                        login_required, open_db_connection, render_template)
 
 root = Blueprint('root')
 
@@ -273,77 +273,7 @@ async def schoolweek(request, requested_date_str):
     if not first_day <= requested_date <= date(2021, 6, 11):
         abort(404, message=f'Requested URL {request.path} not found')
 
-    no_school = [
-        date(2020, 9, 28),  # Yom Kippur
-        date(2020, 10, 12),  # Columbus day
-        date(2020, 11, 3),  # Election day
-        date(2020, 11, 11),  # Veteran's day
-        *daterange(date(2020, 11, 25), date(2020, 11, 27)),  # Thanksgiving break
-        *daterange(date(2020, 12, 24), date(2021, 1, 1))  # Holiday break
-    ]
-    special_days = [
-        date(2020, 10, 2)
-    ]
-
-    all_days = []
-    day_map = {
-        1: 'A',
-        0: 'B'
-    }
-
-    next_friday = thisweek(requested_date)[-1]
-    elapsed_dates = daterange(first_day, next_friday)
-    mondays = [d for d in elapsed_dates if d.weekday() == 0 and d not in no_school]
-    cohort_day = 'maroon'
-
-    for d in elapsed_dates:
-        if d in no_school:
-            continue
-        dow = d.weekday()
-        if dow in (5, 6):
-            continue
-        if dow in (1, 3):
-            cohort_day = 'maroon'
-        elif dow in (2, 4):
-            cohort_day = 'gray'
-        elif dow == 0:
-            # Mondays
-            if d not in mondays:
-                continue
-            if mondays.index(d) % 2 == 0:
-                cohort_day = 'maroon'
-            else:
-                cohort_day = 'gray'
-
-        try:
-            prev_day = [day for day in all_days if day['cohort'] == cohort_day][-1]['day']
-        except IndexError:
-            # We are adding 1 for the first day of each cohort so we "start" with a B (0) day
-            prev_day = 0
-
-        if d in special_days:
-            # Skip a day
-            all_days.append({
-                'cohort': cohort_day,
-                'date': d,
-                'day': prev_day + 2})
-        else:
-            all_days.append({
-                'cohort': cohort_day,
-                'date': d,
-                'day': prev_day + 1})
-
-
-    week = thisweek(requested_date)
-
-    week_fmt = []
-    for day in week:
-        try:
-            day_info = list(filter(lambda d: d['date'] == day, all_days))[0]
-        except IndexError:
-            week_fmt.append(f"{day.strftime('%a %m/%d')}<br>NO SCHOOL")
-        else:
-            week_fmt.append(f"{day.strftime('%a %m/%d')}<br>{day_info['cohort'].title()} {day_map[day_info['day'] % 2]} day")
+    week_fmt = await get_school_week(requested_date, first_day, week=True)
 
     return await render_template(
         template='schoolweek',
@@ -363,15 +293,18 @@ async def email_subscribe(request):
     except KeyError:
         return add_message(request, 'error', 'Enter an email in the field.', '/schoolweek')
 
+    async with open_db_connection(request.app) as conn:
+        existing = await conn.fetchrow('SELECT * FROM mailing_list WHERE email = $1', email)
+        if existing:
+            return add_message(request, 'error', 'Email already subscribed.', '/schoolweek')
+
     msg = EmailMessage()
     msg['Subject'] = 'Thank you for subscribing to GCHS Daily Updates!'
-    # msg['Subject'] = f"GCHS Daily Email Notification ({date.today().strftime('%m/%d/%Y')})"
-    msg['From'] = 'gchs-noreply@sharpbit.dev'
+    msg['From'] = request.app.config.CUSTOM_EMAIL
     msg['To'] = email
     body = MIMEText(
         f"If this wasn't you, click <a href=\"http{'s' if not request.app.config.DEV else ''}://{request.app.config.DOMAIN}"
         f"/schoolweek/unsubscribe/{email}\">here</a> to unsubscribe.", 'html')
-    # body = f"Today, {date.today().strftime('%m/%d/%Y')}, is a maroon A day"
     msg.set_content(body)
 
     with smtplib.SMTP_SSL('smtp.gmail.com', 465) as smtp:
@@ -380,12 +313,8 @@ async def email_subscribe(request):
         smtp.send_message(msg)
 
     async with open_db_connection(request.app) as conn:
-        existing = await conn.fetchrow('SELECT * FROM mailing_list WHERE email = $1', email)
-        if existing:
-            return add_message(request, 'error', 'Email already subscribed.', '/schoolweek')
         await conn.execute('INSERT INTO mailing_list(email) VALUES ($1)', email)
 
-    # TODO: actually send the scheduled emails
     return add_message(request, 'success', 'Your email has been added to the mailing list.', '/schoolweek')
 
 @root.get('/schoolweek/unsubscribe/<email>')
