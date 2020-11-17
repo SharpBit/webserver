@@ -235,12 +235,13 @@ async def handle_daily_emails(app):
     delta = (next_email - datetime.now()).seconds
     await asyncio.sleep(delta)
 
+    today = date.today()  # next day after sleeping
     if today.weekday() in (5, 6):
         # Could be here if the func was called after the time on Friday
         return app.add_task(handle_daily_emails)
 
 
-    today_info = await get_school_week(date(2020, 11, 16), date(2020, 9, 8), week=False)
+    today_info = await get_school_week(today, date(2020, 9, 8), week=False)
     if today_info is None:
         # No school
         await asyncio.sleep(1)
@@ -252,11 +253,11 @@ async def handle_daily_emails(app):
     messages = []
     for email in emails:
         msg = EmailMessage()
-        msg['Subject'] = f"GCHS Daily Email Notification  for {date.today().strftime('%m/%d/%Y')}"
+        msg['Subject'] = f"GCHS Daily Email Notification  for {today.strftime('%m/%d/%Y')}"
         msg['From'] = app.config.CUSTOM_EMAIL
         msg['To'] = email
         body = MIMEText(
-            f"Today, {date.today().strftime('%m/%d/%Y')}, is a {today_info['cohort'].title()} {today_info['day']} day. <br><br>"
+            f"Today, {today.strftime('%m/%d/%Y')}, is a {today_info['cohort'].title()} {today_info['day']} day. <br><br>"
             f"Click <a href=\"http{'s' if not app.config.DEV else ''}://{app.config.DOMAIN}"
             f"/schoolweek/unsubscribe/{msg['To']}\">here</a> to unsubscribe.", 'html')
 
