@@ -1,7 +1,10 @@
 import asyncio
 import smtplib
+import traceback
 from contextlib import asynccontextmanager
-from datetime import date, datetime, time as dt_time, timedelta
+from datetime import date, datetime
+from datetime import time as dt_time
+from datetime import timedelta
 from email.message import EmailMessage
 from email.mime.text import MIMEText
 from functools import wraps
@@ -265,10 +268,14 @@ async def handle_daily_emails(app):
         messages.append(msg)
 
     with smtplib.SMTP_SSL('smtp.gmail.com', 465) as smtp:
-        smtp.login(app.config.NOREPLY_EMAIL, app.config.EMAIL_APP_PASSWORD)
-
-        for msg in messages:
-            smtp.send_message(msg)
+        try:
+            smtp.login(app.config.NOREPLY_EMAIL, app.config.EMAIL_APP_PASSWORD)
+        except smtplib.SMTPAuthenticationError:
+            # Prevent failure of email scheduling if Google's servers crash (like on 12/14/20)
+            print(traceback.format_exc())
+        else:
+            for msg in messages:
+                smtp.send_message(msg)
 
     # Prevent it from sending twice
     await asyncio.sleep(1)
