@@ -148,11 +148,11 @@ async def get_school_week(requested_date: date, first_day: date, week=True):
         *daterange(date(2020, 11, 25), date(2020, 11, 27)),  # Thanksgiving break
         *daterange(date(2020, 12, 24), date(2021, 1, 1)),  # Holiday break
         date(2021, 1, 18),  # Martin Luther King Day
-        date(2021, 2, 1),  # Snow day 2 (first snow day didn't affect A/B days)
         *daterange(date(2021, 2, 15), date(2021, 2, 19))  # Winter break
     ]
     special_days = [
-        date(2020, 10, 2)
+        date(2020, 10, 2),
+        date(2021, 2, 1)  # Snow day 2 (first snow day didn't affect A/B days)
     ]
 
     all_days = []
