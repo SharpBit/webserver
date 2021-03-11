@@ -154,7 +154,8 @@ async def get_school_week(requested_date: date, first_day: date, week=True):
         date(2020, 10, 2),
         date(2021, 2, 1),  # Snow day 2 (first snow day didn't affect A/B days)
         date(2021, 2, 9),  # Idk why they messed up the days in the first place only to mess it up to "fix" it again
-        date(2021, 2, 24)  # dumb schedule again
+        date(2021, 2, 24),  # dumb schedule again
+        date(2021, 3, 12)  # no more hybrid schedule, just fix the last day of the week
     ]
 
     all_days = []
