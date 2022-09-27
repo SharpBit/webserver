@@ -1,0 +1,8 @@
+[flake8]
+max-line-length=120
+ignore = 
+    E252,  # not using spaces around '=' in function arguments
+    E302,  # expecting 2 blank lines between non-member functions
+    E731,  # do not use lambda, use def
+    W605,  # invalid escape sequence
+exclude = env, .git

@@ -1,6 +1,7 @@
 import asyncio
 import smtplib
 import traceback
+from aiohttp import ClientSession
 from contextlib import asynccontextmanager
 from datetime import date, datetime
 from datetime import time as dt_time
@@ -11,21 +12,34 @@ from functools import wraps
 
 import asyncpg
 from jinja2 import Environment, PackageLoader
-from sanic import response
+from sanic import response, Sanic
+from sanic.request import Request
+from sanic.response import HTTPResponse
 
 
 class Oauth2:
-    def __init__(self, client_id, client_secret, scope=None, redirect_uri=None, session=None):
+    """An Oauth2 class to handle logging in with Discord"""
+
+    def __init__(self, client_id: str, client_secret: str, scope: str, redirect_uri: str, session: ClientSession):
         self.client_id = client_id
         self.client_secret = client_secret
         self.scope = scope
         self.redirect_uri = redirect_uri
-        self.discord_login_url = 'https://discord.com/api/oauth2/authorize?client_id={}&redirect_uri={}&response_type=code&scope={}'.format(client_id, redirect_uri, scope)
+        self.discord_login_url = 'https://discord.com/api/oauth2/authorize' + \
+            f'?client_id={client_id}&redirect_uri={redirect_uri}&response_type=code&scope={scope}'
         self.discord_token_url = 'https://discord.com/api/oauth2/token'
         self.discord_api_url = 'https://discord.com/api/v6'
         self.session = session
 
-    async def get_access_token(self, code):
+    async def get_access_token(self, code: str):
+        """Get an access token to make a request to the Discord API
+
+        Parameters
+        ----------
+        code: str
+            The code that gets sent to the request arguments when the user is redirected
+            back to the redirect URI after authorization.
+        """
         payload = {
             'client_id': self.client_id,
             'client_secret': self.client_secret,
@@ -43,11 +57,12 @@ class Oauth2:
             resp = await z.json()
         return resp.get('access_token')
 
-    async def get_user_json(self, access_token):
+    async def get_user_json(self, access_token: str):
+        """Get user information with our new access token"""
         url = self.discord_api_url + '/users/@me'
 
         headers = {
-            'Authorization': 'Bearer {}'.format(access_token)
+            'Authorization': f'Bearer {access_token}'
         }
 
         async with self.session.get(url, headers=headers) as z:
@@ -56,7 +71,7 @@ class Oauth2:
 
 
 @asynccontextmanager
-async def open_db_connection(app, **options):
+async def open_db_connection(app: Sanic, **options):
     user = options.pop('user', app.config.DB_USERNAME)
     password = options.pop('password', app.config.DB_PASSWORD)
     database = options.pop('database', app.config.DB_NAME)
@@ -68,7 +83,7 @@ async def open_db_connection(app, **options):
     # finally:
     await conn.close()
 
-async def render_template(template, request, **context):
+async def render_template(template: str, request: Request, **context) -> HTTPResponse:
     """
     Function to return jinja variables to the html
     """
@@ -88,14 +103,13 @@ async def render_template(template, request, **context):
     request.ctx.session['messages'] = []  # Clear messages after every request
     return response.html(html_content)
 
-def add_message(request, category, message, redirect_to=None):
-    """Add a flash message to appear at the top of a page and redirect to an endpoint if provided"""
+def add_message(request: Request, category: str, message: str, redirect_to: str):
+    """Add a flash message to appear at the top of a page and redirect to an endpoint"""
     request.ctx.session['messages'].append([category, message])
-    if redirect_to:
-        return response.redirect(redirect_to)
+    return response.redirect(redirect_to)
 
 
-def disable_xss(content):
+def disable_xss(content: str) -> str:
     """Prevent cross-site scripting"""
     return content.replace('&', '&amp;').replace('<', '&lt;').replace('>', '&gt;')
 
@@ -125,8 +139,6 @@ def daterange(start_date: date, end_date: date) -> list:
     day_count = (end_date - start_date).days + 1
     return [start_date + timedelta(days=i) for i in range(day_count)]
 
-
-
 def thisweek(today: date) -> list:
     """Gets a list of dates for this week"""
     if 0 <= today.weekday() <= 4:
@@ -137,7 +149,6 @@ def thisweek(today: date) -> list:
     friday = monday + timedelta(days=4)
 
     return daterange(monday, friday)
-
 
 async def get_school_week(requested_date: date, first_day: date, week=True):
     no_school = [
@@ -206,7 +217,6 @@ async def get_school_week(requested_date: date, first_day: date, week=True):
                 'date': d,
                 'day': prev_day + 1})
 
-
     this_week = thisweek(requested_date)
 
     if week:
@@ -217,7 +227,9 @@ async def get_school_week(requested_date: date, first_day: date, week=True):
             except IndexError:
                 week_fmt.append(f"{day.strftime('%a %m/%d')}<br>NO SCHOOL")
             else:
-                week_fmt.append(f"{day.strftime('%a %m/%d')}<br>{day_info['cohort'].title()} {day_map[day_info['day'] % 2]} day")
+                week_fmt.append(
+                    f"{day.strftime('%a %m/%d')}<br>{day_info['cohort'].title()} {day_map[day_info['day'] % 2]} day"
+                )
         return week_fmt
 
     try:
@@ -227,7 +239,6 @@ async def get_school_week(requested_date: date, first_day: date, week=True):
         return None
     day_info['day'] = day_map[day_info['day'] % 2]
     return day_info
-
 
 async def handle_daily_emails(app):
     """Send out an email at a specified time every weekday"""
@@ -249,7 +260,6 @@ async def handle_daily_emails(app):
         # Could be here if the func was called after the time on Friday
         return app.add_task(handle_daily_emails)
 
-
     today_info = await get_school_week(today, date(2020, 9, 8), week=False)
     if today_info is None:
         # No school
@@ -266,7 +276,7 @@ async def handle_daily_emails(app):
         msg['From'] = app.config.CUSTOM_EMAIL
         msg['To'] = email
         body = MIMEText(
-            f"Today, {today.strftime('%m/%d/%Y')}, is a {today_info['cohort'].title()} {today_info['day']} day. <br><br>"
+            f"Today, {today.strftime('%m/%d/%Y')}, is a {today_info['cohort'].title()} {today_info['day']} day.<br><br>"
             f"Click <a href=\"http{'s' if not app.config.DEV else ''}://{app.config.DOMAIN}"
             f"/schoolweek/unsubscribe/{msg['To']}\">here</a> to unsubscribe.", 'html')
 
