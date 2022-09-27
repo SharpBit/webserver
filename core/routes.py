@@ -28,7 +28,7 @@ async def setup_session_dict(request: Request):
 async def index(request: Request):
     async with request.app.ctx.aiohttp.get('https://api.github.com/users/SharpBit/events/public') as resp:
         info = await resp.json()
-    recent_commits = filter(lambda x: x['repo']['name'] != 'SharpBit/modmail' and x['type'] == 'PushEvent', info)
+    recent_commits = filter(lambda x: x['type'] == 'PushEvent', info)
     return await render_template('index', request, title="Home Page", description='Home Page', recent=recent_commits)
 
 @root.get('/repo/<name>')
