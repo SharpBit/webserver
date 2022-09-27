@@ -1,6 +1,5 @@
 from core import create_app
 
-app = create_app()
-
 if __name__ == '__main__':
-    app.run(port=app.config.PORT)
+    app = create_app()
+    app.run(port=app.config.PORT, dev=app.config.DEV)
