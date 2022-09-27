@@ -6,9 +6,9 @@ from datetime import date
 from email.message import EmailMessage
 from email.mime.text import MIMEText
 
-import brawlstats
 from sanic import Blueprint, response
-from sanic.exceptions import abort
+from sanic.exceptions import Forbidden, NotFound, ServerError
+from sanic.request import Request
 
 from core.utils import (add_message, disable_xss, get_school_week,
                         login_required, open_db_connection, render_template)
@@ -16,7 +16,7 @@ from core.utils import (add_message, disable_xss, get_school_week,
 root = Blueprint('root')
 
 @root.middleware('request')
-async def setup_session_dict(request):
+async def setup_session_dict(request: Request):
     """Sets up session attributes if they do not exist already"""
     if request.ctx.session.get('logged_in', None) is None:
         request.ctx.session['logged_in'] = False
@@ -25,46 +25,44 @@ async def setup_session_dict(request):
         request.ctx.session['messages'] = []
 
 @root.get('/')
-async def index(request):
-    async with request.app.session.get('https://api.github.com/users/SharpBit/events/public') as resp:
+async def index(request: Request):
+    async with request.app.ctx.aiohttp.get('https://api.github.com/users/SharpBit/events/public') as resp:
         info = await resp.json()
     recent_commits = filter(lambda x: x['repo']['name'] != 'SharpBit/modmail' and x['type'] == 'PushEvent', info)
     return await render_template('index', request, title="Home Page", description='Home Page', recent=recent_commits)
 
-@root.get('/invite')
-async def invite(request):
-    return response.redirect('https://discord.gg/C2tnmHa')
-
 @root.get('/repo/<name>')
-async def repo(request, name):
+async def repo(request: Request, name: str):
     return response.redirect(f'https://github.com/SharpBit/{name}')
 
-
 @root.get('/login')
-async def login(request):
+async def login(request: Request):
     if request.ctx.session['logged_in']:
         return response.redirect('/')
-    return response.redirect(request.app.oauth.discord_login_url)
+    return response.redirect(request.app.ctx.oauth.discord_login_url)
 
 @root.get('/callback')
-async def callback(request):
+async def callback(request: Request):
     app = request.app
     code = request.args.get('code')
-    access_token = await app.oauth.get_access_token(code)
-    user = await app.oauth.get_user_json(access_token)
+    access_token = await app.ctx.oauth.get_access_token(code)
+    user = await app.ctx.oauth.get_user_json(access_token)
     if user.get('message'):
         return await render_template('unauthorized', request, description='Discord Oauth Unauthorized.')
 
     if user.get('avatar'):
-        avatar = 'https://cdn.discordapp.com/avatars/{}/{}.png'.format(user['id'], user['avatar'])
-    else: # in case of default avatar users
-        avatar = 'https://cdn.discordapp.com/embed/avatars/{}.png'.format(user['discriminator'] % 5)
+        avatar = f"https://cdn.discordapp.com/avatars/{user['id']}/{user['avatar']}.png"
+    else:  # in case of default avatar users
+        avatar = f"https://cdn.discordapp.com/embed/avatars/{user['discriminator'] % 5}.png"
 
     async with open_db_connection(request.app) as conn:
         await conn.executemany(
             '''INSERT INTO users(id, name, discrim, avatar) VALUES ($1, $2, $3, $4)
             ON CONFLICT (id) DO UPDATE SET id=$1, name=$2, discrim=$3, avatar=$4''',
-            [(user['id'], user['username'], user['discriminator'], avatar), (user['id'], user['username'], user['discriminator'], avatar)]
+            [
+                (user['id'], user['username'], user['discriminator'], avatar),
+                (user['id'], user['username'], user['discriminator'], avatar)
+            ]
         )
 
     request.ctx.session['logged_in'] = True
@@ -73,14 +71,14 @@ async def callback(request):
     return response.redirect('/dashboard')
 
 @root.get('/logout')
-async def logout(request):
+async def logout(request: Request):
     del request.ctx.session['logged_in']
     del request.ctx.session['id']
     return response.redirect('/')
 
 @root.get('/dashboard')
 @login_required()
-async def dashboard_home(request):
+async def dashboard_home(request: Request):
     async with open_db_connection(request.app) as conn:
         urls = await conn.fetch('SELECT * FROM urls WHERE user_id = $1', request.ctx.session['id'])
         pastes = await conn.fetch('SELECT * FROM pastebin WHERE user_id = $1', request.ctx.session['id'])
@@ -94,12 +92,12 @@ async def dashboard_home(request):
     )
 
 @root.get('/urlshortener')
-async def url_shortener_home(request):
+async def url_shortener_home(request: Request):
     return await render_template('url_shortener', request, title='URL Shortener', description='Shorten a URL!')
 
 @root.post('/url/create')
 # @authorized()
-async def create_url(request):
+async def create_url(request: Request):
     chars = string.ascii_letters + string.digits
     code = ''.join(random.choice(chars) for i in range(8))
     try:
@@ -115,29 +113,31 @@ async def create_url(request):
             if existing:
                 return add_message(request, 'error', 'That code is already taken. Try another one.', '/urlshortener')
         await conn.execute('INSERT INTO urls(user_id, code, url) VALUES ($1, $2, $3)', account, code, url)
+    secure = 's' if not request.app.config.DEV else ''
     return add_message(
         request,
         'success',
-        f"Shortened URL created at <a href=\"http{'s' if not request.app.config.DEV else ''}://{request.app.config.DOMAIN}/{code}\">"
+        f"Shortened URL created at <a href=\"http{secure}://{request.app.config.DOMAIN}/{code}\">"
         f"http{'s' if not request.app.config.DEV else ''}://{request.app.config.DOMAIN}/{code}</a>",
         '/urlshortener'
     )
 
 @root.get('/<code>')
-async def existing_code(request, code):
+async def existing_code(request: Request, code: str):
     async with open_db_connection(request.app) as conn:
         res = await conn.fetchrow('SELECT * FROM urls WHERE code = $1', code)
     if not res:
-        abort(404, message=f'Requested URL {request.path} not found')
+        raise NotFound(message=f'Requested URL {request.path} not found')
     return response.redirect(res['url'])
 
 @root.get('/pastebin')
-async def pastebin_home(request):
-    return await render_template('pastebin', request, title="Pastebin", description='Paste in code for easy access later!')
+async def pastebin_home(request: Request):
+    return await render_template('pastebin', request, title="Pastebin",
+                                 description='Paste some code for easy access later!')
 
 @root.post('/pastebin/create')
 # @authorized()
-async def create_pastebin(request):
+async def create_pastebin(request: Request):
     chars = string.ascii_letters + string.digits
     code = ''.join(random.choice(chars) for i in range(8))
     try:
@@ -150,126 +150,49 @@ async def create_pastebin(request):
     return response.redirect(f'/pastebin/{code}')
 
 @root.get('/pastebin/<code>')
-async def existing_pastebin(request, code):
+async def existing_pastebin(request: Request, code: str):
     async with open_db_connection(request.app) as conn:
         res = await conn.fetchrow('SELECT * FROM pastebin WHERE code = $1', code)
     if not res:
-        abort(404, message=f'Requested URL {request.path} not found')
+        raise NotFound(message=f'Requested URL {request.path} not found')
     text = disable_xss(res['text'])
-    return await render_template('saved_pastebin', request, title="Pastebin - Saved", description="Saved Pastebin", code=text)
-
-@root.get('/challenges')
-async def challenge_home(request):
     return await render_template(
-        template='challenge_home',
+        template='saved_pastebin',
         request=request,
-        title='Brawl Stars Challenges',
-        description='Search up your tag to view the logs of your Brawl Stars challenge games.'
-    )
-
-@root.post('/challenges/post')
-async def challenge_post(request):
-    try:
-        form_tag = request.form['tag'][0]
-    except KeyError:
-        return add_message(request, 'error', 'Enter a player tag.', '/challenges')
-
-    try:
-        tag = brawlstats.utils.bstag(form_tag)
-    except brawlstats.NotFoundError as e:
-        invalid_chars = e.message.split('\n')
-        invalid_chars = invalid_chars[-1]
-        return add_message(request, 'error', invalid_chars, '/challenges')
-    return response.redirect(f'/challenges/{tag}')
-
-@root.get('/challenges/<tag>')
-async def challenge_stats(request, tag):
-    client = request.app.brawl_client
-    try:
-        logs = await client.get_battle_logs(tag)
-    except brawlstats.NotFoundError:
-        return add_message(request, 'error', f'Tag {disable_xss(tag.upper())} was not found.', '/challenges')
-
-    event_map = {
-        'gemGrab': 'Gem Grab',
-        'brawlBall': 'Brawl Ball',
-        'bounty': 'Bounty',
-        'heist': 'Heist',
-        'siege': 'Siege'
-    }
-
-    def filter_challenge_games(battle):
-        try:
-            if battle.battle.trophy_change == 1 and 'Showdown' not in battle.event.mode:
-                return True
-        except:
-            valid_modes = ['gemGrab', 'brawlBall', 'bounty', 'heist', 'siege']
-            if battle.event.mode in valid_modes:
-                # Hacky way to filter out ranked matches
-                # still possible for a ranked match to be in the result but very unlikely
-                for team in battle.battle.teams:
-                    for player in team:
-                        if player.brawler.trophies % 100 > 3 or player.brawler.power < 10:
-                            return False
-                return True
-        return False
-
-    games = list(filter(filter_challenge_games, logs))[::-1]
-
-    if len(games) == 0:
-        return add_message(request, 'error', 'No recent challenge games were found.', '/challenges')
-
-    battlelog = []
-    for battle in games:
-        battle_info = {
-            'event': event_map[battle.event.mode],
-            'map': battle.event.map,
-            'result': battle.battle.result.title(),
-            'teams': battle.battle.teams.to_list()
-        }
-        for i, team in enumerate(battle_info['teams']):
-            for j, player in enumerate(team):
-                if player['tag'] == battle.battle.star_player.tag:
-                    battle_info['teams'][i][j]['star_player'] = 'star'
-                else:
-                    battle_info['teams'][i][j]['star_player'] = 'normal'
-
-        battlelog.append(battle_info)
-    return await render_template(
-        template='challenge_stats',
-        request=request,
-        games=battlelog,
-        brawler_key={'EL PRIMO': 'El-Primo', 'MR. P': 'Mr.P'},
-        title='Brawl Stars Challenges',
-        description='View the logs of your Brawl Stars challenge games.'
+        title="Pastebin - Saved",
+        description="Saved Pastebin",
+        code=text
     )
 
 @root.get('/brawlstats/<endpoint:path>')
-async def brawlstats_tests_proxy(request, endpoint):
-    app = request.app
+async def brawlstats_tests_proxy(request: Request, endpoint: str):
     endpoint = '/'.join(request.url.split('/')[4:])
     if not request.token:
-        return response.text('Invalid authorization', status=403)
+        raise Forbidden('Invalid authorization')
     headers = {
         'Authorization': f'Bearer {request.token}',
         'Accept-Encoding': 'gzip'
     }
     try:
-        async with app.session.get(f'https://api.brawlstars.com/v1/{endpoint}', timeout=30, headers=headers) as resp:
+        async with request.app.ctx.aiohttp.get(
+            f'https://api.brawlstars.com/v1/{endpoint}',
+            timeout=30,
+            headers=headers
+        ) as resp:
             return response.json(await resp.json(), status=resp.status)
     except asyncio.TimeoutError:
-        return response.text('Request failed', status=503)
+        raise ServerError('Request failed', status_code=503)
 
 @root.get('/schoolweek')
-async def schoolweektoday(request):
+async def schoolweektoday(request: Request):
     return response.redirect(f'/schoolweek/{date.today()}')
 
 @root.get('/schoolweek/<requested_date_str>')
-async def schoolweek(request, requested_date_str):
+async def schoolweek(request: Request, requested_date_str: str):
     requested_date = date(*map(int, requested_date_str.split('-')))
     first_day = date(2020, 9, 8)
     if not first_day <= requested_date <= date(2021, 3, 11):
-        abort(404, message=f'Requested URL {request.path} not found')
+        raise NotFound(f'Requested URL {request.path} not found. Maybe try a date between 9/8/2020 and 3/11/2021?')
 
     week_fmt = await get_school_week(requested_date, first_day, week=True)
 
@@ -300,8 +223,9 @@ async def email_subscribe(request):
     msg['Subject'] = 'Thank you for subscribing to GCHS Daily Updates!'
     msg['From'] = request.app.config.CUSTOM_EMAIL
     msg['To'] = email
+    secure = 's' if not request.app.config.DEV else ''
     body = MIMEText(
-        f"If this wasn't you, click <a href=\"http{'s' if not request.app.config.DEV else ''}://{request.app.config.DOMAIN}"
+        f"If this wasn't you, click <a href=\"http{secure}://{request.app.config.DOMAIN}"
         f"/schoolweek/unsubscribe/{email}\">here</a> to unsubscribe.", 'html')
     msg.set_content(body)
 
@@ -320,3 +244,10 @@ async def email_unsubscribe(request, email):
     async with open_db_connection(request.app) as conn:
         await conn.execute('DELETE FROM mailing_list WHERE email = $1', email)
     return add_message(request, 'success', 'Your email has been removed from mailing list.', '/schoolweek')
+
+@root.get('/japanese-conjugation-practice')
+async def jap_conj(request):
+    return await render_template(
+        template='jap-conj',
+        request=request
+    )

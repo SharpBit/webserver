@@ -1,8 +1,3 @@
-@font-face {
-  font-family: 'LilitaOne';
-  src: url('/static/fonts/LilitaOne-Regular.ttf');
-}
-
 h1, h2, h3, h4, h5, h6, p, tr, td, input, a, button, .label{
   font-family: 'Lato';
 }
@@ -75,49 +70,6 @@ h1, h2, h3, h4, h5, h6, p, tr, td, input, a, button, .label{
   border: 1px solid #e0b4b4;
   color: #b7638a;
   background-color: #fff6f6;
-}
-
-.battle-victory {
-  color: #28a745;
-  padding-top: 10px;
-  padding-right: 20px;
-  padding-bottom: 0px;
-  padding-left: 20px;
-  border: 2px solid #28a745;
-  border-radius: 3px;
-  margin-bottom: 20px;
-  max-width: 640px;
-  font-family: 'LilitaOne';
-}
-
-.battle-defeat {
-  color: #C73930;
-  padding-top: 10px;
-  padding-right: 20px;
-  padding-bottom: 0px;
-  padding-left: 20px;
-  border: 2px solid #C73930;
-  border-radius: 3px;
-  margin-bottom: 20px;
-  max-width: 640px;
-  font-family: 'LilitaOne';
-}
-
-.battle-draw {
-  color: #7D7979;
-  padding-top: 10px;
-  padding-right: 20px;
-  padding-bottom: 0px;
-  padding-left: 20px;
-  border: 2px solid #7D7979;
-  border-radius: 3px;
-  margin-bottom: 20px;
-  max-width: 640px;
-  font-family: 'LilitaOne';
-}
-
-.player-star {
-  color: #DDB71F;
 }
 
 .hideme {
