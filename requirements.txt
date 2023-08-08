@@ -1,6 +1,4 @@
-sanic
-sanic_session
-jinja2
+flask==2.2.2
+flask-wtf
 python-dotenv
-asyncpg
-aiohttp
+requests

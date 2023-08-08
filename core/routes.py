@@ -208,7 +208,7 @@ async def schoolweek(request: Request, requested_date_str: str):
 
 @root.post('/schoolweek/subscribe')
 # @authorized()
-async def email_subscribe(request):
+async def email_subscribe(request: Request):
     try:
         email = request.form['email'][0]
     except KeyError:
@@ -240,14 +240,7 @@ async def email_subscribe(request):
     return add_message(request, 'success', 'Your email has been added to the mailing list.', '/schoolweek')
 
 @root.get('/schoolweek/unsubscribe/<email>')
-async def email_unsubscribe(request, email):
+async def email_unsubscribe(request: Request, email: str):
     async with open_db_connection(request.app) as conn:
         await conn.execute('DELETE FROM mailing_list WHERE email = $1', email)
     return add_message(request, 'success', 'Your email has been removed from mailing list.', '/schoolweek')
-
-@root.get('/japanese-conjugation-practice')
-async def jap_conj(request):
-    return await render_template(
-        template='jap-conj',
-        request=request
-    )
