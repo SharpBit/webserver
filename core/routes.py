@@ -1,17 +1,12 @@
 import asyncio
 import random
-import smtplib
 import string
-from datetime import date
-from email.message import EmailMessage
-from email.mime.text import MIMEText
 
 from sanic import Blueprint, response
 from sanic.exceptions import Forbidden, NotFound, ServerError
 from sanic.request import Request
 
-from core.utils import (add_message, disable_xss, get_school_week,
-                        login_required, open_db_connection, render_template)
+from core.utils import add_message, disable_xss, login_required, open_db_connection, render_template
 
 root = Blueprint('root')
 
@@ -53,15 +48,15 @@ async def callback(request: Request):
     if user.get('avatar'):
         avatar = f"https://cdn.discordapp.com/avatars/{user['id']}/{user['avatar']}.png"
     else:  # in case of default avatar users
-        avatar = f"https://cdn.discordapp.com/embed/avatars/{user['discriminator'] % 5}.png"
+        avatar = f"https://cdn.discordapp.com/embed/avatars/{random.randint(0, 5)}.png"
 
     async with open_db_connection(request.app) as conn:
         await conn.executemany(
-            '''INSERT INTO users(id, name, discrim, avatar) VALUES ($1, $2, $3, $4)
-            ON CONFLICT (id) DO UPDATE SET id=$1, name=$2, discrim=$3, avatar=$4''',
+            '''INSERT INTO users(id, name, avatar) VALUES ($1, $2, $3)
+            ON CONFLICT (id) DO UPDATE SET id=$1, name=$2, avatar=$3''',
             [
-                (user['id'], user['username'], user['discriminator'], avatar),
-                (user['id'], user['username'], user['discriminator'], avatar)
+                (user['id'], user['username'], avatar),
+                (user['id'], user['username'], avatar)
             ]
         )
 
@@ -182,72 +177,3 @@ async def brawlstats_tests_proxy(request: Request, endpoint: str):
             return response.json(await resp.json(), status=resp.status)
     except asyncio.TimeoutError:
         raise ServerError('Request failed', status_code=503)
-
-@root.get('/schoolweek')
-async def schoolweektoday(request: Request):
-    return response.redirect(f'/schoolweek/{date.today()}')
-
-@root.get('/schoolweek/<requested_date_str>')
-async def schoolweek(request: Request, requested_date_str: str):
-    requested_date = date(*map(int, requested_date_str.split('-')))
-    first_day = date(2020, 9, 8)
-    if not first_day <= requested_date <= date(2021, 3, 11):
-        raise NotFound(f'Requested URL {request.path} not found. Maybe try a date between 9/8/2020 and 3/11/2021?')
-
-    week_fmt = await get_school_week(requested_date, first_day, week=True)
-
-    return await render_template(
-        template='schoolweek',
-        request=request,
-        week=week_fmt,
-        requested_date=requested_date,
-        title='School Week',
-        description='This week\'s maroon and gray A and B days.'
-    )
-
-
-@root.post('/schoolweek/subscribe')
-# @authorized()
-async def email_subscribe(request):
-    try:
-        email = request.form['email'][0]
-    except KeyError:
-        return add_message(request, 'error', 'Enter an email in the field.', '/schoolweek')
-
-    async with open_db_connection(request.app) as conn:
-        existing = await conn.fetchrow('SELECT * FROM mailing_list WHERE email = $1', email)
-        if existing:
-            return add_message(request, 'error', 'Email already subscribed.', '/schoolweek')
-
-    msg = EmailMessage()
-    msg['Subject'] = 'Thank you for subscribing to GCHS Daily Updates!'
-    msg['From'] = request.app.config.CUSTOM_EMAIL
-    msg['To'] = email
-    secure = 's' if not request.app.config.DEV else ''
-    body = MIMEText(
-        f"If this wasn't you, click <a href=\"http{secure}://{request.app.config.DOMAIN}"
-        f"/schoolweek/unsubscribe/{email}\">here</a> to unsubscribe.", 'html')
-    msg.set_content(body)
-
-    with smtplib.SMTP_SSL('smtp.gmail.com', 465) as smtp:
-        smtp.login(request.app.config.NOREPLY_EMAIL, request.app.config.EMAIL_APP_PASSWORD)
-
-        smtp.send_message(msg)
-
-    async with open_db_connection(request.app) as conn:
-        await conn.execute('INSERT INTO mailing_list(email) VALUES ($1)', email)
-
-    return add_message(request, 'success', 'Your email has been added to the mailing list.', '/schoolweek')
-
-@root.get('/schoolweek/unsubscribe/<email>')
-async def email_unsubscribe(request, email):
-    async with open_db_connection(request.app) as conn:
-        await conn.execute('DELETE FROM mailing_list WHERE email = $1', email)
-    return add_message(request, 'success', 'Your email has been removed from mailing list.', '/schoolweek')
-
-@root.get('/japanese-conjugation-practice')
-async def jap_conj(request):
-    return await render_template(
-        template='jap-conj',
-        request=request
-    )
