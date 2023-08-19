@@ -8,6 +8,8 @@ listeners = Blueprint('listeners')
 @listeners.listener('before_server_start')
 async def init(app: Sanic, loop):
     app.ctx.aiohttp = aiohttp.ClientSession(loop=loop)
+    print(app.config.DISCORD_CLIENT_ID)
+    print(app.config.DISCORD_CLIENT_SECRET)
     app.ctx.oauth = Oauth2(
         client_id=app.config.DISCORD_CLIENT_ID,
         client_secret=app.config.DISCORD_CLIENT_SECRET,
