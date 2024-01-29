@@ -82,6 +82,7 @@ async def dashboard_home(request: Request):
         request=request,
         title="Dashboard",
         description='Dashboard for your account.',
+        base_url=request.app.config.BASE_URL,
         urls=urls,
         pastes=pastes
     )
@@ -108,12 +109,11 @@ async def create_url(request: Request):
             if existing:
                 return add_message(request, 'error', 'That code is already taken. Try another one.', '/urlshortener')
         await conn.execute('INSERT INTO urls(user_id, code, url) VALUES ($1, $2, $3)', account, code, url)
-    secure = 's' if not request.app.config.DEV else ''
     return add_message(
         request,
         'success',
-        f"Shortened URL created at <a href=\"http{secure}://{request.app.config.DOMAIN}/{code}\">"
-        f"http{'s' if not request.app.config.DEV else ''}://{request.app.config.DOMAIN}/{code}</a>",
+        f"Shortened URL created at <a href=\"{request.app.config.BASE_URL}/{code}\">"
+        f"{request.app.config.BASE_URL}/{code}</a>",
         '/urlshortener'
     )
 
