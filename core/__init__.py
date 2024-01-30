@@ -6,7 +6,6 @@ from core.config import SiteConfig
 
 from core.routes import root
 from core.listeners import listeners
-# from core.utils import handle_daily_emails
 
 
 def create_app(config_class: Config=SiteConfig) -> Sanic:
@@ -21,6 +20,5 @@ def create_app(config_class: Config=SiteConfig) -> Sanic:
     app.blueprint(listeners)
 
     Session(app)  # sanic_session
-    # app.add_task(handle_daily_emails)
 
     return app

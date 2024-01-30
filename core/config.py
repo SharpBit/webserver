@@ -17,6 +17,3 @@ class SiteConfig(Config):
     DB_PASSWORD = os.getenv('DB_PASSWORD')
     DB_NAME = os.getenv('DB_NAME')
     DB_HOST = os.getenv('DB_HOST')
-    NOREPLY_EMAIL = os.getenv('NOREPLY_EMAIL')
-    CUSTOM_EMAIL = os.getenv('CUSTOM_EMAIL')
-    EMAIL_APP_PASSWORD = os.getenv('NOREPLY_APP_PASSWORD')
